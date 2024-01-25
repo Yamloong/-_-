@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+<title>알림톡 발송이력상세</title>
+
+<!--v Packages -->
+<script src="../../assets/js/jquery.min.js"></script>
+
+<link href="../../assets/css/jquery-ui.min.css" rel="stylesheet" />
+<script src="../../assets/js/jquery-ui.min.js"></script>
+
+<link href="../../assets/css/select2.min.css" rel="stylesheet" />
+<script src="../../assets/js/select2.min.js"></script>
+<!--^ Packages -->
+
+<link href="../../assets/css/all.css" rel="stylesheet" />
+<script src="../../assets/js/util.js"></script>
+</head>
+
+<body class="sub-page">
+	<header>
+		<div class="inner">
+			<h1 class="logo">
+				<a href="#">
+					<img src="../../assets/img/logo.svg" />
+				</a>
+			</h1>
+			<div id="gnb">
+				<ul class="gnb-list">
+					<li>
+						<a href="#">회원/카드관리</a>
+					</li>
+					<li>
+						<a href="#">거래관리</a>
+					</li>
+					<li>
+						<a href="#">정산현황</a>
+					</li>
+					<li>
+						<a href="#">통계/분석</a>
+					</li>
+					<li>
+						<a href="#">지원정책</a>
+					</li>
+					<li>
+						<a href="#">환경설정</a>
+					</li>
+					<li>
+						<button type="button" class="btn">
+							<span>전체보기</span>
+							<i class="icon-menu"></i>
+						</button>
+					</li>
+				</ul>
+			</div>
+			<div class="my-menu">
+				<div class="info">
+					<div class="photo">
+						<i class="icon-smile"></i><!-- 혹시 나중에 img태그가 들어간다면 해당 i태그 삭제 -->
+					</div>
+					<div class="name">관리자</div>
+				</div>
+				<div class="log">
+					<span>최종 로그인</span>
+					<span class="time">2022.08.29 14:14</span>
+				</div>
+				<div class="button-wrap">
+					<button type="button" class="btn">
+						<i class="icon-setting"></i>
+					</button>
+					<button type="button" class="btn">
+						<i class="icon-logout"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="container">
+		<div id="lnb">
+			<div class="group-title">
+				<span>환경설정</span>
+			</div>
+			<button type="button" class="btn btn-primary btn_lnb_control">
+				<i class="icon-arrow-prev"></i>
+			</button>
+			<ul class="menu-list">
+				<li>
+					<a href="#">
+						<span>관리자 관리</span>
+						<i class="icon-circle-plus"></i>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>관리자승인</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>관리자 관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>관리자권한관리</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">
+						<span>플랫폼 관리</span>
+						<i class="icon-circle-plus"></i>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>메뉴 관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>배너 관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>팝업 관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>공공데이터관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>가맹점분류코드관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>공휴일관리</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="on">
+					<a href="#">
+						<span>시스템 관리</span>
+						<i class="icon-circle-plus"></i>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>이용자접속현황 관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>메뉴이용현황</span>
+							</a>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>변경이력 관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>메타데이터 관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>연계전문 관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>연계데이터 관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>개인정보접근 이력조회</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>개인정보접근 통계</span>
+							</a>
+						</li>
+						<li class="on">
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>알림톡정보관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>알림톡 발송이력</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!-- #lnb -->
+		<div class="content-wrap">
+			<div class="content-header">
+				<div class="title-wrap">
+					<div class="title">알림톡 발송이력</div>
+					<div class="location">
+						<i class="icon-home"></i>
+						<span>홈</span>
+						<span>환경설정</span>
+						<span>시스템 관리</span>
+						<span>알림톡 발송이력</span>
+					</div>
+				</div>
+			</div>
+			<div class="content-body">
+			</div>
+		</div><!-- .content-wrap -->
+	</div><!-- .container -->
+
+	<!-- 팝업 위치는 항상 여기에 넣어주세요. -->
+	<div id="layerPopup" class="layerPopup" style="display: block;"><!-- 실제 작업하실 때는 style 선언은 지워주세요. 팝업 활성화 방법은 components/modal.html 파일을 참고해주세요. -->
+		<div class="layer-wrap" style="width: 760px;">
+			<div class="layer-header">
+				<h4 class="layer-title">알림톡 발송이력상세</h4>
+				<div class="button-wrap">
+					<button type="button" class="btn btn_close" title="창닫기">
+						<i class="icon-close"></i>
+					</button>
+				</div>
+			</div><!-- .layer-header -->
+	
+			<div class="layer-body">
+				<div class="section-body">
+					<div class="table-wrap">
+						<table class="tbl-form">
+							<colgroup>
+								<col style="width: 100px;">
+								<col style="width: 50%;">
+								<col style="width: 100px;">
+								<col style="width: 50%;">
+							</colgroup>
+							<tbody>
+							<tr>
+								<th>
+									<label class="form-label" for="등록일"><span>등록일시</span></label>
+								</th>
+								<td>
+									<div class="form-container">
+										<div class="input-wrap">
+											<input type="text" id="등록일" name="등록일" value="YYYY.MM.DD" placeholder="" readonly />
+										</div><!-- .input-wrap -->
+										<div class="input-wrap">
+											<input type="text" id="등록시" name="등록시" value="HH24:MI:SS" placeholder="" readonly />
+										</div><!-- .input-wrap -->
+									</div><!-- .form-container -->
+								</td>
+								<th>
+									<label class="form-label" for=" 발송일"><span> 발송일시</span></label>
+								</th>
+								<td>
+									<div class="form-container">
+										<div class="input-wrap">
+											<input type="text" id=" 발송일" name=" 발송일" value="YYYY.MM.DD" placeholder="" readonly />
+										</div><!-- .input-wrap -->
+										<div class="input-wrap">
+											<input type="text" id=" 발송시" name=" 발송시" value="HH24:MI:SS" placeholder="" readonly />
+										</div><!-- .input-wrap -->
+									</div><!-- .form-container -->
+								</td>
+							</tr>
+							<tr>
+								<th>
+									<label class="form-label" for="템플릿ID"><span>템플릿ID</span></label>
+								</th>
+								<td>
+									<div class="form-container">
+										<div class="input-wrap">
+											<input type="text" id="템플릿ID" name="템플릿ID" value="" placeholder="" readonly />
+										</div><!-- .input-wrap -->
+									</div><!-- .form-container -->
+								</td>
+								<th>
+									<label class="form-label" for="템플릿명"><span>템플릿명</span></label>
+								</th>
+								<td>
+									<div class="form-container">
+										<div class="input-wrap">
+											<input type="text" id="템플릿명" name="템플릿명" value="" placeholder="" readonly />
+										</div><!-- .input-wrap -->
+									</div><!-- .form-container -->
+								</td>
+							</tr>
+							<tr>
+								<th>
+									<label class="form-label" for="고객번호"><span>고객번호</span></label>
+								</th>
+								<td>
+									<div class="form-container">
+										<div class="input-wrap">
+											<input type="text" id="고객번호" name="고객번호" value="" placeholder="" readonly />
+										</div><!-- .input-wrap -->
+									</div><!-- .form-container -->
+								</td>
+								<th>
+									<label class="form-label" for="연락처"><span>연락처</span></label>
+								</th>
+								<td>
+									<div class="form-container">
+										<div class="input-wrap">
+											<input type="text" id="연락처" name="연락처" value="" placeholder="" readonly />
+										</div><!-- .input-wrap -->
+									</div><!-- .form-container -->
+								</td>
+							</tr>
+							<tr>
+								<th>
+									<label class="form-label" for="발송상태"><span>발송상태</span></label>
+								</th>
+								<td>
+									<div class="form-container">
+										<div class="input-wrap">
+											<input type="text" id="발송상태" name="발송상태" value="" placeholder="" readonly />
+										</div><!-- .input-wrap -->
+									</div><!-- .form-container -->
+								</td>
+								<th></th>
+								<td></td>
+							</tr>
+							<tr>
+								<th>
+									<label class="form-label" for="발송내용"><span>발송내용</span></label>
+								</th>
+								<td colspan="3" class="content">
+									<div class="form-container">
+										<div class="textarea-wrap">
+											<textarea class="input_count" id="발송내용" name="발송내용" maxlength="" placeholder="" readonly></textarea>
+										</div>
+									</div><!-- .form-container -->
+								</td>
+							</tr>
+							</tbody>
+						</table>
+					</div>
+				</div><!-- .section-body -->
+
+
+			</div><!-- .layer-body -->
+	
+			<div class="layer-footer">
+				<div class="button-wrap">
+					<button type="button" class="btn btn-line btn_close"><span>닫기</span></button>
+				</div>
+			</div><!-- .layer-footer -->
+		</div><!-- .layer-contents -->
+	</div><!-- #layerPopup.layerPopup -->
+</body>
+</html>

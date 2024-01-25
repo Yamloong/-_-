@@ -1,0 +1,213 @@
+@charset "UTF-8";
+/**
+ * datepicker 관련 style을 이 파일에 정의합니다.
+ * 이 파일은 all.css에서 import되어 사용됩니다.
+ **/
+
+.ui-datepicker {
+	padding: 10px 5px;
+	margin-top: 10px;
+	font-family: var(--base-font-family);
+	font-size: var(--base-font-size);
+	color: var(--input-text-color);
+	border-radius: 15px;
+	box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.05);
+}
+.ui-datepicker .ui-datepicker-title {
+	display: flex;
+	justify-content: center;
+	flex-direction: row-reverse;
+}
+.ui-widget.ui-widget-content {
+	border-color: var(--primary);
+}
+.ui-widget-header {
+	background-color: #fff;
+	border: 0;
+}
+.ui-datepicker-year {
+	color: #000;
+	font-size: 12px;
+	font-weight: 700;
+}
+.ui-datepicker-year::after {
+	content: "/";
+	padding: 0 4px 0 7px;
+	color: #ccc;
+	font-size: 12px;
+	font-weight: 400;
+}
+.ui-datepicker .ui-datepicker-prev span {
+	background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.71 6.71001C14.32 6.32001 13.69 6.32001 13.3 6.71001L8.70998 11.3C8.31998 11.69 8.31998 12.32 8.70998 12.71L13.3 17.3C13.69 17.69 14.32 17.69 14.71 17.3C15.1 16.91 15.1 16.28 14.71 15.89L10.83 12L14.71 8.12001C15.1 7.73001 15.09 7.09001 14.71 6.71001V6.71001Z' fill='black'/%3E%3C/svg%3E%0A");
+	background-repeat: no-repeat;
+	background-size: 24px auto;
+	background-position: center center;
+	cursor: pointer;
+}
+.ui-datepicker .ui-datepicker-next span {
+	background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.29006 6.71001C8.90006 7.10001 8.90006 7.73001 9.29006 8.12001L13.1701 12L9.29006 15.88C8.90006 16.27 8.90006 16.9 9.29006 17.29C9.68006 17.68 10.3101 17.68 10.7001 17.29L15.2901 12.7C15.6801 12.31 15.6801 11.68 15.2901 11.29L10.7001 6.70001C10.3201 6.32001 9.68006 6.32001 9.29006 6.71001Z' fill='black'/%3E%3C/svg%3E%0A");
+	background-repeat: no-repeat;
+	background-size: 24px auto;
+	background-position: center center;
+	cursor: pointer;
+}
+
+/*---- 연도 선택 영역에 좌우 화살표 hover */
+.ui-state-hover, 
+.ui-widget-content .ui-state-hover, 
+.ui-widget-header .ui-state-hover, 
+.ui-state-focus, 
+.ui-widget-content .ui-state-focus, 
+.ui-widget-header .ui-state-focus, 
+.ui-button:hover, 
+.ui-button:focus {
+	background-color: #fff;
+}
+.ui-datepicker .ui-datepicker-prev-hover {
+	top: 2px;
+	left: 2px;
+	border-color: #fff;
+}
+.ui-datepicker .ui-datepicker-next-hover {
+	top: 2px;
+	right: 2px;
+	border-color: #fff;
+}
+
+.ui-datepicker table {
+	background-color: white;
+	border-radius: 5px;
+}
+.ui-datepicker table thead {
+	background-color: var(--primary);
+}
+.ui-datepicker table thead th, .ui-datepicker table thead td {
+	border-radius: 0;
+}
+/*---- tbody 위아래 공간 */
+.datepicker-days tbody::before,
+.datepicker-centuries tbody::before,
+.datepicker-decades tbody::before,
+.datepicker-years tbody::before,
+.datepicker-months tbody::before {
+	content: "";
+	display: block;
+	height: 10px;
+}
+.ui-datepicker tfoot .today:hover,
+.ui-datepicker tfoot .clear:hover {
+	/* color: var(--primary);
+	background-color: #F1F5FF;
+	border-color: #a3e4ec !important; */
+	color: #d9e8ff;
+	background-color: var(--primary)
+}
+.ui-datepicker .prev,
+.ui-datepicker .next,
+.ui-datepicker .prev:hover,
+.ui-datepicker .next:hover {
+	color: transparent;
+	background: transparent;
+	position: relative;
+}
+.ui-datepicker .prev::after {
+	content: "\F284";
+	right: 0;
+}
+.ui-datepicker .next::after {
+	content: "\F285";
+	right: 5px;
+}
+.ui-datepicker .prev::after,
+.ui-datepicker .next::after {
+	position: absolute;
+	top: 3px;
+	color: var(--primary);
+	width: 25px;
+	height: 25px;
+	line-height: 26px;
+	color: white;
+	background-color: var(--primary);
+	border-radius: 50%;
+}
+.ui-datepicker .prev:hover::after,
+.ui-datepicker .next:hover::after {
+	background-color: #3879c6;
+}
+.ui-datepicker .next.disabled,
+.ui-datepicker .prev.disabled {
+	visibility: visible;
+	pointer-events: none;
+	cursor: pointer;
+}
+.ui-datepicker .prev.disabled::after,
+.ui-datepicker .next.disabled::after,
+.ui-datepicker .next.disabled:hover::after,
+.ui-datepicker .prev.disabled:hover::after {
+	display: none;
+	pointer-events: none;
+	cursor: pointer;
+}
+
+.ui-datepicker tfoot tr:first-child {
+	height: 45px;
+	border-top: solid 1px #eee;
+}
+.datepicker-days tbody tr td { border-bottom: solid 1px white; }
+
+/*---- 디폴트 날짜 색 표시 */
+.ui-state-default, 
+.ui-widget-content .ui-state-default, 
+.ui-widget-header .ui-state-default, 
+.ui-button, 
+html .ui-button.ui-state-disabled:hover, 
+html .ui-button.ui-state-disabled:active {
+	width: 20px;
+	height: 20px;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 14px;
+	color: #666;
+	font-size: 11px;
+	font-weight: 500;
+	background-color: #fff;
+	border-color: #fff;
+	border-radius: 20px;
+}
+/*---- 토요일, 일요일에 색 표시 */
+.ui-datepicker thead tr th { background-color: white; }
+.ui-datepicker thead tr th:first-child,
+.ui-datepicker tbody tr td:first-child a { 
+	color: #eb3c3c; 
+}
+.ui-datepicker thead tr th:last-child,
+.ui-datepicker tbody tr td:last-child a {
+	color: var(--primary);
+}
+/*---- 오늘 색 표시 */
+.ui-datepicker table tr td.ui-datepicker-today a,
+.ui-datepicker table tr td.ui-datepicker-today:hover a,
+.ui-datepicker table tr td.ui-datepicker-today.focused a,
+.ui-datepicker table tr td.ui-datepicker-today:active a,
+.ui-datepicker table tr td.ui-datepicker-today:hover:active a {
+	color: var(--base-text-color);
+	background-color: #fff;
+	border-color: #fff;
+}
+/*---- 선택한 날짜에 색 표시 */
+.ui-state-active, 
+.ui-widget-content .ui-state-active {
+	color: white !important;
+	background-color: var(--error) !important;
+	border: 1px solid var(--error) !important;
+}
+
+.ui-datepicker table tr td.today.disabled,
+.ui-datepicker table tr td.today.disabled:hover {
+	color: #ccc !important;
+}
+
+.ui-datepicker table tr td.disabled, .ui-datepicker table tr td.disabled:hover,
+.ui-datepicker table tr td span.disabled, .ui-datepicker table tr td span.disabled:hover {
+	color: #eee !important;
+}

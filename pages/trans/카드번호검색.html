@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+<title>카드번호검색</title>
+
+<!--v Packages -->
+<script src="../../assets/js/jquery.min.js"></script>
+
+<link href="../../assets/css/jquery-ui.min.css" rel="stylesheet" />
+<script src="../../assets/js/jquery-ui.min.js"></script>
+
+<link href="../../assets/css/select2.min.css" rel="stylesheet" />
+<script src="../../assets/js/select2.min.js"></script>
+<!--^ Packages -->
+
+<link href="../../assets/css/all.css" rel="stylesheet" />
+<script src="../../assets/js/util.js"></script>
+</head>
+
+<body class="sub-page">
+	<header>
+		<div class="inner">
+			<h1 class="logo">
+				<a href="#">
+					<img src="../../assets/img/logo.svg" />
+				</a>
+			</h1>
+			<div id="gnb">
+				<ul class="gnb-list">
+					<li>
+						<a href="#">회원/카드관리</a>
+					</li>
+					<li>
+						<a href="#">거래관리</a>
+					</li>
+					<li>
+						<a href="#">정산현황</a>
+					</li>
+					<li>
+						<a href="#">통계/분석</a>
+					</li>
+					<li>
+						<a href="#">지원정책</a>
+					</li>
+					<li>
+						<a href="#">환경설정</a>
+					</li>
+					<li>
+						<button type="button" class="btn">
+							<span>전체보기</span>
+							<i class="icon-menu"></i>
+						</button>
+					</li>
+				</ul>
+			</div>
+			<div class="my-menu">
+				<div class="info">
+					<div class="photo">
+						<i class="icon-smile"></i><!-- 혹시 나중에 img태그가 들어간다면 해당 i태그 삭제 -->
+					</div>
+					<div class="name">관리자</div>
+				</div>
+				<div class="log">
+					<span>최종 로그인</span>
+					<span class="time">2022.08.29 14:14</span>
+				</div>
+				<div class="button-wrap">
+					<button type="button" class="btn">
+						<i class="icon-setting"></i>
+					</button>
+					<button type="button" class="btn">
+						<i class="icon-logout"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="container">
+		<div id="lnb">
+			<div class="group-title">
+				<span>거래관리</span>
+			</div>
+			<button type="button" class="btn btn-primary btn_lnb_control">
+				<i class="icon-arrow-prev"></i>
+			</button>
+			<ul class="menu-list">
+				<li class="on">
+					<a href="#">
+						<span>거래내역</span>
+						<i class="icon-circle-plus"></i>
+					</a>
+					<ul class="sub-menu">
+						<li class="on">
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>급식종합관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>거래요약조회</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>거래상세조회</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>거래현황</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>실시간거래내역조회</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">
+						<span>가맹점관리</span>
+						<i class="icon-circle-plus"></i>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>가맹점관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>가맹점별 거래조회</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>가맹점 위생점검 관리</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">
+						<span>가맹점별거래현황</span>
+						<i class="icon-circle-plus"></i>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>가맹점별거래현황</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!-- #lnb -->
+		<div class="content-wrap">
+			<div class="content-header">
+				<div class="title-wrap">
+					<div class="title">급식종합관리</div>
+					<div class="location">
+						<i class="icon-home"></i>
+						<span>홈</span>
+						<span>거래관리</span>
+						<span>거래내역</span>
+						<span>급식종합관리</span>
+					</div>
+				</div>
+			</div>
+			<div class="content-body"></div>
+		</div><!-- .content-wrap -->
+	</div><!-- .container -->
+
+	<!-- 팝업 위치는 항상 여기에 넣어주세요. -->
+	<div id="layerPopup" class="layerPopup" style="display: block;"><!-- 실제 작업하실 때는 style 선언은 지워주세요. 팝업 활성화 방법은 components/modal.html 파일을 참고해주세요. -->
+		<div class="layer-wrap" style="width: 960px;">
+			<div class="layer-header">
+				<h4 class="layer-title">카드번호검색</h4>
+				<div class="button-wrap">
+					<button type="button" class="btn btn_close" title="창닫기">
+						<i class="icon-close"></i>
+					</button>
+				</div>
+			</div><!-- .layer-header -->
+	
+			<div class="layer-body">
+
+				<div class="section-header">
+					<div class="title-wrap">
+						<div class="title">회원정보</div>
+					</div>
+				</div><!-- .section-header -->
+				
+				<div class="search-form-wrap">
+					<form>
+						<div class="search-form-inner">
+							<div class="search-form">
+
+								<div class="row">
+									<div class="col-12">
+										<label class="form-label" for="지자체"><span>지자체</span></label>
+										<div class="form-container">
+											<select class="form-select select2" id="지자체" name="시/도" data-placeholder="시/도 선택" disabled>
+												<option value=""></option>
+												<option value="경기도" selected>경기도</option>
+											</select>
+											<select class="form-select select2" id="시/군" name="시/군" data-placeholder="시/군 선택">
+												<option value=""></option>
+												<option value="옵션1">옵션1</option>
+												<option value="옵션2">옵션2</option>
+												<option value="옵션3">옵션3</option>
+											</select>
+											<select class="form-select select2" id="구" name="구" data-placeholder="구 선택">
+												<option value=""></option>
+												<option value="옵션1">옵션1</option>
+												<option value="옵션2">옵션2</option>
+												<option value="옵션3">옵션3</option>
+											</select>
+											<select class="form-select select2" id="읍/면/동" name="읍/면/동" data-placeholder="읍/면/동 선택">
+												<option value=""></option>
+												<option value="옵션1">옵션1</option>
+												<option value="옵션2">옵션2</option>
+												<option value="옵션3">옵션3</option>
+											</select>
+										</div>
+									</div>
+								</div><!-- .row -->
+
+								<div class="row">
+									<div class="col-6">
+										<label class="form-label" for="성명"><span>성명</span></label>
+										<div class="form-container">
+											<div class="input-wrap">
+												<input type="text" id="성명" name="성명" value="" placeholder="" />
+											</div><!-- .input-wrap -->
+										</div><!-- .form-container -->
+									</div><!-- .col -->
+									<div class="col-6">
+										<label class="form-label" for="휴대폰번호"><span>휴대폰 번호</span></label>
+										<div class="form-container">
+											<div class="input-wrap">
+												<input type="text" id="휴대폰번호" name="휴대폰번호" value="" placeholder="" />
+											</div><!-- .input-wrap -->
+										</div><!-- .form-container -->
+									</div><!-- .col -->
+								</div><!-- .row -->
+
+								<div class="row">
+									<div class="col-6">
+										<label class="form-label" for="생년월일"><span>생년월일</span></label>
+										<div class="form-container">
+											<div class="input-wrap">
+												<input type="text" id="생년월일" name="생년월일" value="" placeholder="" />
+											</div><!-- .input-wrap -->
+										</div><!-- .form-container -->
+									</div><!-- .col -->
+									<div class="col-6">
+										<label class="form-label" for="카드번호"><span>카드번호</span></label>
+										<div class="form-container">
+											<div class="input-wrap">
+												<input type="text" id="카드번호" name="카드번호" value="" placeholder="" />
+											</div><!-- .input-wrap -->
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" id="체크박스1" name="체크박스1" value="체크박스1" checked="" />
+												<label class="form-check-label" for="체크박스1">정지포함</label>
+											</div>
+										</div><!-- .form-container -->
+									</div><!-- .col -->
+								</div><!-- .row -->
+							</div><!-- .search-form -->
+
+							<div class="button-wrap">
+								<button type="button" class="btn btn-primary">
+									<i class="icon-search"></i>
+									<span>검색</span>
+								</button>
+							</div>
+						</div><!-- .search-form-inner -->
+					</form>
+				</div><!-- .search_form_wrap -->
+
+				<div class="section-header">
+					<div class="title-wrap">
+						<div class="title">검색결과<span class="small text-primary">(99건)</span></div>
+					</div>
+				</div><!-- .section-header -->
+
+				<div class="section-body">
+					<div class="grid-area">
+						<div style="padding: 58px 0; text-align: center; font-size: 20px;">IBSheet영역</div><!-- 이 줄을 삭제 후 그리드를 삽입하세요. -->
+					</div>
+				</div><!-- .section-body -->
+
+
+			</div><!-- .layer-body -->
+	
+			<div class="layer-footer">
+				<div class="button-wrap">
+					<button type="button" class="btn btn-line btn_close"><span>닫기</span></button>
+				</div>
+			</div><!-- .layer-footer -->
+		</div><!-- .layer-contents -->
+	</div><!-- #layerPopup.layerPopup -->
+</body>
+</html>

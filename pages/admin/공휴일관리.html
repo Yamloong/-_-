@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+<title>공휴일관리</title>
+
+<!--v Packages -->
+<script src="../../assets/js/jquery.min.js"></script>
+
+<link href="../../assets/css/jquery-ui.min.css" rel="stylesheet" />
+<script src="../../assets/js/jquery-ui.min.js"></script>
+
+<link href="../../assets/css/select2.min.css" rel="stylesheet" />
+<script src="../../assets/js/select2.min.js"></script>
+<!--^ Packages -->
+
+<link href="../../assets/css/all.css" rel="stylesheet" />
+<script src="../../assets/js/util.js"></script>
+</head>
+
+<body class="sub-page">
+	<header>
+		<div class="inner">
+			<h1 class="logo">
+				<a href="#">
+					<img src="../../assets/img/logo.svg" />
+				</a>
+			</h1>
+			<div id="gnb">
+				<ul class="gnb-list">
+					<li>
+						<a href="#">회원/카드관리</a>
+					</li>
+					<li>
+						<a href="#">거래관리</a>
+					</li>
+					<li>
+						<a href="#">정산현황</a>
+					</li>
+					<li>
+						<a href="#">통계/분석</a>
+					</li>
+					<li>
+						<a href="#">지원정책</a>
+					</li>
+					<li>
+						<a href="#">환경설정</a>
+					</li>
+					<li>
+						<button type="button" class="btn">
+							<span>전체보기</span>
+							<i class="icon-menu"></i>
+						</button>
+					</li>
+				</ul>
+			</div>
+			<div class="my-menu">
+				<div class="info">
+					<div class="photo">
+						<i class="icon-smile"></i><!-- 혹시 나중에 img태그가 들어간다면 해당 i태그 삭제 -->
+					</div>
+					<div class="name">관리자</div>
+				</div>
+				<div class="log">
+					<span>최종 로그인</span>
+					<span class="time">2022.08.29 14:14</span>
+				</div>
+				<div class="button-wrap">
+					<button type="button" class="btn">
+						<i class="icon-setting"></i>
+					</button>
+					<button type="button" class="btn">
+						<i class="icon-logout"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="container">
+		<div id="lnb">
+			<div class="group-title">
+				<span>환경설정</span>
+			</div>
+			<button type="button" class="btn btn-primary btn_lnb_control">
+				<i class="icon-arrow-prev"></i>
+			</button>
+			<ul class="menu-list">
+				<li>
+					<a href="#">
+						<span>관리자 관리</span>
+						<i class="icon-circle-plus"></i>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>관리자승인</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>관리자 관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>관리자권한관리</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="on">
+					<a href="#">
+						<span>플랫폼 관리</span>
+						<i class="icon-circle-plus"></i>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>메뉴 관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>배너 관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>팝업 관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>공공데이터관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>가맹점분류코드관리</span>
+							</a>
+						</li>
+						<li class="on">
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>공휴일관리</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">
+						<span>시스템 관리</span>
+						<i class="icon-circle-plus"></i>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>이용자접속현황 관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>변경이력 관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>메타데이터 관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>연계전문 관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>연계데이터 관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>개인정보접근 이력조회</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>개인정보접근 통계</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>알림톡 정보관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>알림톡 발송이력</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!-- #lnb -->
+		<div class="content-wrap">
+			<div class="content-header">
+				<div class="title-wrap">
+					<div class="title">공휴일관리</div>
+					<div class="location">
+						<i class="icon-home"></i>
+						<span>홈</span>
+						<span>환경설정</span>
+						<span>플랫폼관리</span>
+						<span>공휴일관리</span>
+					</div>
+				</div>
+			</div>
+			<div class="content-body">
+
+				<div class="search-form-wrap horizontal">
+					<form>
+						<div class="search-form-inner">
+							<div class="search-form">
+
+								<div class="row">
+									<div class="col-8">
+										<label class="form-label" for="작업연도"><span>작업 연월</span></label>
+										<div class="form-container">
+											<select class="form-select select2" id="작업연도" name="작업연도" data-placeholder="작업연도 선택">
+												<option value=""></option>
+												<option value="2022" selected>2022</option>
+											</select>
+											<span class="unit">년</span>
+											<select class="form-select select2" id="작업월" name="작업월" data-placeholder="작업월 선택">
+												<option value=""></option>
+												<option value="11" selected>11</option>
+											</select>
+											<span class="unit">월</span>
+										</div>
+									</div><!-- .col -->
+								</div><!-- .row -->
+
+							</div><!-- .search-form -->
+
+							<div class="button-wrap">
+								<button type="button" class="btn btn-primary">
+									<i class="icon-search"></i>
+									<span>검색</span>
+								</button>
+								<button type="button" class="btn btn-primary">
+									<span>생성</span>
+								</button>
+							</div>
+						</div><!-- .search-form-inner -->
+					</form>
+				</div><!-- .search_form_wrap -->
+
+				<div class="row">
+					<div class="col-8 section-body" style="flex: 1;">
+						<div class="section-header">
+							<div class="title-wrap">
+								<div class="title">월별 정보</div>
+							</div>
+						</div>
+						<div id="calendar">
+							<table>
+								<colgroup>
+									<col style="width: 14.28%" />
+									<col style="width: 14.28%" />
+									<col style="width: 14.28%" />
+									<col style="width: 14.28%" />
+									<col style="width: 14.28%" />
+									<col style="width: 14.28%" />
+									<col style="width: 14.28%" />
+								</colgroup>
+								<thead>
+									<tr>
+										<th>일</th>
+										<th>월</th>
+										<th>화</th>
+										<th>수</th>
+										<th>목</th>
+										<th>금</th>
+										<th>토</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<div class="date"></div>
+										</td>
+										<td>
+											<div class="date"></div>
+										</td>
+										<td>
+											<div class="date"></div>
+										</td>
+										<td>
+											<div class="date"></div>
+										</td>
+										<td>
+											<div class="date"></div>
+										</td>
+										<td>
+											<div class="date"></div>
+										</td>
+										<td>
+											<div class="date">1</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="date">2</div>
+											<div class="plan">추석</div>
+										</td>
+										<td>
+											<div class="date">3</div>
+											<div class="plan">추석</div>
+										</td>
+										<td>
+											<div class="date">4</div>
+											<div class="plan">추석</div>
+										</td>
+										<td>
+											<div class="date">5</div>
+										</td>
+										<td>
+											<div class="date">6</div>
+										</td>
+										<td>
+											<div class="date">7</div>
+										</td>
+										<td>
+											<div class="date">8</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="today">
+											<div class="date">9</div>
+										</td>
+										<td>
+											<div class="date">10</div>
+										</td>
+										<td><div class="date">11</div></td>
+										<td>
+											<div class="date">12</div>
+										</td>
+										<td>
+											<div class="date">13</div>
+											<div class="plan">추석</div>
+										</td>
+										<td>
+											<div class="date">14</div>
+											<div class="plan">추석</div>
+										</td>
+										<td>
+											<div class="date">15</div>
+											<div class="plan">추석</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="date">16</div>
+										</td>
+										<td>
+											<div class="date">17</div>
+										</td>
+										<td>
+											<div class="date">18</div>
+										</td>
+										<td>
+											<div class="date">19</div>
+										</td>
+										<td>
+											<div class="date">20</div>
+										</td>
+										<td>
+											<div class="date">21</div>
+										</td>
+										<td>
+											<div class="date">22</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="date">23</div>
+										</td>
+										<td>
+											<div class="date">24</div>
+										</td>
+										<td>
+											<div class="date">25</div>
+										</td>
+										<td>
+											<div class="date">26</div>
+										</td>
+										<td>
+											<div class="date">27</div>
+										</td>
+										<td>
+											<div class="date">28</div>
+										</td>
+										<td>
+											<div class="date">29</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="date">30</div>
+										</td>
+										<td>
+											<div class="date"></div>
+										</td>
+										<td>
+											<div class="date"></div>
+										</td>
+										<td>
+											<div class="date"></div>
+										</td>
+										<td>
+											<div class="date"></div>
+										</td>
+										<td>
+											<div class="date"></div>
+										</td>
+										<td>
+											<div class="date"></div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="col-4 section-body" style="max-width: 245px;">
+						<div class="section-header">
+							<div class="title-wrap">
+								<div class="title">일별 상세 정보</div>
+							</div>
+							<div class="button-wrap">
+								<button type="button" class="btn btn-sm btn-primary narrow">
+									<span>저장</span>
+								</button>
+							</div>
+						</div>
+						<div class="table-wrap noPadding">
+							<table class="tbl-form">
+								<tbody>
+									<tr>
+										<th>작업일자</th>
+										<td>2022.09.15</td>
+									</tr>
+									<tr>
+										<th>요일</th>
+										<td>목요일</td>
+									</tr>
+									<tr>
+										<th>휴일여부</th>
+										<td>
+											<div class="form-container">
+												<div class="form-check">
+													<input class="form-check-input" type="radio" id="라디오1_옵션1" name="라디오1" value="옵션1" checked="">
+													<label class="form-check-label" for="라디오1_옵션1">예</label>
+												</div>
+												<div class="form-check">
+													<input class="form-check-input" type="radio" id="라디오1_옵션2" name="라디오1" value="옵션2">
+													<label class="form-check-label" for="라디오1_옵션2">아니오</label>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th>휴일명칭</th>
+										<td>
+											<div class="input-wrap">
+												<input type="text" id="휴일명칭" name="휴일명칭" placeholder="">
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- .content-wrap -->
+	</div><!-- .container -->
+</body>
+</html>

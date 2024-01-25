@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+<title>TABLE</title>
+
+<!--v Packages -->
+<script src="../../assets/js/jquery.min.js"></script>
+
+<link href="../../assets/css/jquery-ui.min.css" rel="stylesheet" />
+<script src="../../assets/js/jquery-ui.min.js"></script>
+
+<link href="../../assets/css/select2.min.css" rel="stylesheet" />
+<script src="../../assets/js/select2.min.js"></script>
+<!--^ Packages -->
+
+<!-- GUIDE관련 소스 -->
+<link href="../assets/css/only_for_guide.css" rel="stylesheet" />
+<script src="../assets/js/only_for_guide.js"></script>
+
+<!--v codemirror : 소스보기용 -->
+<link href="../assets/js/codemirror/lib/codemirror.css" rel="stylesheet" />
+<link href="../assets/js/codemirror/theme/rubyblue.css" rel="stylesheet" />
+<script src="../assets/js/codemirror/lib/codemirror.js"></script>
+<script src="../assets/js/codemirror/mode/xml/xml.js"></script>
+<script src="../assets/js/codemirror/mode/javascript/javascript.js"></script>
+<script src="../assets/js/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+<script src="../assets/js/codemirror/addon/selection/active-line.js"></script>
+<!--^ codemirror : 소스보기용 -->
+
+<link href="../../assets/css/all.css" rel="stylesheet" />
+<script src="../../assets/js/util.js"></script>
+</head>
+
+<body class="guide_page">
+	<header>
+		<div class="inner">
+			<div class="logo">UI/UX GUIDE</div>
+			<ul class="gnb">
+				<li><a href="../index.html">페이지</a></li>
+				<li><a href="../style.html">스타일</a></li>
+				<li class="active"><a href="../components.html">컴포넌트</a></li>
+				<li><a href="../layouts.html">레이아웃</a></li>
+				<li><a href="../about.html">About</a></li>
+			</ul>
+		</div>
+	</header>
+
+	<div class="guide guide_style">
+		<section>
+			<div class="container">
+				<h2 class="page-title">TABLE</h2>
+
+				<div class="page-note">
+					<div>html table 태그로 구성된 데이터 테이블 / 폼 테이블의 예시와 사용방법입니다.</div>
+				</div>
+
+				<article class="guide">
+					<h3 class="guide-title">데이터 타입 테이블 (.table-wrap > table.tbl-data)</h3>
+
+					<div class="contents">
+						<div class="guide-sub-title">
+							기본 형태
+							<div class="right_menu">
+								<button type="button" class="btn btn-primary btn_view_source" data-target="#sourceViewer1"><i class="icon-eyes">👀</i><span>HTML</span></button>
+							</div>
+						</div>
+
+						<ul class="info">
+							<!-- <li>.table-wrap의 max-height는 462px(row 당 42px * (10 + 1)줄로 되어있습니다.</li> -->
+							<!-- <li>recalcHeightDataTableWrap(".table-wrap", 10); 함수 호출로 table 상태에 따라 높이를 재계산하여 redraw 할 수 있습니다.<br/>한 화면(body 기준) .table-wrap이 2개 이상일때는 각 .table-wrap에 id를 부여한 후 id를 selector로 사용해야 합니다.</li> -->
+							<li>기본 row height : 50px (border-bottom 1px 포함)</li>
+							<li>아래 테이블 옵션 클래스를 table class에 적용하여 필요한 테이블을 구성할 수 있습니다.</li>
+							<li style="color: red">.fixed-thead와 .fixed-tfoot은 각각 1줄 일때만 정상작동합니다.</li>
+						</ul>
+
+						<div class="form-control-wrap">
+							<label class="form-label">옵션 클래스 :</label>
+							<div class="form-container">
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" id="fixedThead1" checked="checked" />
+									<label class="form-check-label" for="fixedThead1">.fixed-thead</label>
+								</div>
+								<div class="form-check ms-3">
+									<input class="form-check-input" type="checkbox" id="fixedTfoot1" checked="checked" />
+									<label class="form-check-label" for="fixedTfoot1">.fixed-tfoot</label>
+								</div>
+								<div class="form-check ms-3">
+									<input class="form-check-input" type="checkbox" id="tableHover1" checked="checked" />
+									<label class="form-check-label" for="tableHover1">.table-hover (BS class)</label>
+								</div>
+								`
+								<div class="form-check ms-3">
+									<input class="form-check-input" type="checkbox" id="tdCenter1" />
+									<label class="form-check-label" for="tdCenter1">.text-center</label>
+								</div>
+							</div>
+							<!-- .form-container -->
+						</div>
+						<!-- .form-control-wrap -->
+						<br />
+
+						<div class="guide_html">
+<div class="section-header">
+	<div class="title-wrap">
+		<div class="title">데이터 테이블 제목</div>
+	</div>
+</div>
+
+<div class="table-wrap" style="max-height: 500px">
+<table id="tblMAIN1" class="tbl-data fixed-thead fixed-tfoot table-hover">
+	<colgroup>
+		<col width="7%" />
+		<col width="8%" />
+		<col width="7%" />
+		<col width="10%" />
+		<col width="10%" />
+		<col width="*" />
+		<col width="8%" />
+		<col width="13%" />
+		<col width="8%" />
+		<col width="10%" />
+		<col width="9%" />
+	</colgroup>
+	<thead>
+		<tr>
+			<th>번호</th>
+			<th>제휴사</th>
+			<th>지점</th>
+			<th>거래일</th>
+			<th>지급예정일</th>
+			<th>결제금액</th>
+			<th>회원명</th>
+			<th>사업자번호</th>
+			<th>대표명</th>
+			<th>거래처코드</th>
+			<th>할부기간</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="text-center">1</td>
+			<td>A약품</td>
+			<td>본사</td>
+			<td class="text-center">2021-10-18</td>
+			<td class="text-center">2021-10-18</td>
+			<td class="text-end">100,000</td>
+			<td>A회원</td>
+			<td>012-34-56789</td>
+			<td>A대표</td>
+			<td class="text-center">001</td>
+			<td class="text-center">일시불</td>
+		</tr>
+		<tr class="ON">
+			<td class="text-center">2</td>
+			<td>A약품</td>
+			<td>본사</td>
+			<td class="text-center">2021-10-18</td>
+			<td class="text-center">2021-10-18</td>
+			<td class="text-end">100,000</td>
+			<td>A회원</td>
+			<td>012-34-56789</td>
+			<td>A대표</td>
+			<td class="text-center">001</td>
+			<td class="text-center">12개월</td>
+		</tr>
+		<tr>
+			<td class="text-center">3</td>
+			<td>A약품</td>
+			<td>본사</td>
+			<td class="text-center">2021-10-18</td>
+			<td class="text-center">2021-10-18</td>
+			<td class="text-end">100,000</td>
+			<td>A회원</td>
+			<td>012-34-56789</td>
+			<td>A대표</td>
+			<td class="text-center">001</td>
+			<td class="text-center">일시불</td>
+		</tr>
+		<tr>
+			<td class="text-center">4</td>
+			<td>A약품</td>
+			<td>본사</td>
+			<td class="text-center">2021-10-18</td>
+			<td class="text-center">2021-10-18</td>
+			<td class="text-end">100,000</td>
+			<td>A회원</td>
+			<td>012-34-56789</td>
+			<td>A대표</td>
+			<td class="text-center">001</td>
+			<td class="text-center">12개월</td>
+		</tr>
+		<tr>
+			<td class="text-center">5</td>
+			<td>A약품</td>
+			<td>본사</td>
+			<td class="text-center">2021-10-18</td>
+			<td class="text-center">2021-10-18</td>
+			<td class="text-end">100,000</td>
+			<td>A회원</td>
+			<td>012-34-56789</td>
+			<td>A대표</td>
+			<td class="text-center">001</td>
+			<td class="text-center">일시불</td>
+		</tr>
+		<tr>
+			<td class="text-center">6</td>
+			<td>A약품</td>
+			<td>본사</td>
+			<td class="text-center">2021-10-18</td>
+			<td class="text-center">2021-10-18</td>
+			<td class="text-end">100,000</td>
+			<td>A회원</td>
+			<td>012-34-56789</td>
+			<td>A대표</td>
+			<td class="text-center">001</td>
+			<td class="text-center">12개월</td>
+		</tr>
+		<tr>
+			<td class="text-center">7</td>
+			<td>A약품</td>
+			<td>본사</td>
+			<td class="text-center">2021-10-18</td>
+			<td class="text-center">2021-10-18</td>
+			<td class="text-end">100,000</td>
+			<td>A회원</td>
+			<td>012-34-56789</td>
+			<td>A대표</td>
+			<td class="text-center">001</td>
+			<td class="text-center">일시불</td>
+		</tr>
+		<tr>
+			<td class="text-center">8</td>
+			<td>A약품</td>
+			<td>본사</td>
+			<td class="text-center">2021-10-18</td>
+			<td class="text-center">2021-10-18</td>
+			<td class="text-end">100,000</td>
+			<td>A회원</td>
+			<td>012-34-56789</td>
+			<td>A대표</td>
+			<td class="text-center">001</td>
+			<td class="text-center">12개월</td>
+		</tr>
+		<tr>
+			<td class="text-center">9</td>
+			<td>A약품</td>
+			<td>본사</td>
+			<td class="text-center">2021-10-18</td>
+			<td class="text-center">2021-10-18</td>
+			<td class="text-end">100,000</td>
+			<td>A회원</td>
+			<td>012-34-56789</td>
+			<td>A대표</td>
+			<td class="text-center">001</td>
+			<td class="text-center">일시불</td>
+		</tr>
+		<tr>
+			<td class="text-center">10</td>
+			<td>A약품</td>
+			<td>본사</td>
+			<td class="text-center">2021-10-18</td>
+			<td class="text-center">2021-10-18</td>
+			<td class="text-end">100,000</td>
+			<td>A회원</td>
+			<td>012-34-56789</td>
+			<td>A대표</td>
+			<td class="text-center">001</td>
+			<td class="text-center">12개월</td>
+		</tr>
+		<tr>
+			<td class="text-center">11</td>
+			<td>A약품</td>
+			<td>본사</td>
+			<td class="text-center">2021-10-18</td>
+			<td class="text-center">2021-10-18</td>
+			<td class="text-end">100,000</td>
+			<td>A회원</td>
+			<td>012-34-56789</td>
+			<td>A대표</td>
+			<td class="text-center">001</td>
+			<td class="text-center">12개월</td>
+		</tr>
+		<tr>
+			<td class="text-center">12</td>
+			<td>A약품</td>
+			<td>본사</td>
+			<td class="text-center">2021-10-18</td>
+			<td class="text-center">2021-10-18</td>
+			<td class="text-end">100,000</td>
+			<td>A회원</td>
+			<td>012-34-56789</td>
+			<td>A대표</td>
+			<td class="text-center">001</td>
+			<td class="text-center">12개월</td>
+		</tr>
+		<tr>
+			<td class="text-center">13</td>
+			<td>A약품</td>
+			<td>본사</td>
+			<td class="text-center">2021-10-18</td>
+			<td class="text-center">2021-10-18</td>
+			<td class="text-end">100,000</td>
+			<td>A회원</td>
+			<td>012-34-56789</td>
+			<td>A대표</td>
+			<td class="text-center">001</td>
+			<td class="text-center">12개월</td>
+		</tr>
+		<tr>
+			<td class="text-center">14</td>
+			<td>A약품</td>
+			<td>본사</td>
+			<td class="text-center">2021-10-18</td>
+			<td class="text-center">2021-10-18</td>
+			<td class="text-end">100,000</td>
+			<td>A회원</td>
+			<td>012-34-56789</td>
+			<td>A대표</td>
+			<td class="text-center">001</td>
+			<td class="text-center">12개월</td>
+		</tr>
+		<tr>
+			<td class="text-center">15</td>
+			<td>A약품</td>
+			<td>본사</td>
+			<td class="text-center">2021-10-18</td>
+			<td class="text-center">2021-10-18</td>
+			<td class="text-end">100,000</td>
+			<td>A회원</td>
+			<td>012-34-56789</td>
+			<td>A대표</td>
+			<td class="text-center">001</td>
+			<td class="text-center">12개월</td>
+		</tr>
+		<tr>
+			<td class="text-center">16</td>
+			<td>A약품</td>
+			<td>본사</td>
+			<td class="text-center">2021-10-18</td>
+			<td class="text-center">2021-10-18</td>
+			<td class="text-end">100,000</td>
+			<td>A회원</td>
+			<td>012-34-56789</td>
+			<td>A대표</td>
+			<td class="text-center">001</td>
+			<td class="text-center">12개월</td>
+		</tr>
+		<tr>
+			<td class="text-center">17</td>
+			<td>A약품</td>
+			<td>본사</td>
+			<td class="text-center">2021-10-18</td>
+			<td class="text-center">2021-10-18</td>
+			<td class="text-end">100,000</td>
+			<td>A회원</td>
+			<td>012-34-56789</td>
+			<td>A대표</td>
+			<td class="text-center">001</td>
+			<td class="text-center">12개월</td>
+		</tr>
+		<tr>
+			<td class="text-center">18</td>
+			<td>A약품</td>
+			<td>본사</td>
+			<td class="text-center">2021-10-18</td>
+			<td class="text-center">2021-10-18</td>
+			<td class="text-end">100,000</td>
+			<td>A회원</td>
+			<td>012-34-56789</td>
+			<td>A대표</td>
+			<td class="text-center">001</td>
+			<td class="text-center">12개월</td>
+		</tr>
+		<tr>
+			<td class="text-center">19</td>
+			<td>A약품</td>
+			<td>본사</td>
+			<td class="text-center">2021-10-18</td>
+			<td class="text-center">2021-10-18</td>
+			<td class="text-end">100,000</td>
+			<td>A회원</td>
+			<td>012-34-56789</td>
+			<td>A대표</td>
+			<td class="text-center">001</td>
+			<td class="text-center">12개월</td>
+		</tr>
+		<tr>
+			<td class="text-center">20</td>
+			<td>A약품</td>
+			<td>본사</td>
+			<td class="text-center">2021-10-18</td>
+			<td class="text-center">2021-10-18</td>
+			<td class="text-end">100,000</td>
+			<td>A회원</td>
+			<td>012-34-56789</td>
+			<td>A대표</td>
+			<td class="text-center">001</td>
+			<td class="text-center">12개월</td>
+		</tr>
+	</tbody>
+	<tfoot>
+		<tr>
+			<td></td>
+			<td class="text-center">계</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td class="text-end">1,200,000</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</tfoot>
+</table>
+</div>
+<!-- .table-wrap -->
+						</div><!-- .guide_html -->
+
+						<div id="sourceViewer1" class="collapse source_viewer"></div>
+					</div><!-- .contents -->
+				</article>
+
+				<article class="guide">
+					<h3 class="guide-title">폼 타입 테이블 (table.tbl-form)</h3>
+
+					<div class="contents">
+						<div class="guide-sub-title">
+							기본 형태
+							<div class="right_menu">
+								<button type="button" class="btn btn-primary btn_view_source" data-target="#sourceViewer2"><i class="icon-eyes">👀</i><span>HTML</span></button>
+							</div>
+						</div>
+
+						<ul class="info">
+							<li>기본 row height : 50px (border-bottom 1px 포함)</li>
+							<!-- <li>th 기본 width : .hasf_page에서는 200px, 모달에서는 110 ~ 120px로 하시기 바랍니다.(colgroup에 설정)</li> -->
+							<!-- <li>아래 테이블 옵션 클래스를 table class에 적용하여 필요한 테이블을 구성할 수 있습니다.</li> -->
+						</ul>
+
+						<div class="guide_html">
+<div class="section-header">
+	<div class="title-wrap">
+		<div class="title">테이블 제목</div>
+	</div>
+	<div class="button-wrap">
+		<button type="button" class="btn btn-line">
+			<span>버튼</span>
+		</button>
+	</div>
+</div>
+<!-- .form_title_wrap -->
+
+<form id="form사용자정보" name="form사용자정보" class="needs-validation" novalidate>
+<div class="table-wrap">
+	<table class="tbl-form">
+		<colgroup>
+			<col style="width: 200px" />
+			<col style="width: 50%" />
+			<col style="width: 200px" />
+			<col style="width: 50%" />
+		</colgroup>
+		<tbody>
+			<tr>
+				<th>사용자번호</th>
+				<td>welco</td>
+				<th>이름</th>
+				<td>전체관리자</td>
+			</tr>
+			<tr>
+				<th>SAP ID</th>
+				<td colspan="3">미등록</td>
+			</tr>
+			<tr>
+				<th><label class="form-label" for="비밀번호">비밀번호</label></th>
+				<td>
+					<div class="input-wrap">
+						<input type="password" id="비밀번호" name="비밀번호" placeholder="비밀번호를 입력하시오." />
+					</div>
+				</td>
+				<th><label class="form-label" for="PWD_CHANGE2">비밀번호 확인</label></th>
+				<td>
+					<div class="input-wrap">
+						<input type="password" id="PWD_CHANGE2" name="PWD_CHANGE2" placeholder="비밀번호를 다시 입력하시오." />
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<th>부서</th>
+				<td></td>
+				<th>팀</th>
+				<td>운영지원부</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+</form>
+						</div><!-- .guide_html -->
+
+						<div id="sourceViewer2" class="collapse source_viewer"></div>
+					</div><!-- .contents -->
+				</article>
+
+				<article class="guide">
+					<h3 class="guide-title">Pagination</h3>
+
+					<div class="contents">
+						<div class="guide-sub-title">
+							기본형태
+							<div class="right_menu">
+								<button type="button" class="btn btn-primary btn_view_source" data-target="#sourceViewer3"><i class="icon-eyes">👀</i><span>HTML</span></button>
+							</div>
+						</div>
+
+						<ul class="info">
+							<li>데이터 타입 테이블 하단에 페이징 기능이 필요할때 사용합니다.</li>
+						</ul>
+
+						<div class="guide-row3">
+							<div class="guide_html">
+<div class="pagination-wrap">
+	<ul class="pagination">
+		<li class="first">
+			<button class="btn"><i class="icon-arrow-first"></i></button>
+		</li>
+		<li class="prev">
+			<button class="btn"><i class="icon-arrow-prev"></i></button>
+		</li>
+		<li class="page"><span>1</span></li>
+		<li class="page"><span>2</span></li>
+		<li class="page"><span>3</span></li>
+		<li class="page"><span>4</span></li>
+		<li class="page active"><span>5</span></li>
+		<li class="page"><span>6</span></li>
+		<li class="page"><span>7</span></li>
+		<li class="page"><span>8</span></li>
+		<li class="page"><span>9</span></li>
+		<li class="page"><span>10</span></li>
+		<li class="next">
+			<button class="btn disabled"><i class="icon-arrow-next"></i></button>
+		</li>
+		<li class="last">
+			<button class="btn disabled"><i class="icon-arrow-last"></i></button>
+		</li>
+	</ul>
+</div>
+							</div>
+						</div><!-- .row -->
+
+						<div id="sourceViewer3" class="collapse source_viewer"></div>
+					</div><!-- .contents -->
+				</article>
+			</div>
+			<!-- .container -->
+		</section>
+	</div><!-- .guide -->
+
+	<footer>
+		<div class="inner">
+			<div class="copy">Copyright &copy; GRIDA 2022</div>
+			<div class="f-logo"><img src="../assets/img/ci_grida.svg" /></div>
+		</div>
+	</footer>
+</body>
+
+<script>
+	$(document).ready(function () {
+		// #tblMAIN1 옵션 변경
+		$("#tableHover1").on("click", function () {
+			$("#tblMAIN1").toggleClass("table-hover");
+		});
+		$("#fixedThead1").on("click", function () {
+			$("#tblMAIN1").toggleClass("fixed-thead");
+		});
+		$("#fixedTfoot1").on("click", function () {
+			$("#tblMAIN1").toggleClass("fixed-tfoot");
+		});
+		$("#tdCenter1").on("click", function () {
+			$("#tblMAIN1").toggleClass("text-center");
+		});
+	});
+</script>
+</html>

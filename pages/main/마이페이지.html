@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+<title>마이페이지</title>
+
+<!--v Packages -->
+<script src="../../assets/js/jquery.min.js"></script>
+
+<link href="../../assets/css/jquery-ui.min.css" rel="stylesheet" />
+<script src="../../assets/js/jquery-ui.min.js"></script>
+
+<link href="../../assets/css/select2.min.css" rel="stylesheet" />
+<script src="../../assets/js/select2.min.js"></script>
+<!--^ Packages -->
+
+<link href="../../assets/css/all.css" rel="stylesheet" />
+<script src="../../assets/js/util.js"></script>
+</head>
+
+<body class="sub-page">
+	<header>
+		<div class="inner">
+			<h1 class="logo">
+				<a href="#">
+					<img src="../../assets/img/logo.svg" />
+				</a>
+			</h1>
+			<div id="gnb">
+				<ul class="gnb-list">
+					<li>
+						<a href="#">회원/카드관리</a>
+					</li>
+					<li>
+						<a href="#">거래관리</a>
+					</li>
+					<li>
+						<a href="#">정산현황</a>
+					</li>
+					<li>
+						<a href="#">통계/분석</a>
+					</li>
+					<li>
+						<a href="#">지원정책</a>
+					</li>
+					<li>
+						<a href="#">환경설정</a>
+					</li>
+					<li>
+						<button type="button" class="btn">
+							<span>전체보기</span>
+							<i class="icon-menu"></i>
+						</button>
+					</li>
+				</ul>
+			</div>
+			<div class="my-menu">
+				<div class="info">
+					<div class="photo">
+						<i class="icon-smile"></i><!-- 혹시 나중에 img태그가 들어간다면 해당 i태그 삭제 -->
+					</div>
+					<div class="name">관리자</div>
+				</div>
+				<div class="log">
+					<span>최종 로그인</span>
+					<span class="time">2022.08.29 14:14</span>
+				</div>
+				<div class="button-wrap">
+					<button type="button" class="btn">
+						<i class="icon-setting"></i>
+					</button>
+					<button type="button" class="btn">
+						<i class="icon-logout"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="private-bar">
+		<div class="info">
+			<i class="icon-smile"></i>
+			<span class="name">관리자</span>
+			<span class="address">경기도 OOO시 OOO구 OOO동</span>
+		</div>
+		<button type="button" class="btn btn-white rounded">
+			<span>개인정보 수정</span>
+		</button>
+	</div>
+	<div class="container" style="padding-left: 30px;">
+
+		<div class="mypage-wrap">
+			<!-- 왼쪽 -->
+			<div class="mypage-box">
+					
+				<div class="row">
+					<div class="col-6">
+						<!--v 급식아동 현황 -->
+						<div class="section-header">
+							<div class="title-wrap">
+								<div class="title">급식아동 현황</div>
+							</div>
+							<div class="button-wrap">
+								<button type="button" class="btn btn-sub-line rounded">
+									<span>자세히 보기</span>
+								</button>
+							</div>
+						</div><!-- .section-header -->
+
+						<div class="section-body">
+							<div class="meal-status">
+								<!-- 급식자 수 -->
+								<div class="info-area meal">
+									<div class="title">급식자 수</div>
+									<div class="count">
+										<div class="number">331,276</div>
+										<div class="unit">명</div>
+									</div>
+								</div>
+								
+								<!-- 수급자 수 -->
+								<div class="info-area supply">
+									<div class="title">수급자 수</div>
+									<div class="count">
+										<div class="number">3,016</div>
+										<div class="unit">명</div>
+									</div>
+								</div>
+							</div>
+						</div><!-- .section-body -->
+						<!-- 급식아동 현황 -->
+					</div>
+
+					<div class="col-6">
+						<!--v 모니터링 센터 -->
+						<div class="section-header">
+							<div class="title-wrap">
+								<div class="title">모니터링 센터</div>
+							</div>
+							<div class="button-wrap">
+								<button type="button" class="btn btn-sub-line rounded">
+									<span>자세히 보기</span>
+								</button>
+							</div>
+						</div><!-- .section-header -->
+
+						<div class="section-body">
+							<div class="meal-status">
+								<!-- 영양관리 검출 건 수 -->
+								<div class="info-area nutriment">
+									<div class="title">영양관리 검출 건 수</div>
+									<div class="count">
+										<div class="number">570</div>
+										<div class="unit">건</div>
+									</div>
+								</div>
+								
+								<!-- 이상징후 검출 건 수 -->
+								<div class="info-area sign">
+									<div class="title">이상징후 검출 건 수</div>
+									<div class="count">
+										<div class="number">33</div>
+										<div class="unit">건</div>
+									</div>
+								</div>
+							</div>
+						</div><!-- .section-body -->
+						<!-- 모니터링 센터 -->
+					</div>
+
+				</div><!-- .row -->
+
+				<!--v 회원 전출입 내역 알림 -->
+				<div class="section-header">
+					<div class="title-wrap">
+						<div class="title">회원 전출입 내역 알림</div>
+					</div>
+					<div class="button-wrap">
+						<button type="button" class="btn btn-sub-line rounded">
+							<span>자세히 보기</span>
+						</button>
+					</div>
+				</div><!-- .section-header -->
+				<div class="section-body">
+					<ul class="board-list">
+						<li>
+							<div class="subject">아동명, 전출입신고가 되었습니다.아동명, 전출입신고가 되었습니다.아동명, 전출입신고가 되었습니다.아동명, 전출입신고가 되었습니다.</div>
+							<div class="date">2022.09.30</div>
+						</li>
+						<li>
+							<div class="subject">아동명, 전출입신고가 되었습니다.</div>
+							<div class="date">2022.09.30</div>
+						</li>
+						<li>
+							<div class="subject">아동명, 전출입신고가 되었습니다.</div>
+							<div class="date">2022.09.30</div>
+						</li>
+						<li>
+							<div class="subject">아동명, 전출입신고가 되었습니다.</div>
+							<div class="date">2022.09.30</div>
+						</li>
+						<li>
+							<div class="subject">아동명, 전출입신고가 되었습니다.</div>
+							<div class="date">2022.09.30</div>
+						</li>
+					</ul>
+				</div><!-- .section-body -->
+				<!-- 회원 전출입 내역 알림 -->
+
+				<!--v 신고센터 -->
+				<div class="section-header">
+					<div class="title-wrap">
+						<div class="title">신고센터</div>
+					</div>
+					<div class="button-wrap">
+						<button type="button" class="btn btn-sub-line rounded">
+							<span>자세히 보기</span>
+						</button>
+					</div>
+				</div><!-- .section-header -->
+				<div class="section-body">
+					<div class="board-wrap">
+						<!-- 부정수급 신고 내역 확인 -->
+						<div class="col-6">
+							<div class="illegal">
+								<div class="board-title">
+									<span>부정수급 신고 내역 확인</span>
+									<button type="button" class="btn">
+										<i class="icon-arrow-next"></i>
+									</button>
+								</div>
+								<ul class="board-list">
+									<li>
+										<div class="subject">부정수급 신고입니다.</div>
+										<div class="date">2022.09.30</div>
+									</li>
+									<li>
+										<div class="subject">부정수급 신고입니다.부정수급 신고입니다.</div>
+										<div class="date">2022.09.30</div>
+									</li>
+									<li>
+										<div class="subject">부정수급 신고입니다.</div>
+										<div class="date">2022.09.30</div>
+									</li>
+									<li>
+										<div class="subject">부정수급 신고입니다.</div>
+										<div class="date">2022.09.30</div>
+									</li>
+									<li>
+										<div class="subject">부정수급 신고입니다.</div>
+										<div class="date">2022.09.30</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						
+						<hr>
+
+						<!-- 카드분실 신고 내역 목록 -->
+						<div class="col-6">
+							<div class="lossCard">
+								<div class="board-title">
+									<span>카드분실 신고 내역 목록</span>
+									<button type="button" class="btn">
+										<i class="icon-arrow-next"></i>
+									</button>
+								</div>
+								<ul class="board-list">
+									<li>
+										<div class="subject">카드분실 신고입니다.카드분실 신고입니다.</div>
+										<div class="date">2022.09.30</div>
+									</li>
+									<li>
+										<div class="subject">카드분실 신고입니다.</div>
+										<div class="date">2022.09.30</div>
+									</li>
+									<li>
+										<div class="subject">카드분실 신고입니다.</div>
+										<div class="date">2022.09.30</div>
+									</li>
+									<li>
+										<div class="subject">카드분실 신고입니다.</div>
+										<div class="date">2022.09.30</div>
+									</li>
+									<li>
+										<div class="subject">카드분실 신고입니다.</div>
+										<div class="date">2022.09.30</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div><!-- .section-body -->
+				<!-- 신고센터 -->
+			</div><!-- .mypage-box-->
+
+			<!-- 오른쪽 -->
+			<div class="mypage-box">
+					
+				<!--v 2022년 9월 예산 현황 -->
+				<div class="section-header">
+					<div class="title-wrap">
+						<div class="title">2022년 9월 예산 현황</div>
+					</div>
+					<div class="button-wrap">
+						<button type="button" class="btn btn-sub-line rounded">
+							<span>자세히 보기</span>
+						</button>
+					</div>
+				</div><!-- .section-header -->
+				<div class="section-body">
+					<ul class="budget-status">
+						<li>
+							<div class="title">예산(원)</div>
+							<div class="number">20,000,000</div>
+						</li>
+						<li>
+							<div class="title">집행금액(원)</div>
+							<div class="number">20,000,000</div>
+						</li>
+						<li>
+							<div class="title">미집행잔액(원)</div>
+							<div class="number">20,000,000</div>
+						</li>
+						<li>
+							<div class="title">집행률</div>
+							<div class="number">90%</div>
+						</li>
+					</ul>
+				</div><!-- .section-body -->
+				<!-- 2022년 9월 예산 현황 -->
+
+				<!--v 나의 즐겨찾기 -->
+				<div class="section-header">
+					<div class="title-wrap">
+						<div class="title">나의 즐겨찾기</div>
+					</div>
+					<div class="button-wrap">
+						<button type="button" class="btn btn-sub-line rounded">
+							<span>즐겨찾기 등록</span>
+						</button>
+					</div>
+				</div><!-- .section-header -->
+				<div class="section-body">
+					<div class="favorite-list">
+						<ul class="list">
+							<li>
+								<i class="icon-star"></i>
+								<span>바우처시스템 개선요청</span>
+							</li>
+							<li>
+								<i class="icon-star"></i>
+								<span>이용자접속현황관리</span>
+							</li>
+							<li>
+								<i class="icon-star"></i>
+								<span>이용자접속현황관리</span>
+							</li>
+							<li>
+								<i class="icon-star"></i>
+								<span>이용자접속현황관리</span>
+							</li>
+							<li>
+								<i class="icon-star"></i>
+								<span>이용자접속현황관리</span>
+							</li>
+							<li>
+								<i class="icon-star"></i>
+								<span>이용자접속현황관리</span>
+							</li>
+							<li>
+								<i class="icon-star"></i>
+								<span>이용자접속현황관리</span>
+							</li>
+							<li>
+								<i class="icon-star"></i>
+								<span>이용자접속현황관리</span>
+							</li>
+							<li>
+								<i class="icon-star"></i>
+								<span>이용자접속현황관리</span>
+							</li>
+							<li>
+								<i class="icon-star"></i>
+								<span>이용자접속현황관리</span>
+							</li>
+							<li>
+								<i class="icon-star"></i>
+								<span>이용자접속현황관리</span>
+							</li>
+							<li>
+								<i class="icon-star"></i>
+								<span>이용자접속현황관리</span>
+							</li>
+							<li>
+								<i class="icon-star"></i>
+								<span>이용자접속현황관리</span>
+							</li>
+							<li>
+								<i class="icon-star"></i>
+								<span>이용자접속현황관리</span>
+							</li>
+							<li>
+								<i class="icon-star"></i>
+								<span>이용자접속현황관리</span>
+							</li>
+							<li>
+								<i class="icon-star"></i>
+								<span>바우처시스템 개선요청</span>
+							</li>
+							<li>
+								<i class="icon-star"></i>
+								<span>바우처시스템 개선요청</span>
+							</li>
+							<li>
+								<i class="icon-star"></i>
+								<span>바우처시스템 개선요청</span>
+							</li>
+							<li>
+								<i class="icon-star"></i>
+								<span>바우처시스템 개선요청</span>
+							</li>
+							<li>
+								<i class="icon-star"></i>
+								<span>바우처시스템 개선요청</span>
+							</li>
+							<li>
+								<i class="icon-star"></i>
+								<span>바우처시스템 개선요청</span>
+							</li>
+							<li>
+								<i class="icon-star"></i>
+								<span>바우처시스템 개선요청</span>
+							</li>
+							<li>
+								<i class="icon-star"></i>
+								<span>바우처시스템 개선요청</span>
+							</li>
+							<li>
+								<i class="icon-star"></i>
+								<span>바우처시스템 개선요청</span>
+							</li>
+							<li>
+								<i class="icon-star"></i>
+								<span>바우처시스템 개선요청</span>
+							</li>
+							<li>
+								<i class="icon-star"></i>
+								<span>바우처시스템 개선요청</span>
+							</li>
+							<li>
+								<i class="icon-star"></i>
+								<span>바우처시스템 개선요청</span>
+							</li>
+						</ul>
+					</div>
+				</div><!-- .section-body -->
+				<!-- 나의 즐겨찾기 -->
+
+				<!--v 공지 및 문의사항 -->
+				<div class="section-header">
+					<div class="title-wrap">
+						<div class="title">공지 및 문의사항</div>
+					</div>
+					<div class="button-wrap">
+						<button type="button" class="btn btn-sub-line rounded">
+							<span>자세히 보기</span>
+						</button>
+					</div>
+				</div><!-- .section-header -->
+				<div class="section-body">
+					<div class="board-wrap">
+						<!-- 공지사항 -->
+						<div class="col-6">
+							<div class="notice">
+								<div class="board-title">
+									<span>공지사항</span>
+									<button type="button" class="btn">
+										<i class="icon-arrow-next"></i>
+									</button>
+								</div>
+								<ul class="board-list">
+									<li>
+										<div class="subject">공지사항입니다.공지사항입니다.공지사항입니다.</div>
+										<div class="date">2022.09.30</div>
+									</li>
+									<li>
+										<div class="subject">공지사항입니다.</div>
+										<div class="date">2022.09.30</div>
+									</li>
+									<li>
+										<div class="subject">공지사항입니다.</div>
+										<div class="date">2022.09.30</div>
+									</li>
+									<li>
+										<div class="subject">공지사항입니다.</div>
+										<div class="date">2022.09.30</div>
+									</li>
+									<li>
+										<div class="subject">공지사항입니다.</div>
+										<div class="date">2022.09.30</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<hr>
+						
+						<!-- 1:1 문의내역 -->
+						<div class="col-6">
+							<div class="inquiry">
+								<div class="board-title">
+									<span>1:1 문의내역</span>
+									<button type="button" class="btn">
+										<i class="icon-arrow-next"></i>
+									</button>
+								</div>
+								<ul class="board-list">
+									<li>
+										<div class="subject">1:1 문의내역입니다.1:1 문의내역입니다.1:1 문의내역입니다.</div>
+										<div class="date">2022.09.30</div>
+									</li>
+									<li>
+										<div class="subject">1:1 문의내역입니다.</div>
+										<div class="date">2022.09.30</div>
+									</li>
+									<li>
+										<div class="subject">1:1 문의내역입니다.</div>
+										<div class="date">2022.09.30</div>
+									</li>
+									<li>
+										<div class="subject">1:1 문의내역입니다.</div>
+										<div class="date">2022.09.30</div>
+									</li>
+									<li>
+										<div class="subject">1:1 문의내역입니다.</div>
+										<div class="date">2022.09.30</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div><!-- .section-body -->
+				<!-- 공지 및 문의사항 -->
+
+			</div><!-- .mypage-box-->
+
+		</div><!-- .mypage-wrap -->
+		
+	</div><!-- .container -->
+</body>
+</html>

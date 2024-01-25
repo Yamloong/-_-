@@ -1,0 +1,651 @@
+@charset "utf-8";
+
+/* ----------------------Grid.js ---------------------*/
+.jgrid {
+    position: relative;
+    /* overflow: hidden; */ /* footer에 조회건수 보이게 하려고 주석처리함 */
+    zoom:1;
+    font-size: 14px; /* opt['font'] */
+	font-weight: 500;
+    border-top: 2px solid #3d3d3d; /* borderSide option not supported */
+    /* opt['style'] */
+}
+.jgrid div {
+    box-sizing: content-box;
+}
+/* --------------------Collapser.js ------------------*/
+.jgrid .indent {
+    /*height: viewportManager.getRowInnerHeight();   */
+    height: 100%; 
+    float: left;
+}
+.jgrid .jgrid-collapser {
+    float: left;
+    width: 6px; /* opt['width'] Not supported */
+    padding: 0 5px; /* 0 opt['padding']px Not supported */
+}
+.jgrid .jgrid-row .jgrid-collapser {
+    /*height: rowH;  used for calculation */
+    height: 100%;
+}
+.jgrid .jgrid-collapser.expanded {
+    background: url(images/expanded.png) no-repeat center transparent; /* opt['urlExpanded'] not supported */
+}
+.jgrid .jgrid-collapser.expanded:hover {
+    background: url(images/expanded-hover.png) no-repeat center transparent; /* opt['urlExpandedHover'] not supported */
+}
+.jgrid .jgrid-collapser.collapsed {
+    background: url(images/collapsed.png) no-repeat center transparent; /* opt['urlCollapsed'] not supported */
+}
+.jgrid .jgrid-collapser.collapsed:hover {
+    background: url(images/collapsed-hover.png) no-repeat center transparent; /* opt['urlCollapsedHover'] not supported */
+}
+.jgrid .jgrid-colheader .jgrid-collapser {
+    /*height: header._options['height'] */
+    height: 100%;
+}
+/* -------------------ViewportManager.js--------------------*/
+.jgrid .jgrid-viewport {
+    /* height: this._calHeight() */
+    outline: 0;
+    position: relative;
+    white-space: nowrap;
+    overflow: auto;
+    /* 130102 IE Print fix */
+    top: 0;
+    left: 0;
+    /* 130102 */
+    /* line-height: opt['rowH'] */
+    cursor: default;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    /* opt['style'] */
+}
+.jgrid .jgrid-viewport:focus {
+    background: #FFF;   /* opt['focusBackground'] not supported */
+    /* outline: 2px solid #f1ca7f;  */
+}
+.jgrid .jgrid-canvas {
+    /* height: this._calCanvasHeight() */
+    /* opt['canvasStyle'] */
+    padding: 0;
+    border: 0;
+    margin: 0;
+    float: left;
+    position: relative;
+    white-space: nowrap;
+    /* 130102 IE Print fix */
+    top: 0;
+    left: 0;
+    /* 130102 */
+}
+.jgrid .jgrid-row {
+    background: white;
+    position: absolute;
+    /* opt['rowStyle'] */
+    padding: 0;
+    border: 0;
+    margin: 0;
+    float: left;
+    width:100%;
+}
+.jgrid .jgrid-cell {
+    /* height: opt['rowH'] */
+    /* border-bottom: opt['borderThickness'] + 'px ' + opt['border'] */
+    float: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: bottom;
+    /* padding-left: this._getPadding() + 'px'; */
+    /* padding-right: this._getPadding() + 'px'; */
+    /* border-right: opt['borderThickness'] + 'px ' + opt['border'] */
+    /* opt['cellStyle'] */
+    text-align: center;
+}
+.jgrid .jgrid-cell.fit { width: auto !important; position: absolute !important; overflow:visible !important;}
+.jgrid .jgrid-cell.first-cell { clear: left; }
+.jgrid .jgrid-cell.second-last-cell { _margin-right: -3px; }
+.jgrid .jgrid-cell.last-cell { float: none; _margin-left:0px; width: auto !important; }
+/*
+Add class .odd to dom when option specified
+*/
+.jgrid .jgrid-row.odd {
+    background: #F4F4F4; /* opt['oddRowsBackground'] */
+}
+/* Column styles for each key */
+
+/*---------------------ColumnHeader.js------------------------*/
+.jgrid .jgrid-header-mask {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    font-size: 14px; /* opt['font'] */
+    background: url(images/column-headers-bg.png) repeat-x scroll center; /* opt['background'] */
+    /* border-bottom: opt['borderThickness']px + opt['border'] */
+    /* opt['style'] */
+    border-bottom: 1px solid #aaa !important;
+}
+.jgrid .jgrid-header {
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: default;
+    background-color: #fff;
+    left: -10000px; /* left: -opt[scrollerLeft]px not supported*/
+    float: left;
+    /* width: opt['scrollerWidth']px */
+    /* line-height: opt['height']px */
+}
+.jgrid .jgrid-colheader {
+	font-weight: 600;
+		/* 2019-03-07 �߰� */
+    position: relative;
+    overflow: hidden;
+    float: left;
+    text-overflow: ellipsis;
+    text-align: center;
+    vertical-align: middle;
+    left: 10000px; /* left: (opt['scrollerLeft'] - this.getView().getScrollLeft()) + "px" Not supported. TODO: jquery sortable place_holder issue */
+    /* height: opt['height']px */
+    /* padding-left: this._getPadding() + px.  opt['padding'] */
+    /* padding-right: this._getPadding() + px. opt['padding'] */
+    /* border-right: opt['borderThickness']px + opt['border'] */
+    /* opt['headerStyle'] */
+    color: #222;
+}
+.jgrid .jgrid-colheader.interactive:hover, .jgrid .jgrid-colheader-active {
+    cursor: pointer;
+    /* background: url(images/column-headers-over-bg.png) repeat-x scroll center; */
+}
+.jgrid .jgrid-colheader-active {
+    /* border-left: opt['borderThickness']px + opt['border'] */
+}
+.jgrid .jgrid-colheader.jgrid-colheader-placeholder {
+    background: #646464!important; /* opt['backgroundPlaceholder']!important */
+}
+.jgrid .jgrid-sort {
+    position: absolute;
+    height: 100%;
+    top: 0px;
+    width: 10px;    /* option['sortWidth']  Not supported */ 
+    left: 10px;    /* option['sortRight']  Not supported */
+    background: url(images/sort.png) no-repeat center transparent;  /* option['sortBackground'] Not supported */
+}
+/* option 'sortRight' Not supported */
+.jgrid .jgrid-sort-asc {
+    background: url(images/sort-asc.png) no-repeat center transparent; /* option['sortBackgroundAsc'] Not supported */
+}
+.jgrid .jgrid-sort-desc {
+    background: url(images/sort-desc.png) no-repeat center transparent; /* option['sortBackgroundDesc'] Not supported */
+}
+.jgrid .jgrid-sort-order {
+    position: absolute;
+    font-size: 8px;      /* option['sortOrderFontSize']  Not supported*/ 
+    top: 0px;
+    height: 100%;
+    right: 15px;    /* option sortOrderRight  Not supported */
+                    /* option sortOrderWidth  Not supported */
+}
+/* option 'sortOrderWidth'  Not supported */
+.jgrid .jgrid-resize-handle {
+    z-index: 10;
+    /* background: black; */
+    filter: alpha(opacity=10);   
+    /* opacity: 0.10;    resizeHandleBackground -> not supported */
+    cursor: e-resize;
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    /* width: opt['resizeHandleWidth']px  included in many calculations */
+}
+.jgrid .resize-guide {
+    z-index: 10;
+    position: absolute;
+    background: black;           
+    filter: alpha(opacity=40);   
+    opacity: 0.4;                /* resizeBackground     -> not supported */
+    /* width: opt['resizeGuideWidth']px  included in many calculations */
+}
+/* handle colDefs[i].headerStyle -> ok */
+
+/*------------------------EditManager----------------------*/
+.jgrid .jgrid-cell.jgrid-edit {
+    background: #fff9d7; /* option['basicBackground'] Not supported */
+}
+.jgrid .jgrid-edit input {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    background: #fff9d7; /* option['basicBackground'] Not supported */
+    /* height: view._getRowInnerHeight() computational value */
+    /* line-height: view._getRowInnerHeight() computational value  */
+}
+.jgrid .jgrid-editable {
+    background: #fff;  /* option['editableBg']   not supported */
+}
+.jgrid .jgrid-notEditable {
+    background: #f6f6f6; /* option['notEditableBg']   not supported */
+}
+.jgrid .edit-icon {
+    float: left;
+    position: absolute;
+    right: 12px;
+    top: 0;
+    padding: 0 3px;  /* option['editIconPadding'] not supported */
+    width: 12px; /* option['editIconWidth'] not supported */
+    /*height: view._getRowInnerHeight() computational value */
+    background: url(images/editable-small.png) no-repeat center transparent;  /* opt['urlEditIcon'] not supported */
+}
+.jgrid .edit-success {
+    background: #cdf7b6;  /* opt['successBackground'] Not supported */
+}
+.jgrid .edit-failure {
+    background: #ff0000; /* opt['failureBackground'] Not supported */
+}
+
+/*-----------------SelectionManager (This should come after EditManager)------*/
+.jgrid .rowSelected div {
+    background: #f2f7ff;  /* option['bgColorRowSelected'] Not supported */
+}
+.jgrid .jgrid-selection {
+    background: #dcebfe;  /* option['bgColorSelection'] Not supported */
+}
+.jgrid .selection-range {
+    background: #d9d9d9;  /* option['bgColorRange'] Not supported */ 
+}
+.jgrid div.selection-last {
+    color: #3976cf;
+    background: #e3edfd;  /* option['bgColorLast']  Not supported */ 
+}
+
+/*-------------------------Footer-----------------------------*/
+.jgrid .jgrid-footer {
+    position: absolute;
+    left: 0;
+    top: -34px;
+    float: left;
+    cursor: default;
+    width: 100%;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    border-top: 0px solid #ccd9ea; /* opt['border'] Not supported */
+    border-collapse: collapse;
+    color: #666; /* opt['color']  Not supported */
+    font-size: 13px; /* opt['fontSize'] Not supported */ 
+	font-weight: 500;
+		/* opt['fontWeight'] Not supported */
+    /* opt['style'] --- inline styles Not supported */
+    z-index: -1;
+}
+.jgrid .jgrid-footer .footer-cell {
+    float: left;
+    white-space: nowrap;
+    line-height: 25px; /* opt['cellHeight'] Not supported */
+    padding-right: 40px; /* opt['cellPadding'] Not supported */
+    /* opt['cellStyle'] -- inline styles Not supported */
+}
+.jgrid .jgrid-footer .footer-cell * {
+    line-height: 25px; /* opt['cellHeight'] Not supported */
+}
+.jgrid .jgrid-footer .footer-title {
+    text-align: right;
+    color: #5a6779; /* opt['titleColor'] Not supported */
+    font-size: 12px; /* opt['titleFontSize'] Not supported */
+    font-weight: 300; /* opt['titleFontWeight'] not supported */ 
+    /* opt['titleStyle'] -- inline styles Not supported */
+}
+.jgrid .jgrid-footer .footer-content {
+    color: #1e395B; /* opt['contentColor'] Not supported */
+    font-size: 12px; /* opt['contentFontSize'] Not supported */
+    font-weight: 300; /* opt['contentFontWeight'] Not supported */
+    /* opt['contentStyle'] -- inline style? Not supported */
+}
+.jgrid .classSliderMask {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin-top: -1px;
+    border-top: 1px solid #e0e0e0;
+}
+.jgrid .classSlider {
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: default;
+    background: #f6f9ff;
+    left: -10000px;
+    width: 100000px;
+    line-height: 21px;
+}
+.jgrid .classSlider * {
+    line-height: 21px;
+}
+.jgrid .classSliderCell {
+    position: relative;
+    overflow: hidden;
+    float: left;
+    text-overflow: ellipsis;
+    text-align: right;    /* opt['sumAlign'] not supported */
+    vertical-align: middle;
+    height: 21px;
+    left: 10000px;
+    /* left: (10000 - this.grid['view'].getScrollLeft()) + "px", TODO: shouldn't we have a fixed value here instead of inline style? */
+    color: #3976cf;
+    height: 51px !important;
+    line-height: 51px !important;
+    padding: 0 15px !important;
+    margin-left: 1px;
+    box-sizing: border-box;
+}
+/*--------------------------MenuBar-------------------------*/
+.jgrid .menubar {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    position: relative;
+    width: 100%;
+    background: url(images/menubar-bg.png) repeat-x scroll center; /* opt['background'] Not supported */
+    border-bottom: 1px solid #b6bac0; /* opt['borderThickness'] & opt['border'] Not supported */
+    /* height: 27px; opt['height'] */
+    z-index: 50;
+}
+.jgrid .menu-icon {
+    float: left;
+    position: relative;
+    /* height: " + opt['iconHeight'] + "px; */
+    /* width: " + opt['iconWidth'] + "px; */
+    border: 1px solid transparent; /* opt['iconBorderThickness'], opt['iconBorder'] Not supported */
+    margin: 2px 0 0 2px; /* opt['iconMargin']px 0 0 opt['iconMargin']px Not supported */
+    /* background: "opt['iconBackground'] Not supported */
+    border-radius: 4px; /*opt['iconBorderRadius'] Not supported */
+    -moz-border-radius: 4px; /* opt['iconBorderRadius'] Not supported */
+}
+.jgrid .menu-icon:hover, .jgrid .menu-icon:focus {
+    background: url(images/menu-icon-hover.png) repeat-x scroll center; /* opt['iconBackgroundHover'] Not supported  */
+    border: 1px solid #d4d4d4; /* opt['iconBorderThickness'], opt['iconBorderHover'] Not supported */
+}
+.jgrid .menu-icon:active, .jgrid .menu-icon.active {
+    cursor: default;
+    outline: none;
+    background: url(images/menu-icon-active.png) repeat-x scroll center; /* opt['iconBackgroundActive'] Not supported */ 
+    border: 1px solid #9a9a9a; /* opt['iconBorderThickness'], opt['iconBorderActive'] Not supported */
+}
+.jgrid .menu-icon.active:focus {
+    border: 1px solid #5f5f5f; /* opt['iconBorderThickness'], opt['iconBorderFocus'] not supported */
+}
+.jgrid .jgrid-column-toggle-icon {
+    background: url(images/data-creator-icon.png) no-repeat center; /* opt['columnIconUrl'] Not supported */ 
+    /* width: " + opt['columnIconWidth'] + "px; Inline */
+    /* height:" + opt['columnIconHeight'] + "px; Inline */
+}
+.jgrid-column-toggle-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #888;
+    background: #eee;
+}
+.jgrid-column-toggle-box li {
+    cursor: pointer;
+    padding: 1px 24px 1px 0px;
+    max-width: 300px;
+}
+.jgrid-column-toggle-box li.unchecked {
+    background: #ccc;
+}
+/*-----------------------SettingsManager----------------------------*/
+.jgrid .settings-icon {
+    background: url(images/settings-icon.png) no-repeat center; /* opt['iconUrl'] Not supported */
+    background-size: 100% 100%;
+    /* width: opt['iconWidth'] + "px"  addIcon will add inline style */
+    /* height: opt['iconHeight'] + "px" addIcon will add inline style */
+}
+.jgrid .settings-menu {
+    background-color: #eee; /* opt['menuBackgroundColor'] Not supported */
+    display: none;
+    list-style-type: none;
+    font: 12px sans-serif; /* opt['menuFont'] Not supported */
+    position: absolute;
+    top: 100%;
+    padding: 0;
+    margin: 0;
+    z-index: 10;
+    border: 1px solid #aaa; /* opt['menuBorderStyle'] Not supported */
+}
+.jgrid .settings-menu-item {
+    display: block;
+    padding: 5px; /* opt['menuItemPadding'] Not supported */
+    white-space: nowrap;
+}
+.jgrid .settings-menu-item:hover {
+    background-color: #37F;  /* opt['menuItemHoverColor'] Not supported */
+}
+/*----------------------------CheckManager---------------------------*/
+.jgrid .jgrid-cell .checkmg {
+    *overflow: hidden;
+    padding: 0;
+    /* width: 13px; used in computation  */
+    /* height: 13px; used in computation */
+    /* margin: ((this.getView()._getRowInnerHeight() - h) / 2) + "px 0 0 " + ((this._col['width'] - this.getView()._getPadding() - w) / 2) + "px" */
+}
+.jgrid .jgrid-cell .checkmg.checkm {
+    /* margin: + ((this.getHeader()._options['height'] - h) / 2) + "px 0 0 0}" */
+}
+/*------------------------------DataCreator----------------------------*/
+.jgrid .data-creator {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    float: left;
+    width: 100%;
+    padding-left: 8px;
+    background: #dfdfdf; /* opt['background'] Not supported */
+    border-top: 0px solid #d6d6d6; /* opt['borderThickness'], opt['border'] Not supported */
+    font: 12px Arial, Helvetica, sans-serif; /* opt['font'] Not supported */
+}
+.jgrid .data-creator button {
+    float: left;
+    margin: 3px 3px 0 0;  /* opt['padding']px opt['padding']px 0 0   Not supported */
+    height: 22px; /*" (opt['height'] - 2 * opt['padding']) + "px  Not supported */
+}
+.jgrid .data-creator input {
+    float:left;
+    padding: 0;
+    margin-top: 4px; /*" + ((opt['height'] - opt['inputHeight'] - 2 * opt['inputBorderThickness']) / 2) + "px; Not supported */
+    height: 18px; /*" + opt['inputHeight'] + "px; Not supported */
+    border: 1px solid #a7a7a7; /* " + opt['inputBorderThickness'] + "px " + opt['inputBorder'] + "; Not supported */
+    border-radius: 3px; /* opt['inputBorderRadius'] Not supported */
+    -moz-border-radius: 3px; /*  opt['inputBorderRadius'] Not supported */
+}
+.jgrid .data-creator-col {
+    float: left;
+    overflow: hidden;
+    white-space: nowrap;
+    line-height: 28px; /*" + opt['height'] + "px; Not supported */
+    margin-right: 8px; /* opt['inputMargin'] Not supported */
+}
+.jgrid .data-creator-col * {
+    line-height: 28px; /*" + opt['height'] + "px; Not supported */
+}
+.jgrid .data-creator-name {
+    float: left;
+    margin-right: 2px; /* opt['nameMargin'] Not supported */
+}
+.jgrid .creator-icon {
+    background: url(images/data-creator-icon.png) no-repeat center; /* opt['creatorIconUrl'] Not supported */
+    /* width: " + opt['creatorIconWidth'] + "px; addIcon will handle this */
+    /* height: " + opt['creatorIconHeight'] + "px addIcon will handle this */
+}
+/*-------------------------------SearchManager--------------------------*/
+.jgrid .search-mask {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    overflow: hidden;
+    float: left;
+    background: #f0f0f0; /* opt['background'] not supported */
+}
+.jgrid .search-mask.simple {
+    margin: 0 2px;
+}
+.jgrid .search-mask button {
+    margin: 0;
+    padding: 0 3px;
+}
+.jgrid .search-mask.simple .search-btn {
+    float: left;
+    position: relative;
+    height: 21px;
+    width: 21px;
+    border: 1px solid #a7a7a7;
+    margin: 2px 0 0 0;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+}
+.jgrid .search-mask.simple .search-btn:hover {
+    background: url(images/menu-icon-hover.png) repeat-x scroll center;
+    border: 1px solid #d4d4d4;
+}
+.jgrid .search-mask.simple .search-btn:active {
+    background: url(images/menu-icon-active.png) repeat-x scroll center;
+    border: 1px solid #d4d4d4;
+}
+.jgrid .search-mask input {
+    border: 1px solid #a7a7a7; /* " + opt['inputBorder'] + "; not supported */
+    padding: 0; /* " + opt['inputPadding'] not supported */ 
+}
+.jgrid .search-bar {
+    float: left;
+    width: 140px; /* " + opt['searchbarWidth'] + "; not supported */
+    margin: 2px 2px; /* " + opt['searchbarMargin'] + "px 2px; not supported */
+    height: 21px; /* " + opt['searchbarHeight'] + "px; not supported */
+    line-height: 21px; /* " + opt['searchbarHeight'] + "px; not supported */
+    border-radius: 3px;      
+    -moz-border-radius: 3px; /* opt['tagsBorderRadius'] Not supported */
+}
+.jgrid .search-bar.placeholder {
+    color: #aaa;
+}
+.jgrid .search-tags {
+    float: left;
+    cursor: default;
+    height: 24px; /* " + (opt['tagsHeight'] - opt['tagsPadding']) + "px; not supported */
+    padding: 2px 0 0 2px; /* " + opt['tagsPadding'] + "px 0 0 " + opt['tagsPadding'] + "px; not supported */
+    border-bottom: 0px solid #d6d6d6; /* opt['borderThickness'], opt['border'] not supported */
+}
+.jgrid .more-options {
+    float: left;
+    margin-right: 2px; /* " + opt['tagsPadding'] + "px; not supported */
+    /* background: ; /* " + opt['advButtonBg'] + "; not supported */
+    border: 1px solid  transparent; /* advButtonBorderThickness, advButtonBorder not supported*/
+    padding:0 5px; /* " + opt['advButtonPadding'] + "px;not supported */
+    border-radius: 3px;      
+    -moz-border-radius: 3px; /* opt['tagsBorderRadius'] Not supported */
+}
+.jgrid .more-options:hover {
+    background: url(images/more-options-bg-hover.png) repeat-x scroll center; /* " + opt['advButtonBgHover'] + ";  not supported */
+    border: 1px solid #a4a4a4; /* advButtonBorderThickness, advButtonBorderHover not supported */
+}
+.jgrid .more-options.opened {
+    background: url(images/more-options-bg-opened.png) repeat-x scroll center; /* " + opt['advButtonBgOpened'] + "; not supported */
+    border: 1px solid #bfbfbf; /* advButtonBorderThickness, advButtonBorderOpened not supported */
+}
+.jgrid .more-options:active {
+    background: url(images/more-options-bg-active.png) repeat-x scroll center; /* " + opt['advButtonBgActive'] + "; not supported */
+    border: 1px solid #c5c5c5; /* advButtonBorderThickness, advButtonBorderActive not supported */
+}
+.jgrid .more-option-name {
+    float: left;
+    color: #123272; /* " + opt['advButtonColor'] + "; not supported */
+    font: bold 12px Arial,Helvetica,sans-serif; /* " + opt['advButtonFont'] + "; not supported */
+    line-height: 20px;  /*" + (opt['tagsHeight'] - 2 * opt['tagsPadding'] - 2 * opt['advButtonBorderThickness']) + "px not supported */
+}
+.jgrid .more-icon {
+    float: left;
+    height: 20px;  /*" + advButtonHeight + "px; not supported */
+    margin-left: 2px; /* " + opt['advButtonIconMargin'] + "px; not supported */
+    background: url(images/more-options.png) no-repeat center;  /*url(" + opt['advButtonIconUrl'] + ") no-repeat center; not supported */
+    width: 9px;  /*" + opt['advButtonIconWidth'] + "px not supported */
+}
+.jgrid .more-options.opened .more-icon {
+    background: url(images/more-options-close.png) no-repeat center;  /*url(" + opt['advButtonIconCloseUrl'] + ") no-repeat center; not supported */
+}
+.jgrid .search-tag {
+    float: left;
+    border: 1px solid #93979D;  /*" + opt['tagBorderThickness'] + "px " + opt['tagBorder'] + "; not supported */
+    margin: 0 2px 2px 0;  /* 0" + opt['tagsPadding'] + "px " + opt['tagsPadding'] + "px 0; not supported */
+    padding: 0 2px;  /*" + opt['tagPadding'] + "px; not supported */
+    background: url(images/tag-background.png) repeat-x scroll center;  /*" + opt['tagBackground'] + "; not supported */
+    border-radius: 3px;      
+    -moz-border-radius: 3px; /* opt['tagsBorderRadius'] Not supported */
+}
+.jgrid .search-tag-name {
+    float: left;
+    color: #282853;  /*" + opt['tagColor'] + "; not supported */
+    font:bold 13px Arial;  /*" + opt['tagFont'] + "; not supported */
+    line-height: 20px;  /*" + (opt['tagsHeight'] - 2 * opt['tagsPadding'] - 2 * opt['advButtonBorderThickness']) + "px not supported */
+}
+.jgrid .search-tag-remove {
+    float: left;
+    margin-left: 2px;  /*" + opt['tagPadding'] + "px; not supported */
+    background: url(images/tag-close.png) no-repeat center;  /*url(" + opt['tagRemoveIconUrl'] + ") no-repeat center; not supported */
+    width: 12px;  /*" + opt['tagRemoveIconWidth'] + "px; not supported */
+    height: 20px;  /*" + (opt['tagsHeight'] - 2 * opt['tagsPadding'] - 2 * opt['advButtonBorderThickness']) + "px not supported */
+}
+.jgrid .search-tag-remove:hover {
+    background: url(images/tag-close-hover.png) no-repeat center;  /*url(" + opt['tagRemoveIconHoverUrl'] + ") no-repeat center not supported */
+}
+.jgrid .search-tag-remove:active {
+    background: url(images/tag-close-active.png) no-repeat center;  /*url(" + opt['tagRemoveIconActiveUrl'] + ") no-repeat center not supported */
+}
+.jgrid .clear-tags {
+    height: 22px; /* tagsInnerHeight not supported */ 
+}
+.jgrid .search-advanced {
+    cursor: default;
+    font: 11px Arial;  /*" + opt['advFont'] + "; not supported */
+    border-bottom: 0px solid #d6d6d6;  /*" opt['borderThickness'] + "px " + opt['border'] not supported */
+}
+.jgrid .search-option-col {
+    display: inline-block;
+    vertical-align: top;
+}
+.jgrid .search-option-col input {
+    width: 30px;  /*" + opt['advInputWidth'] + "px; not supported */
+    margin-right: 2px;
+    border-radius: 3px;      
+    -moz-border-radius: 3px; /* opt['tagsBorderRadius'] Not supported */
+}
+.jgrid .search-icon {
+    background: url(images/search-icon.png) no-repeat center;  /*url(" + opt['searchIconUrl'] + ") no-repeat center; not supported */
+    width: 15px;  /* searchIconWidth not supported */
+    height: 15px;  /* searchIconHeight not supported */
+    margin: 3px 3px;
+}
+/*---------------------------------TooltipManager--------------------*/
+.jgrid .jgrid-tooltip {
+    position: absolute;
+    z-index: 10;
+    background: #f5f5f5;  /*" + opt['background'] + "; not supported */
+    border: 1px solid #868686;  /*" + opt['border'] + "; not supported */
+    padding: 2px 10px;  /*" + opt['padding'] + "; not supported */
+    color: #333;  /*" + opt['color'] + "; not supported */
+    font: 14px Arial, Helvetica, sans-serif;  /*" + opt['font'] not supported */
+}

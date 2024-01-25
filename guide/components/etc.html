@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+<title>ETC</title>
+
+<!--v Packages -->
+<script src="../../assets/js/jquery.min.js"></script>
+
+<link href="../../assets/css/jquery-ui.min.css" rel="stylesheet" />
+<script src="../../assets/js/jquery-ui.min.js"></script>
+
+<link href="../../assets/css/select2.min.css" rel="stylesheet" />
+<script src="../../assets/js/select2.min.js"></script>
+<!--^ Packages -->
+
+<!-- GUIDE관련 소스 -->
+<link href="../assets/css/only_for_guide.css" rel="stylesheet" />
+<script src="../assets/js/only_for_guide.js"></script>
+
+<!--v codemirror : 소스보기용 -->
+<link href="../assets/js/codemirror/lib/codemirror.css" rel="stylesheet" />
+<link href="../assets/js/codemirror/theme/rubyblue.css" rel="stylesheet" />
+<script src="../assets/js/codemirror/lib/codemirror.js"></script>
+<script src="../assets/js/codemirror/mode/xml/xml.js"></script>
+<script src="../assets/js/codemirror/mode/javascript/javascript.js"></script>
+<script src="../assets/js/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+<script src="../assets/js/codemirror/addon/selection/active-line.js"></script>
+<!--^ codemirror : 소스보기용 -->
+
+<link href="../../assets/css/all.css" rel="stylesheet" />
+<script src="../../assets/js/util.js"></script>
+</head>
+
+<body class="guide_page">
+	<header>
+		<div class="inner">
+			<div class="logo">UI/UX GUIDE</div>
+			<ul class="gnb">
+				<li><a href="../index.html">페이지</a></li>
+				<li><a href="../style.html">스타일</a></li>
+				<li class="active"><a href="../components.html">컴포넌트</a></li>
+				<li><a href="../layouts.html">레이아웃</a></li>
+				<li><a href="../about.html">About</a></li>
+			</ul>
+		</div>
+	</header>
+
+	<div class="guide">
+		<section>
+			<div class="container">
+				<h2 class="page-title">ETC</h2>
+
+				<div class="page-note"><strong>Overview</strong> jQuery UI 등 3rd party 제품 기반의 component 예시와 사용방법입니다.</div>
+
+				<article class="guide">
+					<h3 class="guide-title">Tooltip</h3>
+
+					<ul class="info">
+						<li>CSS로만 구현된 tooltip입니다. fade처리는 pubUtil.js에 구현되어 있습니다.</li>
+						<li>툴팁의 넓이는 inner style로 처리합니다.</li>
+						<li>툴팁의 dafault 위치는 툴팁 아이콘을 기준으로 하여 &nbsp; <strong>하단 우측</strong> 입니다.</li>
+					</ul>
+
+					<div class="contents">
+						<div class="guide-sub-title">
+							기본형태
+							<div class="right_menu">
+								<button type="button" class="btn btn-primary btn_view_source" data-target="#sourceViewer1"><i class="icon-eyes">👀</i><span>HTML</span></button>
+							</div>
+						</div>
+
+						<div class="guide-row">
+							<div class="guide_html">
+툴팁이 보입니다.
+<div class="tooltip-wrap">
+	<button type="button" class="btn text-error">
+		<i class="icon-information2"></i>
+	</button>
+	<div class="tooltip" style="width: 280px;">
+		<div class="tooltip-header">
+			<div class="title">
+				<i class="icon-information2"></i>
+				<span>영양관리등급이란?</span>
+			</div>
+			<button type="button" class="btn btn_close">
+				<i class="icon-close"></i>
+			</button>
+		</div>
+		<div class="tooltip-body">
+			<ul class="content">
+				<li>
+					<strong>정상 : </strong>
+					<span>해당 연령대 평균 섭취비율 ±10% 미만</span>
+				</li>
+				<li>
+					<strong>경고 : </strong>
+					<span>해당 연령대 평균 섭취비율 ±10% 이상</span>
+				</li>
+				<li>
+					<strong>위험 : </strong>
+					<span>해당 연령대 평균 섭취비율 ±20% 이상</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+							</div><!-- .guide_html -->
+						</div><!-- .guide-row -->
+
+						<div id="sourceViewer1" class="collapse source_viewer"></div>
+					</div><!-- .contents -->
+				</article>
+
+				<article class="guide">
+					<h3 class="guide-title">BADGE</h3>
+
+					<div class="contents">
+						<div class="guide-sub-title">
+							기본형태
+							<div class="right_menu">
+								<button type="button" class="btn btn-primary btn_view_source" data-target="#sourceViewer2"><i class="icon-eyes">👀</i><span>HTML</span></button>
+							</div>
+						</div>
+
+						<div class="guide-row">
+							<div class="guide_html">
+<span class="badge primary">Badge</span>
+<span class="badge error">Badge</span>
+<span class="badge warning">Badge</span>
+							</div>
+						</div>
+
+						<div id="sourceViewer2" class="collapse source_viewer"></div>
+					</div>
+				</article>
+
+				<article class="guide">
+					<h3 class="guide-title">TAB UI</h3>
+
+					<div class="contents">
+						<h5 class="guide-sub-title">
+							기본 형태
+							<div class="right_menu">
+								<button type="button" class="btn btn-primary btn_view_source" data-target="#sourceViewer3"><i class="icon-eyes">👀</i><span>HTML</span></button>
+							</div>
+						</h5>
+
+						<ul class="info">
+							<li>탭 메뉴를 누르면 해당 순서에 맞는 div가 보여집니다.</li>
+							<li>tab 관련 스크립트는 pubUtil.js에 있습니다.</li>
+						</ul>
+
+						<div class="guide-row">
+							<div class="guide_html">
+<ul class="tab-menu">
+	<li class="on">
+		<button type="button" class="btn btn-tab">Tab메뉴-1</button>
+	</li>
+	<li>
+		<button type="button" class="btn btn-tab">Tab메뉴-2</button>
+	</li>
+	<li>
+		<button type="button" class="btn btn-tab">Tab메뉴-3</button>
+	</li>
+	<li>
+		<button type="button" class="btn btn-tab">Tab메뉴-4</button>
+	</li>
+	<li>
+		<button type="button" class="btn btn-tab">Tab메뉴-5</button>
+	</li>
+</ul>
+
+<div class="tab-content">
+	<div class="tab-section on">
+		탭1 Content<br /><br />Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+		it to make a type specimen book.
+	</div>
+	<div class="tab-section">
+		탭2 Content<br /><br />It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+		passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+	</div>
+	<div class="tab-section">
+		탭3 Content<br /><br />It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
+		letters, as opposed to using 'Content here, content here',
+	</div>
+	<div class="tab-section">탭4 Content<br /><br />Contrary to popular belief, Lorem Ipsum is not simply random text.</div>
+	<div class="tab-section">
+		탭5 Content<br /><br />The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact
+		original form, accompanied by English versions from the 1914 translation by H. Rackham.
+	</div>
+</div>
+							</div><!-- .guide_html -->
+						</div>
+						<!-- .row -->
+
+						<div id="sourceViewer3" class="collapse source_viewer"></div>
+					</div><!-- .contents -->
+				</article>
+			</div><!-- .container -->
+		</section>
+	</div><!-- .guide -->
+
+	<footer>
+		<div class="inner">
+			<div class="copy">Copyright &copy; GRIDA 2022</div>
+			<div class="f-logo"><img src="../assets/img/ci_grida.svg" /></div>
+		</div>
+	</footer>
+</body>
+</html>

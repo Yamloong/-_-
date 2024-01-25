@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+<title>사용자권한관리</title>
+
+<!--v Packages -->
+<script src="../../assets/js/jquery.min.js"></script>
+
+<link href="../../assets/css/jquery-ui.min.css" rel="stylesheet" />
+<script src="../../assets/js/jquery-ui.min.js"></script>
+
+<link href="../../assets/css/select2.min.css" rel="stylesheet" />
+<script src="../../assets/js/select2.min.js"></script>
+<!--^ Packages -->
+
+<link href="../../assets/css/all.css" rel="stylesheet" />
+<script src="../../assets/js/util.js"></script>
+</head>
+
+<body class="sub-page">
+	<header>
+		<div class="inner">
+			<h1 class="logo">
+				<a href="#">
+					<img src="../../assets/img/logo.svg" />
+				</a>
+			</h1>
+			<div id="gnb">
+				<ul class="gnb-list">
+					<li>
+						<a href="#">회원/카드관리</a>
+					</li>
+					<li>
+						<a href="#">거래관리</a>
+					</li>
+					<li>
+						<a href="#">정산현황</a>
+					</li>
+					<li>
+						<a href="#">통계/분석</a>
+					</li>
+					<li>
+						<a href="#">지원정책</a>
+					</li>
+					<li>
+						<a href="#">환경설정</a>
+					</li>
+					<li>
+						<button type="button" class="btn">
+							<span>전체보기</span>
+							<i class="icon-menu"></i>
+						</button>
+					</li>
+				</ul>
+			</div>
+			<div class="my-menu">
+				<div class="info">
+					<div class="photo">
+						<i class="icon-smile"></i><!-- 혹시 나중에 img태그가 들어간다면 해당 i태그 삭제 -->
+					</div>
+					<div class="name">관리자</div>
+				</div>
+				<div class="log">
+					<span>최종 로그인</span>
+					<span class="time">2022.08.29 14:14</span>
+				</div>
+				<div class="button-wrap">
+					<button type="button" class="btn">
+						<i class="icon-setting"></i>
+					</button>
+					<button type="button" class="btn">
+						<i class="icon-logout"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="container">
+		<div id="lnb">
+			<div class="group-title">
+				<span>환경설정</span>
+			</div>
+			<button type="button" class="btn btn-primary btn_lnb_control">
+				<i class="icon-arrow-prev"></i>
+			</button>
+			<ul class="menu-list">
+				<li class="on">
+					<a href="#">
+						<span>사용자 관리</span>
+						<i class="icon-circle-plus"></i>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>사용자승인</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>사용자 관리</span>
+							</a>
+						</li>
+						<li class="on">
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>사용자권한관리</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">
+						<span>플랫폼 관리</span>
+						<i class="icon-circle-plus"></i>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>메뉴 관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>배너 관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>팝업 관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>공공데이터관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>가맹점분류코드관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>공휴일관리</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">
+						<span>시스템 관리</span>
+						<i class="icon-circle-plus"></i>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>이용자접속현황 관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>변경이력 관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>메타데이터 관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>연계전문 관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>연계데이터 관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>개인정보접근 이력조회</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>개인정보접근 통계</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!-- #lnb -->
+		<div class="content-wrap">
+			<div class="content-header">
+				<div class="title-wrap">
+					<div class="title">사용자권한관리</div>
+					<div class="location">
+						<i class="icon-home"></i>
+						<span>홈</span>
+						<span>환경설정</span>
+						<span>사용자관리</span>
+						<span>사용자권한관리</span>
+					</div>
+				</div>
+			</div>
+			<div class="content-body">
+				<div class="page-memo">
+					<ul class="list">
+						<li>메뉴권한그룹을 먼저 선택한 뒤 각 메뉴의 권한을 조절하세요.</li>
+					</ul>
+				</div>
+
+				<div class="row">
+					<div class="col-3 section-body" style="min-width: 290px;">
+						<div class="section-header">
+							<div class="form-control-wrap">
+								<label class="form-label" for="메뉴권한그룹">
+									<span>분류</span>
+								</label>
+								<div class="form-container">
+									<select class="form-select select2" id="메뉴권한그룹" name="메뉴권한그룹" data-placeholder="메뉴권한그룹 선택">
+										<option></option>
+										<option value="1">옵션1</option>
+										<option value="2">옵션2</option>
+										<option value="3">옵션3</option>
+									</select>
+								</div><!-- .form-container -->
+							</div><!-- .form-control-wrap -->
+						</div>
+						<div class="grid-area">
+							트리구조 그리드 영역
+						</div>
+					</div>
+					<div class="col-9 section-body">
+						<div class="section-header">
+							<div class="form-control-wrap">
+								<label class="form-label" for="조회">
+									<span>프로그램 목록</span>
+								</label>
+								<div class="form-container">
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" id="조회" name="프로그램 목록" value="조회" checked="" />
+										<label class="form-check-label" for="조회">조회</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" id="등록" name="프로그램 목록" value="등록" />
+										<label class="form-check-label" for="등록">등록</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" id="수정" name="프로그램 목록" value="수정" />
+										<label class="form-check-label" for="수정">수정</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" id="삭제" name="프로그램 목록" value="삭제" />
+										<label class="form-check-label" for="삭제">삭제</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" id="개인정보" name="프로그램 목록" value="개인정보" />
+										<label class="form-check-label" for="개인정보">개인정보</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" id="엑셀" name="프로그램 목록" value="엑셀" />
+										<label class="form-check-label" for="엑셀">엑셀</label>
+									</div>
+									<button type="button" class="btn btn-primary">
+										<span>저장</span>
+									</button>
+								</div><!-- .form-container -->
+							</div><!-- .form-control-wrap -->
+						</div>
+						<div class="table-wrap">
+							<table class="tbl-data all-center">
+								<colgroup>
+									<col style="width: 70px;">
+									<col>
+									<col style="width: 70px;">
+									<col style="width: 70px;">
+									<col style="width: 70px;">
+									<col style="width: 70px;">
+									<col style="width: 75px;">
+									<col style="width: 70px;">
+								</colgroup>
+								<thead>
+								<tr>
+									<th>순서</th>
+									<th>프로그램명칭</th>
+									<th>조회</th>
+									<th>등록</th>
+									<th>수정</th>
+									<th>삭제</th>
+									<th>개인정보</th>
+									<th>엑셀</th>
+								</tr>
+								</thead>
+								<tbody>
+								<tr>
+									<td>1</td>
+									<td>종합관리</td>
+									<td>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="종합관리 조회" name="종합관리" value="종합관리 조회" checked="" />
+										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="종합관리 등록" name="종합관리" value="종합관리 등록" />
+										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="종합관리 수정" name="종합관리" value="종합관리 수정" />
+										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="종합관리 삭제" name="종합관리" value="종합관리 삭제" />
+										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="종합관리 개인정보" name="종합관리" value="종합관리 개인정보" />
+										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="종합관리 엑셀" name="종합관리" value="종합관리 엑셀" />
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>급식종합관리</td>
+									<td>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="급식종합관리 조회" name="급식종합관리" value="급식종합관리 조회" checked="" />
+										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="급식종합관리 등록" name="급식종합관리" value="급식종합관리 등록" />
+										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="급식종합관리 수정" name="급식종합관리" value="급식종합관리 수정" />
+										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="급식종합관리 삭제" name="급식종합관리" value="급식종합관리 삭제" />
+										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="급식종합관리 개인정보" name="급식종합관리" value="급식종합관리 개인정보" />
+										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="급식종합관리 엑셀" name="급식종합관리" value="급식종합관리 엑셀" />
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>종합관리2</td>
+									<td>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="종합관리2 조회" name="종합관리2" value="종합관리2 조회" checked="" />
+										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="종합관리2 등록" name="종합관리2" value="종합관리2 등록" />
+										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="종합관리2 수정" name="종합관리2" value="종합관리2 수정" />
+										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="종합관리2 삭제" name="종합관리2" value="종합관리2 삭제" />
+										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="종합관리2 개인정보" name="종합관리2" value="종합관리2 개인정보" />
+										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="종합관리2 엑셀" name="종합관리2" value="종합관리2 엑셀" />
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td>급식종합관리</td>
+									<td>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="급식종합관리2 조회" name="급식종합관리2" value="급식종합관리2 조회" checked="" />
+										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="급식종합관리2 등록" name="급식종합관리2" value="급식종합관리2 등록" />
+										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="급식종합관리2 수정" name="급식종합관리2" value="급식종합관리2 수정" />
+										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="급식종합관리2 삭제" name="급식종합관리2" value="급식종합관리2 삭제" />
+										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="급식종합관리2 개인정보" name="급식종합관리2" value="급식종합관리2 개인정보" />
+										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="급식종합관리2 엑셀" name="급식종합관리2" value="급식종합관리2 엑셀" />
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>5</td>
+									<td>거래요약상세</td>
+									<td>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="거래요약상세 조회" name="거래요약상세" value="거래요약상세 조회" checked="" />
+										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="거래요약상세 등록" name="거래요약상세" value="거래요약상세 등록" />
+										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="거래요약상세 수정" name="거래요약상세" value="거래요약상세 수정" />
+										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="거래요약상세 삭제" name="거래요약상세" value="거래요약상세 삭제" />
+										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="거래요약상세 개인정보" name="거래요약상세" value="거래요약상세 개인정보" />
+										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="거래요약상세 엑셀" name="거래요약상세" value="거래요약상세 엑셀" />
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>6</td>
+									<td>거래상세조회</td>
+									<td>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="거래상세조회 조회" name="거래상세조회" value="거래상세조회 조회" checked="" />
+										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="거래상세조회 등록" name="거래상세조회" value="거래상세조회 등록" />
+										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="거래상세조회 수정" name="거래상세조회" value="거래상세조회 수정" />
+										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="거래상세조회 삭제" name="거래상세조회" value="거래상세조회 삭제" />
+										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="거래상세조회 개인정보" name="거래상세조회" value="거래상세조회 개인정보" />
+										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="거래상세조회 엑셀" name="거래상세조회" value="거래상세조회 엑셀" />
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>7</td>
+									<td>사용현황</td>
+									<td>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="사용현황 조회" name="사용현황" value="사용현황 조회" checked="" />
+										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="사용현황 등록" name="사용현황" value="사용현황 등록" />
+										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="사용현황 수정" name="사용현황" value="사용현황 수정" />
+										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="사용현황 삭제" name="사용현황" value="사용현황 삭제" />
+										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="사용현황 개인정보" name="사용현황" value="사용현황 개인정보" />
+										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="사용현황 엑셀" name="사용현황" value="사용현황 엑셀" />
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>8</td>
+									<td>월별통계현황</td>
+									<td>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="월별통계현황 조회" name="월별통계현황" value="월별통계현황 조회" checked="" />
+										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="월별통계현황 등록" name="월별통계현황" value="월별통계현황 등록" />
+										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="월별통계현황 수정" name="월별통계현황" value="월별통계현황 수정" />
+										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="월별통계현황 삭제" name="월별통계현황" value="월별통계현황 삭제" />
+										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="월별통계현황 개인정보" name="월별통계현황" value="월별통계현황 개인정보" />
+										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="월별통계현황 엑셀" name="월별통계현황" value="월별통계현황 엑셀" />
+										</div>
+									</td>
+								</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- .content-wrap -->
+	</div><!-- .container -->
+</body>
+</html>

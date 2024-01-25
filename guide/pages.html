@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- <link rel="icon" type="image/x-icon" href="../assets/favicon.ico"> -->
+	<title>UI/UX Style Guide</title>
+
+	<link href="../assets/css/all.css" rel="stylesheet" />
+	<script src="../assets/js/jquery.min.js"></script>
+
+	<!-- GUIDE관련 소스 -->
+	<link href="./assets/css/only_for_guide.css" rel="stylesheet" />
+	<script src="./assets/js/only_for_guide.js"></script>
+<style>
+a.guide { font-size: 12px; }
+</style>
+</head>
+
+<body class="guide_page">
+
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+		<div class="container">
+			<a class="navbar-brand" href="../index.html"><img src="../assets/logo_main.svg" style="height: 25px;"/></a>
+			<button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<!-- <span class="navbar-toggler-icon"></span> -->
+				<i class="bi bi-list"></i>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+					<li class="nav-item"><a class="nav-link" aria-current="page" href="../index.html">Home</a></li>
+					<li class="nav-item"><a class="nav-link" aria-current="page" href="0A_style.html">스타일</a></li>
+					<li class="nav-item"><a class="nav-link" aria-current="page" href="0C_components.html">컴포넌트</a></li>
+					<li class="nav-item"><a class="nav-link" aria-current="page" href="0L_layouts.html">레이아웃</a></li>
+					<li class="nav-item"><a class="nav-link active" aria-current="page" href="0P_pages.html">페이지</a></li>
+					<li class="nav-item"><a class="nav-link" aria-current="page" href="0Z_about.html">About</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="guide guide_pages">
+		<section>
+			<div class="container">
+				<h2 class="guide pt-4"><i class="bi bi-file-earmark-code me-3"></i>페이지</h2>
+
+				<div class="note note-primary my-4">
+					<div>각 페이지별 퍼블리싱 현황을 정리합니다.</div>
+				</div>
+
+				<article class="guide">
+					<h3>페이지 분류</h3>
+
+					<ul>
+						<li>경로 : ./pages/</li>
+						<li>분류 :
+							<div class="d-flex align-items-center">
+								<span class="badge badge_sm rounded-pill outline_secondary text-secondary ms-5 me-2">FORM</span> Input Form
+								<span class="badge badge_sm rounded-pill bg-secondary ms-5 me-2">TABLE</span> Data Table
+								<span class="badge badge_sm rounded-pill bg-success ms-5 me-2">jGRID</span> jex Grid
+								<span class="badge badge_sm rounded-pill bg-warning ms-5 me-2">MODAL</span> Modal(Popup)
+								<span class="badge badge_sm rounded-pill bg-info text-dark ms-5 me-2">TAB</span> Tab Panel
+							</div>
+						</li>
+					</ul>
+
+					<div class="table-responsive">
+						<table class="guide table table-bordered">
+							<colgroup>
+								<col width="140px" />
+								<col />
+								<col />
+								<col />
+								<col width="70px" />
+								<col width="220px"/>
+								<col width="135px" />
+								<col width="200px" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th>Depth-1</th>
+									<th>Depth-2</th>
+									<th>Depth-3</th>
+									<th>Depth-3</th>
+									<th>분류</th>
+									<th>파일</th>
+									<th>최종작업일</th>
+									<th>비고</th>
+								</tr>
+							</thead>
+							<tbody>
+<!--
+								<tr>
+									<td colspan="2">서브-1 레이아웃(수납관리자 메뉴)</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td><a class="guide" href="./pages/layout_서브.html" target="_pages">layout_서브.html</a></td>
+									<td class="last_modified">2022-04-22</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td colspan="2">서브-2 레이아웃(수납관리자 메뉴)</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td><a class="guide" href="./pages/layout_서브_SA.html" target="_pages">layout_서브_SA.html</a></td>
+									<td class="last_modified">2022-04-22</td>
+									<td>Single Article</td>
+								</tr>
+-->
+								<tr style="border-top: solid 2px gray;">
+									<td colspan="100" class="bg-primary" style="text-align: center; font-size: 16px; font-weight: 500;">공통 (pages)</td>
+								</tr>
+								<tr>
+									<td>안내 페이지</td>
+									<td>서비스준비중</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td><a class="guide" href="./pages/서비스준비중.html" target="_blank">서비스준비중.html</a></td>
+									<td class="last_modified">2022-05-16</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>서비스준비중 (2)</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td><a class="guide" href="./pages/서비스준비중_2.html" target="_blank">서비스준비중_2.html</a></td>
+									<td class="last_modified">2022-05-16</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>500</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td><a class="guide" href="./pages/500.html" target="_blank">500.html</a></td>
+									<td class="last_modified">2022-05-16</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>500 (2)</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td><a class="guide" href="./pages/500_2.html" target="_blank">500_2.html</a></td>
+									<td class="last_modified">2022-05-16</td>
+									<td></td>
+								</tr>
+
+<!-- A.e-모아 > 수납관리자 서비스 -->
+								<tr style="border-top: solid 2px gray;">
+									<td colspan="100" class="bg-primary" style="text-align: center; font-size: 16px; font-weight: 500;">A.수납관리자 서비스 (pages/sub)</td>
+								</tr>
+								<tr>
+									<td>e-모아 메인</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td><a class="guide" href="./pages/A_Main.html" target="_sub">A_Main.html</a></td>
+									<td class="last_modified">2022-06-14</td>
+									<td>* 공지, FAQ, 상세보기 팝업<br/>* 메인비주얼 공지라인 추가</td>
+								</tr>
+								<tr>
+									<td>로그인</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill outline_secondary text-secondary">FORM</span></td>
+									<td><a class="guide btn-link" href="./pages/로그인_수납관리자.html" target="_sub">로그인_수납관리자.html</a></td>
+									<td class="last_modified">2022-05-17</td>
+									<td>* 비밀번호 찾기 등 팝업 추가</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>회원가입</td>
+									<td>①약관동의</td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill outline_secondary text-secondary">FORM</span></td>
+									<td><a class="guide btn-link" href="./pages/회원가입_1_약관동의.html" target="_sub">회원가입_1_약관동의.html</a></td>
+									<td class="last_modified">2022-05-19</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>②정보입력</td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill outline_secondary text-secondary">FORM</span></td>
+									<td><a class="guide btn-link" href="./pages/회원가입_2_정보입력.html" target="_sub">회원가입_2_정보입력.html</a></td>
+									<td class="last_modified">2022-05-19</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td colspan="2">이메일-아이디/비밀번호찾기</td>
+									<td></td>
+									<td><a class="guide btn-link" href="./pages/email_아이디비밀번호찾기.html" target="_sub">email_아이디비밀번호찾기.html</a></td>
+									<td class="last_modified">2022-05-19</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>aside</td>
+									<td>SMS 서비스</td>
+									<td></td>
+									<td></td>
+									<td>
+										<span class="badge badge_sm rounded-pill bg-success">jGRID</span>
+										<span class="badge badge_sm rounded-pill bg-warning">MODAL</span>
+									</td>
+									<td><a class="guide" href="./pages/sub/모달_SMS보내기.html" target="_sub">sub/모달_SMS보내기.html</a></td>
+									<td class="last_modified">2022-06-14</td>
+									<td></td>
+								</tr>
+
+								<tr style="border-top: solid 2px gray;">
+									<td>1.납부자관리</td>
+									<td>납부자 조회(1)</td>
+									<td></td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill bg-secondary">TABLE</span></td>
+									<td><a class="guide" href="./pages/sub/A101_납부자조회_table.html" target="_sub">sub/A101_납부자조회_table.html</a></td>
+									<td class="last_modified">2022-05-11</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>납부자 조회(2)</td>
+									<td></td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill bg-success">jGRID</span></td>
+									<td><a class="guide" href="./pages/sub/A101_납부자조회.html" target="_sub">sub/A101_납부자조회.html</a></td>
+									<td class="last_modified">2022-05-11</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>납부자 상세(1)</td>
+									<td>[TAB]납부자정보</td>
+									<td><span class="badge badge_sm rounded-pill outline_secondary text-secondary">FORM</span></td>
+									<td><a class="guide" href="./pages/sub/A101a_납부자상세_1.html" target="_sub">sub/A101a_납부자상세_1.html</a></td>
+									<td class="last_modified">2022-06-09</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>[TAB]청구등록</td>
+									<td><span class="badge badge_sm rounded-pill outline_secondary text-secondary">FORM</span></td>
+									<td><a class="guide" href="./pages/sub/A101a_납부자상세_2.html" target="_sub">sub/A101a_납부자상세_2.html</a></td>
+									<td class="last_modified">2022-05-03</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>납부자 상세(2)</td>
+									<td></td>
+									<td>
+										<span class="badge badge_sm rounded-pill bg-info text-dark">TAB</span>
+										<span class="badge badge_sm rounded-pill outline_secondary text-secondary">FORM</span>
+									</td>
+									<td><a class="guide" href="./pages/sub/A101a_납부자상세_tab.html" target="_sub">sub/A101a_납부자상세_tab.html</a></td>
+									<td class="last_modified">2022-06-09</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>납부자 등록(1)</td>
+									<td>[TAB]납부자정보</td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill outline_secondary text-secondary">FORM</span></td>
+									<td><a class="guide" href="./pages/sub/A102_납부자등록_1.html" target="_sub">sub/A102_납부자등록_1.html</a></td>
+									<td class="last_modified">2022-06-09</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>[TAB]청구등록</td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill outline_secondary text-secondary">FORM</span></td>
+									<td><a class="guide" href="./pages/sub/A102_납부자등록_2.html" target="_sub">sub/A102_납부자등록_2.html</a></td>
+									<td class="last_modified">2022-05-09</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>[TAB]수납결과등록</td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill outline_secondary text-secondary">FORM</span></td>
+									<td><a class="guide" href="./pages/sub/A102_납부자등록_3.html" target="_sub">sub/A102_납부자등록_3.html</a></td>
+									<td class="last_modified">2022-05-09</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td colspan="2">납부자 등록(2)</td>
+									<td></td>
+									<td>
+										<span class="badge badge_sm rounded-pill bg-info text-dark">TAB</span>
+										<span class="badge badge_sm rounded-pill outline_secondary text-secondary">FORM</span>
+									</td>
+									<td><a class="guide" href="./pages/sub/A102_납부자등록_tab.html" target="_sub">sub/A102_납부자등록_tab.html</a></td>
+									<td class="last_modified">2022-06-09</td>
+									<td>* 수납결과등록 페이지 변경</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>납부자 일괄등록</td>
+									<td></td>
+									<td></td>
+									<td>
+										<span class="badge badge_sm rounded-pill bg-success">jGRID</span>
+										<span class="badge badge_sm rounded-pill bg-warning">MODAL</span>
+									</td>
+									<td><a class="guide" href="./pages/sub/A103_납부자일괄등록.html" target="_sub">sub/A103_납부자일괄등록.html</a></td>
+									<td class="last_modified">2022-05-11</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>납부자구분 일괄수정</td>
+									<td>[TAB]화면직접수정</td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill bg-success">jGRID</span></td>
+									<td><a class="guide" href="./pages/sub/A104_납부자구분일괄수정_1.html" target="_sub">sub/A104_납부자구분일괄수정_1.html</a></td>
+									<td class="last_modified">2022-05-11</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>{TAB]엑셀이용수정</td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill bg-success">jGRID</span><span class="badge badge_sm rounded-pill bg-warning">MODAL</span></td>
+									<td><a class="guide" href="./pages/sub/A104_납부자구분일괄수정_2.html" target="_sub">sub/A104_납부자구분일괄수정_2.html</a></td>
+									<td class="last_modified">2022-05-11</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>SMS 발송내역</td>
+									<td></td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill bg-secondary">TABLE</span></td>
+									<td><a class="guide" href="./pages/sub/A105_SMS발송내역.html" target="_sub">sub/A105_SMS발송내역.html</a></td>
+									<td class="last_modified">2022-05-11</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>이메일 발송내역</td>
+									<td></td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill bg-secondary">TABLE</span></td>
+									<td><a class="guide" href="./pages/sub/A106_이메일발송내역.html" target="_sub">sub/A106_이메일발송내역.html</a></td>
+									<td class="last_modified">2022-05-11</td>
+									<td></td>
+								</tr>
+
+								<tr style="border-top: solid 2px gray;">
+									<td>2.청구관리</td>
+									<td>청구내역 조회</td>
+									<td></td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill bg-success">jGRID</span></td>
+									<td><a class="guide" href="./pages/sub/A201_청구내역조회.html" target="_sub">sub/A201_청구내역조회.html</a></td>
+									<td class="last_modified">2022-05-24</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>청구내역 상세</td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill outline_secondary text-secondary">FORM</span></td>
+									<td><a class="guide" href="./pages/sub/A201a_청구내역상세.html" target="_sub">sub/A201a_청구내역상세.html</a></td>
+									<td class="last_modified">2022-06-09</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>청구 개별등록</td>
+									<td></td>
+									<td></td>
+									<td>
+										<span class="badge badge_sm rounded-pill outline_secondary text-secondary">FORM</span>
+										<span class="badge badge_sm rounded-pill bg-warning">MODAL</span>
+										<span class="badge badge_sm rounded-pill bg-success">jGRID</span>
+									</td>
+									<td><a class="guide" href="./pages/sub/A202_청구개별등록.html" target="_sub">sub/A202_청구개별등록.html</a></td>
+									<td class="last_modified">2022-06-09</td>
+									<td>* 납부자 검색 팝업</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>청구 일괄수정</td>
+									<td></td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill bg-success">jGRID</span></td>
+									<td><a class="guide" href="./pages/sub/A203_청구일괄수정.html" target="_sub">sub/A203_청구일괄수정.html</a></td>
+									<td class="last_modified">2022-06-09</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>청구 일괄등록</td>
+									<td></td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill bg-success">jGRID</span></td>
+									<td><a class="guide" href="./pages/sub/A204_청구일괄등록.html" target="_sub">sub/A204_청구일괄등록.html</a></td>
+									<td class="last_modified"></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>납부고지서 인쇄</td>
+									<td></td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill bg-success">jGRID</span></td>
+									<td><a class="guide" href="./pages/sub/A205_납부고지서인쇄.html" target="_sub">sub/A205_납부고지서인쇄.html</a></td>
+									<td class="last_modified">2022-06-17</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>이메일-납부고지서</td>
+									<td></td>
+									<td></td>
+									<td><a class="guide" href="./pages/email_납부고지서.html" target="_sub">sub/email_납부고지서.html</a></td>
+									<td class="last_modified">2022-05-19</td>
+									<td></td>
+								</tr>
+
+								<tr style="border-top: solid 2px gray;">
+									<td>3.수납관리</td>
+									<td>수납내역 조회</td>
+									<td></td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill bg-success">jGRID</span></td>
+									<td><a class="guide" href="./pages/sub/A301_수납내역조회.html" target="_sub">sub/A301_수납내역조회.html</a></td>
+									<td class="last_modified">2022-06-02</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>수납결과 상세</td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill outline_secondary text-secondary">FORM</span></td>
+									<td><a class="guide" href="./pages/sub/A301a_수납결과상세.html" target="_sub">sub/A301a_수납결과상세.html</a></td>
+									<td class="last_modified">2022-06-09</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>수납내역 조회(다계좌)</td>
+									<td></td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill bg-success">jGRID</span></td>
+									<td><a class="guide" href="./pages/sub/A302_수납내역조회_다계좌.html" target="_sub">sub/A302_수납내역조회_다계좌.html</a></td>
+									<td class="last_modified">2022-06-02</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>수납결과 개별등록</td>
+									<td></td>
+									<td></td>
+									<td>
+										<span class="badge badge_sm rounded-pill outline_secondary text-secondary">FORM</span>
+										<span class="badge badge_sm rounded-pill bg-warning">MODAL</span>
+										<span class="badge badge_sm rounded-pill bg-success">jGRID</span>
+									</td>
+									<td><a class="guide" href="./pages/sub/A303_수납결과개별등록.html" target="_sub">sub/A303_수납결과개별등록.html</a></td>
+									<td class="last_modified">2022-06-09</td>
+									<td>* 납부자 검색 팝업</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>수납결과 일괄등록</td>
+									<td></td>
+									<td></td>
+									<td>
+										<span class="badge badge_sm rounded-pill bg-success">jGRID</span>
+										<span class="badge badge_sm rounded-pill bg-warning">MODAL</span>
+									</td>
+									<td><a class="guide" href="./pages/sub/A304_수납결과일괄등록.html" target="_sub">sub/A304_수납결과일괄등록.html</a></td>
+									<td class="last_modified">2022-06-02</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>현금영수증 발급신청</td>
+									<td></td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill bg-success">jGRID</span><span class="badge badge_sm rounded-pill bg-warning">MODAL</span></td>
+									<td><a class="guide" href="./pages/sub/A305_현금영수증발급신청.html" target="_sub">sub/A305_현금영수증발급신청.html</a></td>
+									<td class="last_modified">2022-06-09</td>
+									<td>조건에 따른 checkbox 처리</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>현금영수증 발급현황</td>
+									<td></td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill bg-success">jGRID</span><span class="badge badge_sm rounded-pill bg-warning">MODAL</span></td>
+									<td><a class="guide" href="./pages/sub/A306_현금영수증발급현황.html" target="_sub">sub/A306_현금영수증발급현황.html</a></td>
+									<td class="last_modified">2022-06-09</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>가상계좌 입금오류 조회</td>
+									<td></td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill bg-success">jGRID</span></td>
+									<td><a class="guide" href="./pages/sub/A307_가상계좌입금오류조회.html" target="_sub">sub/A307_가상계좌입금오류조회.html</a></td>
+									<td class="last_modified">2022-06-10</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>등록내역관리(수질검사)</td>
+									<td></td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill bg-success">jGRID</span></td>
+									<td><a class="guide" href="./pages/sub/A308_수질검사_등록내역관리.html" target="_sub">sub/A308_수질검사_등록내역관리.html</a></td>
+									<td class="last_modified">2022-06-10</td>
+									<td>* 납입고지서(상수도업체) 인쇄</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>입금내역조회(수질검사)</td>
+									<td></td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill bg-success">jGRID</span></td>
+									<td><a class="guide" href="./pages/sub/A309_수질검사_입금내역조회.html" target="_sub">sub/A309_수질검사_입금내역조회.html</a></td>
+									<td class="last_modified">2022-06-10</td>
+									<td>* 납입고지서(상수도업체) 인쇄</td>
+								</tr>
+
+								<tr style="border-top: solid 2px gray;">
+									<td>4.게시판관리</td>
+									<td>공지사항</td>
+									<td></td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill bg-secondary">TABLE</span></td>
+									<td><a class="guide" href="./pages/sub/A401_공지사항.html" target="_sub">sub/A401_공지사항.html</a></td>
+									<td class="last_modified">2022-05-11</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>공지사항 상세</td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill outline_secondary text-secondary">FORM</span></td>
+									<td><a class="guide" href="./pages/sub/A401a_공지사항상세.html" target="_sub">sub/A401a_공지사항상세.html</a></td>
+									<td class="last_modified">2022-05-09</td>
+									<td>* [이전] link style 변경</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>공지사항 등록</td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill outline_secondary text-secondary">FORM</span></td>
+									<td><a class="guide" href="./pages/sub/A401b_공지사항등록.html" target="_sub">sub/A401b_공지사항등록.html</a></td>
+									<td class="last_modified">2022-05-03</td>
+									<td>* 첨부파일 부분 변경</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>납부자 Q&A</td>
+									<td></td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill bg-secondary">TABLE</span></td>
+									<td><a class="guide" href="./pages/sub/A402_납부자QnA.html" target="_sub">sub/A402_납부자QnA.html</a></td>
+									<td class="last_modified">2022-05-11</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>납부자 Q&A 상세</td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill outline_secondary text-secondary">FORM</span></td>
+									<td><a class="guide" href="./pages/sub/A402a_납부자QnA상세.html" target="_sub">sub/A402a_납부자QnA상세.html</a></td>
+									<td class="last_modified">2022-05-09</td>
+									<td>* 저장/삭제 버튼 높이 변경</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>수납관리자 문의</td>
+									<td></td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill bg-secondary">TABLE</span></td>
+									<td><a class="guide" href="./pages/sub/A403_수납관리자문의.html" target="_sub">sub/A403_수납관리자문의.html</a></td>
+									<td class="last_modified">2022-05-11</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td class="text-end"> (답변완료 전)</td>
+									<td>수납관리자 문의 상세</td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill outline_secondary text-secondary">FORM</span></td>
+									<td><a class="guide" href="./pages/sub/A403a_수납관리자문의상세.html" target="_sub">sub/A403a_수납관리자문의상세.html</a></td>
+									<td class="last_modified">2022-05-09</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td class="text-end">(답변완료 후)</td>
+									<td>수납관리자 문의 상세</td>
+									<td></td>
+									<td></td>
+									<td><a class="guide" href="./pages/sub/A403b_수납관리자문의상세.html" target="_sub">sub/A403b_수납관리자문의상세.html</a></td>
+									<td class="last_modified">2022-05-02</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>수납관리자 문의 등록</td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill outline_secondary text-secondary">FORM</span></td>
+									<td><a class="guide" href="./pages/sub/A403c_수납관리자문의등록.html" target="_sub">sub/A403c_수납관리자문의등록.html</a></td>
+									<td class="last_modified">2022-05-09</td>
+									<td>* 제목, 등록일 input 변경</td>
+								</tr>
+
+								<tr style="border-top: solid 2px gray;">
+									<td>5.보고서관리</td>
+									<td>기간별 수납현황</td>
+									<td></td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill bg-secondary">TABLE</span><span class="badge badge_sm rounded-pill bg-warning">MODAL</span></td>
+									<td><a class="guide" href="./pages/sub/A501_기간별수납현황.html" target="_sub">sub/A501_기간별수납현황.html</a></td>
+									<td class="last_modified">2022-06-09</td>
+									<td>
+										* modal 내에 table(or grid)<br/>
+										* 인쇄(리포트)
+									</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>월별 수납현황</td>
+									<td></td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill bg-secondary">TABLE</span><span class="badge badge_sm rounded-pill bg-warning">MODAL</span></td>
+									<td><a class="guide" href="./pages/sub/A502_월별수납현황.html" target="_sub">sub/A502_월별수납현황.html</a></td>
+									<td class="last_modified">2022-06-09</td>
+									<td>
+										* modal 내에 table(or grid)<br/>
+										* 인쇄(리포트)
+									</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>청구월별 수납현황</td>
+									<td></td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill bg-secondary">TABLE</span><span class="badge badge_sm rounded-pill bg-warning">MODAL</span></td>
+									<td><a class="guide" href="./pages/sub/A503_청구월별수납현황.html" target="_sub">sub/A503_청구월별수납현황.html</a></td>
+									<td class="last_modified">2022-06-09</td>
+									<td>
+										* modal 내에 table(or grid)<br/>
+										* 인쇄(리포트)
+									</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>현금영수증 이용현황</td>
+									<td></td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill bg-success">jGRID</span></td>
+									<td><a class="guide" href="./pages/sub/A504_현금영수증이용현황.html" target="_sub">sub/A504_현금영수증이용현황.html</a></td>
+									<td class="last_modified">2022-05-30</td>
+									<td>* 인쇄(리포트)</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>납부자별 수납현황</td>
+									<td></td>
+									<td></td>
+									<td>
+										<span class="badge badge_sm rounded-pill outline_secondary text-secondary">FORM</span>
+										<span class="badge badge_sm rounded-pill bg-warning">MODAL</span>
+										<span class="badge badge_sm rounded-pill bg-success">jGRID</span>
+									</td>
+									<td><a class="guide" href="./pages/sub/A505_납부자별수납현황.html" target="_sub">sub/A505_납부자별수납현황.html</a></td>
+									<td class="last_modified">2022-06-02</td>
+									<td>
+										* 인쇄(리포트)<br/>
+										* 납부자 검색 팝업
+									</td>
+								</tr>
+
+								<tr style="border-top: solid 2px gray;">
+									<td>6.사용자관리</td>
+									<td>기본정보관리</td>
+									<td></td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill outline_secondary text-secondary">FORM</span></td>
+									<td><a class="guide" href="./pages/sub/A601_기본정보관리.html" target="_sub">sub/A601_기본정보관리.html</a></td>
+									<td class="last_modified">2022-05-31</td>
+									<td>* 결제라인 선택 부분 변경</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>현금영수증 발급관리</td>
+									<td></td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill outline_secondary text-secondary">FORM</span></td>
+									<td><a class="guide" href="./pages/sub/A602_현금영수증발급관리.html" target="_sub">sub/A602_현금영수증발급관리.html</a></td>
+									<td class="last_modified">2022-05-16</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>납부고지서 출력관리</td>
+									<td></td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill outline_secondary text-secondary">FORM</span></td>
+									<td><a class="guide" href="./pages/sub/A603_납부고지서출력관리.html" target="_sub">sub/A603_납부고지서출력관리.html</a></td>
+									<td class="last_modified">2022-05-17</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>가상계좌 설정관리</td>
+									<td></td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill outline_secondary text-secondary">FORM</span></td>
+									<td><a class="guide" href="./pages/sub/A604_가상계좌설정관리.html" target="_sub">sub/A604_가상계좌설정관리.html</a></td>
+									<td class="last_modified">2022-05-16</td>
+									<td></td>
+								</tr>
+
+<!-- B.e-모아 > 납부자 서비스 -->
+								<tr style="border-top: solid 2px gray;">
+									<td colspan="100" class="bg-primary" style="text-align: center; font-size: 16px; font-weight: 500;">B.납부자 서비스 (pages/sub_B)</td>
+								</tr>
+								<tr>
+									<td>로그인</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill outline_secondary text-secondary">FORM</span></td>
+									<td><a class="guide btn-link" href="./pages/로그인_납부자.html" target="_sub_B">로그인_납부자.html</a></td>
+									<td class="last_modified">2022-05-02</td>
+									<td></td>
+								</tr>
+								<tr style="border-top: solid 2px gray;">
+									<td>1.대금납부</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td><a class="guide btn-link" href="./pages/sub_B/B1_대금납부.html" target="_sub_B">sub_B/B1_대금납부.html</a></td>
+									<td class="last_modified">2022-06-17</td>
+									<td>* 대금납부정보 인쇄</td>
+								</tr>
+								<tr>
+									<td>2.납부내역 조회</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill bg-success">jGRID</span><span class="badge badge_sm rounded-pill bg-warning">MODAL</span></td>
+									<td><a class="guide btn-link" href="./pages/sub_B/B2_납부내역조회.html" target="_sub_B">sub_B/B2_납부내역조회.html</a></td>
+									<td class="last_modified">2022-06-17</td>
+									<td>* 납부확인서 인쇄</td>
+								</tr>
+								<tr>
+									<td>3.현금영수증</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill bg-success">jGRID</span><span class="badge badge_sm rounded-pill bg-warning">MODAL</span></td>
+									<td><a class="guide btn-link" href="./pages/sub_B/B3_현금영수증.html" target="_sub_B">sub_B/B3_현금영수증.html</a></td>
+									<td class="last_modified">2022-05-30</td>
+									<td>* 현금영수증 인쇄</td>
+								</tr>
+								<tr>
+									<td>4.공지사항</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill bg-secondary">TABLE</span></td>
+									<td><a class="guide btn-link" href="./pages/sub_B/B4_공지사항.html" target="_sub_B">sub_B/B4_공지사항.html</a></td>
+									<td class="last_modified">2022-05-23</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>상세</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td><a class="guide btn-link" href="./pages/sub_B/B4a_공지사항상세.html" target="_sub_B">sub_B/B4a_공지사항상세.html</a></td>
+									<td class="last_modified">2022-05-23</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>5.납부자 Q&A</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill bg-secondary">TABLE</span></td>
+									<td><a class="guide btn-link" href="./pages/sub_B/B5_납부자QnA.html" target="_sub_B">sub_B/B5_납부자QnA.html</a></td>
+									<td class="last_modified">2022-05-23</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>상세</td>
+									<td></td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill outline_secondary text-secondary">FORM</span></td>
+									<td><a class="guide btn-link" href="./pages/sub_B/B5a_납부자QnA상세.html" target="_sub_B">sub_B/B5a_납부자QnA상세.html</a></td>
+									<td class="last_modified">2022-05-23</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>등록</td>
+									<td></td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill outline_secondary text-secondary">FORM</span></td>
+									<td><a class="guide btn-link" href="./pages/sub_B/B5a_납부자QnA등록.html" target="_sub_B">sub_B/B5a_납부자QnA등록.html</a></td>
+									<td class="last_modified">2022-05-23</td>
+									<td></td>
+								</tr>
+
+<!-- C.캠퍼스 e-모아 > 수납관리자 -->
+								<tr style="border-top: solid 2px gray;">
+									<td colspan="100" class="bg-primary" style="text-align: center; font-size: 16px; font-weight: 500;">C.캠퍼스 e-모아 > 수납관리자 (pages/sub_C)</td>
+								</tr>
+								<tr>
+									<td>캠퍼스 e-모아 메인</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td><a class="guide" href="./pages/C_Main.html" target="_sub_C">C_Main.html</a></td>
+									<td class="last_modified">2022-06-14</td>
+									<td>* 공지, FAQ, 상세보기 팝업<br/>* 메인비주얼 공지라인 추가</td>
+								</tr>
+								<tr>
+									<td>로그인</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill outline_secondary text-secondary">FORM</span></td>
+									<td><a class="guide btn-link" href="./pages/로그인_캠퍼스_수납관리자.html" target="_sub_C">로그인_캠퍼스_수납관리자.html</a></td>
+									<td class="last_modified">2022-05-17</td>
+									<td>회원가입 절차는 e-모아와 동일</td>
+								</tr>
+
+								<tr style="border-top: solid 2px gray;">
+									<td>1.수납대상명세관리</td>
+									<td>수납대상명세 관리</td>
+									<td></td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill bg-success">jGRID</span></td>
+									<td><a class="guide" href="./pages/sub_C/C101_수납대상명세관리.html" target="_sub_C">sub_C/C101_수납대상명세관리.html</a></td>
+									<td class="last_modified">2022-05-12</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>수납대상명세 상세</td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill outline_secondary text-secondary">FORM</span></td>
+									<td><a class="guide" href="./pages/sub_C/C101a_수납대상명세상세.html" target="_sub_C">sub_C/C101a_수납대상명세상세.html</a></td>
+									<td class="last_modified">2022-05-24</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>수납대상명세 등록</td>
+									<td></td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill outline_secondary text-secondary">FORM</span></td>
+									<td><a class="guide" href="./pages/sub_C/C102_수납대상명세등록.html" target="_sub_C">sub_C/C102_수납대상명세등록.html</a></td>
+									<td class="last_modified">2022-05-12</td>
+									<td></td>
+								</tr>
+								<tr style="border-top: solid 2px gray;">
+									<td>2.고지관리</td>
+									<td>고지내역 조회</td>
+									<td></td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill bg-success">jGRID</span><span class="badge badge_sm rounded-pill bg-warning">MODAL</span></td>
+									<td><a class="guide" href="./pages/sub_C/C201_고지내역조회.html" target="_sub_C">sub_C/C201_고지내역조회.html</a></td>
+									<td class="last_modified">2022-06-10</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>고지파일 관리</td>
+									<td></td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill bg-success">jGRID</span></td>
+									<td><a class="guide" href="./pages/sub_C/C202_고지파일관리.html" target="_sub_C">sub_C/C202_고지파일관리.html</a></td>
+									<td class="last_modified">2022-05-11</td>
+									<td></td>
+								</tr>
+								<tr style="border-top: solid 2px gray;">
+									<td>3.수납관리</td>
+									<td>수납내역 조회</td>
+									<td></td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill bg-success">jGRID</span><span class="badge badge_sm rounded-pill bg-warning">MODAL</span></td>
+									<td><a class="guide" href="./pages/sub_C/C301_수납내역조회.html" target="_sub_C">sub_C/C301_수납내역조회.html</a></td>
+									<td class="last_modified">2022-06-10</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>수납내역 조회(과거)</td>
+									<td></td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill bg-success">jGRID</span><span class="badge badge_sm rounded-pill bg-warning">MODAL</span></td>
+									<td><a class="guide" href="./pages/sub_C/C302_수납내역조회_과거.html" target="_sub_C">sub_C/C302_수납내역조회_과거.html</a></td>
+									<td class="last_modified">2022-05-11</td>
+									<td>* 검색결과(X) 메시지</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>수납결과 조회</td>
+									<td></td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill bg-success">jGRID</span></td>
+									<td><a class="guide" href="./pages/sub_C/C303_수납결과조회.html" target="_sub_C">sub_C/C303_수납결과조회.html</a></td>
+									<td class="last_modified">2022-05-11</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>집계 조회</td>
+									<td></td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill bg-secondary">TABLE</span></td>
+									<td><a class="guide" href="./pages/sub_C/C304_집계조회.html" target="_sub_C">sub_C/C304_집계조회.html</a></td>
+									<td class="last_modified">2022-05-11</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>집계 조회(과거)</td>
+									<td></td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill bg-secondary">TABLE</span></td>
+									<td><a class="guide" href="./pages/sub_C/C305_집계조회_과거.html" target="_sub_C">sub_C/C305_집계조회_과거.html</a></td>
+									<td class="last_modified">2022-05-11</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>수납파일 관리</td>
+									<td></td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill bg-success">jGRID</span></td>
+									<td><a class="guide" href="./pages/sub_C/C306_수납파일관리.html" target="_sub_C">sub_C/C306_수납파일관리.html</a></td>
+									<td class="last_modified">2022-05-11</td>
+									<td></td>
+								</tr>
+
+								<tr style="border-top: solid 2px gray;">
+									<td>4.사용자관리</td>
+									<td>기본정보관리</td>
+									<td></td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill outline_secondary text-secondary">FORM</span></td>
+									<td><a class="guide" href="./pages/sub_C/C401_기본정보관리.html" target="_sub_C">sub_C/C401_기본정보관리.html</a></td>
+									<td class="last_modified">2022-05-17</td>
+									<td>로고 이미지 부분 class명 변경</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>수납설정관리</td>
+									<td></td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill outline_secondary text-secondary">FORM</span></td>
+									<td><a class="guide" href="./pages/sub_C/C402_수납설정관리.html" target="_sub_C">sub_C/C402_수납설정관리.html</a></td>
+									<td class="last_modified">2022-05-09</td>
+									<td></td>
+								</tr>
+	
+<!-- D.캠퍼스 e-모아 > 납부자 -->
+								<tr style="border-top: solid 2px gray;">
+									<td colspan="100" class="bg-primary" style="text-align: center; font-size: 16px; font-weight: 500;">D.캠퍼스 e-모아 > 납부자 (pages/sub_D)</td>
+								</tr>
+								<tr>
+									<td>로그인</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill outline_secondary text-secondary">FORM</span></td>
+									<td><a class="guide btn-link" href="./pages/로그인_캠퍼스_납부자.html" target="_sub_C">로그인_캠퍼스_납부자.html</a></td>
+									<td class="last_modified">2022-05-02</td>
+									<td></td>
+								</tr>
+								<tr style="border-top: solid 2px gray;">
+									<td>1.납부내역 상세조회</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill bg-success">jGRID</span><span class="badge badge_sm rounded-pill bg-warning">MODAL</span></td>
+									<td><a class="guide btn-link" href="./pages/sub_D/D1_납부내역상세조회.html" target="_sub_D">sub_D/D1_납부내역상세조회.html</a></td>
+									<td class="last_modified">2022-06-10</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>2.납부내역 결과조회</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td><span class="badge badge_sm rounded-pill bg-success">jGRID</span></td>
+									<td><a class="guide btn-link" href="./pages/sub_D/D2_납부내역결과조회.html" target="_sub_D">sub_D/D2_납부내역결과조회.html</a></td>
+									<td class="last_modified">2022-05-20</td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</article>
+
+			</div><!-- .container -->
+		</section>
+	</div><!-- .guide -->
+
+	<footer>
+		<div class="inner">
+			<div class="copy">Copyright &copy; GRIDA 2022</div>
+			<div class="f-logo"><img src="./assets/img/ci_grida.svg" /></div>
+		</div>
+	</footer>
+
+<script>
+$(document).ready(function() {
+	let	today = new Date();
+	let	lastModified = "", diffDays = 0;
+
+	$(".last_modified").each(function(i, dateLastModified) {
+		lastModified = $(dateLastModified).text().trim();
+		if(lastModified !== "") {
+			diffDays = today.dateDiff($(dateLastModified).text());
+			console.log( today, lastModified, diffDays );
+			if(diffDays === 0) {
+				if(today.getDate() !== new Date(lastModified).getDate()) {
+					$(dateLastModified).html( `${lastModified}<span class="badge badge_sm bg-success ms-1">어제</span>`);
+				}
+				else {
+					$(dateLastModified).html( `${lastModified}<span class="badge badge_sm bg-primary ms-1">오늘</span>`);
+				}
+			}
+			else if(diffDays <= -1) {
+				$(dateLastModified).html( `${lastModified}<span class="badge badge_sm bg-info text-dark ms-1">예정</span>`);
+			}
+			else if(diffDays <= 1) {
+				$(dateLastModified).html( `${lastModified}<span class="badge badge_sm bg-success ms-1">어제</span>`);
+			}
+			else if(diffDays <= 6) {
+				$(dateLastModified).html( `${lastModified}<span class="badge badge_sm bg-warning text-dark ms-1">${diffDays}일 전</span>`);
+			}
+		}
+	})
+});
+</script>
+</body>
+</html>

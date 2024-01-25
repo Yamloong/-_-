@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+<title>BUTTON</title>
+
+<!--v Packages -->
+<script src="../../assets/js/jquery.min.js"></script>
+
+<link href="../../assets/css/jquery-ui.min.css" rel="stylesheet" />
+<script src="../../assets/js/jquery-ui.min.js"></script>
+
+<link href="../../assets/css/select2.min.css" rel="stylesheet" />
+<script src="../../assets/js/select2.min.js"></script>
+<!--^ Packages -->
+
+<!-- GUIDE관련 소스 -->
+<link href="../assets/css/only_for_guide.css" rel="stylesheet" />
+<script src="../assets/js/only_for_guide.js"></script>
+
+<!--v codemirror : 소스보기용 -->
+<link href="../assets/js/codemirror/lib/codemirror.css" rel="stylesheet" />
+<link href="../assets/js/codemirror/theme/rubyblue.css" rel="stylesheet" />
+<script src="../assets/js/codemirror/lib/codemirror.js"></script>
+<script src="../assets/js/codemirror/mode/xml/xml.js"></script>
+<script src="../assets/js/codemirror/mode/javascript/javascript.js"></script>
+<script src="../assets/js/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+<script src="../assets/js/codemirror/addon/selection/active-line.js"></script>
+<!--^ codemirror : 소스보기용 -->
+
+<link href="../../assets/css/all.css" rel="stylesheet" />
+<script src="../../assets/js/util.js"></script>
+</head>
+
+<body class="guide_page">
+	<header>
+		<div class="inner">
+			<div class="logo">UI/UX GUIDE</div>
+			<ul class="gnb">
+				<li><a href="../index.html">페이지</a></li>
+				<li><a href="../style.html">스타일</a></li>
+				<li class="active"><a href="../components.html">컴포넌트</a></li>
+				<li><a href="../layouts.html">레이아웃</a></li>
+				<li><a href="../about.html">About</a></li>
+			</ul>
+		</div>
+	</header>
+
+	<div class="container">
+		<h2 class="page-title">BUTTON</h2>
+
+		<div class="page-note"><strong>Overview</strong> button의 예시와 사용방법입니다.</div>
+
+		<article class="guide">
+			<h3 class="guide-title">BUTTON</h3>
+
+			<div class="contents">
+				<div class="guide-sub-title">
+					기본 형태
+					<div class="right_menu">
+						<button type="button" class="btn btn-primary btn_view_source" data-target="#sourceViewer1"><i class="icon-eyes">👀</i><span>HTML</span></button>
+					</div>
+				</div>
+
+				<ul class="info">
+					<li>버튼의 최소 사이즈는 100px 입니다.</li>
+					<li>관리자 가입 및 팝업에서만 버튼의 최소 사이즈는 120px 입니다.</li>
+				</ul>
+
+				<div class="guide-row">
+					<div class="guide_html">
+<button type="button" class="btn btn-primary">
+	<span>.btn-primary</span>
+</button>
+<button type="button" class="btn btn-primary" disabled="disabled">
+	<span>Disabled</span>
+</button>
+					</div>
+					<div class="guide_html">
+<button type="button" class="btn btn-line">
+	<span>.btn-line</span>
+</button>
+<button type="button" class="btn btn-line" disabled="disabled">
+	<span>Disabled</span>
+</button>
+					</div>
+					<div class="guide_html">
+<button type="button" class="btn btn-line-black">
+	<span>.btn-line-black</span>
+</button>
+<button type="button" class="btn btn-line-black" disabled="disabled">
+	<span>Disabled</span>
+</button>
+					</div>
+					<div class="guide_html">
+<button type="button" class="btn btn-line-error">
+	<span>.btn-line-error</span>
+</button>
+<button type="button" class="btn btn-line-error" disabled="disabled">
+	<span>Disabled</span>
+</button>
+					</div>
+				</div><!-- .guide-row -->
+
+				<div class="guide-row">
+					<div class="guide_html">
+<button type="button" class="btn btn-primary">
+	<span>조회</span>
+</button>
+<button type="button" class="btn btn-primary" disabled="disabled">
+	<span>조회</span>
+</button>
+					</div>
+					<div class="guide_html">
+<button type="button" class="btn btn-line">
+	<span>SMS전송</span>
+</button>
+<button type="button" class="btn btn-line" disabled="disabled">
+	<span>SMS전송</span>
+</button>
+					</div>
+					<div class="guide_html">
+<button type="button" class="btn btn-line-black">
+	<span>등록</span>
+</button>
+<button type="button" class="btn btn-line-black" disabled="disabled">
+	<span>등록</span>
+</button>
+					</div>
+					<div class="guide_html">
+<button type="button" class="btn btn-line-error">
+	<span>탈퇴</span>
+</button>
+<button type="button" class="btn btn-line-error" disabled="disabled">
+	<span>탈퇴</span>
+</button>
+					</div>
+				</div><!-- .guide-row -->
+				<br><br>
+				<div class="guide-row">
+					<div class="guide_html">
+<button type="button" class="btn btn-primary">
+	<i class="icon-search"></i>
+	<span>검색</span>
+</button>
+<button type="button" class="btn btn-primary" disabled="disabled">
+	<i class="icon-search"></i>
+	<span>검색</span>
+</button>
+					</div>
+
+					<div class="guide_html">
+<button type="button" class="btn btn-line">
+	<i class="icon-filedown"></i>
+	<span>엑셀다운</span>
+</button>
+<button type="button" class="btn btn-line" disabled="disabled">
+	<span>Disabled</span>
+</button>
+					</div>
+					
+					<div class="guide_html">
+<button type="button" class="btn btn-sub-line">
+	<span>.btn-sub-line</span>
+</button>
+<button type="button" class="btn btn-sub-line" disabled="disabled">
+	<span>Disabled</span>
+</button>
+					</div>
+					
+					<div class="guide_html">
+<button type="button" class="btn btn-sub-line">
+	<i class="icon-reload"></i>
+</button>
+<button type="button" class="btn btn-sub-line" disabled="disabled">
+	<i class="icon-reload"></i>
+</button>
+					</div>
+				</div>
+			</div><!-- .contents -->
+
+			<div class="contents">
+				
+				<div class="guide-sub-title">
+					기본 형태2
+					<div class="right_menu">
+						<button type="button" class="btn btn-primary btn_view_source" data-target="#sourceViewer1"><i class="icon-eyes">👀</i><span>HTML</span></button>
+					</div>
+				</div>
+
+				<ul class="info">
+					<li>최소 사이즈 없이 텍스트 길이에 따라 넓이가 가변되는 버튼입니다.</li>
+					<li>기존 버튼 클래스명에서 .narrow 클래스만 추가해주세요.</li>
+				</ul>
+
+				<div class="guide-row">
+					<div class="guide_html">
+<button type="button" class="btn btn-primary narrow">
+	<span>.narrow</span>
+</button>
+<button type="button" class="btn btn-primary narrow" disabled="disabled">
+	<span>disabled</span>
+</button>
+					</div>
+				</div>
+
+				<div id="sourceViewer1" class="source_viewer"></div>
+			</div><!-- .contents -->
+
+			<div class="contents">
+				<div class="guide-sub-title">
+					테이블 내부 버튼은 둥글게 .rounded 클래스 추가
+					<div class="right_menu">
+						<button type="button" class="btn btn-primary btn_view_source" data-target="#sourceViewer3"><i class="icon-eyes">👀</i><span>HTML</span></button>
+					</div>
+				</div>
+
+				<div class="guide-row">
+					<div class="guide_html">
+						<button type="button" class="btn btn-sub-line rounded"><span>.rounded</span></button>
+						<button type="button" class="btn btn-sub-line rounded" disabled="disabled"><span>Disabled</span></button>
+					</div>
+					<div class="guide_html"></div>
+					<div class="guide_html"></div>
+					<div class="guide_html"></div>
+				</div><!-- .guide-row -->
+
+				<div id="sourceViewer3" class="source_viewer"></div>
+			</div><!-- .contents -->
+
+			<div class="contents">
+				<div class="guide-sub-title">
+					사이즈
+					<div class="right_menu">
+						<button type="button" class="btn btn-primary btn_view_source" data-target="#sourceViewer3"><i class="icon-eyes">👀</i><span>HTML</span></button>
+					</div>
+				</div>
+
+				<div class="guide-row">
+					<div class="guide_html">
+<button type="button" class="btn btn-primary btn-sm">
+	<span>.btn.btn-sm</span>
+</button>
+<button type="button" class="btn btn-primary">
+	<span>dafault</span>
+</button>
+					</div>
+				</div><!-- .guide-row -->
+
+				<div id="sourceViewer3" class="source_viewer"></div>
+			</div><!-- .contents -->
+		</article>
+	</div><!-- .container -->
+
+	<footer>
+		<div class="inner">
+			<div class="copy">Copyright &copy; GRIDA 2022</div>
+			<div class="f-logo"><img src="../assets/img/ci_grida.svg" /></div>
+		</div>
+	</footer>
+</body>
+</html>

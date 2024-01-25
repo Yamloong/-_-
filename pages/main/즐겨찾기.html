@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+<title>즐겨찾기</title>
+
+<!--v Packages -->
+<script src="../../assets/js/jquery.min.js"></script>
+
+<link href="../../assets/css/jquery-ui.min.css" rel="stylesheet" />
+<script src="../../assets/js/jquery-ui.min.js"></script>
+
+<link href="../../assets/css/select2.min.css" rel="stylesheet" />
+<script src="../../assets/js/select2.min.js"></script>
+<!--^ Packages -->
+
+<link href="../../assets/css/all.css" rel="stylesheet" />
+<script src="../../assets/js/util.js"></script>
+</head>
+
+<body class="sub-page">
+	<header>
+		<div class="inner">
+			<h1 class="logo">
+				<a href="#">
+					<img src="../../assets/img/logo.svg" />
+				</a>
+			</h1>
+			<div id="gnb">
+				<ul class="gnb-list">
+					<li>
+						<a href="#">회원/카드관리</a>
+					</li>
+					<li>
+						<a href="#">거래관리</a>
+					</li>
+					<li>
+						<a href="#">정산현황</a>
+					</li>
+					<li>
+						<a href="#">통계/분석</a>
+					</li>
+					<li>
+						<a href="#">지원정책</a>
+					</li>
+					<li>
+						<a href="#">환경설정</a>
+					</li>
+					<li>
+						<button type="button" class="btn">
+							<span>전체보기</span>
+							<i class="icon-menu"></i>
+						</button>
+					</li>
+				</ul>
+			</div>
+			<div class="my-menu">
+				<div class="info">
+					<div class="photo">
+						<i class="icon-smile"></i><!-- 혹시 나중에 img태그가 들어간다면 해당 i태그 삭제 -->
+					</div>
+					<div class="name">관리자</div>
+				</div>
+				<div class="log">
+					<span>최종 로그인</span>
+					<span class="time">2022.08.29 14:14</span>
+				</div>
+				<div class="button-wrap">
+					<button type="button" class="btn">
+						<i class="icon-setting"></i>
+					</button>
+					<button type="button" class="btn">
+						<i class="icon-logout"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="container" style="padding-left: 30px;">
+		<!-- #lnb -->
+		<div class="content-wrap">
+			<div class="content-header">
+				<div class="title-wrap">
+					<div class="title">즐겨찾기</div>
+				</div>
+			</div>
+			<div class="content-body">
+				<div class="section-body">
+					<div class="favorite-wrap">
+						<!-- 회원/카드관리 -->
+						<div class="favorite-section">
+							<div class="favorite-section-title">
+								<span>회원/카드관리</span>
+							</div>
+
+							<!-- 대상자관리 -->
+							<div class="favorite-title">
+								<span>대상자관리</span>
+								<button type="button" class="btn">
+									<i class="icon-star"></i>
+								</button>
+							</div>
+							<ul class="favorite-list">
+								<li>
+									<span>급식대상자조회</span>
+									<button type="button" class="btn">
+										<i class="icon-star"></i>
+									</button>
+								</li>
+								<li>
+									<span>카드 및 급식자 신규등록</span>
+									<button type="button" class="btn">
+										<i class="icon-star"></i>
+									</button>
+								</li>
+								<li>
+									<span>보휴회원명단</span>
+									<button type="button" class="btn">
+										<i class="icon-star"></i>
+									</button>
+								</li>
+							</ul>
+							<!--// 대상자관리 -->
+
+							<!-- 카드관리 -->
+							<div class="favorite-title">
+								<span>카드관리</span>
+								<button type="button" class="btn">
+									<i class="icon-star"></i>
+								</button>
+							</div>
+							<ul class="favorite-list">
+								<li>
+									<span>재료카드 요청</span>
+									<button type="button" class="btn">
+										<i class="icon-star"></i>
+									</button>
+								</li>
+								<li>
+									<span>빈카드 조회</span>
+									<button type="button" class="btn">
+										<i class="icon-star"></i>
+									</button>
+								</li>
+							</ul>
+							<!--// 카드관리 -->
+
+							<!-- 이용현황 -->
+							<div class="favorite-title">
+								<span>이용현황</span>
+								<button type="button" class="btn">
+									<i class="icon-star"></i>
+								</button>
+							</div>
+							<ul class="favorite-list">
+								<li>
+									<span>회원별 거래현황</span>
+									<button type="button" class="btn">
+										<i class="icon-star"></i>
+									</button>
+								</li>
+								<li>
+									<span>회원별 이용현황</span>
+									<button type="button" class="btn">
+										<i class="icon-star"></i>
+									</button>
+								</li>
+								<li>
+									<span>일자별 집계</span>
+									<button type="button" class="btn">
+										<i class="icon-star"></i>
+									</button>
+								</li>
+							</ul>
+							<!--// 이용현황 -->
+						</div>
+						<!--// 회원/카드관리 -->
+
+						<!-- 거래관리 -->
+						<div class="favorite-section">
+							<div class="favorite-section-title">
+								<span>거래관리</span>
+							</div>
+
+							<!-- 거래내역 -->
+							<div class="favorite-title">
+								<span>거래내역</span>
+								<button type="button" class="btn">
+									<i class="icon-star"></i>
+								</button>
+							</div>
+							<ul class="favorite-list">
+								<li>
+									<span>급식종합관리</span>
+									<button type="button" class="btn">
+										<i class="icon-star"></i>
+									</button>
+								</li>
+								<li>
+									<span>거래요약조회</span>
+									<button type="button" class="btn">
+										<i class="icon-star"></i>
+									</button>
+								</li>
+								<li>
+									<span>거래상세조회</span>
+									<button type="button" class="btn">
+										<i class="icon-star"></i>
+									</button>
+								</li>
+								<li>
+									<span>사용현황</span>
+									<button type="button" class="btn">
+										<i class="icon-star"></i>
+									</button>
+								</li>
+							</ul>
+							<!--// 거래내역 -->
+
+							<!-- 실시간조회 -->
+							<div class="favorite-title">
+								<span>실시간조회</span>
+								<button type="button" class="btn">
+									<i class="icon-star"></i>
+								</button>
+							</div>
+							<ul class="favorite-list">
+								<li>
+									<span>VAN사 거래조회</span>
+									<button type="button" class="btn">
+										<i class="icon-star"></i>
+									</button>
+								</li>
+								<li>
+									<span>월별 통계현황</span>
+									<button type="button" class="btn">
+										<i class="icon-star"></i>
+									</button>
+								</li>
+							</ul>
+							<!--// 실시간조회 -->
+
+							<!-- 가맹점관리 -->
+							<div class="favorite-title">
+								<span>가맹점관리</span>
+								<button type="button" class="btn">
+									<i class="icon-star on"></i>
+								</button>
+							</div>
+							<ul class="favorite-list">
+								<li>
+									<span>가맹점관리</span>
+									<button type="button" class="btn">
+										<i class="icon-star on"></i>
+									</button>
+								</li>
+								<li>
+									<span>가맹점별 거래조회</span>
+									<button type="button" class="btn">
+										<i class="icon-star on"></i>
+									</button>
+								</li>
+							</ul>
+							<!--// 가맹점관리 -->
+
+							<!-- 가맹점별 거래현황 -->
+							<div class="favorite-title">
+								<span>가맹점별 거래현황</span>
+								<button type="button" class="btn">
+									<i class="icon-star"></i>
+								</button>
+							</div>
+							<ul class="favorite-list">
+								<li>
+									<span>가맹점별 거래현황</span>
+									<button type="button" class="btn">
+										<i class="icon-star"></i>
+									</button>
+								</li>
+							</ul>
+							<!--// 가맹점별 거래현황 -->
+						</div>
+						<!--// 거래관리 -->
+
+						<!-- 정산현황 -->
+						<div class="favorite-section">
+							<div class="favorite-section-title">
+								<span>정산현황</span>
+							</div>
+
+							<!-- 예산관리 -->
+							<div class="favorite-title">
+								<span>예산관리</span>
+								<button type="button" class="btn">
+									<i class="icon-star"></i>
+								</button>
+							</div>
+							<ul class="favorite-list">
+								<li>
+									<span>예산관리</span>
+									<button type="button" class="btn">
+										<i class="icon-star"></i>
+									</button>
+								</li>
+							</ul>
+							<!--// 예산관리 -->
+
+							<!-- 정산관리 -->
+							<div class="favorite-title">
+								<span>정산관리</span>
+								<button type="button" class="btn">
+									<i class="icon-star"></i>
+								</button>
+							</div>
+							<ul class="favorite-list">
+								<li>
+									<span>정산조회</span>
+									<button type="button" class="btn">
+										<i class="icon-star"></i>
+									</button>
+								</li>
+								<li>
+									<span>대사 및 정산집계</span>
+									<button type="button" class="btn">
+										<i class="icon-star"></i>
+									</button>
+								</li>
+							</ul>
+							<!--// 정산관리 -->
+						</div>
+						<!--// 정산현황 -->
+
+						<!-- 통계/분석 -->
+						<div class="favorite-section">
+							<div class="favorite-section-title">
+								<span>통계/분석</span>
+							</div>
+
+							<!-- 모니터링 -->
+							<div class="favorite-title">
+								<span>모니터링</span>
+								<button type="button" class="btn">
+									<i class="icon-star"></i>
+								</button>
+							</div>
+							<ul class="favorite-list">
+								<li>
+									<span>이상징후 모니터링</span>
+									<button type="button" class="btn">
+										<i class="icon-star"></i>
+									</button>
+								</li>
+								<li>
+									<span>영양관리 모니터링</span>
+									<button type="button" class="btn">
+										<i class="icon-star"></i>
+									</button>
+								</li>
+							</ul>
+							<!--// 모니터링 -->
+
+							<!-- 통계현황 -->
+							<div class="favorite-title">
+								<span>통계현황</span>
+								<button type="button" class="btn">
+									<i class="icon-star"></i>
+								</button>
+							</div>
+							<ul class="favorite-list">
+								<li>
+									<span>급식수통계</span>
+									<button type="button" class="btn">
+										<i class="icon-star"></i>
+									</button>
+								</li>
+								<li>
+									<span>조중석통계</span>
+									<button type="button" class="btn">
+										<i class="icon-star"></i>
+									</button>
+								</li>
+								<li>
+									<span>지원내용별 현황</span>
+									<button type="button" class="btn">
+										<i class="icon-star"></i>
+									</button>
+								</li>
+								<li>
+									<span>월별통계 현황</span>
+									<button type="button" class="btn">
+										<i class="icon-star"></i>
+									</button>
+								</li>
+								<li>
+									<span>지자체별 정산통계</span>
+									<button type="button" class="btn">
+										<i class="icon-star"></i>
+									</button>
+								</li>
+								<li>
+									<span>지자체별 수급자통계</span>
+									<button type="button" class="btn">
+										<i class="icon-star"></i>
+									</button>
+								</li>
+								<li>
+									<span>수급자 주문통계</span>
+									<button type="button" class="btn">
+										<i class="icon-star"></i>
+									</button>
+								</li>
+								<li>
+									<span>배달업체별 상품통계</span>
+									<button type="button" class="btn">
+										<i class="icon-star"></i>
+									</button>
+								</li>
+								<li>
+									<span>배달업체별 주문통계</span>
+									<button type="button" class="btn">
+										<i class="icon-star"></i>
+									</button>
+								</li>
+							</ul>
+							<!--// 통계현황 -->
+						</div>
+						<!--// 통계/분석 -->
+
+						<!-- 지원정책 -->
+						<div class="favorite-section">
+							<div class="favorite-section-title">
+								<span>지원정책</span>
+							</div>
+
+							<!-- 참여마당 -->
+							<div class="favorite-title">
+								<span>참여마당</span>
+								<button type="button" class="btn">
+									<i class="icon-star"></i>
+								</button>
+							</div>
+							<ul class="favorite-list">
+								<li>
+									<span>공지관리</span>
+									<button type="button" class="btn">
+										<i class="icon-star"></i>
+									</button>
+								</li>
+								<li>
+									<span>자주하는질문관리</span>
+									<button type="button" class="btn">
+										<i class="icon-star"></i>
+									</button>
+								</li>
+								<li>
+									<span>1:1문의관리</span>
+									<button type="button" class="btn">
+										<i class="icon-star"></i>
+									</button>
+								</li>
+								<li>
+									<span>바우처시스템 개선요청</span>
+									<button type="button" class="btn">
+										<i class="icon-star"></i>
+									</button>
+								</li>
+							</ul>
+							<!--// 참여마당 -->
+
+							<!-- 부정수급 -->
+							<div class="favorite-title">
+								<span>부정수급</span>
+								<button type="button" class="btn">
+									<i class="icon-star"></i>
+								</button>
+							</div>
+							<ul class="favorite-list">
+								<li>
+									<span>부정수급사례조회</span>
+									<button type="button" class="btn">
+										<i class="icon-star"></i>
+									</button>
+								</li>
+								<li>
+									<span>부정수급 신고내역조회</span>
+									<button type="button" class="btn">
+										<i class="icon-star"></i>
+									</button>
+								</li>
+							</ul>
+							<!--// 부정수급 -->
+
+							<!-- 지원정책 -->
+							<div class="favorite-title">
+								<span>지원정책</span>
+								<button type="button" class="btn">
+									<i class="icon-star"></i>
+								</button>
+							</div>
+							<ul class="favorite-list">
+								<li>
+									<span>바우처정책</span>
+									<button type="button" class="btn">
+										<i class="icon-star"></i>
+									</button>
+								</li>
+								<li>
+									<span>학교관리</span>
+									<button type="button" class="btn">
+										<i class="icon-star"></i>
+									</button>
+								</li>
+								<li>
+									<span>지자체관리</span>
+									<button type="button" class="btn">
+										<i class="icon-star"></i>
+									</button>
+								</li>
+							</ul>
+							<!--// 지원정책 -->
+						</div>
+						<!--// 지원정책 -->
+
+						<!-- 환경설정 -->
+						<div class="favorite-section">
+							<div class="favorite-section-title">
+								<span>환경설정</span>
+							</div>
+
+							<!-- 사용자관리 -->
+							<div class="favorite-title">
+								<span>사용자관리</span>
+								<button type="button" class="btn">
+									<i class="icon-star"></i>
+								</button>
+							</div>
+							<ul class="favorite-list">
+								<li>
+									<span>사용자승인</span>
+									<button type="button" class="btn">
+										<i class="icon-star"></i>
+									</button>
+								</li>
+								<li>
+									<span>사용자관리</span>
+									<button type="button" class="btn">
+										<i class="icon-star"></i>
+									</button>
+								</li>
+								<li>
+									<span>사용자권한관리</span>
+									<button type="button" class="btn">
+										<i class="icon-star"></i>
+									</button>
+								</li>
+							</ul>
+							<!--// 사용자관리 -->
+
+							<!-- 플랫폼관리 -->
+							<div class="favorite-title">
+								<span>플랫폼관리</span>
+								<button type="button" class="btn">
+									<i class="icon-star"></i>
+								</button>
+							</div>
+							<ul class="favorite-list">
+								<li>
+									<span>메뉴관리</span>
+									<button type="button" class="btn">
+										<i class="icon-star"></i>
+									</button>
+								</li>
+								<li>
+									<span>배너관리</span>
+									<button type="button" class="btn">
+										<i class="icon-star"></i>
+									</button>
+								</li>
+								<li>
+									<span>팝업관리</span>
+									<button type="button" class="btn">
+										<i class="icon-star"></i>
+									</button>
+								</li>
+								<li>
+									<span>공공데이터관리</span>
+									<button type="button" class="btn">
+										<i class="icon-star"></i>
+									</button>
+								</li>
+								<li>
+									<span>가맹점분류코드관리</span>
+									<button type="button" class="btn">
+										<i class="icon-star"></i>
+									</button>
+								</li>
+								<li>
+									<span>공휴일관리</span>
+									<button type="button" class="btn">
+										<i class="icon-star"></i>
+									</button>
+								</li>
+							</ul>
+							<!--// 플랫폼관리 -->
+
+							<!-- 시스템관리 -->
+							<div class="favorite-title">
+								<span>시스템관리</span>
+								<button type="button" class="btn">
+									<i class="icon-star"></i>
+								</button>
+							</div>
+							<ul class="favorite-list">
+								<li>
+									<span>이용자접속현황관리</span>
+									<button type="button" class="btn">
+										<i class="icon-star"></i>
+									</button>
+								</li>
+								<li>
+									<span>메뉴이용현황</span>
+									<button type="button" class="btn">
+										<i class="icon-star"></i>
+									</button>
+								</li>
+								<li>
+									<span>변경이력관리</span>
+									<button type="button" class="btn">
+										<i class="icon-star"></i>
+									</button>
+								</li>
+								<li>
+									<span>메타데이터관리</span>
+									<button type="button" class="btn">
+										<i class="icon-star"></i>
+									</button>
+								</li>
+								<li>
+									<span>연계전문관리</span>
+									<button type="button" class="btn">
+										<i class="icon-star"></i>
+									</button>
+								</li>
+								<li>
+									<span>연계데이터관리</span>
+									<button type="button" class="btn">
+										<i class="icon-star"></i>
+									</button>
+								</li>
+								<li>
+									<span>개인정보관리</span>
+									<button type="button" class="btn">
+										<i class="icon-star"></i>
+									</button>
+								</li>
+							</ul>
+							<!--// 시스템관리 -->
+						</div>
+						<!--// 환경설정 -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><!-- .container -->
+</body>
+</html>

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+<title>연령별 필요 영양소 정보</title>
+
+<!--v Packages -->
+<script src="../../assets/js/jquery.min.js"></script>
+
+<link href="../../assets/css/jquery-ui.min.css" rel="stylesheet" />
+<script src="../../assets/js/jquery-ui.min.js"></script>
+
+<link href="../../assets/css/select2.min.css" rel="stylesheet" />
+<script src="../../assets/js/select2.min.js"></script>
+<!--^ Packages -->
+
+<link href="../../assets/css/all.css" rel="stylesheet" />
+<script src="../../assets/js/util.js"></script>
+</head>
+
+<body class="sub-page">
+	<header>
+		<div class="inner">
+			<h1 class="logo">
+				<a href="#">
+					<img src="../../assets/img/logo.svg" />
+				</a>
+			</h1>
+			<div id="gnb">
+				<ul class="gnb-list">
+					<li>
+						<a href="#">회원/카드관리</a>
+					</li>
+					<li>
+						<a href="#">거래관리</a>
+					</li>
+					<li>
+						<a href="#">정산현황</a>
+					</li>
+					<li>
+						<a href="#">통계/분석</a>
+					</li>
+					<li>
+						<a href="#">지원정책</a>
+					</li>
+					<li>
+						<a href="#">환경설정</a>
+					</li>
+					<li>
+						<button type="button" class="btn">
+							<span>전체보기</span>
+							<i class="icon-menu"></i>
+						</button>
+					</li>
+				</ul>
+			</div>
+			<div class="my-menu">
+				<div class="info">
+					<div class="photo">
+						<i class="icon-smile"></i><!-- 혹시 나중에 img태그가 들어간다면 해당 i태그 삭제 -->
+					</div>
+					<div class="name">관리자</div>
+				</div>
+				<div class="log">
+					<span>최종 로그인</span>
+					<span class="time">2022.08.29 14:14</span>
+				</div>
+				<div class="button-wrap">
+					<button type="button" class="btn">
+						<i class="icon-setting"></i>
+					</button>
+					<button type="button" class="btn">
+						<i class="icon-logout"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="container">
+		<div id="lnb">
+			<div class="group-title">
+				<span>통계/분석</span>
+			</div>
+			<button type="button" class="btn btn-primary btn_lnb_control">
+				<i class="icon-arrow-prev"></i>
+			</button>
+			<ul class="menu-list">
+				<li class="on">
+					<a href="#">
+						<span>모니터링</span>
+						<i class="icon-circle-plus"></i>
+					</a>
+					<ul class="sub-menu">
+						<li class="on">
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>영양관리 모니터링</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>이상징후 모니터링</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">
+						<span>통계현황</span>
+						<i class="icon-circle-plus"></i>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>조중석통계</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>지원내용별 현황</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>지원구분별 금액</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>월별통계현황</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>지자체별 정산 통계</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>지자체별 대상자 통계</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>대상자 주문 통계</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>배달업체별 상품 통계</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>배달업체별 주문 통계</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!-- #lnb -->
+		<div class="content-wrap">
+		</div><!-- .content-wrap -->
+	</div><!-- .container -->
+
+	<!-- 팝업 위치는 항상 여기에 넣어주세요. -->
+	<div id="layerPopup" class="layerPopup" style="display: block;"><!-- 실제 작업하실 때는 style 선언은 지워주세요. 팝업 활성화 방법은 components/modal.html 파일을 참고해주세요. -->
+		<div class="layer-wrap" style="width: 960px;">
+			<div class="layer-header">
+				<h4 class="layer-title">연령별 필요 영양소 정보</h4>
+				<div class="button-wrap">
+					<button type="button" class="btn btn_close" title="창닫기">
+						<i class="icon-close"></i>
+					</button>
+				</div>
+			</div><!-- .layer-header -->
+	
+			<div class="layer-body">
+				<div class="page-memo">
+					<ul class="list">
+						<li>국내 연령대별 하루에 섭취하는 평균 섭취 영양소 정보 입니다.</li>
+					</ul>
+				</div>
+
+				<div class="section-header">
+					<div class="title-wrap">
+						<div class="title">연령별 필요 영양소 정보</div>
+					</div>
+					<div class="title-wrap">
+						<div class="sub-title">(출처:)</div>
+					</div>
+				</div><!-- .section-header -->
+
+				<div class="section-body">
+					<div class="table-wrap">
+						<table class="tbl-data all-center">
+							<thead>
+							  <tr>
+								<th rowspan="2">연령대(세)</th>
+								<th colspan="2">에너지(kcal)</th>
+								<th colspan="2">단백질(g)</th>
+								<th colspan="2">지방(g)</th>
+								<th colspan="2">탄수화물(g)</th>
+								<th colspan="2">당(g)</th>
+							  </tr>
+							  <tr>
+								<th>남</th>
+								<th>여</th>
+								<th>남</th>
+								<th>여</th>
+								<th>남</th>
+								<th>여</th>
+								<th>남</th>
+								<th>여</th>
+								<th>남</th>
+								<th>여</th>
+							  </tr>
+							</thead>
+							<tbody>
+							  <tr>
+								<th>1 ~ 2</th>
+								<td>1173.73</td>
+								<td>1109.2</td>
+								<td>38.79</td>
+								<td>39.07</td>
+								<td>31.11</td>
+								<td>33.27</td>
+								<td>183.62</td>
+								<td>162.34</td>
+								<td>47.98</td>
+								<td>50.94</td>
+							  </tr>
+							  <tr>
+								<th>3 ~ 5</th>
+								<td>1420.08</td>
+								<td>1237.12</td>
+								<td>49.22</td>
+								<td>43.61</td>
+								<td>38.24</td>
+								<td>33.71</td>
+								<td>217.98</td>
+								<td>188.44</td>
+								<td>57.59</td>
+								<td>51.5</td>
+							  </tr>
+							  <tr>
+								<th>6 ~ 11</th>
+								<td>1892.77</td>
+								<td>1641.99</td>
+								<td>70</td>
+								<td>58.76</td>
+								<td>55.27</td>
+								<td>45.67</td>
+								<td>274.45</td>
+								<td>246.51</td>
+								<td>64.35</td>
+								<td>62.48</td>
+							  </tr>
+							  <tr>
+								<th>12 ~ 18</th>
+								<td>2331.73</td>
+								<td>1829.8</td>
+								<td>92.67</td>
+								<td>65.96</td>
+								<td>70.7</td>
+								<td>53.16</td>
+								<td>325</td>
+								<td>268.35</td>
+								<td>72.7</td>
+								<td>70.92</td>
+							  </tr>
+							  <tr>
+								<th>19 ~ 39</th>
+								<td>2446.11</td>
+								<td>1737.49</td>
+								<td>98.31</td>
+								<td>66.96</td>
+								<td>72.19</td>
+								<td>51.88</td>
+								<td>307.65</td>
+								<td>238.47</td>
+								<td>70.74</td>
+								<td>62.25</td>
+							  </tr>
+							  <tr>
+								<th>30 ~ 49</th>
+								<td>2452.86</td>
+								<td>1676.86</td>
+								<td>91.8</td>
+								<td>64.37</td>
+								<td>64.82</td>
+								<td>44.67</td>
+								<td>320.93</td>
+								<td>240.82</td>
+								<td>68.04</td>
+								<td>57.35</td>
+							  </tr>
+							  <tr>
+								<th>50 ~ 64</th>
+								<td>2232.01</td>
+								<td>1586.03</td>
+								<td>79.73</td>
+								<td>57.6</td>
+								<td>46.67</td>
+								<td>35.78</td>
+								<td>323.38</td>
+								<td>254.1</td>
+								<td>60.96</td>
+								<td>60.96</td>
+							  </tr>
+							  <tr>
+								<th>65 이상</th>
+								<td>1817.83</td>
+								<td>1329.87</td>
+								<td>63.97</td>
+								<td>44.95</td>
+								<td>33.03</td>
+								<td>23.3</td>
+								<td>291.66</td>
+								<td>232.62</td>
+								<td>51.7</td>
+								<td>44.7</td>
+							  </tr>
+							</tbody>
+						</table>
+					</div>
+				</div><!-- .section-body -->
+
+
+			</div><!-- .layer-body -->
+	
+			<div class="layer-footer">
+				<div class="button-wrap">
+					<button type="button" class="btn btn-line btn_close"><span>닫기</span></button>
+				</div>
+			</div><!-- .layer-footer -->
+		</div><!-- .layer-contents -->
+	</div><!-- #layerPopup.layerPopup -->
+</body>
+</html>

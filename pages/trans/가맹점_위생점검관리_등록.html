@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+<title>가맹점 위생점검 등록</title>
+
+<!--v Packages -->
+<script src="../../assets/js/jquery.min.js"></script>
+
+<link href="../../assets/css/jquery-ui.min.css" rel="stylesheet" />
+<script src="../../assets/js/jquery-ui.min.js"></script>
+
+<link href="../../assets/css/select2.min.css" rel="stylesheet" />
+<script src="../../assets/js/select2.min.js"></script>
+<!--^ Packages -->
+
+<link href="../../assets/css/all.css" rel="stylesheet" />
+<script src="../../assets/js/util.js"></script>
+</head>
+
+<body class="sub-page">
+	<header>
+		<div class="inner">
+			<h1 class="logo">
+				<a href="#">
+					<img src="../../assets/img/logo.svg" />
+				</a>
+			</h1>
+			<div id="gnb">
+				<ul class="gnb-list">
+					<li>
+						<a href="#">회원/카드관리</a>
+					</li>
+					<li>
+						<a href="#">거래관리</a>
+					</li>
+					<li>
+						<a href="#">정산현황</a>
+					</li>
+					<li>
+						<a href="#">통계/분석</a>
+					</li>
+					<li>
+						<a href="#">지원정책</a>
+					</li>
+					<li>
+						<a href="#">환경설정</a>
+					</li>
+					<li>
+						<button type="button" class="btn">
+							<span>전체보기</span>
+							<i class="icon-menu"></i>
+						</button>
+					</li>
+				</ul>
+			</div>
+			<div class="my-menu">
+				<div class="info">
+					<div class="photo">
+						<i class="icon-smile"></i><!-- 혹시 나중에 img태그가 들어간다면 해당 i태그 삭제 -->
+					</div>
+					<div class="name">관리자</div>
+				</div>
+				<div class="log">
+					<span>최종 로그인</span>
+					<span class="time">2022.08.29 14:14</span>
+				</div>
+				<div class="button-wrap">
+					<button type="button" class="btn">
+						<i class="icon-setting"></i>
+					</button>
+					<button type="button" class="btn">
+						<i class="icon-logout"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="container">
+		<div id="lnb">
+			<div class="group-title">
+				<span>거래관리</span>
+			</div>
+			<button type="button" class="btn btn-primary btn_lnb_control">
+				<i class="icon-arrow-prev"></i>
+			</button>
+			<ul class="menu-list">
+				<li>
+					<a href="#">
+						<span>거래내역</span>
+						<i class="icon-circle-plus"></i>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>급식종합관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>거래요약조회</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>거래상세조회</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>거래현황</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>실시간거래내역조회</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="on">
+					<a href="#">
+						<span>가맹점관리</span>
+						<i class="icon-circle-plus"></i>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>가맹점관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>가맹점별 거래조회</span>
+							</a>
+						</li>
+						<li class="on">
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>가맹점 위생점검 관리</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">
+						<span>가맹점별거래현황</span>
+						<i class="icon-circle-plus"></i>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>가맹점별거래현황</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!-- #lnb -->
+		<div class="content-wrap">
+			<div class="content-header">
+				<div class="title-wrap">
+					<div class="title">가맹점 위생점검 등록</div>
+					<div class="location">
+						<i class="icon-home"></i>
+						<span>홈</span>
+						<span>거래관리</span>
+						<span>가맹점관리</span>
+						<span>가맹점 위생점검 등록</span>
+					</div>
+				</div>
+			</div>
+			<div class="content-body">
+
+				<div class="section-header">
+					<div class="title-wrap">
+						<div class="title">가맹점 정보 조회</div>
+					</div>
+				</div><!-- .section-header -->
+
+				<div class="section-body">
+					<div class="table-wrap">
+						<table class="tbl-form">
+							<colgroup>
+								<col style="width: 100px;">
+								<col style="width: 40%;">
+								<col style="width: 100px;">
+								<col style="width: 40%;">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>
+										<label class="form-label" for="지자체"><span>지자체</span></label>
+									</th>
+									<td colspan="3">
+										<div class="form-container">
+											<select class="form-select select2" id="지자체" name="시/도" data-placeholder="시/도 선택" disabled>
+												<option value=""></option>
+												<option value="경기도" selected>경기도</option>
+											</select>
+											<select class="form-select select2" id="시/군" name="시/군" data-placeholder="시/군 선택">
+												<option value=""></option>
+												<option value="옵션1">옵션1</option>
+												<option value="옵션2">옵션2</option>
+												<option value="옵션3">옵션3</option>
+											</select>
+											<select class="form-select select2" id="구" name="구" data-placeholder="구 선택">
+												<option value=""></option>
+												<option value="옵션1">옵션1</option>
+												<option value="옵션2">옵션2</option>
+												<option value="옵션3">옵션3</option>
+											</select>
+											<select class="form-select select2" id="읍/면/동" name="읍/면/동" data-placeholder="읍/면/동 선택">
+												<option value=""></option>
+												<option value="옵션1">옵션1</option>
+												<option value="옵션2">옵션2</option>
+												<option value="옵션3">옵션3</option>
+											</select>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>
+										<label class="form-label" for="특정가맹점"><span>특정가맹점</span></label>
+									</th>
+									<td>
+										<div class="form-container">
+											<div class="input-wrap">
+												<input type="text" id="특정가맹점" name="특정가맹점" value="" placeholder="" />
+											</div><!-- .input-wrap -->
+											<button type="button" class="btn btn-sub-line">
+												<span>가맹점 검색</span>
+											</button>
+										</div><!-- .form-container -->
+									</td>
+									<th></th>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div><!-- .section-body -->
+
+				<div class="section-header">
+					<div class="title-wrap">
+						<div class="title">가맹점 정보</div>
+					</div>
+				</div><!-- .section-header -->
+
+				<div class="section-body">
+					<div class="table-wrap">
+						<table class="tbl-form">
+							<colgroup>
+								<col style="width: 100px;">
+								<col style="width: 40%;">
+								<col style="width: 100px;">
+								<col style="width: 40%;">
+							</colgroup>
+							<tbody>
+							<tr>
+								<th>상호</th>
+								<td>0000 빵집</td>
+								<th>사업자번호</th>
+								<td>000-00-00000 (정상)</td>
+							</tr>
+							<tr>
+								<th>대표자명</th>
+								<td>홍*동</td>
+								<th>가맹점분류</th>
+								<td>일반 휴게음식 / 서양음식</td>
+							</tr>
+							<tr>
+								<th>주소</th>
+								<td colspan="3">00000 경기 김포시 김포한강00로 00, 1층 101(00동, 000빌딩)</td>
+							</tr>
+							<tr>
+								<th>휴대폰</th>
+								<td>010-0000-0000</td>
+								<th>전화번호</th>
+								<td>031-000-0000</td>
+							</tr>
+							<tr>
+								<th>점검일</th>
+								<td>
+									<div class="form-container">
+										<div class="input-wrap input_datepicker_wrap">
+											<input class="datepicker" type="text" id="점검일" name="점검일" value="" maxlength="10" placeholder="YYYY.MM.DD" oninput="checkInputPattern(this, '0-9\-');" />
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<th>점검자</th>
+								<td>
+									<div class="form-container">
+										<div class="input-wrap">
+											<input type="text" id="특정가맹점" name="특정가맹점" value="" placeholder="" />
+										</div><!-- .input-wrap -->
+									</div><!-- .form-container -->
+								</td>
+							</tr>
+							</tbody>
+						</table>
+					</div>
+				</div><!-- .section-body -->
+
+				<div class="section-header">
+					<div class="title-wrap">
+						<div class="title">가맹점 위생점검표</div>
+					</div>
+					<div class="title-wrap">
+						<div class="sub-title">(출처 : 식품의약품안전처 집단급식소 급식안전관리 기준-21.9.2./위생관리 점검표 제5조관련)</div>
+					</div>
+				</div><!-- .section-header -->
+
+				<div class="section-body">
+					<div class="table-wrap">
+						<table class="tbl-normal">
+							<colgroup>
+								<col style="width: 170px;">
+								<col style="width: 90px;">
+								<col width="*">
+								<col style="width: 54px;">
+								<col style="width: 54px;">
+								<col style="width: 54px;">
+								<col style="width: 54px;">
+								<col style="width: 200px;">
+							</colgroup>
+							<thead>
+							<tr>
+								<th rowspan="2">구분</th>
+								<th rowspan="2" colspan="2">점검사항</th>
+								<th colspan="4">점검결과</th>
+								<th rowspan="2">조치사항</th>
+							</tr>
+							<tr>
+								<th>적합</th>
+								<th>미흡</th>
+								<th>부적합</th>
+								<th>해당<br>없음</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td rowspan="2">1. 개인위생관리</td>
+								<td class="text-center">복장관리</td>
+								<td>위생복, 위생모, 마스크, 앞치마 착용, 장신구 미착용 여부</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오1_옵션1" name="라디오1" value="옵션1">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오1_옵션2" name="라디오1" value="옵션2">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오1_옵션3" name="라디오1" value="옵션3" checked>
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오1_옵션4" name="라디오1" value="옵션4">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="input-wrap">
+											<input type="text" id="" name="조치사항" value="" placeholder="" />
+										</div><!-- .input-wrap -->
+									</div><!-- .form-container -->
+								</td>
+							</tr>
+							<tr>
+								<td class="text-center">건강상태</td>
+								<td>식품취급자(조리종사자 포함) 건강상태</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오2_옵션1" name="라디오2" value="옵션1">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오2_옵션2" name="라디오2" value="옵션2">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오2_옵션3" name="라디오2" value="옵션3">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오2_옵션4" name="라디오2" value="옵션4">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="input-wrap">
+											<input type="text" id="" name="조치사항" value="" placeholder="" disabled />
+										</div><!-- .input-wrap -->
+									</div><!-- .form-container -->
+								</td>
+							</tr>
+							<tr>
+								<td rowspan="4">2. 식재료 검수 및 보관 관리</td>
+								<td class="text-center">검수일지</td>
+								<td>식재료 검수일지 작성, 보관 여부</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오3_옵션1" name="라디오3" value="옵션1">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오3_옵션2" name="라디오3" value="옵션2">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오3_옵션3" name="라디오3" value="옵션3">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오3_옵션4" name="라디오3" value="옵션4">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="input-wrap">
+											<input type="text" id="" name="조치사항" value="" placeholder="" disabled />
+										</div><!-- .input-wrap -->
+									</div><!-- .form-container -->
+								</td>
+							</tr>
+							<tr>
+								<td class="text-center">유통기한</td>
+								<td>식재료의 유통기한 경과 확인</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오4_옵션1" name="라디오4" value="옵션1">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오4_옵션2" name="라디오4" value="옵션2">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오4_옵션3" name="라디오4" value="옵션3">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오4_옵션4" name="라디오4" value="옵션4">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="input-wrap">
+											<input type="text" id="" name="조치사항" value="" placeholder="" disabled />
+										</div><!-- .input-wrap -->
+									</div><!-- .form-container -->
+								</td>
+							</tr>
+							<tr>
+								<td class="text-center">구분보관</td>
+								<td>식품, 비식품(세척제, 소독제 등)을 구분 보관 여부</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오5_옵션1" name="라디오5" value="옵션1">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오5_옵션2" name="라디오5" value="옵션2">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오5_옵션3" name="라디오5" value="옵션3">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오5_옵션4" name="라디오5" value="옵션4">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="input-wrap">
+											<input type="text" id="" name="조치사항" value="" placeholder="" disabled />
+										</div><!-- .input-wrap -->
+									</div><!-- .form-container -->
+								</td>
+							</tr>
+							<tr>
+								<td class="text-center">냉장 · 냉동고 관리</td>
+								<td>냉장고 · 냉동고 적정온도 여부</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오6_옵션1" name="라디오6" value="옵션1">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오6_옵션2" name="라디오6" value="옵션2">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오6_옵션3" name="라디오6" value="옵션3">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오6_옵션4" name="라디오6" value="옵션4">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="input-wrap">
+											<input type="text" id="" name="조치사항" value="" placeholder="" disabled />
+										</div><!-- .input-wrap -->
+									</div><!-- .form-container -->
+								</td>
+							</tr>
+							<tr>
+								<td rowspan="4">3. 조리관리</td>
+								<td class="text-center">세척 및 소독</td>
+								<td>가열하지 않고 생으로 제공하는 야채 · 과일을 소독할 경우에는 식품첨가물로 허용된 살균제 사용 및 충분한 헹굼여부</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오7_옵션1" name="라디오7" value="옵션1">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오7_옵션2" name="라디오7" value="옵션2">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오7_옵션3" name="라디오7" value="옵션3">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오7_옵션4" name="라디오7" value="옵션4">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="input-wrap">
+											<input type="text" id="" name="조치사항" value="" placeholder="" disabled />
+										</div><!-- .input-wrap -->
+									</div><!-- .form-container -->
+								</td>
+							</tr>
+							<tr>
+								<td class="text-center">조리 시</td>
+								<td>육류, 어류 등 동물성원료(돈까스, 만두, 떡갈비 등 분쇄육 등)를 가열 조리하는 경우에는 식품의 중심부까지 충분히 익힘 여부</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오8_옵션1" name="라디오8" value="옵션1">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오8_옵션2" name="라디오8" value="옵션2">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오8_옵션3" name="라디오8" value="옵션3">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오8_옵션4" name="라디오8" value="옵션4">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="input-wrap">
+											<input type="text" id="" name="조치사항" value="" placeholder="" disabled />
+										</div><!-- .input-wrap -->
+									</div><!-- .form-container -->
+								</td>
+							</tr>
+							<tr>
+								<td class="text-center">주의 사항</td>
+								<td>해동은 위생적인 방법으로 실시하고, 해동식품 재냉동 금지 확인</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오9_옵션1" name="라디오9" value="옵션1">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오9_옵션2" name="라디오9" value="옵션2">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오9_옵션3" name="라디오9" value="옵션3">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오9_옵션4" name="라디오9" value="옵션4">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="input-wrap">
+											<input type="text" id="" name="조치사항" value="" placeholder="" disabled />
+										</div><!-- .input-wrap -->
+									</div><!-- .form-container -->
+								</td>
+							</tr>
+							<tr>
+								<td class="text-center">구분사용</td>
+								<td>칼 · 도마(어류 · 육류 · 채소류) 용도별 구분 사용 여부</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오10_옵션1" name="라디오10" value="옵션1">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오10_옵션2" name="라디오10" value="옵션2">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오10_옵션3" name="라디오10" value="옵션3">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오10_옵션4" name="라디오10" value="옵션4">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="input-wrap">
+											<input type="text" id="" name="조치사항" value="" placeholder="" disabled />
+										</div><!-- .input-wrap -->
+									</div><!-- .form-container -->
+								</td>
+							</tr>
+							<tr>
+								<td rowspan="3">4. 배식 및 보존식 관리</td>
+								<td class="text-center">배식</td>
+								<td>배식용 보관용기는 세척 · 소독 · 건조된 것을 사용하며 조리된 음식은 뚜껑 등을 덮어 교차오염 되지 않도록 관리</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오11_옵션1" name="라디오11" value="옵션1">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오11_옵션2" name="라디오11" value="옵션2">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오11_옵션3" name="라디오11" value="옵션3">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오11_옵션4" name="라디오11" value="옵션4">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="input-wrap">
+											<input type="text" id="" name="조치사항" value="" placeholder="" disabled />
+										</div><!-- .input-wrap -->
+									</div><!-- .form-container -->
+								</td>
+							</tr>
+							<tr>
+								<td class="text-center">배식 후 관리</td>
+								<td>배식대에서 배식하고 남은 음식물을 다시 사용 · 조리 또는 보관 여부</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오12_옵션1" name="라디오12" value="옵션1">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오12_옵션2" name="라디오12" value="옵션2">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오12_옵션3" name="라디오12" value="옵션3">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오12_옵션4" name="라디오12" value="옵션4">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="input-wrap">
+											<input type="text" id="" name="조치사항" value="" placeholder="" disabled />
+										</div><!-- .input-wrap -->
+									</div><!-- .form-container -->
+								</td>
+							</tr>
+							<tr>
+								<td class="text-center">보존식</td>
+								<td>보존식 보관 및 관리기준(-18℃이하, 144시간 이상) 준수 여부</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오13_옵션1" name="라디오13" value="옵션1">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오13_옵션2" name="라디오13" value="옵션2">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오13_옵션3" name="라디오13" value="옵션3">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오13_옵션4" name="라디오13" value="옵션4">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="input-wrap">
+											<input type="text" id="" name="조치사항" value="" placeholder="" disabled />
+										</div><!-- .input-wrap -->
+									</div><!-- .form-container -->
+								</td>
+							</tr>
+							<tr>
+								<td rowspan="2">5. 시설관리</td>
+								<td rowspan="2" class="text-center">시설</td>
+								<td>자외선 또는 전기살균소독기, 열탕세척 소독시설, 환기시설 정상작동 확인</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오14_옵션1" name="라디오14" value="옵션1">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오14_옵션2" name="라디오14" value="옵션2">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오14_옵션3" name="라디오14" value="옵션3">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오14_옵션4" name="라디오14" value="옵션4">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="input-wrap">
+											<input type="text" id="" name="조치사항" value="" placeholder="" disabled />
+										</div><!-- .input-wrap -->
+									</div><!-- .form-container -->
+								</td>
+							</tr>
+							<tr>
+								<td>배수구 청결관리 여부(조리장 바닥에 배수구 있는 경우)</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오15_옵션1" name="라디오15" value="옵션1">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오15_옵션2" name="라디오15" value="옵션2">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오15_옵션3" name="라디오15" value="옵션3">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" id="라디오15_옵션4" name="라디오15" value="옵션4">
+										</div>
+									</div><!-- .form-container -->
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="input-wrap">
+											<input type="text" id="" name="조치사항" value="" placeholder="" disabled />
+										</div><!-- .input-wrap -->
+									</div><!-- .form-container -->
+								</td>
+							</tr>
+							</tbody>
+						</table>
+					</div>
+				</div><!-- .section-body -->
+
+				<div class="section-foot">
+					<div class="button-wrap">
+						<button type="button" class="btn btn-line">
+							<span>취소</span>
+						</button>
+						<button type="button" class="btn btn-primary">
+							<span>저장</span>
+						</button>
+					</div>
+				</div><!-- .section-foot -->
+			</div>
+		</div><!-- .content-wrap -->
+	</div><!-- .container -->
+</body>
+</html>

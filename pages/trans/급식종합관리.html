@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+<title>급식종합관리</title>
+
+<!--v Packages -->
+<script src="../../assets/js/jquery.min.js"></script>
+
+<link href="../../assets/css/jquery-ui.min.css" rel="stylesheet" />
+<script src="../../assets/js/jquery-ui.min.js"></script>
+
+<link href="../../assets/css/select2.min.css" rel="stylesheet" />
+<script src="../../assets/js/select2.min.js"></script>
+<!--^ Packages -->
+
+<link href="../../assets/css/all.css" rel="stylesheet" />
+<script src="../../assets/js/util.js"></script>
+</head>
+
+<body class="sub-page">
+	<header>
+		<div class="inner">
+			<h1 class="logo">
+				<a href="#">
+					<img src="../../assets/img/logo.svg" />
+				</a>
+			</h1>
+			<div id="gnb">
+				<ul class="gnb-list">
+					<li>
+						<a href="#">회원/카드관리</a>
+					</li>
+					<li>
+						<a href="#">거래관리</a>
+					</li>
+					<li>
+						<a href="#">정산현황</a>
+					</li>
+					<li>
+						<a href="#">통계/분석</a>
+					</li>
+					<li>
+						<a href="#">지원정책</a>
+					</li>
+					<li>
+						<a href="#">환경설정</a>
+					</li>
+					<li>
+						<button type="button" class="btn">
+							<span>전체보기</span>
+							<i class="icon-menu"></i>
+						</button>
+					</li>
+				</ul>
+			</div>
+			<div class="my-menu">
+				<div class="info">
+					<div class="photo">
+						<i class="icon-smile"></i><!-- 혹시 나중에 img태그가 들어간다면 해당 i태그 삭제 -->
+					</div>
+					<div class="name">관리자</div>
+				</div>
+				<div class="log">
+					<span>최종 로그인</span>
+					<span class="time">2022.08.29 14:14</span>
+				</div>
+				<div class="button-wrap">
+					<button type="button" class="btn">
+						<i class="icon-setting"></i>
+					</button>
+					<button type="button" class="btn">
+						<i class="icon-logout"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="container">
+		<div id="lnb">
+			<div class="group-title">
+				<span>거래관리</span>
+			</div>
+			<button type="button" class="btn btn-primary btn_lnb_control">
+				<i class="icon-arrow-prev"></i>
+			</button>
+			<ul class="menu-list">
+				<li class="on">
+					<a href="#">
+						<span>거래내역</span>
+						<i class="icon-circle-plus"></i>
+					</a>
+					<ul class="sub-menu">
+						<li class="on">
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>급식종합관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>거래요약조회</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>거래상세조회</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>거래현황</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>실시간거래내역조회</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">
+						<span>가맹점관리</span>
+						<i class="icon-circle-plus"></i>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>가맹점관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>가맹점별 거래조회</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>가맹점 위생점검 관리</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">
+						<span>가맹점별거래현황</span>
+						<i class="icon-circle-plus"></i>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>가맹점별거래현황</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!-- #lnb -->
+		<div class="content-wrap">
+			<div class="content-header">
+				<div class="title-wrap">
+					<div class="title">급식종합관리</div>
+					<div class="location">
+						<i class="icon-home"></i>
+						<span>홈</span>
+						<span>거래관리</span>
+						<span>거래내역</span>
+						<span>급식종합관리</span>
+					</div>
+				</div>
+			</div>
+			<div class="content-body">
+				
+				<div class="search-form-wrap">
+					<form>
+						<div class="search-form-inner">
+							<div class="search-form">
+
+								<div class="row">
+									<div class="col-6">
+										<label class="form-label" for="카드번호"><span>카드번호</span></label>
+										<div class="form-container">
+											<div class="input-wrap">
+												<input type="text" id="카드번호" name="카드번호" value="" placeholder="" />
+											</div><!-- .input-wrap -->
+											<button type="button" class="btn btn-sub-line">
+												<span>카드번호 찾기</span>
+											</button>
+										</div><!-- .form-container -->
+									</div><!-- .col -->
+									<div class="col-6">
+										<label class="form-label" for="기간S"><span>검색기간</span></label>
+										<div class="form-container">
+											<div class="input-wrap input_datepicker_wrap">
+												<input class="from" type="text" id="기간S" name="기간S" value="" maxlength="10" placeholder="YYYY.MM.DD" oninput="checkInputPattern(this, '0-9\-');" />
+											</div>
+											<div class="input-wrap input_datepicker_wrap">
+												<input class="to" type="text" id="기간E" name="기간E" value="" maxlength="10" placeholder="YYYY.MM.DD" oninput="checkInputPattern(this, '0-9\-');" />
+											</div>
+										</div><!-- .form-container -->
+									</div><!-- .col -->
+								</div><!-- .row -->
+
+								<div class="row">
+									<div class="col-12">
+										<label class="form-label" for="체크박스1"><span>조회선택</span></label>
+										<div class="form-container">
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" id="체크박스1" name="체크박스1" value="체크박스1" checked="" />
+												<label class="form-check-label" for="체크박스1">충전</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" id="체크박스2" name="체크박스2" value="체크박스2" />
+												<label class="form-check-label" for="체크박스2">추가충전</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" id="체크박스3" name="체크박스3" value="체크박스3" />
+												<label class="form-check-label" for="체크박스3">충전취소</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" id="체크박스4" name="체크박스4" value="체크박스4" />
+												<label class="form-check-label" for="체크박스4">이월</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" id="체크박스5" name="체크박스5" value="체크박스5" />
+												<label class="form-check-label" for="체크박스5">사용</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" id="체크박스6" name="체크박스6" value="체크박스6" />
+												<label class="form-check-label" for="체크박스6">사용취소</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" id="체크박스7" name="체크박스7" value="체크박스7" />
+												<label class="form-check-label" for="체크박스7">소멸</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" id="체크박스8" name="체크박스8" value="체크박스8" />
+												<label class="form-check-label" for="체크박스8">회수</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" id="체크박스9" name="체크박스9" value="체크박스9" />
+												<label class="form-check-label" for="체크박스9">입금</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" id="체크박스10" name="체크박스10" value="체크박스10" />
+												<label class="form-check-label" for="체크박스10">입금취소</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" id="체크박스11" name="체크박스11" value="체크박스11" />
+												<label class="form-check-label" for="체크박스11">출금</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" id="체크박스12" name="체크박스12" value="체크박스12" />
+												<label class="form-check-label" for="체크박스12">출금취소</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" id="체크박스13" name="체크박스13" value="체크박스13" />
+												<label class="form-check-label" for="체크박스13">적립</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" id="체크박스14" name="체크박스14" value="체크박스14" />
+												<label class="form-check-label" for="체크박스14">적립취소</label>
+											</div>
+										</div><!-- .form-container -->
+									</div><!-- .col -->
+								</div><!-- .row -->
+
+								<div class="row">
+									<div class="col-6">
+										<label class="form-label" for="체크박스20"><span>조회구분</span></label>
+										<div class="form-container">
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" id="체크박스20" name="체크박스20" value="체크박스20" />
+												<label class="form-check-label" for="체크박스20">정상거래만 조회</label>
+											</div>
+										</div><!-- .form-container -->
+									</div><!-- .col -->
+									<div class="col-6"></div><!-- .col -->
+								</div><!-- .row -->
+
+							</div><!-- .search-form -->
+
+							<div class="button-wrap">
+								<button type="button" class="btn btn-primary">
+									<i class="icon-search"></i>
+									<span>검색</span>
+								</button>
+							</div>
+						</div><!-- .search-form-inner -->
+					</form>
+				</div><!-- .search_form_wrap -->
+
+				<div class="section-header">
+					<div class="button-wrap">
+						<button type="button" class="btn btn-line">
+							<span>기본정보</span>
+						</button>
+						<button type="button" class="btn btn-line">
+							<span>재발급등록</span>
+						</button>
+						<button type="button" class="btn btn-line">
+							<span>정지처리</span>
+						</button>
+						<button type="button" class="btn btn-line">
+							<span>정지취소</span>
+						</button>
+						<button type="button" class="btn btn-line-error">
+							<span>탈퇴처리</span>
+						</button>
+					</div>
+				</div><!-- .section-header -->
+
+				<div class="section-body">
+					<div class="table-wrap">
+						<table class="tbl-form">
+							<colgroup>
+								<col style="width: 100px;">
+								<col style="width: 40%;">
+								<col style="width: 100px;">
+								<col style="width: 40%;">
+							</colgroup>
+							<tbody>
+							<tr>
+								<th>성명</th>
+								<td>김*토로 (00-0000-0000)</td>
+								<th>카드분류</th>
+								<td>경기도 G-Dream카드(949111001)</td>
+							</tr>
+							<tr>
+								<th>생년월일</th>
+								<td>010101 (남)</td>
+								<th>학교(구분)</th>
+								<td>토토로 초등학교</td>
+							</tr>
+							<tr>
+								<th>읍면동</th>
+								<td>경기도 OO시 OO동</td>
+								<th>전화번호</th>
+								<td>031-****-0000</td>
+							</tr>
+							<tr>
+								<th>주소</th>
+								<td colspan="3">00000 경기 김포시 김포한강00로 ****</td>
+							</tr>
+							<tr>
+								<th>지원내용</th>
+								<td>월(석) 화(석) 수(석) 목(석) 금(석) 토(조중) 공(조중) 방월(석)</td>
+								<th>현재잔액</th>
+								<td>98,123</td>
+							</tr>
+							<tr>
+								<th>전출입등록</th>
+								<td>
+									<button type="button" class="btn btn-sub-line rounded">
+										<span>전출입등록</span>
+									</button>
+								</td>
+								<th>카드상태</th>
+								<td>정상</td>
+							</tr>
+							<tr>
+								<th>최초급식일</th>
+								<td>yyyy.mm.dd</td>
+								<th>급식종료일</th>
+								<td></td>
+							</tr>
+							<tr>
+								<th>비고</th>
+								<td colspan="3"></td>
+							</tr>
+							</tbody>
+						</table>
+					</div>
+				</div><!-- .section-body -->
+
+				<div class="section-header">
+					<div class="button-wrap">
+						<button type="button" class="btn btn-line">
+							<i class="icon-filedown"></i>
+							<span>엑셀다운</span>
+						</button>
+					</div>
+				</div><!-- .section-header -->
+
+				<div class="section-body">
+
+					<div class="section-header">
+						<ul class="tab-menu">
+							<li class="on">
+								<button type="button" class="btn btn-tab">거래정보</button>
+							</li>
+							<li>
+								<button type="button" class="btn btn-tab">신청현황</button>
+							</li>
+							<li>
+								<button type="button" class="btn btn-tab">월집계</button>
+							</li>
+							<li>
+								<button type="button" class="btn btn-tab">급식표</button>
+							</li>
+						</ul>
+						<div class="button-wrap">
+							<button type="button" class="btn btn-primary">
+								<span>급식표 수정</span>
+							</button>
+						</div>
+					</div><!-- .section-header -->
+					
+					<div class="tab-content">
+						<div class="tab-section on">
+							<div class="grid-area">
+								<div style="padding: 100px 0; text-align: center; font-size: 20px;">IBSheet영역</div><!-- 이 줄을 삭제 후 그리드를 삽입하세요. -->
+							</div>
+						</div>
+						<div class="tab-section">
+							탭2 Content<br><br>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+							passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+						</div>
+						<div class="tab-section">
+							탭3 Content<br><br>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
+							letters, as opposed to using 'Content here, content here',
+						</div>
+						<div class="tab-section">탭4 Content<br><br>Contrary to popular belief, Lorem Ipsum is not simply random text.</div>
+						<div class="tab-section">
+							탭5 Content<br><br>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact
+							original form, accompanied by English versions from the 1914 translation by H. Rackham.
+						</div>
+					</div>
+				</div><!-- .section-body -->
+
+			</div>
+		</div><!-- .content-wrap -->
+	</div><!-- .container -->
+</body>
+</html>

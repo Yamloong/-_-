@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+<title>가입여부확인</title>
+
+<!--v Packages -->
+<script src="../../assets/js/jquery.min.js"></script>
+
+<link href="../../assets/css/jquery-ui.min.css" rel="stylesheet" />
+<script src="../../assets/js/jquery-ui.min.js"></script>
+
+<link href="../../assets/css/select2.min.css" rel="stylesheet" />
+<script src="../../assets/js/select2.min.js"></script>
+<!--^ Packages -->
+
+<link href="../../assets/css/all.css" rel="stylesheet" />
+<script src="../../assets/js/util.js"></script>
+</head>
+
+<body class="normal-page">
+	<header>
+		<div class="inner">
+			<h1 class="logo">
+				<a href="#">
+					<img src="../../assets/img/logo.svg" />
+				</a>
+			</h1>
+		</div>
+	</header>
+
+	<div class="container">
+		<div class="join-wrap" style="width: 450px;">
+			<div class="join-header">
+				<div class="title-wrap">
+					<div class="title">가입여부확인</div>
+				</div>
+			</div>
+			<div class="join-body">
+				<div class="section-body">
+					<div class="table-wrap noLine">
+						<table class="tbl-form">
+							<colgroup>
+								<col style="width: 100px;">
+								<col width="*">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>
+										<label class="form-label required" for="아이디">아이디</label>
+									</th>
+									<td>
+										<div class="input-wrap">
+											<input type="text" id="아이디" name="아이디" placeholder="">
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>
+										<label class="form-label required" for="이름">이름</label>
+									</th>
+									<td>
+										<div class="input-wrap">
+											<input type="text" id="이름" name="이름" placeholder="">
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="section-foot">
+					<div class="button-wrap">
+						<button type="button" class="btn btn-line">
+							<span>취소</span>
+						</button>
+						<button type="button" class="btn btn-primary btn_layer" data-target="#authorization">
+							<span>확인</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div><!-- .join-wrap -->
+	</div><!-- .container -->
+
+	<!-- 휴대폰 번호 인증 팝업 -->
+	<div id="authorization" class="layerPopup">
+		<div class="layer-wrap" style="width: 450px;">
+			<div class="layer-header">
+				<h4 class="layer-title">가입승인여부 조회</h4>
+				<div class="button-wrap">
+					<button type="button" class="btn btn_close" title="창닫기">
+						<i class="icon-close"></i>
+					</button>
+				</div>
+			</div><!-- .layer-header -->
+	
+			<div class="layer-body">
+				<div class="text-box">
+					경기도 OOO시 OOO구 OOO동 홍길동(admin_1) 님<br>
+					가입 승인이 완료되었습니다.<br>
+					로그인 후 사용이 가능합니다. 
+				</div>
+			</div><!-- .layer-body -->
+	
+			<div class="layer-footer">
+				<div class="button-wrap">
+					<button type="button" class="btn btn-line btn_close"><span>확인</span></button>
+				</div>
+			</div><!-- .layer-footer -->
+		</div><!-- .layer-contents -->
+	</div><!-- #Change_phone.layerPopup -->
+</body>
+
+</html>

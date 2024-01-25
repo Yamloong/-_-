@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+<title>서브샘플</title>
+
+<!--v Packages -->
+<script src="../../assets/js/jquery.min.js"></script>
+
+<link href="../../assets/css/jquery-ui.min.css" rel="stylesheet" />
+<script src="../../assets/js/jquery-ui.min.js"></script>
+
+<link href="../../assets/css/select2.min.css" rel="stylesheet" />
+<script src="../../assets/js/select2.min.js"></script>
+<!--^ Packages -->
+
+<link href="../../assets/css/all.css" rel="stylesheet" />
+<script src="../../assets/js/util.js"></script>
+</head>
+
+<body class="sub-page">
+	<header>
+		<div class="inner">
+			<h1 class="logo">
+				<a href="#">
+					<img src="../../assets/img/logo.svg" />
+				</a>
+			</h1>
+			<div id="gnb">
+				<ul class="gnb-list">
+					<li>
+						<a href="#">회원/카드관리</a>
+						<div class="gnb-sub-menu">
+							<ul class="menu-list">
+								<li>
+									<span>대상자관리</span>
+									<ul class="sub-menu">
+										<li>
+											<a href="#">
+												<span>수급자관리</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>대상자 신규등록</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>보유회원명단</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>사용자관리</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<span>카드관리</span>
+									<ul class="sub-menu">
+										<li>
+											<a href="#">
+												<span>재료카드 요청</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>빈 카드 조회</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<span>이용현황</span>
+									<ul class="sub-menu">
+										<li>
+											<a href="#">
+												<span>회원별 거래현황</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>회원별 이용현황</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>일자별 집계</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#">거래관리</a>
+						<div class="gnb-sub-menu">
+							<ul class="menu-list">
+								<li>
+									<span>거래내역</span>
+									<ul class="sub-menu">
+										<li>
+											<a href="#">
+												<span>급식종합관리</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>거래요약조회</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>거래상세조회</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>사용현황</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<span>실시간조회</span>
+									<ul class="sub-menu">
+										<li>
+											<a href="#">
+												<span>실시간 사용현황</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>실시간 앱 거래현황</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<span>가맹점관리</span>
+									<ul class="sub-menu">
+										<li>
+											<a href="#">
+												<span>가맹점관리</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>가맹점별 거래조회</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>가맹점 위생점검 관리</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<span>가맹점별거래현황</span>
+									<ul class="sub-menu">
+										<li>
+											<a href="#">
+												<span>가맹점별거래현황</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul><!-- .menu-list -->
+						</div>
+					</li>
+					<li>
+						<a href="#">정산현황</a>
+						<div class="gnb-sub-menu">
+							<ul class="menu-list">
+								<li class="on">
+									<span>예산관리</span>
+									<ul class="sub-menu">
+										<li class="on">
+											<a href="#">
+												<span>예산관리</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>예산운영현황</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<span>정산관리</span>
+									<ul class="sub-menu">
+										<li>
+											<a href="#">
+												<span>정산관리</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#">통계/분석</a>
+						<div class="gnb-sub-menu">
+							<ul class="menu-list">
+								<li>
+									<span>모니터링</span>
+									<ul class="sub-menu">
+										<li>
+											<a href="#">
+												<span>영양관리 모니터링</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>이상징후 모니터링</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<span>통계현황</span>
+									<ul class="sub-menu">
+										<li>
+											<a href="#">
+												<span>조중석통계</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>지원내용별 현황</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>지원구분별 금액</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>월별통계현황</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>지자체별 정산 통계</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>지자체별 수급자 통계</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>수급자 주문 통계</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>배달업체별 상품 통계</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>배달업체별 주문 통계</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#">지원정책</a>
+						<div class="gnb-sub-menu">
+							<ul class="menu-list">
+								<li>
+									<span>참여마당</span>
+									<ul class="sub-menu">
+										<li>
+											<a href="#">
+												<span>공지관리</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>자주하는 질문 관리</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>1:1문의관리</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>바우처시스템 개선 요청</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<span>부정수급</span>
+									<ul class="sub-menu">
+										<li>
+											<a href="#">
+												<span>부정수급사례 조회</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>부정수급 신고내역 조회</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<span>지원정책</span>
+									<ul class="sub-menu">
+										<li>
+											<a href="#">
+												<span>바우처정책</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>학교관리</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>지자체관리</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>급식 템플릿 관리</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#">환경설정</a>
+						<div class="gnb-sub-menu">
+							<ul class="menu-list">
+								<li>
+									<span>사용자 관리</span>
+									<ul class="sub-menu">
+										<li>
+											<a href="#">
+												<span>사용자승인</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>사용자 관리</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>사용자권한관리</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<span>플랫폼 관리</span>
+									<ul class="sub-menu">
+										<li>
+											<a href="#">
+												<span>메뉴 관리</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>배너 관리</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>팝업 관리</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>공공데이터관리</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>가맹점분류코드관리</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>공휴일관리</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<span>시스템 관리</span>
+									<ul class="sub-menu">
+										<li>
+											<a href="#">
+												<span>이용자접속현황 관리</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>변경이력 관리</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>메타데이터 관리</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>연계전문 관리</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>연계데이터 관리</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>개인정보접근 이력조회</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>개인정보접근 통계</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<button type="button" class="btn">
+							<span>전체보기</span>
+							<i class="icon-menu"></i>
+						</button>
+					</li>
+				</ul>
+			</div>
+			<div class="my-menu">
+				<div class="info">
+					<div class="photo">
+						<i class="icon-smile"></i><!-- 혹시 나중에 img태그가 들어간다면 해당 i태그 삭제 -->
+					</div>
+					<div class="name">관리자</div>
+				</div>
+				<div class="log">
+					<span>최종 로그인</span>
+					<span class="time">2022.08.29 14:14</span>
+				</div>
+				<div class="button-wrap">
+					<button type="button" class="btn">
+						<i class="icon-setting"></i>
+					</button>
+					<button type="button" class="btn">
+						<i class="icon-logout"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="container">
+		<div id="lnb">
+			<div class="group-title">
+				<span>거래관리</span>
+			</div>
+			<button type="button" class="btn btn-primary btn_lnb_control">
+				<i class="icon-arrow-prev"></i>
+			</button>
+			<ul class="menu-list">
+				<li class="on">
+					<a href="#">
+						<span>거래내역</span>
+						<i class="icon-circle-plus"></i>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>급식종합관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>거래요약조회</span>
+							</a>
+						</li>
+						<li class="on">
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>거래상세조회</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>사용현황</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">
+						<span>실시간조회</span>
+						<i class="icon-circle-plus"></i>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>실시간 사용현황</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>실시간 앱 거래현황</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">
+						<span>가맹점관리</span>
+						<i class="icon-circle-plus"></i>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>가맹점관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>가맹점별 거래조회</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>가맹점 위생점검 관리</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">
+						<span>가맹점별거래현황</span>
+						<i class="icon-circle-plus"></i>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>가맹점별거래현황</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!-- #lnb -->
+		<div class="content-wrap">
+			<div class="content-header">
+				<div class="title-wrap">
+					<div class="title">거래상세조회</div>
+					<div class="location">
+						<i class="icon-home"></i>
+						<span>홈</span>
+						<span>거래관리</span>
+						<span>거래내역</span>
+						<span>거래상세조회</span>
+					</div>
+				</div>
+			</div>
+			<div class="content-body">
+				<div class="page-memo">
+					<ul class="list">
+						<li>메뉴권한그룹을 먼저 선택한 뒤 각 메뉴의 권한을 조절하세요.</li>
+						<li>먼저 발급할 지역(읍/면/동)을 확인한 뒤 카드를 선택하세요.</li>
+						<li>붉은색 글씨의 급식자확인은 필수 사항입니다.</li>
+						<li>붉은색의 <span class="text-warning">*</span>표시는 필수선택 사항입니다.</li>
+					</ul>
+				</div>
+				
+				<div class="search-form-wrap">
+					<form>
+						<div class="search-form-inner">
+							<div class="search-form">
+
+								<div class="row">
+									<div class="col-12">
+										<label class="form-label" for="지자체"><span>지자체</span></label>
+										<div class="form-container">
+											<select class="form-select select2" id="지자체" name="시/도" data-placeholder="시/도 선택" disabled>
+												<option value=""></option>
+												<option value="경기도" selected>경기도</option>
+											</select>
+											<select class="form-select select2" id="시/군" name="시/군" data-placeholder="시/군 선택">
+												<option value=""></option>
+												<option value="옵션1">옵션1</option>
+												<option value="옵션2">옵션2</option>
+												<option value="옵션3">옵션3</option>
+											</select>
+											<select class="form-select select2" id="구" name="구" data-placeholder="구 선택">
+												<option value=""></option>
+												<option value="옵션1">옵션1</option>
+												<option value="옵션2">옵션2</option>
+												<option value="옵션3">옵션3</option>
+											</select>
+											<select class="form-select select2" id="읍/면/동" name="읍/면/동" data-placeholder="읍/면/동 선택">
+												<option value=""></option>
+												<option value="옵션1">옵션1</option>
+												<option value="옵션2">옵션2</option>
+												<option value="옵션3">옵션3</option>
+											</select>
+										</div>
+									</div><!-- .col -->
+								</div><!-- .row -->
+
+								<div class="row">
+									<div class="col-6">
+										<label class="form-label" for="기간S"><span>거래기간</span></label>
+										<div class="form-container">
+											<div class="input-wrap input_datepicker_wrap">
+												<input class="from" type="text" id="기간S" name="기간S" value="" maxlength="10" placeholder="YYYY.MM.DD" oninput="checkInputPattern(this, '0-9\-');" />
+											</div>
+											<div class="input-wrap input_datepicker_wrap">
+												<input class="to" type="text" id="기간E" name="기간E" value="" maxlength="10" placeholder="YYYY.MM.DD" oninput="checkInputPattern(this, '0-9\-');" />
+											</div>
+										</div><!-- .form-container -->
+									</div><!-- .col -->
+									<div class="col-6">
+										<label class="form-label" for="INPUT"><span>거래시간</span></label>
+										<div class="form-container">
+											<div class="input-wrap time">
+												<input type="text" id="INPUT" name="INPUT" value="" placeholder="" maxlength="2" />
+											</div><!-- .input-wrap -->
+											<div class="unit">시~</div>
+
+											<div class="input-wrap time">
+												<input type="text" id="INPUT" name="INPUT" value="" placeholder="" maxlength="2" />
+											</div><!-- .input-wrap -->
+											<div class="unit">시</div>
+
+											<div class="form-check">
+												<input class="form-check-input" type="radio" id="라디오1_옵션1" name="라디오1" value="옵션1" checked="" />
+												<label class="form-check-label" for="라디오1_옵션1">현재까지</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="radio" id="라디오1_옵션2" name="라디오1" value="옵션2" />
+												<label class="form-check-label" for="라디오1_옵션2">현재시간만</label>
+											</div>
+										</div><!-- .form-container -->
+									</div><!-- .col -->
+								</div><!-- .row -->
+
+								<div class="row">
+									<div class="col-6">
+										<label class="form-label" for="특정가맹점"><span>특정가맹점</span></label>
+										<div class="form-container">
+											<div class="input-wrap">
+												<input type="text" id="특정가맹점" name="특정가맹점" value="" placeholder="" />
+											</div><!-- .input-wrap -->
+											<button type="button" class="btn btn-sub-line">
+												<span>가맹점 검색</span>
+											</button>
+										</div><!-- .form-container -->
+									</div><!-- .col -->
+									<div class="col-6">
+										<label class="form-label" for="특정회원"><span>특정회원</span></label>
+										<div class="form-container">
+											<div class="input-wrap">
+												<input type="text" id="특정회원" name="특정회원" value="" placeholder="" />
+											</div>
+											<button type="button" class="btn btn-sub-line">
+												<span>카드번호 찾기</span>
+											</button>
+											<button type="button" class="btn btn-sub-line">
+												<i class="icon-reload"></i>
+											</button>
+										</div><!-- .form-container -->
+									</div><!-- .col -->
+								</div><!-- .row -->
+
+								<div class="row">
+									<div class="col-6">
+										<label class="form-label" for="금액구간1"><span>금액구간</span></label>
+										<div class="form-container">
+											<div class="input-wrap">
+												<input class="number" type="text" id="금액구간1" name="금액구간1" value="" step="1" placeholder="0" oninput="numberLocaleString(this);" />
+											</div>
+											<div class="input-wrap">
+												<input class="number" type="text" id="금액구간2" name="금액구간2" value="" step="1" placeholder="0" oninput="numberLocaleString(this);" />
+											</div>
+										</div><!-- .form-container -->
+									</div><!-- .col -->
+									<div class="col-6">
+										<label class="form-label" for="체크박스1"><span>금액구간</span></label>
+										<div class="form-container">
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" id="체크박스1" name="체크박스1" value="체크박스1" checked="" />
+												<label class="form-check-label" for="체크박스1">옵션1</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" id="체크박스2" name="체크박스2" value="체크박스2" />
+												<label class="form-check-label" for="체크박스2">옵션2</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" id="체크박스3" name="체크박스3" value="체크박스3" />
+												<label class="form-check-label" for="체크박스3">옵션3</label>
+											</div>
+										</div><!-- .form-container -->
+									</div><!-- .col -->
+								</div><!-- .row -->
+							</div><!-- .search-form -->
+
+							<div class="button-wrap">
+								<button type="button" class="btn btn-primary">
+									<i class="icon-search"></i>
+									<span>검색</span>
+								</button>
+							</div>
+						</div><!-- .search-form-inner -->
+					</form>
+				</div><!-- .search_form_wrap -->
+
+				<div class="section-header">
+					<div class="title-wrap">
+						<div class="title">타이틀영역<span class="small text-primary">(00건)</span></div>
+					</div>
+					<div class="button-wrap">
+						<div class="title-wrap">
+							<div class="sub-title text-primary">서브 텍스트 영역입니다.</div>
+						</div>
+						<button type="button" class="btn btn-line">
+							<span>삭제</span>
+						</button>
+						<button type="button" class="btn btn-line">
+							<span>목록</span>
+						</button>
+						<button type="button" class="btn btn-line">
+							<i class="icon-print"></i>
+							<span>인쇄</span>
+						</button>
+						<button type="button" class="btn btn-line">
+							<i class="icon-filedown"></i>
+							<span>엑셀다운</span>
+						</button>
+						<button type="button" class="btn btn-line-error">
+							<span>탈퇴처리</span>
+						</button>
+						<button type="button" class="btn btn-primary">
+							<span>저장 또는 승인</span>
+						</button>
+					</div>
+				</div><!-- .section-header -->
+
+				<div class="section-body">
+					<div class="grid-area">
+						<div style="padding: 100px 0; text-align: center; font-size: 20px;">IBSheet영역</div><!-- 이 줄을 삭제 후 그리드를 삽입하세요. -->
+					</div>
+				</div><!-- .section-body -->
+
+				<div class="section-header">
+					<div class="title-wrap">
+						<div class="title">타이틀영역<span class="small text-primary">(00건)</span></div>
+					</div>
+					<div class="button-wrap">
+						<div class="title-wrap">
+							<div class="sub-title text-primary">서브 텍스트 영역입니다.</div>
+						</div>
+						<button type="button" class="btn btn-line">
+							<span>사용자 대량등록</span>
+						</button>
+						<button type="button" class="btn btn-line">
+							<span>대상자 등록</span>
+						</button>
+						<button type="button" class="btn btn-line">
+							<span>기본정보</span>
+						</button>
+						<button type="button" class="btn btn-line">
+							<span>재발급등록</span>
+						</button>
+						<button type="button" class="btn btn-line">
+							<span>정지처리</span>
+						</button>
+						<button type="button" class="btn btn-line">
+							<span>정지취소</span>
+						</button>
+					</div>
+				</div><!-- .section-header -->
+
+				<div class="section-body">
+					<ul class="tab-menu">
+						<li class="on">
+							<button type="button" class="btn btn-tab">Tab메뉴-1</button>
+						</li>
+						<li>
+							<button type="button" class="btn btn-tab">Tab메뉴-2</button>
+						</li>
+						<li>
+							<button type="button" class="btn btn-tab">Tab메뉴-3</button>
+						</li>
+						<li>
+							<button type="button" class="btn btn-tab">Tab메뉴-4</button>
+						</li>
+						<li>
+							<button type="button" class="btn btn-tab">Tab메뉴-5</button>
+						</li>
+					</ul>
+					
+					<div class="tab-content">
+						<div class="tab-section on">
+							<div class="grid-area">
+								<div style="padding: 100px 0; text-align: center; font-size: 20px;">IBSheet영역</div><!-- 이 줄을 삭제 후 그리드를 삽입하세요. -->
+							</div>
+						</div>
+						<div class="tab-section">
+							탭2 Content<br><br>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+							passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+						</div>
+						<div class="tab-section">
+							탭3 Content<br><br>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
+							letters, as opposed to using 'Content here, content here',
+						</div>
+						<div class="tab-section">탭4 Content<br><br>Contrary to popular belief, Lorem Ipsum is not simply random text.</div>
+						<div class="tab-section">
+							탭5 Content<br><br>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact
+							original form, accompanied by English versions from the 1914 translation by H. Rackham.
+						</div>
+					</div>
+				</div><!-- .section-body -->
+
+				<div class="section-foot">
+					<div class="pagination-wrap">
+						<ul class="pagination">
+							<li class="first">
+								<button class="btn"><i class="icon-arrow-first"></i></button>
+							</li>
+							<li class="prev">
+								<button class="btn"><i class="icon-arrow-prev"></i></button>
+							</li>
+							<li class="page"><span>1</span></li>
+							<li class="page"><span>2</span></li>
+							<li class="page"><span>3</span></li>
+							<li class="page"><span>4</span></li>
+							<li class="page active"><span>5</span></li>
+							<li class="page"><span>6</span></li>
+							<li class="page"><span>7</span></li>
+							<li class="page"><span>8</span></li>
+							<li class="page"><span>9</span></li>
+							<li class="page"><span>10</span></li>
+							<li class="next">
+								<button class="btn disabled"><i class="icon-arrow-next"></i></button>
+							</li>
+							<li class="last">
+								<button class="btn disabled"><i class="icon-arrow-last"></i></button>
+							</li>
+						</ul>
+					</div>
+				</div><!-- .section-foot -->
+			</div>
+		</div><!-- .content-wrap -->
+	</div><!-- .container -->
+</body>
+</html>

@@ -1,0 +1,205 @@
+@charset "UTF-8";
+/**
+ * jexGrid 관련 style을 이 파일에 정의합니다.
+ * 이 파일은 all.css에서 import되어 사용됩니다.
+ **/
+
+/* ----------------------Grid.js ---------------------*/
+.jgrid {
+	--jgrid-cell-min-width: 48px;
+
+	font-size: var(--base-font-size);
+	font-weight: 500;
+	color: var(--table-text-color);
+	border-top: solid 1px var(--table-border-top-color);
+}
+/* .jgrid div {
+	box-sizing: border-box;
+} */
+
+
+/* -------------------ViewportManager.js--------------------*/
+.jgrid-viewport { background-color: #fafafa !important; }
+.jgrid .jgrid-cell.first-cell {
+	clear: both;
+/*	width: var(--jgrid-cell-min-width) !important; */
+}
+.jgrid .jgrid-cell.last-cell {
+	float: unset;
+	width: unset;
+}
+.jgrid .jgrid-row.odd {
+	background: #F4F4F4;
+}
+
+
+/*---------------------ColumnHeader.js------------------------*/
+.jgrid .jgrid-header-mask {
+	font-size: var(--base-font-size);
+	border-bottom: solid 1px var(--table-thead-border-color) !important;
+}
+.jgrid .jgrid-header {
+	background-color: var(--table-thead-bg-color);
+}
+.jgrid .jgrid-colheader {
+/*	min-width: var(--jgrid-cell-min-width); */
+	color: var(--table-thead-text-color);
+}
+.jgrid .jgrid-colheader.jgrid-colheader-placeholder {
+	background: var(--input-placeholder-color) !important;
+}
+/* .jgrid-colheader-title {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	padding-left: 24px;
+	padding-right: 24px;
+} */
+
+/*--v cell header가 2줄+셀병합인 경우 */
+.use_parent .jgrid .jgrid-header { z-index: 1; }
+.use_parent .jgrid .jgrid-header .jgrid-colheader {
+	height: 24px !important;
+	line-height: 24px !important;
+}
+.use_parent .jgrid .jgrid-header + .jgrid-header { z-index: 2; /*overflow: unset !important;*/ }
+.use_parent .jgrid .jgrid-header + .jgrid-header .jgrid-colheader {
+	height: 34px !important;
+	line-height: 34px !important;
+	/* overflow: unset !important;
+	overflow-x: hidden !important; */
+}
+.use_parent .jgrid .jgrid-header + .jgrid-header .jgrid-colheader.has_parent {
+	border-top: solid 1px var(--table-thead-border-color);
+}
+.use_parent .jgrid .jgrid-header + .jgrid-header .jgrid-colheader.no_parent span {
+	margin-top: -10px;
+}
+.use_parent .jgrid .jgrid-colheader [type=radio],
+.use_parent .jgrid .jgrid-colheader [type=checkbox] {
+	margin: 0 !important;
+}
+.use_parent .jgrid-colheader-title {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	padding-left: 24px;
+	padding-right: 24px;
+}
+.use_parent .edit-icon { height: 100% !important; }
+/*--^ cell header가 2줄+셀병합인 경우 */
+
+/* 
+div[colkey=checkbox] + div[colkey=checkbox], 
+div.jgrid-cell.k_checkbox + div.jgrid-cell.k_checkbox { display: none; visibility: hidden; width: 0 !important; padding: 0 !important; }
+*/
+
+/*------------------------EditManager----------------------*/
+.jgrid input[type=radio],
+.jgrid input[type=checkbox] {
+	vertical-align: top;
+	background-color: #fff;
+	background-position: center;
+	background-size: contain;
+	border: 1px solid var(--input-border-color);
+	appearance: none;
+	-webkit-print-color-adjust: exact;
+
+	width: var(--input-checkbox-size) !important;
+	height: var(--input-checkbox-size) !important;
+}
+.jgrid input[type=radio]:disabled,
+.jgrid input[type=checkbox]:disabled { display: none; }
+.jgrid input[type=radio] {
+	border-radius: 50%;
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='1' fill='%23fff'/%3e%3c/svg%3e");
+}
+.jgrid input[type=checkbox] {
+	border-radius: 0.25em;
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 11l3 3l8-8'/%3e%3c/svg%3e");
+}
+.jgrid input[type=radio]:checked,
+.jgrid input[type=checkbox]:checked {
+	background-color: #3A414E;
+	border-color: #3A414E;
+}
+.jgrid input[type=radio]:hover,
+.jgrid input[type=checkbox]:hover {
+	cursor: pointer;
+	border-color: #818181;
+}
+.jgrid input[type=radio]:focus,
+.jgrid input[type=checkbox]:focus {
+	border-color: #bababa;
+	box-shadow: 0 0 0 2px rgb(58 65 78 / 25%);
+}
+
+.jgrid .jgrid-cell.jgrid-edit {
+	background: var(--table-row-bg-color-on);
+}
+.jgrid .jgrid-edit input, .jgrid .jgrid-cell select {
+	background-color: var(--input-bg-color);
+	border: solid 1px var(--input-border-color);
+	color: var(--input-text-color);
+	width: 100% !important;
+	height: 32px !important;
+	margin: 0 auto;
+	padding: 4px 10px 5px;
+	font-size: var(--base-font-size);
+	border-radius: 4px;
+}
+.jgrid .jgrid-cell .select_wrap {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+.jgrid .jgrid-edit input:hover, .jgrid .jgrid-cell select:hover {
+	border-color: #818181;
+}
+.jgrid .jgrid-edit input:focus, .jgrid .jgrid-cell select:focus {
+	border-color: var(--input-border-color-focused);
+}
+
+.jgrid .jgrid-cell button.btn {
+	margin: 0 0 3.5px 0;
+}
+
+/*-----------------SelectionManager (This should come after EditManager)------*/
+.jgrid .rowSelected div {
+	background: var(--table-row-bg-color-on);
+}
+
+
+/*-------------------------Footer-----------------------------*/
+.jgrid .classSliderMask {
+	border-top: solid 1px var(--table-tfoot-border-color);
+	border-bottom: solid 1px var(--table-tfoot-border-color) !important;
+}
+
+.jgrid .classSliderCell {
+	color: var(--table-tfoot-text-color);
+	height: calc(var(--table-row-height) - 1px) !important;
+	line-height: calc(var(--table-row-height) - 1px) !important;
+	border-right-color: var(--table-tfoot-bg-color) !important;
+}
+.footer_cell_bordered .jgrid .classSliderCell {
+	border-right-color: var(--table-tfoot-border-color) !important;
+}
+
+.jgrid .jgrid-footer {
+	top: inherit;
+	bottom: -35px;
+	width: 300px;
+	font-size: 14px;
+	color: var(--table-text-color);
+	z-index: unset;
+}
+.jgrid .jgrid-footer [name=totalCount] {
+	color: #000;
+	font-weight: 600;
+}
+
+.no_footer .jgrid .classSliderMask {
+	border-top: solid 1px white;
+}

@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+/* 나눔스퀘어 네오 */
+@font-face{
+	font-family: "NanumSquareNeo";
+	font-weight: 400;
+	src:url("../fonts/NanumSquareNeo/NanumSquareNeoTTF-aLt.woff2");
+}
+	
+@font-face{
+	font-family: "NanumSquareNeo";
+	font-weight: 500;
+	src:url("../fonts/NanumSquareNeo/NanumSquareNeoTTF-bRg.woff2");
+}
+	
+@font-face{
+	font-family: "NanumSquareNeo";
+	font-weight: 600;
+	src:url("../fonts/NanumSquareNeo/NanumSquareNeoTTF-cBd.woff2");
+}
+	
+@font-face{
+	font-family: "NanumSquareNeo";
+	font-weight: 700;
+	src:url("../fonts/NanumSquareNeo/NanumSquareNeoTTF-dEb.woff2");
+}
+	
+@font-face{
+	font-family: "NanumSquareNeo";
+	font-weight: 800;
+	src:url("../fonts/NanumSquareNeo/NanumSquareNeoTTF-eHv.woff2");
+}
+
+/* Infinity Sans */
+@font-face {
+	font-family: "InfinitySans";
+	font-weight: 400;
+	src: url("../fonts/InfinitySans/InfinitySans-Regular.woff") format("woff");
+}
+@font-face {
+	font-family: "InfinitySans";
+	font-weight: 600;
+	src: url("../fonts/InfinitySans/InfinitySans-Medium.woff") format("woff");
+}
+@font-face {
+	font-family: "InfinitySans";
+	font-weight: 700;
+	src: url("../fonts/InfinitySans/InfinitySans-Bold.woff") format("woff");
+}

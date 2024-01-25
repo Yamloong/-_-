@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+<title>DATE PICKER</title>
+
+<!--v Packages -->
+<script src="../../assets/js/jquery.min.js"></script>
+
+<link href="../../assets/css/jquery-ui.min.css" rel="stylesheet" />
+<script src="../../assets/js/jquery-ui.min.js"></script>
+
+<link href="../../assets/css/select2.min.css" rel="stylesheet" />
+<script src="../../assets/js/select2.min.js"></script>
+<!--^ Packages -->
+
+<!-- GUIDE관련 소스 -->
+<link href="../assets/css/only_for_guide.css" rel="stylesheet" />
+<script src="../assets/js/only_for_guide.js"></script>
+
+<!--v codemirror : 소스보기용 -->
+<link href="../assets/js/codemirror/lib/codemirror.css" rel="stylesheet" />
+<link href="../assets/js/codemirror/theme/rubyblue.css" rel="stylesheet" />
+<script src="../assets/js/codemirror/lib/codemirror.js"></script>
+<script src="../assets/js/codemirror/mode/xml/xml.js"></script>
+<script src="../assets/js/codemirror/mode/javascript/javascript.js"></script>
+<script src="../assets/js/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+<script src="../assets/js/codemirror/addon/selection/active-line.js"></script>
+<!--^ codemirror : 소스보기용 -->
+
+<link href="../../assets/css/all.css" rel="stylesheet" />
+<script src="../../assets/js/util.js"></script>
+</head>
+
+<body class="guide_page">
+	<header>
+		<div class="inner">
+			<div class="logo">UI/UX GUIDE</div>
+			<ul class="gnb">
+				<li><a href="../index.html">페이지</a></li>
+				<li><a href="../style.html">스타일</a></li>
+				<li class="active"><a href="../components.html">컴포넌트</a></li>
+				<li><a href="../layouts.html">레이아웃</a></li>
+				<li><a href="../about.html">About</a></li>
+			</ul>
+		</div>
+	</header>
+
+	<div class="guide guide_style">
+		<section>
+			<div class="container">
+				<h2 class="page-title">DATE PICKER</h2>
+
+				<div class="page-note"><strong>Overview</strong> jQuery UI 등 3rd party 제품 기반의 component 예시와 사용방법입니다.</div>
+
+				<article class="guide">
+					<h3 class="guide-title">DatePicker</h3>
+
+					<div class="contents">
+						<div class="guide-sub-title">
+							기본형태 1
+							<div class="right_menu">
+								<button type="button" class="btn btn-primary btn_view_source" data-target="#sourceViewer1" aria-expanded="false" aria-controls="sourceViewer1"><i class="icon-eyes">👀</i><span>HTML</span></button>
+							</div>
+						</div>
+
+						<ul class="info">
+							<li>DatePicker를 설치할 input에 .datepicker class를 추가 합니다.</li>
+						</ul>
+						<div class="guide-row">
+							<div class="guide_html">
+<div class="form-control-top-wrap">
+	<label class="form-label" for="입력일자">날짜</label>
+	<div class="form-container">
+		<div class="input-wrap input_datepicker_wrap">
+			<input class="datepicker" type="text" id="입력일자" name="입력일자" value="2022.02.21" maxlength="10" placeholder="YYYY.MM.DD" oninput="checkInputPattern(this, '0-9\-');" />
+		</div>
+	</div>
+</div>
+							</div>
+						</div><!-- .guide-row -->
+
+						<div id="sourceViewer1" class="source_viewer"></div>
+					</div><!-- .contents -->
+
+					<div class="contents">
+						<div class="guide-sub-title">
+							기본 형태 2
+							<span>왼쪽 레이블 + 레이블 width에 따라 input width 가변</span>
+							<div class="right_menu">
+								<button type="button" class="btn btn-primary btn_view_source" data-target="#sourceViewer2" aria-expanded="false" aria-controls="sourceViewer2"><i class="icon-eyes">👀</i><span>HTML</span></button>
+							</div>
+						</div>
+
+						<div class="guide-row">
+							<div class="guide_html">
+<div class="form-control-wrap">
+	<label class="form-label" for="입력일자2">날짜</label>
+	<div class="form-container">
+		<div class="input-wrap input_datepicker_wrap">
+			<input class="datepicker" type="text" id="입력일자2" name="입력일자2" value="" maxlength="10" placeholder="YYYY.MM.DD" oninput="checkInputPattern(this, '0-9\-');" />
+		</div>
+	</div>
+</div>
+							</div>
+						</div><!-- .guide-row -->
+
+						<div id="sourceViewer2" class="source_viewer"></div>
+					</div><!-- .contents -->
+
+					<div class="contents">
+						<div class="guide-sub-title">
+							기간입력 + 옵션버튼
+							<div class="right_menu">
+								<button type="button" class="btn btn-primary btn_view_source" data-target="#sourceViewer3" aria-expanded="false" aria-controls="sourceViewer3"><i class="icon-eyes">👀</i><span>HTML</span></button>
+							</div>
+						</div>
+
+						<ul class="info">
+							<li>기간입력이면 입력창을 아래 예시처럼 .input_period_wrap으로 감싸야 합니다.</li>
+							<li>기간선택 단축버튼은 '금일'처럼 setInputPeriod()에 넘겨받을 시작일, 종료일 입력창을 파라미터로 넘겨야 합니다.</li>
+							<li>그외 단축버튼처럼 파라미터를 안넘길 경우, 부모(.input_period_wrap)에서 .from을 시작일로, .to를 종료일로 처리합니다.</li>
+							<li>div.button-wrap (기간선택 단축버튼 그룹)을 제거하여 기간입력창만 사용할 수도 있습니다.</li>
+						</ul>
+						<div class="guide-row">
+							<div class="guide_html">
+<div class="form-control-wrap">
+	<label class="form-label" for="입력기간S">기간</label>
+	<div class="form-container">
+		<div class="input_period_wrap">
+			<div class="input-wrap input_datepicker_wrap">
+				<input class="from" type="text" id="입력기간S" name="입력기간S" value="" maxlength="10" placeholder="YYYY.MM.DD" oninput="checkInputPattern(this, '0-9\-');" />
+			</div>
+			<span class="mx-1">~</span>
+			<div class="input-wrap input_datepicker_wrap">
+				<input class="to" type="text" id="입력기간E" name="입력기간E" value="" maxlength="10" placeholder="YYYY.MM.DD" oninput="checkInputPattern(this, '0-9\-');" />
+			</div>
+			<div class="button-wrap">
+				<!-- 기간선택 단축버튼 그룹 -->
+				<button type="button" class="btn btn-sub-line period" onclick="setInputPeriod(this, 'd0', $('#입력기간S'), $('#입력기간E'));"><span>금일</span></button>
+				<button type="button" class="btn btn-sub-line period" onclick="setInputPeriod(this, 'd-1');"><span>어제~</span></button>
+				<button type="button" class="btn btn-sub-line period" onclick="setInputPeriod(this, 'd+1');"><span>내일</span></button>
+				<button type="button" class="btn btn-sub-line period" onclick="setInputPeriod(this, 'd-7');"><span>1주일</span></button>
+				<button type="button" class="btn btn-sub-line period" onclick="setInputPeriod(this, 'd-14');"><span>15일</span></button>
+				<button type="button" class="btn btn-sub-line period" onclick="setInputPeriod(this, 'd-30');"><span>최근30일</span></button>
+			</div>
+		</div>
+	</div>
+</div>
+							</div>
+						</div><!-- .guide-row -->
+
+						<div class="guide-row">
+							<div class="guide_html">
+<div class="form-control-wrap">
+	<label class="form-label" for="입력기간S">기간</label>
+	<div class="form-container">
+		<div class="input_period_wrap">
+			<div class="input-wrap input_datepicker_wrap">
+				<input class="from" type="text" id="입력기간S" name="입력기간S" value="" maxlength="10" placeholder="YYYY.MM.DD" oninput="checkInputPattern(this, '0-9\-');" />
+			</div>
+			<span class="mx-1">~</span>
+			<div class="input-wrap input_datepicker_wrap">
+				<input class="to" type="text" id="입력기간E" name="입력기간E" value="" maxlength="10" placeholder="YYYY.MM.DD" oninput="checkInputPattern(this, '0-9\-');" />
+			</div>
+			<div class="button-wrap">
+				<!-- 기간선택 단축버튼 그룹 -->
+				<button type="button" class="btn btn-sub-line period" onclick="setInputPeriod(this, 'w0');"><span>금주</span></button>
+				<button type="button" class="btn btn-sub-line period" onclick="setInputPeriod(this, 'w-1');"><span>전주</span></button>
+				<button type="button" class="btn btn-sub-line period" onclick="setInputPeriod(this, 'w+1');"><span>차주</span></button>
+				<button type="button" class="btn btn-sub-line period" onclick="setInputPeriod(this, 'lm-1');"><span>1개월</span></button>
+				<button type="button" class="btn btn-sub-line period" onclick="setInputPeriod(this, 'lm-3');"><span>3개월</span></button>
+				<button type="button" class="btn btn-sub-line period" onclick="setInputPeriod(this, 'm0');"><span>금월</span></button>
+				<button type="button" class="btn btn-sub-line period" onclick="setInputPeriod(this, 'm-1');"><span>전월</span></button>
+				<button type="button" class="btn btn-sub-line period" onclick="setInputPeriod(this, 'y0');"><span>금년</span></button>
+				<button type="button" class="btn btn-sub-line period" onclick="setInputPeriod(this, 'y-1');"><span>작년</span></button>
+			</div>
+		</div>
+	</div>
+</div>
+							</div>
+						</div><!-- .guide-row -->
+
+						<div id="sourceViewer3" class="source_viewer"></div>
+					</div><!-- .contents -->
+				</article>
+			</div><!-- .container -->
+		</section>
+	</div><!-- .guide -->
+
+	<div style="height: 160px"></div>
+
+	<footer>
+		<div class="inner">
+			<div class="copy">Copyright &copy; GRIDA 2022</div>
+			<div class="f-logo"><img src="../assets/img/ci_grida.svg" /></div>
+		</div>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+<title>가맹점별 거래조회</title>
+
+<!--v Packages -->
+<script src="../../assets/js/jquery.min.js"></script>
+
+<link href="../../assets/css/jquery-ui.min.css" rel="stylesheet" />
+<script src="../../assets/js/jquery-ui.min.js"></script>
+
+<link href="../../assets/css/select2.min.css" rel="stylesheet" />
+<script src="../../assets/js/select2.min.js"></script>
+<!--^ Packages -->
+
+<link href="../../assets/css/all.css" rel="stylesheet" />
+<script src="../../assets/js/util.js"></script>
+</head>
+
+<body class="sub-page">
+	<header>
+		<div class="inner">
+			<h1 class="logo">
+				<a href="#">
+					<img src="../../assets/img/logo.svg" />
+				</a>
+			</h1>
+			<div id="gnb">
+				<ul class="gnb-list">
+					<li>
+						<a href="#">회원/카드관리</a>
+					</li>
+					<li>
+						<a href="#">거래관리</a>
+					</li>
+					<li>
+						<a href="#">정산현황</a>
+					</li>
+					<li>
+						<a href="#">통계/분석</a>
+					</li>
+					<li>
+						<a href="#">지원정책</a>
+					</li>
+					<li>
+						<a href="#">환경설정</a>
+					</li>
+					<li>
+						<button type="button" class="btn">
+							<span>전체보기</span>
+							<i class="icon-menu"></i>
+						</button>
+					</li>
+				</ul>
+			</div>
+			<div class="my-menu">
+				<div class="info">
+					<div class="photo">
+						<i class="icon-smile"></i><!-- 혹시 나중에 img태그가 들어간다면 해당 i태그 삭제 -->
+					</div>
+					<div class="name">관리자</div>
+				</div>
+				<div class="log">
+					<span>최종 로그인</span>
+					<span class="time">2022.08.29 14:14</span>
+				</div>
+				<div class="button-wrap">
+					<button type="button" class="btn">
+						<i class="icon-setting"></i>
+					</button>
+					<button type="button" class="btn">
+						<i class="icon-logout"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="container">
+		<div id="lnb">
+			<div class="group-title">
+				<span>거래관리</span>
+			</div>
+			<button type="button" class="btn btn-primary btn_lnb_control">
+				<i class="icon-arrow-prev"></i>
+			</button>
+			<ul class="menu-list">
+				<li>
+					<a href="#">
+						<span>거래내역</span>
+						<i class="icon-circle-plus"></i>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>급식종합관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>거래요약조회</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>거래상세조회</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>거래현황</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>실시간거래내역조회</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="on">
+					<a href="#">
+						<span>가맹점관리</span>
+						<i class="icon-circle-plus"></i>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>가맹점관리</span>
+							</a>
+						</li>
+						<li class="on">
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>가맹점별 거래조회</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>가맹점 위생점검 관리</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">
+						<span>가맹점별거래현황</span>
+						<i class="icon-circle-plus"></i>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>가맹점별거래현황</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!-- #lnb -->
+		<div class="content-wrap">
+			<div class="content-header">
+				<div class="title-wrap">
+					<div class="title">가맹점별 거래조회</div>
+					<div class="location">
+						<i class="icon-home"></i>
+						<span>홈</span>
+						<span>거래관리</span>
+						<span>가맹점관리</span>
+						<span>가맹점별 거래조회</span>
+					</div>
+				</div>
+			</div>
+			<div class="content-body">
+				<div class="page-memo">
+					<ul class="list">
+						<li>붉은색의 <span class="text-warning">*</span>표시는 필수선택 사항입니다.</li>
+					</ul>
+				</div>
+
+				
+				<div class="search-form-wrap">
+					<form>
+						<div class="search-form-inner">
+							<div class="search-form">
+
+								<div class="row">
+									<div class="col-6">
+										<label class="form-label required" for="가맹점"><span>가맹점</span></label>
+										<div class="form-container">
+											<div class="input-wrap">
+												<input type="text" id="가맹점" name="가맹점" value="" placeholder="" />
+											</div><!-- .input-wrap -->
+											<button type="button" class="btn btn-sub-line">
+												<span>가맹점 검색</span>
+											</button>
+										</div><!-- .form-container -->
+									</div><!-- .col -->
+									<div class="col-6">
+										<label class="form-label" for="기간S"><span>기간선택</span></label>
+										<div class="form-container">
+											<div class="input-wrap input_datepicker_wrap">
+												<input class="from" type="text" id="기간S" name="기간S" value="" maxlength="10" placeholder="YYYY.MM.DD" oninput="checkInputPattern(this, '0-9\-');" />
+											</div>
+											<div class="input-wrap input_datepicker_wrap">
+												<input class="to" type="text" id="기간E" name="기간E" value="" maxlength="10" placeholder="YYYY.MM.DD" oninput="checkInputPattern(this, '0-9\-');" />
+											</div>
+										</div><!-- .form-container -->
+									</div><!-- .col -->
+								</div><!-- .row -->
+
+								<div class="row">
+									<div class="col-6">
+										<label class="form-label" for="체크박스1"><span>선택</span></label>
+										<div class="form-container">
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" id="체크박스1" name="체크박스1" value="체크박스1" checked="" />
+												<label class="form-check-label" for="체크박스1">사용</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" id="체크박스2" name="체크박스2" value="체크박스2" />
+												<label class="form-check-label" for="체크박스2">사용취소</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" id="체크박스3" name="체크박스3" value="체크박스3" />
+												<label class="form-check-label" for="체크박스3">적립</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" id="체크박스4" name="체크박스4" value="체크박스4" />
+												<label class="form-check-label" for="체크박스4">적립취소</label>
+											</div>
+										</div><!-- .form-container -->
+									</div><!-- .col -->
+									<div class="col-6">
+										<label class="form-label" for="라디오2_옵션1"><span>조회기준</span></label>
+										<div class="form-container">
+											<div class="form-check">
+												<input class="form-check-input" type="radio" id="라디오2_옵션1" name="라디오1" value="옵션1" />
+												<label class="form-check-label" for="라디오2_옵션1">사업자번호로 조회</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="radio" id="라디오2_옵션2" name="라디오1" value="옵션2" checked="" />
+												<label class="form-check-label" for="라디오2_옵션2">가맹점번호로 조회</label>
+											</div>
+										</div><!-- .form-container -->
+									</div><!-- .col -->
+								</div><!-- .row -->
+
+								<div class="row">
+									<div class="col-6">
+										<label class="form-label" for="라디오1_옵션1"><span>취소원거래</span></label>
+										<div class="form-container">
+											<div class="form-check">
+												<input class="form-check-input" type="radio" id="라디오1_옵션1" name="라디오1" value="옵션1" />
+												<label class="form-check-label" for="라디오1_옵션1">포함</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="radio" id="라디오1_옵션2" name="라디오1" value="옵션2" checked="" />
+												<label class="form-check-label" for="라디오1_옵션2">미포함</label>
+											</div>
+										</div><!-- .form-container -->
+									</div><!-- .col -->
+									<div class="col-6"></div>
+								</div><!-- .row -->
+
+							</div><!-- .search-form -->
+
+							<div class="button-wrap">
+								<button type="button" class="btn btn-primary">
+									<i class="icon-search"></i>
+									<span>검색</span>
+								</button>
+							</div>
+						</div><!-- .search-form-inner -->
+					</form>
+				</div><!-- .search_form_wrap -->
+
+				<div class="section-body">
+					<div class="table-wrap">
+						<table class="tbl-form">
+							<colgroup>
+								<col style="width: 100px;">
+								<col style="width: 40%;">
+								<col style="width: 100px;">
+								<col style="width: 40%;">
+							</colgroup>
+							<tbody>
+							<tr>
+								<th>상호</th>
+								<td>0000 빵집</td>
+								<th>사업자번호</th>
+								<td>000-00-00000 (정상)</td>
+							</tr>
+							<!-- <tr>
+								<th>대표자명</th>
+								<td></td>
+								<th></th>
+								<td></td>
+							</tr> -->
+							<tr>
+								<th>주소</th>
+								<td colspan="3">00000 경기 김포시 김포한강00로 00, 1층 101(00동, 000빌딩)</td>
+							</tr>
+							<tr>
+								<th>휴대폰</th>
+								<td>010-0000-0000</td>
+								<th>전화번호</th>
+								<td>031-000-0000</td>
+							</tr>
+							<tr>
+								<th>가입일</th>
+								<td>yyyy.mm.dd</td>
+								<th>해약일</th>
+								<td>yyyy.mm.dd</td>
+							</tr>
+							<tr>
+								<th>가맹점분류</th>
+								<td>일반휴게음식 / 서양음식</td>
+								<th>읍/면/동</th>
+								<td>경기도</td>
+							</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<div class="section-header">
+					<div class="title-wrap">
+						<div class="title">가맹점별 거래목록<span class="small text-primary">(99건)</span></div>
+					</div>
+					<div class="button-wrap">
+						<button type="button" class="btn btn-line">
+							<i class="icon-filedown"></i>
+							<span>엑셀다운</span>
+						</button>
+					</div>
+				</div>
+				<div class="section-body">
+					<div class="grid-area">
+						<div style="padding: 100px 0; text-align: center; font-size: 20px;">IBSheet영역</div><!-- 이 줄을 삭제 후 그리드를 삽입하세요. -->
+					</div>
+				</div>
+			</div>
+		</div><!-- .content-wrap -->
+	</div><!-- .container -->
+</body>
+</html>

@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+<title>연계전문상세</title>
+
+<!--v Packages -->
+<script src="../../assets/js/jquery.min.js"></script>
+
+<link href="../../assets/css/jquery-ui.min.css" rel="stylesheet" />
+<script src="../../assets/js/jquery-ui.min.js"></script>
+
+<link href="../../assets/css/select2.min.css" rel="stylesheet" />
+<script src="../../assets/js/select2.min.js"></script>
+<!--^ Packages -->
+
+<link href="../../assets/css/all.css" rel="stylesheet" />
+<script src="../../assets/js/util.js"></script>
+</head>
+
+<body class="sub-page">
+	<header>
+		<div class="inner">
+			<h1 class="logo">
+				<a href="#">
+					<img src="../../assets/img/logo.svg" />
+				</a>
+			</h1>
+			<div id="gnb">
+				<ul class="gnb-list">
+					<li>
+						<a href="#">회원/카드관리</a>
+					</li>
+					<li>
+						<a href="#">거래관리</a>
+					</li>
+					<li>
+						<a href="#">정산현황</a>
+					</li>
+					<li>
+						<a href="#">통계/분석</a>
+					</li>
+					<li>
+						<a href="#">지원정책</a>
+					</li>
+					<li>
+						<a href="#">환경설정</a>
+					</li>
+					<li>
+						<button type="button" class="btn">
+							<span>전체보기</span>
+							<i class="icon-menu"></i>
+						</button>
+					</li>
+				</ul>
+			</div>
+			<div class="my-menu">
+				<div class="info">
+					<div class="photo">
+						<i class="icon-smile"></i><!-- 혹시 나중에 img태그가 들어간다면 해당 i태그 삭제 -->
+					</div>
+					<div class="name">관리자</div>
+				</div>
+				<div class="log">
+					<span>최종 로그인</span>
+					<span class="time">2022.08.29 14:14</span>
+				</div>
+				<div class="button-wrap">
+					<button type="button" class="btn">
+						<i class="icon-setting"></i>
+					</button>
+					<button type="button" class="btn">
+						<i class="icon-logout"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="container">
+		<div id="lnb">
+			<div class="group-title">
+				<span>환경설정</span>
+			</div>
+			<button type="button" class="btn btn-primary btn_lnb_control">
+				<i class="icon-arrow-prev"></i>
+			</button>
+			<ul class="menu-list">
+				<li>
+					<a href="#">
+						<span>관리자 관리</span>
+						<i class="icon-circle-plus"></i>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>관리자승인</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>관리자 관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>관리자권한관리</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">
+						<span>플랫폼 관리</span>
+						<i class="icon-circle-plus"></i>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>메뉴 관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>배너 관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>팝업 관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>공공데이터관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>가맹점분류코드관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>공휴일관리</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="on">
+					<a href="#">
+						<span>시스템 관리</span>
+						<i class="icon-circle-plus"></i>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>이용자접속현황 관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>변경이력 관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>메타데이터 관리</span>
+							</a>
+						</li>
+						<li class="on">
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>연계전문 관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>연계데이터 관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>개인정보접근 이력조회</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>개인정보접근 통계</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>알림톡 정보관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>알림톡 발송이력</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!-- #lnb -->
+		<div class="content-wrap">
+			<div class="content-header">
+				<div class="title-wrap">
+					<div class="title">연계전문 관리</div>
+					<div class="location">
+						<i class="icon-home"></i>
+						<span>홈</span>
+						<span>환경설정</span>
+						<span>시스템 관리</span>
+						<span>연계전문 관리</span>
+					</div>
+				</div>
+			</div>
+			<div class="content-body">
+			</div>
+		</div><!-- .content-wrap -->
+	</div><!-- .container -->
+
+	<!-- 팝업 위치는 항상 여기에 넣어주세요. -->
+	<div id="layerPopup" class="layerPopup" style="display: block;"><!-- 실제 작업하실 때는 style 선언은 지워주세요. 팝업 활성화 방법은 components/modal.html 파일을 참고해주세요. -->
+		<div class="layer-wrap" style="width: 960px;">
+			<div class="layer-header">
+				<h4 class="layer-title">연계 전문 상세 화면</h4>
+				<div class="button-wrap">
+					<button type="button" class="btn btn_close" title="창닫기">
+						<i class="icon-close"></i>
+					</button>
+				</div>
+			</div><!-- .layer-header -->
+	
+			<div class="layer-body">
+				<div class="section-header">
+					<div class="title-wrap">
+						<div class="title">전문 기본정보</div>
+					</div>
+				</div><!-- .section-header-->
+				<div class="section-body">
+					<div class="table-wrap">
+						<table class="tbl-data">
+							<colgroup>
+								<col width="120px">
+								<col width="120px">
+								<col width="200px">
+								<col width="120px">
+								<col width="120px">
+								<col width="120px">
+								<col width="120px">
+								<col width="120px">
+								<col width="120px">
+								<col width="120px">
+								<col width="120px">
+								<col width="120px">
+							</colgroup>
+							<thead>
+							<tr>
+								<th>단위업무</th>
+								<th>전문번호</th>
+								<th>전문내용</th>
+								<th>양방향구분</th>
+								<th>전문길이</th>
+								<th>전문구분</th>
+								<th>비고</th>
+								<th>송수신구분</th>
+								<th>연계기관</th>
+								<th>응답전문</th>
+								<th>X-헤더</th>
+								<th>기관그룹</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>
+									<div class="form-container">
+										<div class="input-wrap">
+											<input type="text" id="단위업무" name="단위업무" placeholder="" />
+										</div><!-- .input-wrap -->
+									</div>
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="input-wrap">
+											<input type="text" id="전문번호" name="전문번호" placeholder="" />
+										</div><!-- .input-wrap -->
+									</div>
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="input-wrap">
+											<input type="text" id="전문내용" name="전문내용" placeholder="" />
+										</div><!-- .input-wrap -->
+									</div>
+								</td>
+								<td>
+									<div class="form-container">
+										<select class="form-select select2" id="양방향구분" name="양방향구분" data-placeholder="양방향구분 선택">
+											<option value=""></option>
+											<option value="옵션1">옵션1</option>
+											<option value="옵션2">옵션2</option>
+											<option value="옵션3">옵션3</option>
+										</select>
+									</div>
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="input-wrap">
+											<input type="text" id="전문길이" name="전문길이" placeholder="" />
+										</div><!-- .input-wrap -->
+									</div>
+								</td>
+								<td>
+									<div class="form-container">
+										<select class="form-select select2" id="전문구분" name="전문구분" data-placeholder="전문구분 선택">
+											<option value=""></option>
+											<option value="옵션1">옵션1</option>
+											<option value="옵션2">옵션2</option>
+											<option value="옵션3">옵션3</option>
+										</select>
+									</div>
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="input-wrap">
+											<input type="text" id="비고" name="비고" placeholder="" />
+										</div><!-- .input-wrap -->
+									</div>
+								</td>
+								<td>
+									<div class="form-container">
+										<select class="form-select select2" id="송수신구분" name="송수신구분" data-placeholder="송수신구분 선택">
+											<option value=""></option>
+											<option value="옵션1">옵션1</option>
+											<option value="옵션2">옵션2</option>
+											<option value="옵션3">옵션3</option>
+										</select>
+									</div>
+								</td>
+								<td>
+									<div class="form-container">
+										<select class="form-select select2" id="연계기관" name="연계기관" data-placeholder="연계기관 선택">
+											<option value=""></option>
+											<option value="옵션1">옵션1</option>
+											<option value="옵션2">옵션2</option>
+											<option value="옵션3">옵션3</option>
+										</select>
+									</div>
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="input-wrap">
+											<input type="text" id="응답전문" name="응답전문" placeholder="" />
+										</div><!-- .input-wrap -->
+									</div>
+								</td>
+								<td>
+									<div class="form-container">
+										<div class="input-wrap">
+											<input type="text" id="X-헤더" name="X-헤더" placeholder="" />
+										</div><!-- .input-wrap -->
+									</div>
+								</td>
+								<td>
+									<div class="form-container">
+										<select class="form-select select2" id="기관그룹" name="기관그룹" data-placeholder="기관그룹 선택">
+											<option value=""></option>
+											<option value="옵션1">옵션1</option>
+											<option value="옵션2">옵션2</option>
+											<option value="옵션3">옵션3</option>
+										</select>
+									</div>
+								</td>
+							</tr>
+							</tbody>
+						</table>
+					</div>
+				</div><!-- .section-body -->
+
+				<div class="section-header">
+					<div class="title-wrap">
+						<div class="title">전문 상세정보</div>
+					</div>
+				</div>
+				<div class="section-body">
+					<div class="grid-area">
+						<div style="padding: 100px 0; text-align: center; font-size: 20px;">IBSheet영역</div><!-- 이 줄을 삭제 후 그리드를 삽입하세요. -->
+					</div>
+				</div>
+
+			</div><!-- .layer-body -->
+	
+			<div class="layer-footer">
+				<div class="button-wrap">
+					<button type="button" class="btn btn-line btn_close"><span>닫기</span></button>
+					<button type="button" class="btn btn-line"><span>삭제</span></button>
+					<button type="button" class="btn btn-primary"><span>저장</span></button>
+				</div>
+			</div><!-- .layer-footer -->
+		</div><!-- .layer-contents -->
+	</div><!-- #layerPopup.layerPopup -->
+</body>
+</html>

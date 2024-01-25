@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+<title>SELECT</title>
+
+<!--v Packages -->
+<script src="../../assets/js/jquery.min.js"></script>
+
+<link href="../../assets/css/jquery-ui.min.css" rel="stylesheet" />
+<script src="../../assets/js/jquery-ui.min.js"></script>
+
+<link href="../../assets/css/select2.min.css" rel="stylesheet" />
+<script src="../../assets/js/select2.min.js"></script>
+<!--^ Packages -->
+
+<!-- GUIDE관련 소스 -->
+<link href="../assets/css/only_for_guide.css" rel="stylesheet" />
+<script src="../assets/js/only_for_guide.js"></script>
+
+<!--v codemirror : 소스보기용 -->
+<link href="../assets/js/codemirror/lib/codemirror.css" rel="stylesheet" />
+<link href="../assets/js/codemirror/theme/rubyblue.css" rel="stylesheet" />
+<script src="../assets/js/codemirror/lib/codemirror.js"></script>
+<script src="../assets/js/codemirror/mode/xml/xml.js"></script>
+<script src="../assets/js/codemirror/mode/javascript/javascript.js"></script>
+<script src="../assets/js/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+<script src="../assets/js/codemirror/addon/selection/active-line.js"></script>
+<!--^ codemirror : 소스보기용 -->
+
+<link href="../../assets/css/all.css" rel="stylesheet" />
+<script src="../../assets/js/util.js"></script>
+</head>
+
+<body class="guide_page">
+	<header>
+		<div class="inner">
+			<div class="logo">UI/UX GUIDE</div>
+			<ul class="gnb">
+				<li><a href="../index.html">페이지</a></li>
+				<li><a href="../style.html">스타일</a></li>
+				<li class="active"><a href="../components.html">컴포넌트</a></li>
+				<li><a href="../layouts.html">레이아웃</a></li>
+				<li><a href="../about.html">About</a></li>
+			</ul>
+		</div>
+	</header>
+
+	<div class="guide guide_style">
+		<section>
+			<div class="container">
+				<h2 class="page-title">SELECT</h2>
+
+				<div class="page-note"><strong>Overview</strong> jQuery UI 등 3rd party 제품 기반의 component 예시와 사용방법입니다.</div>
+
+				<a name="select2"></a>
+
+				<article class="guide">
+					<h3 class="guide-title">SELECT</h3>
+
+					<div class="contents">
+						<div class="guide-sub-title">
+							기본 형태 1
+							<div class="right_menu">
+								<button type="button" class="btn btn-primary btn_view_source" data-target="#sourceViewer0"><i class="icon-eyes">👀</i><span>HTML</span></button>
+							</div>
+						</div>
+						<div class="guide-row">
+							<div class="guide_html">
+<select class="form-select select2" id="언어선택0" name="언어선택0" data-placeholder="언어를 선택하시오.">
+	<option></option>
+	<option value="KR" selected="true">한국어 한국어 한국어 한국어 한국어 한국어</option>
+	<option value="EN">English</option>
+	<option value="CN">中國語</option>
+</select>
+							</div>
+						</div><!-- .guide-row -->
+
+						<div id="sourceViewer0" class="collapse source_viewer"></div>
+					</div>
+				</article>
+
+				<article class="guide">
+					<h3 class="guide-title">LABEL + SELECT</h3>
+
+					<ul class="info">
+						<li>* custom select는 select2를 style 변경하여 사용함. 기본 사용법은 <a class="guide btn-link" href="https://select2.org/" target="_blank">https://select2.org/</a>을 참조하시기 바랍니다.</li>
+					</ul>
+
+					<div class="contents">
+						<div class="guide-sub-title">
+							기본 형태 1
+							<div class="right_menu">
+								<button type="button" class="btn btn-primary btn_view_source" data-target="#sourceViewer3"><i class="icon-eyes">👀</i><span>HTML</span></button>
+							</div>
+						</div>
+
+						<ul class="info">
+							<li>select tag의 class에 "select2" class가 들어있으면 모두 select2 형태로 변환됩니다. (pubUtil.js에 관련 기능이 구현되어 있습니다.)</li>
+							<!-- <li>placeholder 기능을 이용하시려면 data-placeholder에 placeholder 값을 입력합니다.</li> -->
+							<li style="color: red">필수입력인 경우, data-placeholder를 반드시 입력해야 합니다.</li>
+							<li style="color: red">첫번째 옵션에 반드시 빈 옵션(&lt;option&gt;&lt;/option&gt;)을 두어야 합니다. (단, 검색조건으로 사용할 경우는 예외)</li>
+							<li>필수입력항목(required="required")인 select가 아닌 경우, 선택된 옵션 뒤에 [X] 버튼이 노출됩니다.</li>
+							<li>select를 readonly하고자 할때는 같은 이름의 input[type=hidden]을 추가하여 값을 전달하고, select는 disabled="disabled" 합니다.</li>
+							<li>
+								<i class="icon-circle-fill text-danger"></i> 검색조건으로 select2를 사용하고자 할 때는 아래 '검색' 예시처럼 1)required="required" 2)첫번째 옵션에 '전체' 형태로 사용하시기 바랍니다.<br />
+								required로 안하면 선택창 뒤에 [X]가 노출됩니다.
+							</li>
+						</ul>
+						<div class="guide-row2">
+							<div class="guide_html">
+<div class="form-control-wrap">
+<label class="form-label" for="언어선택1">언어</label>
+<div class="form-container">
+	<select class="form-select select2" id="언어선택1" name="언어선택1" data-placeholder="언어를 선택하시오.">
+		<option></option>
+		<option value="KR" selected="true">한국어 한국어 한국어 한국어 한국어 한국어</option>
+		<option value="EN">English</option>
+		<option value="CN">中國語</option>
+	</select>
+</div><!-- .form-container -->
+</div>
+							</div>
+							<div class="guide_html">
+<div class="form-control-wrap">
+<label class="form-label required" for="언어선택1M">언어</label>
+<div class="form-container">
+	<select class="form-select select2" id="언어선택1M" name="언어선택1M" data-placeholder="언어선택" required="required">
+		<option></option>
+		<option value="KR">한국어</option>
+		<option value="EN">English</option>
+		<option value="CN">中國語</option>
+	</select>
+</div><!-- .form-container -->
+</div>
+							</div>
+							<div class="guide_html">
+<div class="form-control-wrap">
+<label class="form-label" for="언어선택2">언어 (읽기전용)</label>
+<div class="form-container">
+	<input type="hidden" name="언어선택2" value="한국어" />
+	<select class="form-select select2" id="언어선택2" name="언어선택2" data-placeholder="언어선택" disabled="disabled">
+		<option value="KR" selected="true">한국어</option>
+		<option value="EN">English</option>
+		<option value="CN">中國語</option>
+	</select>
+</div><!-- .form-container -->
+</div>
+<!--
+select에는 readonly가 안되므로, select는 disabled="disabled" 시키고, input[type=hidden]으로 값을 넘김.
+이때, 반드시 input[type=hidden]을 select 위에 들 것. (disabled select와 구분 목적)
+-->
+							</div>
+							<div class="guide_html">
+<div class="form-control-wrap">
+<label class="form-label" for="언어선택3">언어 (사용불가)</label>
+<div class="form-container">
+	<select class="form-select select2" id="언어선택3" name="언어선택3" data-placeholder="언어선택" disabled="disabled">
+		<option value="KR" selected="true">한국어</option>
+		<option value="EN">English</option>
+		<option value="CN">中國語</option>
+	</select>
+</div><!-- .form-container -->
+</div>
+							</div>
+
+							<div class="guide_html">
+<div class="form-control-wrap">
+<label class="form-label" for="검색">검색</label>
+<div class="form-container">
+	<select class="form-select select2" id="검색" name="검색" required="required">
+		<option value="">(전체)</option>
+		<option value="옵션1">검색옵션1</option>
+		<option value="옵션2">검색옵션2</option>
+		<option value="옵션3">검색옵션3</option>
+	</select>
+</div><!-- .form-container -->
+</div>
+							</div>
+							<div class="guide_html">
+<div class="form-control-wrap">
+<label class="form-label" for="검색1">검색</label>
+<div class="form-container">
+	<select class="form-select select2 is-invalid" id="검색1" name="검색1" data-placeholder="검색옵션선택" required="required">
+		<option value="">(전체)</option>
+		<option value="옵션1">검색옵션1 검색옵션1 검색옵션1 검색옵션1 검색옵션1</option>
+		<option value="옵션2">검색옵션2</option>
+		<option value="옵션3">검색옵션3</option>
+	</select>
+</div><!-- .form-container -->
+</div>
+							</div>
+						</div><!-- .guide-row -->
+
+						<div id="sourceViewer3" class="collapse source_viewer"></div>
+					</div><!-- .contents -->
+				</article>
+			</div><!-- .container -->
+		</section>
+	</div><!-- .guide -->
+
+	<footer>
+		<div class="inner">
+			<div class="copy">Copyright &copy; GRIDA 2022</div>
+			<div class="f-logo"><img src="../assets/img/ci_grida.svg" /></div>
+		</div>
+	</footer>
+</body>
+</html>

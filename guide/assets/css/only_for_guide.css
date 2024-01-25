@@ -1,0 +1,335 @@
+@charset "UTF-8";
+/**
+ * guide에만 사용되는 style을 여기에 정의합니다.
+ */
+
+ body.guide_page {
+	font-family: var(--base-font-family);
+	font-size: var(--base-font-size);
+	font-weight: 500;
+	line-height: 1.5;
+	color: var(--base-text-color);
+	background-color: #fff;
+}
+.inner {
+	max-width: var(--page-min-width);
+	margin: 0 auto;
+}
+
+a.delete {
+	text-decoration: line-through;
+}
+
+/************************************************
+	HEADER
+************************************************/
+.guide_page header {
+	background-color: #333;
+}
+.guide_page header .inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 0;
+	color: #fff;
+	font-size: 20px;
+}
+.guide_page .gnb {
+	display: flex;
+}
+.guide_page .gnb li {
+	font-size: 13px;
+}
+.guide_page .gnb li + li {
+	margin-left: 30px;
+}
+.guide_page .gnb li a {
+	color: #fff;
+	text-decoration: none;
+}
+.guide_page .gnb li.active a {
+	color: #ebd0a0;
+	font-weight: 700;
+}
+
+/************************************************
+	FOOTER
+************************************************/
+.guide_page footer {
+	background-color: #f8f8f8;
+}
+.guide_page footer .inner {
+	display: flex;
+	justify-content: space-between;
+	padding: 40px 0;
+}
+.guide_page footer .f-logo img {
+	height: 20px;
+}
+
+
+/************************************************
+	GUIDE
+************************************************/
+.guide_page .container {
+	display: block;
+	max-width: 1200px;
+	padding: 40px 0;
+	margin: 0 auto;
+}
+.guide_page .page-title {
+	font-size: 25px;
+	font-weight: 600;
+}
+.guide_page .page-note {
+	margin: 25px 0 35px;
+	padding: 25px;
+	background-color: #f8f8f8;
+	border-left: 5px solid #666;
+	border-radius: 5px;
+}
+
+.guide-title {
+	padding: 10px 20px;
+	margin-bottom: 25px;
+	font-size: 20px;
+	font-weight: 600;
+	background-color: #e5e5e5;
+	border-top: 1px solid #333;
+}
+.guide-note {
+	margin: 20px 0;
+	padding: 25px;
+	background-color: #f8f8f8;
+	border-left: 5px solid #333;
+	border-radius: 5px;
+}
+
+.guide-sub-title {
+	position: relative;
+	margin-bottom: 25px;
+	font-size: 16px;
+	font-weight: 600;
+}
+.guide-sub-title::before {
+	content: '📢';
+	margin-right: 3px;
+}
+.guide-sub-title .right_menu {
+	position: absolute;
+	right: 0;
+	top: -7px;
+}
+
+/* section */
+article.guide {
+	padding-bottom: 50px;
+}
+.guide .contents {
+	padding-bottom: 40px;
+	margin-bottom: 40px;
+	border-bottom: 1px dotted #ddd;
+}
+.guide .contents:last-child {
+	padding: 0;
+	margin: 0;
+	border-bottom: 0;
+}
+.guide .guide-row {
+	display: flex;
+	flex-wrap: wrap;
+	padding-bottom: 15px;
+}
+.guide .guide-row .guide_html	{
+	min-width: 25%;
+}
+
+.guide .guide-row2 {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 20px 25px;
+	padding-bottom: 15px;
+}
+
+.guide .guide-row3 {
+	padding-bottom: 15px;
+}
+
+/* 안내 */
+.guide ul.info {
+	margin: 0 10px 30px 10px;
+}
+.guide ul.info li {
+	display: flex;
+	position: relative;
+	padding-left: 8px;
+	line-height: 32px;
+}
+.guide ul.info li::before {
+	content: '✔';
+	margin-right: 3px;
+}
+
+/* 검색폼 */
+.guide_page .search-form-inner > .search-form {
+	background-color: rgb(255, 215, 221);
+}
+.guide_page div[class^=col-] {
+	border: dashed 1px IndianRed;
+	border-radius: 5px;
+	color: IndianRed;
+	height: 36px;
+	margin-top: 3.5px;
+	margin-bottom: 3.5px;
+}
+/* 입력폼 */
+.guide_page .form_input {
+	border-radius: 5px;
+	background-color: rgb(255, 215, 221);
+	line-height: 35px;
+}
+
+.guide-table-wrap {
+	border-top: 1px solid #000;
+	margin-bottom: 50px;
+}
+.guide-table-wrap table {
+	width: 100%;
+	border-left: 1px solid #ddd;
+}
+.guide-table-wrap table th {
+	text-align: center;
+	font-weight: 600;
+}
+.guide-table-wrap table td {
+	padding: 0 12px;
+}
+.guide-table-wrap table td.td-title {
+	text-align: center;
+	font-size: 15px;
+	font-weight: 600;
+	/* color: #fff;
+	background-color: #333; */
+	background-color: #ddd;
+}
+.guide-table-wrap table td.last_modified {
+	text-align: center;
+}
+.guide-table-wrap table th,
+.guide-table-wrap table td {
+	height: var(--table-row-height);
+	border-right: 1px solid #ccc;
+		border-bottom: 1px solid #ccc;
+}
+.guide-table-wrap table td[class^="bg-"] {
+	color: #fff;
+}
+
+/* badge */
+.guide .badge-list {
+	display: inline-flex;
+	align-items: center;
+	margin-left: 10px;
+}
+.guide .badge-list .badge {
+	margin-right: 5px;
+}
+.guide .badge-list .badge + .badge {
+	margin-left: 30px;
+}
+
+/* component영역 */
+.guide_page h5 > .right_menu {
+	float: right;
+} 
+.guide_page h5 button {
+	margin-left: 8px;
+	padding: 2px 8px;
+	font-size: 12px;
+}
+
+/* source viewer */
+.btn_view_source .icon-eyes {
+	margin-top: -5px;
+	font-size: 20px;
+}
+.guide .source_viewer.hide {
+	display: none;
+}
+.guide .source_viewer .CodeMirror {
+	height: auto;
+	font-family: Consolas, 'Courier New', monospace;
+	font-size: 12px;
+}
+
+
+/* about */
+.guide .dependencies {
+	list-style: disc inside none;
+}
+.guide .dependencies li {
+	margin-bottom: 0.5rem;
+}
+.guide .dependencies li .li_title {
+	display: inline-flex;
+	width: 200px;
+	font-weight: 600;
+}
+.guide .dependencies li .li_data {
+	display: inline-flex;
+	width: 300px;
+}
+.guide .dependencies li .li_memo {
+	display: inline-flex;
+	width: 300px;
+}
+
+.guide .dependencies li .li_site {
+	display: inline-flex;
+}
+
+/* tree */
+ul#guideDirectory li {
+	list-style: none;
+}
+ul#guideDirectory li > div.folder {
+	display: flex;
+}
+ul#guideDirectory li > div.folder .name {
+	width: 140px;
+}
+ul#guideDirectory li > div.folder .memo {
+	width: 400px;
+}
+
+.icon_list {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px 10px;
+	margin-bottom: 40px;
+}
+.icon_list li {
+	display: flex;
+	align-items: center;
+	gap: 0 10px;
+}
+.icon_list li .icon_img {
+	font-size: 24px;
+}
+.icon_list li .icon_tag {
+	margin: 0;
+	font-family: var(--base-font-family);
+}
+
+/************************************************
+	COLOR CHIP
+************************************************/
+.color_chip {
+	display: inline-block;
+    position: relative;
+    top: 2px;
+    width: 64px;
+    height: 1rem;
+    margin-right: 0.25rem;
+}
+

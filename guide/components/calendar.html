@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+<title>CALENDAR</title>
+
+<!--v Packages -->
+<script src="../../assets/js/jquery.min.js"></script>
+
+<link href="../../assets/css/jquery-ui.min.css" rel="stylesheet" />
+<script src="../../assets/js/jquery-ui.min.js"></script>
+
+<link href="../../assets/css/select2.min.css" rel="stylesheet" />
+<script src="../../assets/js/select2.min.js"></script>
+<!--^ Packages -->
+
+<!-- GUIDE관련 소스 -->
+<link href="../assets/css/only_for_guide.css" rel="stylesheet" />
+<script src="../assets/js/only_for_guide.js"></script>
+
+<!--v codemirror : 소스보기용 -->
+<link href="../assets/js/codemirror/lib/codemirror.css" rel="stylesheet" />
+<link href="../assets/js/codemirror/theme/rubyblue.css" rel="stylesheet" />
+<script src="../assets/js/codemirror/lib/codemirror.js"></script>
+<script src="../assets/js/codemirror/mode/xml/xml.js"></script>
+<script src="../assets/js/codemirror/mode/javascript/javascript.js"></script>
+<script src="../assets/js/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+<script src="../assets/js/codemirror/addon/selection/active-line.js"></script>
+<!--^ codemirror : 소스보기용 -->
+
+<link href="../../assets/css/all.css" rel="stylesheet" />
+<script src="../../assets/js/util.js"></script>
+</head>
+
+<body class="guide_page">
+	<header>
+		<div class="inner">
+			<div class="logo">UI/UX GUIDE</div>
+			<ul class="gnb">
+				<li><a href="../index.html">페이지</a></li>
+				<li><a href="../style.html">스타일</a></li>
+				<li class="active"><a href="../components.html">컴포넌트</a></li>
+				<li><a href="../layouts.html">레이아웃</a></li>
+				<li><a href="../about.html">About</a></li>
+			</ul>
+		</div>
+	</header>
+
+	<div class="guide guide_style">
+		<section>
+			<div class="container">
+				<h2 class="page-title">DATE PICKER</h2>
+
+				<div class="page-note"><strong>Overview</strong> calendar 예시와 사용방법입니다.</div>
+
+				<article class="guide">
+					<h3 class="guide-title">Calendar</h3>
+
+					<div class="contents">
+						<div class="guide-sub-title">
+							기본형태 1
+							<div class="right_menu">
+								<button type="button" class="btn btn-primary btn_view_source" data-target="#sourceViewer1" aria-expanded="false" aria-controls="sourceViewer1"><i class="icon-eyes">👀</i><span>HTML</span></button>
+							</div>
+						</div>
+
+						<div class="guide-row3">
+							<div class="guide_html">
+<div id="calendar">
+<div class="content-header">
+	<div class="title-wrap">
+		<div class="title">2022년 10월</div>
+	</div>
+	<div class="button-wrap">
+		<button type="button" class="btn btn-primary">
+			<span>today</span>
+		</button>
+		<button type="button" class="btn btn-line">
+			<span>&lt;</span>
+		</button>
+		<button type="button" class="btn btn-line">
+			<span>&gt;</span>
+		</button>
+	</div>
+</div>
+<table>
+	<colgroup>
+		<col style="width: 14.28%" />
+		<col style="width: 14.28%" />
+		<col style="width: 14.28%" />
+		<col style="width: 14.28%" />
+		<col style="width: 14.28%" />
+		<col style="width: 14.28%" />
+		<col style="width: 14.28%" />
+	</colgroup>
+	<thead>
+		<tr>
+			<th>SUN</th>
+			<th>MON</th>
+			<th>TUE</th>
+			<th>WED</th>
+			<th>THU</th>
+			<th>FRI</th>
+			<th>SAT</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><span></span></td>
+			<td><span></span></td>
+			<td><span></span></td>
+			<td><span></span></td>
+			<td><span></span></td>
+			<td><span></span></td>
+			<td><span>1</span></td>
+		</tr>
+		<tr>
+			<td><span>2</span></td>
+			<td><span>3</span></td>
+			<td><span>4</span></td>
+			<td><span>5</span></td>
+			<td><span>6</span></td>
+			<td><span>7</span></td>
+			<td><span>8</span></td>
+		</tr>
+		<tr>
+			<td><span>9</span></td>
+			<td><span>10</span></td>
+			<td><span class="today">11</span></td>
+			<td><span>12</span></td>
+			<td><span>13</span></td>
+			<td><span>14</span></td>
+			<td><span>15</span></td>
+		</tr>
+		<tr>
+			<td><span>16</span></td>
+			<td><span>17</span></td>
+			<td><span>18</span></td>
+			<td><span>19</span></td>
+			<td><span>20</span></td>
+			<td><span>21</span></td>
+			<td><span>22</span></td>
+		</tr>
+		<tr>
+			<td><span>23</span></td>
+			<td><span>24</span></td>
+			<td><span>25</span></td>
+			<td><span>26</span></td>
+			<td><span>27</span></td>
+			<td><span>28</span></td>
+			<td><span>29</span></td>
+		</tr>
+		<tr>
+			<td><span>30</span></td>
+			<td><span></span></td>
+			<td><span></span></td>
+			<td><span></span></td>
+			<td><span></span></td>
+			<td><span></span></td>
+			<td><span></span></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+							</div>
+						</div><!-- .guide-row -->
+
+						<div id="sourceViewer1" class="source_viewer"></div>
+					</div><!-- .contents -->
+				</article>
+			</div><!-- .container -->
+		</section>
+	</div><!-- .guide -->
+
+	<div style="height: 160px"></div>
+
+	<footer>
+		<div class="inner">
+			<div class="copy">Copyright &copy; GRIDA 2022</div>
+			<div class="f-logo"><img src="../assets/img/ci_grida.svg" /></div>
+		</div>
+	</footer>
+</body>
+</html>
+

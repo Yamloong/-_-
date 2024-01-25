@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+<title>INPUT</title>
+
+<!--v Packages -->
+<script src="../../assets/js/jquery.min.js"></script>
+
+<link href="../../assets/css/jquery-ui.min.css" rel="stylesheet" />
+<script src="../../assets/js/jquery-ui.min.js"></script>
+
+<link href="../../assets/css/select2.min.css" rel="stylesheet" />
+<script src="../../assets/js/select2.min.js"></script>
+<!--^ Packages -->
+
+<!-- GUIDE관련 소스 -->
+<link href="../assets/css/only_for_guide.css" rel="stylesheet" />
+<script src="../assets/js/only_for_guide.js"></script>
+
+<!--v codemirror : 소스보기용 -->
+<link href="../assets/js/codemirror/lib/codemirror.css" rel="stylesheet" />
+<link href="../assets/js/codemirror/theme/rubyblue.css" rel="stylesheet" />
+<script src="../assets/js/codemirror/lib/codemirror.js"></script>
+<script src="../assets/js/codemirror/mode/xml/xml.js"></script>
+<script src="../assets/js/codemirror/mode/javascript/javascript.js"></script>
+<script src="../assets/js/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+<script src="../assets/js/codemirror/addon/selection/active-line.js"></script>
+<!--^ codemirror : 소스보기용 -->
+
+<link href="../../assets/css/all.css" rel="stylesheet" />
+<script src="../../assets/js/util.js"></script>
+</head>
+
+<body class="guide_page">
+	<header>
+		<div class="inner">
+			<div class="logo">UI/UX GUIDE</div>
+			<ul class="gnb">
+				<li><a href="../index.html">페이지</a></li>
+				<li><a href="../style.html">스타일</a></li>
+				<li class="active"><a href="../components.html">컴포넌트</a></li>
+				<li><a href="../layouts.html">레이아웃</a></li>
+				<li><a href="../about.html">About</a></li>
+			</ul>
+		</div>
+	</header>
+
+	<div class="container">
+		<h2 class="page-title">INPUT</h2>
+
+		<div class="page-note"><strong>Overview</strong> input, select, textarea 의 예시와 사용방법입니다.</div>
+		<article class="guide">
+			<h3 class="guide-title">INPUT</h3>
+
+			<div class="contents">
+				<div class="guide-sub-title">
+					기본 형태 1
+					<div class="right_menu">
+						<button type="button" class="btn btn-primary btn_view_source" data-target="#sourceViewer0"><i class="icon-eyes">👀</i><span>HTML</span></button>
+					</div>
+				</div>
+
+				<ul class="info">
+					<li>input은 항상 .input-wrap 으로 감싸야 합니다.</li>
+				</ul>
+
+				<div class="guide-row">
+					<div class="guide_html">
+<div class="input-wrap">
+	<input type="text" id="이름1" name="이름1" placeholder="이름을 입력하시오." />
+</div>
+					</div>
+				</div><!-- .guide-row -->
+
+				<div id="sourceViewer0" class="collapse source_viewer"></div>
+			</div>
+		</article>
+
+		<article class="guide">
+			<h3 class="guide-title">LABEL + INPUT</h3>
+
+			<div class="contents">
+				<div class="guide-sub-title">
+					기본 형태 1
+					<div class="right_menu">
+						<button type="button" class="btn btn-primary btn_view_source" data-target="#sourceViewer1"><i class="icon-eyes">👀</i><span>HTML</span></button>
+					</div>
+				</div>
+
+				<div class="guide-row2">
+					<div class="guide_html">
+<div class="form-control-wrap">
+	<label class="form-label" for="이름1">이름</label>
+	<div class="form-container">
+		<div class="input-wrap">
+			<input type="text" id="이름1" name="이름1" placeholder="이름을 입력하시오." />
+		</div>
+	</div><!-- .form-container -->
+</div>
+					</div>
+					<div class="guide_html">
+<div class="form-control-wrap">
+	<label class="form-label" for="비밀번호1">비밀번호</label>
+	<div class="form-container">
+		<div class="input-wrap">
+			<input type="password" id="비밀번호1" name="비밀번호1" placeholder="비밀번호를 입력하시오." />
+		</div>
+	</div><!-- .form-container -->
+</div>
+					</div>
+					<div class="guide_html">
+<div class="form-control-wrap">
+	<label class="form-label" for="이메일1">이메일</label>
+	<div class="form-container">
+		<div class="input-wrap">
+			<input type="email" id="이메일1" name="이메일1" placeholder="이메일 주소를 입력하시오." />
+		</div>
+	</div><!-- .form-container -->
+</div>
+					</div>
+					<div class="guide_html">
+<div class="form-control-wrap">
+	<label class="form-label" for="파일1">파일</label>
+	<div class="form-container">
+		<label class="input-group-text" for="파일1">파일찾기</label>
+		<div class="input-wrap">
+			<input type="file" id="파일1" name="파일1" placeholder="파일을 선택하시요." />
+		</div>
+		<button type="button" class="btn btn-sm">
+			<i class="icon-trash"></i>
+		</button>
+	</div><!-- .form-container -->
+</div>
+					</div>
+					<div class="guide_html">
+<div class="form-control-wrap">
+<label class="form-label" for="읽기전용1">읽기전용</label>
+<div class="form-container">
+	<div class="input-wrap">
+		<input type="text" id="읽기전용1" name="읽기전용1" value="읽기만 가능함" placeholder="읽기만 가능합니다." readonly="readonly" />
+	</div>
+</div><!-- .form-container -->
+</div>
+					</div>
+					<div class="guide_html">
+<div class="form-control-wrap">
+	<label class="form-label" for="사용불가1">사용불가</label>
+	<div class="form-container">
+		<div class="input-wrap">
+			<input type="text" id="사용불가1" name="사용불가1" placeholder="이 값은 전송되지 않습니다." disabled="disabled" />
+		</div>
+	</div><!-- .form-container -->
+</div>
+					</div>
+				</div><!-- .guide-row -->
+
+				<div id="sourceViewer1" class="collapse source_viewer"></div>
+			</div><!-- .contents -->
+
+			<div class="contents">
+				<div class="guide-sub-title">
+					기본 형태 2
+					<span class="small">왼쪽 레이블 + 레이블 width에 따라 input width 가변</span>
+					<div class="right_menu">
+						<button type="button" class="btn btn-primary btn_view_source" data-target="#sourceViewer2"><i class="icon-eyes">👀</i><span>HTML</span></button>
+					</div>
+				</div>
+
+				<div class="guide-row2">
+					<div class="guide_html">
+<div class="form-control-top-wrap">
+	<label class="form-label" for="이름2">이름</label>
+	<div class="form-container">
+		<div class="input-wrap">
+			<input type="text" id="이름2" name="이름2" value="홍길동" placeholder="이름을 입력하시오." />
+		</div>
+	</div><!-- .form-container -->
+</div>
+					</div>
+					<div class="guide_html">
+<div class="form-control-top-wrap">
+	<label class="form-label" for="비밀번호2">비밀번호</label>
+	<div class="form-container">
+		<div class="input-wrap">
+			<input type="password" id="비밀번호2" name="비밀번호2" value="abcd1234~~" placeholder="비밀번호를 입력하시오." />
+		</div>
+	</div><!-- .form-container -->
+</div>
+					</div>
+					<div class="guide_html">
+<div class="form-control-top-wrap">
+	<label class="form-label" for="이메일2">이메일</label>
+	<div class="form-container">
+		<div class="input-wrap">
+			<input type="email" id="이메일2" name="이메일2" value="les900506@gmail.com" placeholder="이메일 주소를 입력하시오." />
+		</div>
+	</div>
+	<!-- .form-container -->
+</div>
+					</div>
+					<div class="guide_html">
+<div class="form-control-top-wrap">
+	<label class="form-label" for="파일2">파일</label>
+	<div class="form-container">
+		<label class="input-group-text" for="파일2">파일찾기</label>
+		<div class="input-wrap">
+			<input type="file" id="파일2" name="파일2" placeholder="파일을 선택하시요." />
+		</div>
+		<button type="button" class="btn btn-sm">
+			<i class="icon-trash"></i>
+		</button>
+	</div>
+	<!-- .form-container -->
+</div>
+					</div>
+					<div class="guide_html">
+<div class="form-control-top-wrap">
+	<label class="form-label" for="읽기전용2">읽기전용</label>
+	<div class="form-container">
+		<div class="input-wrap">
+			<input type="text" id="읽기전용2" name="읽기전용2" value="읽기만 가능한 값" placeholder="읽기만 가능합니다." readonly="readonly" />
+		</div>
+	</div>
+	<!-- .form-container -->
+</div>
+					</div>
+					<div class="guide_html">
+<div class="form-control-top-wrap">
+	<label class="form-label" for="사용불가2">사용불가</label>
+	<div class="form-container">
+		<div class="input-wrap">
+			<input type="text" id="사용불가2" name="사용불가2" value="전송되지 않는 값" placeholder="이 값은 전송되지 않습니다." disabled="disabled" />
+		</div>
+	</div>
+	<!-- .form-container -->
+</div>
+					</div>
+				</div><!-- .guide-row -->
+
+				<div id="sourceViewer2" class="collapse source_viewer"></div>
+			</div><!-- .contents -->
+
+			<div class="contents">
+				<div class="guide-sub-title">
+					응용 형태
+					<span class="small">숫자 입력 > .unit(단위)</span>
+					<div class="right_menu">
+						<button type="button" class="btn btn-primary btn_view_source" data-target="#sourceViewer4"><i class="icon-eyes">👀</i><span>HTML</span></button>
+					</div>
+				</div>
+
+				<ul class="info">
+					<li>숫자만 입력받을 때 input type=number로 함. 단, 1000단위 comma를 찍어주고자 할때는 type=text(모바일 일때는 tel)로 할 것.</li>
+					<li>아래 예시 '금액' 입력처럼 입력과 동시에 ','를 보여주고자 할때는 onkeyup 이벤트에 numberLocaleString()을 호출할 것.</li>
+					<li>아래 예시 '퍼센트' 입력처럼 소숫점 있는 숫자를 입력받을 때는 반드시 onfocusout 이벤트에 numberLocalString()을 호출할 것.</li>
+					<li>numberLocaleString()함수는 pubUtil.js에 있습니다.</li>
+				</ul>
+				<div class="guide-row2">
+					<div class="guide_html">
+<div class="form-control-wrap">
+	<label class="form-label" for="숫자1">숫자</label>
+	<div class="form-container">
+		<div class="input-wrap">
+			<input class="number" type="number" id="숫자1" name="숫자1" value="100000" placeholder="숫자를 입력하시오." />
+		</div>
+	</div><!-- .form-container -->
+</div>
+					</div>
+					<div class="guide_html">
+<div class="form-control-wrap">
+	<label class="form-label" for="금액1">금액</label>
+	<div class="form-container">
+		<div class="input-wrap">
+			<input class="number" type="text" id="금액1" name="금액1" value="100,000" step="1" placeholder="금액을 입력하시오." oninput="numberLocaleString(this);" />
+		</div>
+		<span class="unit">원</span>
+	</div><!-- .form-container -->
+</div>
+					</div>
+					<div class="guide_html">
+<div class="form-control-wrap">
+	<label class="form-label" for="퍼센트1">퍼센트</label>
+	<div class="form-container">
+		<div class="input-wrap">
+			<input class="number" type="number" id="퍼센트1" name="퍼센트1" value="99.00" placeholder="퍼센트을 입력하시오." pattern="[0-9.,]+" step="0.01" min="-100" max="100" onfocusout="numberLocaleString(this, 2);" />
+		</div>
+		<span class="unit">%</span>
+	</div><!-- .form-container -->
+</div>
+					</div>
+				</div><!-- .guide-row -->
+
+				<div id="sourceViewer4" class="collapse source_viewer"></div>
+			</div><!-- .contents -->
+
+		</article>
+
+		<article class="guide">
+			<h3 class="guide-title">CHECKBOX / RADIO</h3>
+
+			<div class="contents">
+				<div class="guide-sub-title">
+					기본 형태 1
+					<div class="right_menu">
+						<button type="button" class="btn btn-primary btn_view_source" data-target="#sourceViewer7"><i class="icon-eyes">👀</i><span>HTML</span></button>
+					</div>
+				</div>
+
+				<div class="guide-row">
+					<div class="guide_html">
+<div class="form-control">
+	<div class="form-check">
+		<input class="form-check-input" type="checkbox" id="체크박스1_옵션1" name="체크박스1" value="옵션1" checked />
+		<label class="form-check-label" for="체크박스1_옵션1">선택됨</label>
+	</div>
+	<div class="form-check">
+		<input class="form-check-input" type="checkbox" id="체크박스1_옵션2" name="체크박스1" value="옵션2" />
+		<label class="form-check-label" for="체크박스1_옵션2">선택안됨</label>
+	</div>
+	<div class="form-check">
+		<input class="form-check-input" type="checkbox" id="체크박스1_옵션1R" name="체크박스1R" value="옵션1R" onclick="return false;" checked />
+		<label class="form-check-label" for="체크박스1_옵션1R">선택됨(readonly)</label>
+	</div>
+	<div class="form-check">
+		<input class="form-check-input" type="checkbox" id="체크박스1_옵션2R" name="체크박스1R" value="옵션2R" onclick="return false;" />
+		<label class="form-check-label" for="체크박스1_옵션2R">선택안됨(readonly)</label>
+	</div>
+	<div class="form-check">
+		<input class="form-check-input" type="checkbox" id="체크박스1_옵션1D" name="체크박스1D" value="옵션1D" disabled checked />
+		<label class="form-check-label" for="체크박스1_옵션1D">선택됨(disabled)</label>
+	</div>
+	<div class="form-check">
+		<input class="form-check-input" type="checkbox" id="체크박스1_옵션2D" name="체크박스1D" value="옵션2D" disabled />
+		<label class="form-check-label" for="체크박스1_옵션2D">선택안됨(disabled)</label>
+	</div>
+</div><!-- .form-control -->
+					</div>
+				</div>
+				<div class="guide-row">
+					<div class="guide_html">
+<div class="form-control">
+	<div class="form-check">
+		<input class="form-check-input" type="radio" id="라디오1_옵션1" name="라디오1" value="옵션1" checked />
+		<label class="form-check-label" for="라디오1_옵션1">선택됨</label>
+	</div>
+	<div class="form-check">
+		<input class="form-check-input" type="radio" id="라디오1_옵션2" name="라디오1" value="옵션2" />
+		<label class="form-check-label" for="라디오1_옵션2">선택안됨</label>
+	</div>
+	<div class="form-check">
+		<input class="form-check-input" type="radio" id="라디오1_옵션1R" name="라디오2" value="옵션1R" onclick="return false;" checked />
+		<label class="form-check-label" for="라디오1_옵션1R">선택됨(readonly)</label>
+	</div>
+	<div class="form-check">
+		<input class="form-check-input" type="radio" id="라디오1_옵션2R" name="라디오2" value="옵션2R" onclick="return false;" />
+		<label class="form-check-label" for="라디오1_옵션2R">선택안됨(readonly)</label>
+	</div>
+	<div class="form-check">
+		<input class="form-check-input" type="radio" id="라디오1_옵션1D" name="라디오3" value="옵션1D" disabled checked />
+		<label class="form-check-label" for="라디오1_옵션1D">선택됨(disabled)</label>
+	</div>
+	<div class="form-check">
+		<input class="form-check-input" type="radio" id="라디오1_옵션2D" name="라디오3" value="옵션2D" disabled />
+		<label class="form-check-label" for="라디오1_옵션2D">선택안됨(disabled)</label>
+	</div>
+</div><!-- .form-control -->
+					</div>
+				</div><!-- .guide-row -->
+
+				<div id="sourceViewer7" class="collapse source_viewer"></div>
+			</div><!-- .contents -->
+
+			<div class="contents">
+				<div class="guide-sub-title">
+					기본 형태 2
+					<span class="small">왼쪽 레이블 + checkbox 전체선택</span>
+					<div class="right_menu">
+						<button type="button" class="btn btn-primary btn_view_source" data-target="#sourceViewer8"><i class="icon-eyes">👀</i><span>HTML+JS</span></button>
+					</div>
+				</div>
+
+				<ul class="info">
+					<li>체크박스 전체선택 기능을 사용하려면 전체선택 input에 onclik="checkAll(this)"를 선언해주세요.</li>
+				</ul>
+
+				<div class="guide-row">
+					<div class="guide_html">
+<div class="form-control-wrap">
+	<label class="form-label">선택 :</label>
+	<div class="form-container">
+		<div class="form-control">
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" id="체크박스2_ALL" name="체크박스2" onclick="checkAll(this)" />
+				<label class="form-check-label" for="체크박스2_ALL">전체선택</label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" id="체크박스2_옵션1" name="체크박스2" value="옵션1" />
+				<label class="form-check-label" for="체크박스2_옵션1">옵션1</label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" id="체크박스2_옵션2" name="체크박스2" value="옵션2" />
+				<label class="form-check-label" for="체크박스2_옵션2">옵션2</label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" id="체크박스2_옵션3" name="체크박스2" value="옵션3" />
+				<label class="form-check-label" for="체크박스2_옵션3">옵션3</label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" id="체크박스2_옵션4" name="체크박스2" value="옵션4" />
+				<label class="form-check-label" for="체크박스2_옵션4">옵션4</label>
+			</div>
+		</div><!-- .form-control -->
+	</div><!-- .form-container -->
+</div>
+					</div>
+				</div>
+				<div class="guide-row">
+					<div class="guide_html">
+<div class="form-control-wrap">
+	<label class="form-label">선택 :</label>
+	<div class="form-container">
+		<div class="form-control">
+			<div class="form-check">
+				<input class="form-check-input" type="radio" id="라디오2_옵션1" name="라디오2" value="옵션1" />
+				<label class="form-check-label" for="라디오2_옵션1">옵션1</label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="radio" id="라디오2_옵션2" name="라디오2" value="옵션2" />
+				<label class="form-check-label" for="라디오2_옵션2">옵션2</label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="radio" id="라디오2_옵션3" name="라디오2" value="옵션3" />
+				<label class="form-check-label" for="라디오2_옵션3">옵션3</label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="radio" id="라디오2_옵션4" name="라디오2" value="옵션4" />
+				<label class="form-check-label" for="라디오2_옵션4">옵션4</label>
+			</div>
+		</div><!-- .form-control -->
+	</div><!-- .form-container -->
+</div>
+					</div>
+				</div><!-- .guide-row -->
+
+				<div class="guide_js">
+<script language="javascript">
+/**
+ * 이 JS는 checkbox의 전체선택 기능을 시뮬레이션 용도입니다.
+ */
+function checkAll(checkBox) {
+	var checkName = $(checkBox).attr("name");
+	if ($(checkBox).is(":checked")) {
+		$("input[name=" + checkName + "]").prop("checked", true);
+	} else {
+		$("input[name=" + checkName + "]").prop("checked", false);
+	}
+}
+</script>
+				</div><!-- .guide_js -->
+
+				<div id="sourceViewer8" class="collapse source_viewer"></div>
+			</div><!-- .contents -->
+		</article>
+
+		<article class="guide">
+			<h3 class="guide-title">LABEL + TEXTAREA</h3>
+
+			<ul class="info">
+				<li>입력 글자수 계산은 pubUtil.js 파일 내부에 calcInputLetters()에서 합니다.</li>
+			</ul>
+			<div class="contents">
+				<div class="guide-sub-title">
+					기본 형태 1
+					<div class="right_menu">
+						<button type="button" class="btn btn-primary btn_view_source" data-target="#sourceViewer12"><i class="icon-eyes">👀</i><span>HTML</span></button>
+					</div>
+				</div>
+
+				<div class="guide-row3">
+					<div class="guide_html">
+<div class="form-control-top-wrap">
+<label class="form-label" for="내용1">내용</label>
+<div class="form-container">
+	<div class="input_count_wrap">
+		<div class="textarea-wrap">
+			<textarea class="input_count" id="내용1" name="내용1" maxlength="50" placeholder="게시글 내용을 입력하세요."></textarea>
+		</div>
+		<div class="text_len">(<span class="cur_len">0</span>/<span class="max_len">50</span>)</div>
+		<!-- 글자수 계산은 pubUtil.js에 있음. -->
+	</div>
+</div><!-- .form-container -->
+</div>
+					</div>
+				</div><!-- .guide-row -->
+
+				<div id="sourceViewer12" class="collapse source_viewer"></div>
+			</div><!-- .contents -->
+
+			<div class="contents">
+				<div class="guide-sub-title">
+					기본 형태 2
+					<span class="small">왼쪽 레이블 + 레이블 width에 따라 textarea width 가변</span>
+					<div class="right_menu">
+						<button type="button" class="btn btn-primary btn_view_source" data-target="#sourceViewer13"><i class="icon-eyes">👀</i><span>HTML</span></button>
+					</div>
+				</div>
+
+				<div class="guide-row3">
+					<div class="guide_html">
+<div class="form-control-wrap">
+	<label class="form-label" for="내용2">내용</label>
+	<div class="form-container">
+		<div class="input_count_wrap">
+			<div class="textarea-wrap">
+				<textarea class="input_count" id="내용2" name="내용2" maxlength="200" placeholder="게시글 내용을 입력하세요.">
+이미 등록된 글의 글자 수를 계산하여 출력합니다.
+				</textarea>
+			</div>
+			<div class="text_len">(<span class="cur_len">0</span>/<span class="max_len">200</span>)</div>
+			<!-- 글자수 계산은 pubUtil.js에 있음. -->
+		</div>
+	</div><!-- .form-container -->
+</div>
+					</div>
+				</div><!-- .guide-row -->
+
+				<div id="sourceViewer13" class="collapse source_viewer"></div>
+			</div><!-- .contents -->
+		</article>
+	</div><!-- .container -->
+
+	<footer>
+		<div class="inner">
+			<div class="copy">Copyright &copy; GRIDA 2022</div>
+			<div class="f-logo"><img src="../assets/img/ci_grida.svg" /></div>
+		</div>
+	</footer>
+</body>
+</html>

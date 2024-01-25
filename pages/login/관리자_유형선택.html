@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+<title>관리자 유형선택</title>
+
+<!--v Packages -->
+<script src="../../assets/js/jquery.min.js"></script>
+
+<link href="../../assets/css/jquery-ui.min.css" rel="stylesheet" />
+<script src="../../assets/js/jquery-ui.min.js"></script>
+
+<link href="../../assets/css/select2.min.css" rel="stylesheet" />
+<script src="../../assets/js/select2.min.js"></script>
+<!--^ Packages -->
+
+<link href="../../assets/css/all.css" rel="stylesheet" />
+<script src="../../assets/js/util.js"></script>
+</head>
+
+<body class="normal-page">
+
+	<header>
+		<div class="inner">
+			<h1 class="logo">
+				<a href="#">
+					<img src="../../assets/img/logo.svg" />
+				</a>
+			</h1>
+		</div>
+	</header>
+
+
+	
+
+
+
+
+<script>
+$(document).ready(function() {
+	
+});
+
+function fn_submit(){
+	var val	= $('input:radio[name="menuAuthGrpCd"]:checked').val();
+	if ( typeof val === "undefined" ){
+		alert("관리자 유형을 선택해 주세요.");
+		return false;
+	}
+	
+	$("#frm").submit();
+}
+</script>
+
+
+	<div class="container">
+		<div class="join-wrap" style="width: 450px;">
+			<div class="join-header">
+				<div class="title-wrap">
+					<div class="title">관리자 가입신청</div>
+				</div>
+			</div>
+			<div class="join-body">
+				<div class="section-body">
+					<div class="section-header">
+						<div class="title-wrap">
+							<div class="title">관리자 유형을 선택해 주세요.</div>
+						</div>
+					</div>
+					<div class="choice-wrap">
+						<ul class="list">
+							<li>
+								<div class="form-check">
+									<input class="form-check-input" type="radio" id="menuAuthGrpCd" name="menuAuthGrpCd" value="10" >
+									<label class="form-check-label" for="menuAuthGrpCd">지자체 담당자</label>
+								</div>
+							</li>
+							<li>
+								<div class="form-check">
+									<input class="form-check-input" type="radio" id="menuAuthGrpCd2" name="menuAuthGrpCd" value="20">
+									<label class="form-check-label" for="menuAuthGrpCd2">가맹점(카드사) 담당자</label>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="button-wrap">
+						<button type="button" class="btn btn-line">
+							<span>취소</span>
+						</button>
+						<button type="button" class="btn btn-primary">
+							<span>확인</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><!-- .container -->
+	<!-- Loading Bar -->
+	<div id="loaderBackground" style="display:none;">
+		<div class="loader">
+		Loading...
+		</div>
+	</div>
+
+</body>
+</html>

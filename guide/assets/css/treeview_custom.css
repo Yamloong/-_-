@@ -1,0 +1,147 @@
+@charset "UTF-8";
+/**
+ * jquery-treeview 중 custom하여 사용할 style을 여기에 정의합니다.
+ * 이 파일은 all.css에서 import되어 사용됩니다.
+ * Dependency : 아이콘 - fontawesome
+ **/
+
+ .treeview {
+	height: 100%;
+	padding: 10px 15px !important;
+	overflow: auto;
+	background-color: white;
+	line-height: 1.5;
+}
+.treeview ul {
+	margin-top: 0;
+}
+.treeview a {
+	text-decoration: none;
+	color: #333;
+}
+.treeview a:hover {
+	text-decoration: none;
+	color: #333;
+}
+.treeview .hover {
+	color: unset;
+}
+.treeview li {
+	padding: 3px 0 3px 20px;
+	position: relative;
+}
+.treeview li {
+	/* background-image: url(../node_modules/jquery-treeview/images/treeview-default-line.gif); */
+	background-position: 0 0;
+	background-repeat: no-repeat;
+}
+.treeview li.last {
+	background-position: 0 -1764px;
+}
+/*
+.treeview-gray li {
+	background-image: url(../../treeview-lightgray-line.png);
+}
+*/
+.treeview li.lastExpandable,
+.treeview li.lastCollapsable {
+	background-image: none;
+}
+.treeview .hitarea {
+	background-image: none;
+	background-color: white;
+	height: 14px;
+	width: 14px;
+	margin-left: 0;
+	float: left;
+	cursor: pointer;
+	position: absolute;
+	top: 4px;
+	left: 0px;
+}
+.treeview li.collapsable > .hitarea::before,
+.treeview li.expandable > .hitarea::before {
+	font-family: "bootstrap-icons";
+	font-size: 14px;
+	position: absolute;
+	top: -4px;
+	left: 0px;
+}
+.treeview li.expandable > .hitarea::before {
+	content: "\f4fd";	/* [+] */
+}
+.treeview li.collapsable > .hitarea::before {
+	content: "\f2e9";	/* [-] */
+}
+.treeview li > span {
+	border-radius: 5px;
+	margin-left: -5px;
+	padding-left: 5px;
+}
+.treeview li > .folder,
+.treeview li > span.file {
+	background: none;
+	padding: 0 0 0 5px;
+	display: flex;
+	align-items: center;
+}
+.treeview li > span:hover {
+	background-color: #f0f0f0 !important;
+}
+.treeview li.root > .hitarea {
+	top: 6px;
+}
+.treeview li.root > span {
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 24px;
+}
+
+
+.filetree li.expandable .folder {
+	background: none;
+}
+.filetree li .folder::before {
+	content: "";	/* folder-fill-open */
+	font-size: 14px;
+	width: 14px;
+	height: 14px;
+	text-align: center;
+	margin-right: 5px;
+	color: #EABE42;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='%23EABE42' viewBox='0 0 24 24'%3E%3Cpath d='M7.972 2h-6.972l.714 5h2.021l-.429-3h3.694c1.112 1.388 1.952 2 4.277 2h9.283l-.2 1h2.04l.6-3h-11.723c-1.978 0-2.041-.417-3.305-2zm16.028 7h-24l2 13h20l2-13z'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 100% auto;
+}
+.filetree li.expandable .folder::before {
+	content: "";	/* folder-fill */
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='%23EABE42' viewBox='0 0 24 24'%3E%3Cpath d='M11 5c-1.629 0-2.305-1.058-4-3h-7v20h24v-17h-13z'/%3E%3C/svg%3E");
+}
+.filetree span.file::before {
+	content: "";	/* doc-text */
+	font-size: 14px;
+	width: 24px;
+	height: 24px;
+	text-align: center;
+	margin-right: 5px;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M4 22v-20h16v11.543c0 4.107-6 2.457-6 2.457s1.518 6-2.638 6h-7.362zm18-7.614v-14.386h-20v24h10.189c3.163 0 9.811-7.223 9.811-9.614z'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 100% auto;
+}
+
+.filetree li span.file.menu_item > a {
+	color: #7b8999;
+}
+.filetree li span.file.menu_item::before {
+	font-family: "icomoon";
+	content: "\e801";	/* menu */
+}
+
+.filetree li.root > span {
+	color: var(--theme-main-color);
+}
+.filetree li.root > ul > li > span {	/* 1st Depth */
+	color: var(--theme-main-color);
+}

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<link rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+	<title>회원가입</title>
+
+	<!--v Packages -->
+	<script src="../../../js/jquery.min.js"></script>
+
+	<link href="../../../css/jquery-ui.min.css" rel="stylesheet" />
+	<script src="../../../js/jquery-ui.min.js"></script>
+
+	<link href="../../../css/select2.min.css" rel="stylesheet" />
+	<script src="../../../js/select2.min.js"></script>
+
+	<!-- IB Sheet -->
+	<script src="https://www.ibsheet.com/ibleaders.js"></script>
+	<script src="https://www.ibsheet.com/demo/js/lib/sheet/ibsheetinfo.js"></script>
+	<script src="https://www.ibsheet.com/demo/js/lib/sheet/ibsheet.js"></script>
+	<script src="https://www.ibsheet.com/demo/js/lib/sheet/ibsheet-global.js"></script>
+	<!--^ Packages -->
+
+	<link href="../../../css/all.css" rel="stylesheet" />
+	<script src="../../../js/pubUtil.js"></script>
+</head>
+
+<body class="normal-page">
+	<header>
+		<div class="inner">
+			<h1 class="logo">
+				<a href="#">
+					<img src="../../assets/img/logo.svg" />
+				</a>
+			</h1>
+		</div>
+	</header>
+
+	<div class="container">
+		<div class="join-wrap" style="width: 855px;">
+			<div class="join-header">
+				<div class="title-wrap">
+					<div class="title">관리자 가입신청</div>
+				</div>
+			</div>
+			<div class="join-body">
+				<div class="section-body">
+					<div class="section-header">
+						<div class="title-wrap">
+							<div class="title">관리자 추가정보 입력</div>
+						</div>
+					</div>
+					<div class="table-wrap noLine">
+						<table class="tbl-form">
+							<colgroup>
+								<col style="width: 150px;">
+								<col width="*">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>
+										<label class="form-label required" for="지자체 선택">지자체 선택</label>
+									</th>
+									<td>
+										<div class="form-container">
+											<select class="form-select select2" id="지자체" name="시/도" data-placeholder="시/도" disabled>
+												<option value=""></option>
+												<option value="경기도" selected>경기도</option>
+											</select>
+											<select class="form-select select2" id="지자체 선택" name="지자체 선택" data-placeholder="지자체를 선택하시오." required="required">
+												<option></option>
+												<option value="KR" selected="true">시/도 선택</option>
+												<option value="EN">선택</option>
+												<option value="CN">선택</option>
+											</select>
+											<select class="form-select select2" id="시/군/구 선택" name="시/군/구 선택" data-placeholder="시/군/구를 선택하시오." required="required">
+												<option></option>
+												<option value="KR" selected="true">시/군/구 선택</option>
+												<option value="EN">선택</option>
+												<option value="CN">선택</option>
+											</select>
+											<select class="form-select select2" id="읍/면/동 선택" name="읍/면/동 선택" data-placeholder="읍/면/동을 선택하시오." required="required">
+												<option></option>
+												<option value="KR" selected="true">읍/면/동 선택</option>
+												<option value="EN">선택</option>
+												<option value="CN">선택</option>
+											</select>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>
+										<label class="form-label required" for="아이디">아이디</label>
+									</th>
+									<td>
+										<div class="input-wrap">
+											<input type="text" id="아이디" name="아이디" placeholder="6자 이상 20자 이내, 공백 및 특수문자 사용 안됩니다." value="아이디" readonly>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>
+										<label class="form-label required" for="성명">성명</label>
+									</th>
+									<td>
+										<div class="input-wrap">
+											<input type="text" id="성명" name="성명" placeholder="" value="김급식" readonly>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>
+										<label class="form-label" for="부서">부서</label>
+									</th>
+									<td>
+										<div class="input-wrap">
+											<input type="text" id="부서" name="부서" placeholder="">
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>
+										<label class="form-label" for="직위">직위</label>
+									</th>
+									<td>
+										<div class="input-wrap">
+											<input type="text" id="직위" name="직위" placeholder="">
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>
+										<label class="form-label" for="전화번호">전화번호</label>
+									</th>
+									<td>
+										<div class="input-wrap">
+											<input type="text" id="전화번호" name="전화번호" placeholder="">
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>
+										<label class="form-label required" for="휴대폰 번호">휴대폰 번호</label>
+									</th>
+									<td>
+										<div class="form-container">
+											<div class="input-wrap">
+												<input type="text" id="휴대폰 번호" name="휴대폰 번호" placeholder="">
+											</div>
+											<button type="button" class="btn btn-sub-line rounded">
+												<span>휴대전화 인증</span>
+											</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>
+										<label class="form-label required" for="이메일">이메일</label>
+									</th>
+									<td>
+										<div class="form-container">
+											<div class="input-wrap">
+												<input type="text" id="이메일" name="이메일" placeholder="">
+											</div>
+											<button type="button" class="btn btn-sub-line rounded">
+												<span>이메일 인증</span>
+											</button>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="section-foot">
+					<div class="button-wrap">
+						<button type="button" class="btn btn-line">
+							<span>취소</span>
+						</button>
+						<button type="button" class="btn btn-primary">
+							<span>확인</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div><!-- .join-wrap -->
+	</div><!-- .container -->
+</body>
+
+</html>

@@ -1,0 +1,201 @@
+@charset "UTF-8";
+/**
+ * CSS 상수 항목(컬러, 폰트 사이즈, 화면 사이즈 등등)을 이 파일에 정의합니다.
+ * 이 파일은 all.css에서 import되어 사용됩니다.
+ *
+ * [Selector Naming Convention]
+ * id : 앞에 3~4자로 종류(ex. btn, form)를 표현하고, 바로 뒤에 고유한 이름을 붙임(한글 가능)
+ * class : snake case
+ **/
+
+:root {
+	/* 기본 폰트 정보 */
+	--base-font-family: "NanumSquareNeo", "맑은 고딕", Arial, Tahoma;
+	--base-font-size: 13px;
+	/* --base-letter-spacing: -0.025em; */
+
+	/* 서브 폰트 정보 */
+	--sub-font-family: "InfinitySans", "맑은 고딕", Arial, Tahoma;
+
+	/* 기본 폰트 색상 */
+	--base-text-color: #333;
+	
+
+	/* 컬러칩 정보 */
+	--primary: #4676FB;
+	--error: #FD7A01;
+	--warning: #FF0000;
+	--info: #999;
+
+	--black: #000;
+	--white: #fff;
+
+	--blue-bg-total: #E1E6FF;
+	--blue-bg: #F1F1FF;
+
+	/* 사이트 최소 사이즈 */
+	--page-min-width: 1280px;
+
+	/* 기본 배경색 */
+	--base-bg-color: #F6F6FD;
+
+	/* 타이틀 폰트 정보 */
+	--title-font-size: 22px;
+	--sub-font-size: 16px;
+	
+	/* 버튼 색상 정보 */
+	--button-color-disabled: #ccc;
+	--button-bg-color-disabled: #eee;
+	--button-border-color-disabled: #ccc;
+
+	/* 인풋색상 정보 */
+	--input-border-color: #ccc;
+	--input-border-color-focused: var(--primary);
+	--input-bg-color: #fff;
+	--input-bg-color-disabled: #eee;
+	--input-text-color: #333;
+	--input-text-color-disabled: #999;
+	--input-icon-color: var(--primary);	/* 입력창 안에 아이콘(검색, ...) 색상 */
+	--input-unit-color: #666;	/* 입력창 뒤에 단위(원, ...) 색상*/
+	--input-placeholder-color: #ccc;
+
+	--input-invalid-seccess: #4676FB;
+	--input-invalid-error: #FD7A01;
+	
+	--checkbox-size: 20px;
+	--checkbox-border-color: #999;
+	--checkbox-border-color-focused: var(--primary);
+	--checkbox-color-disabled: #ccc;
+	--checkbox-bg-color-disabled: #eee;
+
+	/* 테이블 색상 정보 */
+	--table-bg-color: #fff;
+	--table-thead-bg-color: #fff;
+	--table-tfoot-bg-color: #E1E6FF;
+	
+	--table-text-color: #333;
+
+	--table-thead-text-color: #000;
+	--table-tfoot-text-color: #000;
+
+	--table-row-bg-color-on: #F1F1FF;
+	--table-row-bg-color-hover: #F1F1FF;
+	--table-row-bg-rgba-hover: rgba(241, 241, 255, 1);
+
+	--table-border-top-color: #000;
+	--table-thead-border-color: #ccc;
+	--table-tfoot-border-color: #ccc;
+	--table-cell-border-color: #ccc;
+
+	--table-row-height: 45px;
+
+	/* 탭 색상 정보 */
+	--tab-text-color: #333;
+	--tab-text-color-active: #000;
+	--tab-font-size: 15px;
+	--tab-bg-color: #eee;
+	--tab-bg-color-active: #fff;
+	--tab-border-color: #eee;
+	--tab-border-color-active: #000;
+
+	/* 검색 영역 1칸 넓이 */
+	--col-width: 8.333%;
+}
+
+
+/* 전체 스크롤바 custom */
+* {
+	scrollbar-width: thin;
+}
+::-webkit-scrollbar {
+	width: 7px;
+	height: 7px;
+}
+::-webkit-scrollbar-track {
+	background-color: #4242421a;
+	border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+	background: #c6c6c6;
+	border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: #848484; 
+}
+
+/* disabled 요소에 마우스 올렸을때 커서 모양*/
+/* :disabled {
+	cursor: not-allowed;
+	pointer-events: all !important;
+} */
+
+/* [웹접근성] 전체 사이트의 focus 가능한 요소에 outline을 주려면 아래 comment를 풀 것. */
+:focus {
+	outline: 0 !important;
+	/* outline: solid 2px rgb(var(--primary-rgba) / 75%) !important; outline-offset: 0; */
+}
+
+xmp {
+	white-space: pre-wrap;
+}
+
+/************************************************
+	COLOR
+************************************************/
+.text-primary {
+	color: var(--primary) !important;
+}
+.text-error {
+	color: var(--error) !important;
+}
+.text-warning {
+	color: var(--warning) !important;
+}
+.text-info {
+	color: var(--info) !important;
+}
+
+.bg-primary {
+	background-color: var(--primary);
+}
+.bg-error {
+	background-color: var(--error);
+}
+.bg-warning {
+	background-color: var(--warning);
+}
+
+
+/************************************************
+	ALIGN
+************************************************/
+.text-left { text-align: left !important; }
+.text-center { text-align: center !important; }
+.text-right { text-align: right !important; }
+
+
+
+/************************************************
+	BORDER
+************************************************/
+.bt0 { border-top: 0 !important; }
+
+
+/************************************************
+	MARGIN
+************************************************/
+.mt0 { margin-top: 0 !important; }
+.mt30 { margin-top: 30px !important; }
+
+
+/************************************************
+	PADDING
+************************************************/
+.pd0 { padding: 0 !important; }
+.pb0 { padding-bottom: 0 !important; }
+
+
+/************************************************
+	WIDTH
+************************************************/
+.w100 { width: 100px; }

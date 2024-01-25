@@ -1,0 +1,625 @@
+@charset "UTF-8";
+/**
+ * 각 서브 페이지에 제작에 사용된 style을 여기에 정의합니다.
+ * 이 파일은 all.css에서 import되어 사용됩니다.
+ */
+
+
+/************************************************
+	전체메뉴
+************************************************/
+.layerPopup.all-menu .layer-wrap {
+	top: 0;
+	left: 0;
+	width: 100%;
+	max-width: 100%;
+	max-height: 100%;
+	padding: 10px 55px 50px 55px;
+	transform: none;
+	border-radius: 0;
+}
+.layerPopup.all-menu .layer-header {
+	padding-bottom: 0;
+	text-align: left;
+	border: 0;
+}
+.layerPopup.all-menu .layer-header .button-wrap {
+	top: 20px;
+	right: -33px;
+}
+.layerPopup.all-menu .layer-header .btn_close {
+	height: 24px;
+}
+
+
+/************************************************
+	즐겨찾기
+************************************************/
+.favorite-wrap {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	gap: 0 18px;
+}
+.favorite-section-title {
+	margin-bottom: 20px;
+	text-align: center;
+	color: #000;
+	font-size: var(--sub-font-size);
+	font-weight: 700;
+}
+.favorite-section .favorite-title {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 10px;
+	color: #000;
+	font-size: var(--base-font-size);
+	font-weight: 700;
+	line-height: 32px;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #ccc;
+}
+.favorite-section .favorite-list {
+	padding-bottom: 5px;
+}
+.favorite-section .favorite-list li {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 10px;
+	line-height: 32px;
+	color: #000;
+	font-size: var(--base-font-size);
+	cursor: pointer;
+}
+.favorite-section .btn {
+	height: 32px;
+}
+.icon-star {
+	color: #000;
+	font-size: 20px;
+}
+.icon-star.on::before {
+	color: var(--primary);
+}
+
+
+
+/************************************************
+	로그인
+************************************************/
+.login-wrap {
+	position: relative;
+	width: 930px;
+	margin: 0 auto;
+}
+.login-wrap::after {
+	content: '';
+	display: block;
+	position: absolute;
+	left: calc(50% + 270px);
+	top: -25px;
+	width: 320px;
+	height: 190px;
+	background: url('../img/login/img_cloud.png') no-repeat center center;
+	background-size: 320px auto;
+}
+.login-wrap .login-header {
+	margin: 0 0 22px 55px;
+}
+.login-wrap .login-body {
+	display: flex;
+	position: relative;
+	z-index: 10;
+	height: 600px;
+	background: #fff url('../img/login/bg_login.png') no-repeat -28px top;
+	border-radius: 30px;
+}
+.login-wrap .login-left {
+	min-width: 470px;
+	padding: 50px;
+}
+.login-wrap .login-left .title-wrap .big-tit {
+	color: #fff;
+	font-size: 45px;
+	font-weight: 600;
+	line-height: 55px;
+}
+.login-wrap .login-left .title-wrap .eng-tit {
+	position: relative;
+	padding-top: 40px;
+	font-family: var(--sub-font-family);
+	color: #fff;
+	font-size: 23px;
+	font-weight: 400;
+	line-height: 30px;
+}
+.login-wrap .login-left .title-wrap .eng-tit::before {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 21px;
+	width: 30px;
+	height: 1px;
+	border-top: 1px solid #fff;
+}
+.login-wrap .login-right {
+	height: 500px;
+	padding: 77px 75px;
+}
+.login-wrap .login-right .title-wrap .eng-tit {
+	font-family: var(--sub-font-family);
+	color: var(--black);
+	font-size: 45px;
+	font-weight: 700;
+	line-height: 58px;
+}
+.login-wrap .login-right .title-wrap .sub-tit {
+	margin-top: 5px;
+	color: #666;
+	font-weight: 700;
+	font-size: 15px;
+	line-height: 35px;
+}
+.login-wrap .input-area {
+	margin-top: 17px;
+}
+.login-wrap .input-area .input-wrap {
+	gap: 0;
+	min-height: 45px;
+	margin-bottom: 10px;
+	padding: 0 15px;
+	border-color: #ccc;
+	border-radius: 45px;
+}
+.login-wrap .input-area .input-wrap .form-label {
+	color: #999;
+	font-size: 16px;
+	font-weight: 600;
+}
+.login-wrap .input-area .input-wrap input {
+	font-size: 15px;
+}
+.login-wrap .service-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 10px;
+}
+.login-wrap .service-wrap hr {
+	min-width: 100%;
+	margin: 15px 0;
+	padding: 0;
+	border: 0;
+	border-top: 1px solid #ccc;
+}
+.login-wrap .service-wrap .btn-txt {
+	color: #666;
+	font-size: 13px;
+	font-weight: 500;
+	line-height: 15px;
+}
+.login-wrap .service-wrap .btn-txt:last-child {
+	margin-left: auto;
+}
+.login-wrap .button-wrap {
+	margin-top: 20px;
+}
+.login-wrap .button-wrap .btn:only-child {
+	width: 100%;
+}
+
+.login-wrap .button-wrap .btn_login {
+	height: 55px;
+	font-size: 20px;
+	border-radius: 55px;
+}
+
+
+/************************************************
+	회원가입 - 관리자 가입신청
+************************************************/
+.join-wrap {
+	position: relative;
+	width: 1000px;
+	margin: 0 auto;
+}
+.join-wrap .join-header {
+	margin-bottom: 40px;
+	text-align: center;
+}
+.join-wrap .join-header .title-wrap .title {
+	font-size: var(--title-font-size);
+	font-weight: 700;
+	line-height: 32px;
+}
+
+.sub-page .join-wrap {
+	padding: 60px 30px;
+}
+
+/* 관리자 유형 선택 */
+.join-wrap .choice-wrap {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 200px;
+	height: 165px;
+	margin: 0 auto;
+	padding-bottom: 30px;
+}
+.join-wrap .choice-wrap .list li + li {
+	margin-top: 15px;
+}
+.join-wrap .button-wrap {
+	justify-content: center;
+}
+.join-wrap .button-wrap .btn {
+	min-width: 120px;
+}
+
+/* 관리자 약관동의 */
+.join-wrap .agree-wrap li .form-check-label {
+	font-weight: 700;
+}
+.join-wrap .agree-wrap li .textarea-wrap {
+	margin-top: 15px;
+}
+.join-wrap .agree-wrap li {
+	margin-bottom: 30px;
+}
+
+/* 관리자 정보입력 */
+.join-wrap .section-header {
+	padding-bottom: 20px;
+	margin-bottom: 30px;
+	border-bottom: 1px solid #ccc;
+}
+.join-wrap .section-header .title-wrap {
+	display: block;
+	text-align: center;
+}
+.join-wrap .section-header .title-wrap .sub-title {
+	margin-top: 3px;
+	color: #666;
+	line-height: 15px;
+}
+.join-wrap .section-body {
+	padding: 20px 40px 40px;
+}
+.join-wrap .table-wrap td .select2-container,
+.join-wrap .table-wrap td .input-wrap {
+	max-width: 330px;
+}
+.join-wrap .table-wrap table.tbl-form th,
+.join-wrap .table-wrap table.tbl-form td {
+	padding: 5px 0;
+}
+
+/* 아이디/비밀번호 찾기 - 인증종류선택 */
+.join-wrap .section-header .tab-menu {
+	margin: 0 auto;
+}
+.join-wrap .section-body .tab-section {
+	padding: 0 19px;
+}
+.join-wrap .find-info {
+	height: 60px;
+	padding-left: 83px;
+	margin-bottom: 28px;
+}
+.join-wrap .find-info .title {
+	color: #000;
+	font-size: 15px;
+	font-weight: 700;
+	line-height: 35px;
+}
+.join-wrap .find-info .sub-title {
+	color: var(--base-text-color);
+	font-size: 12px;
+}
+
+.join-wrap .button-wrap + .find-info {
+	margin-top: 40px;
+}
+/* bg-phone */
+.join-wrap .find-info.phone {
+	background: url('../img/login/bg_phone.png') no-repeat left center;
+}
+/* bg-email */
+.join-wrap .find-info.email {
+	background: url('../img/login/bg_email.png') no-repeat left center;
+}
+
+/* 아이디/비밀번호 찾기 - 정보입력 */
+.join-wrap .find-form {
+	display: flex;
+	flex-direction: column;
+	gap: 10px 0;
+	margin-bottom: 40px;
+}
+
+/* 아이디/비밀번호 찾기 - 결과 */
+.join-wrap .find-info.result-id {
+	height: auto;
+	padding: 90px 0 0 0;
+	text-align: center;
+	background: url('../img/login/bg_lock.png') no-repeat center top;
+}
+.join-wrap .find-info.result-id .title {
+	font-weight: 500;
+}
+
+.join-wrap .find-info.result-pw {
+	height: 65px;
+	background: url('../img/login/bg_lock2.png') no-repeat left center;
+}
+.join-wrap .find-form .form-control-wrap .form-label {
+	min-width: 90px;
+	font-size: var(--base-font-size);
+}
+
+
+/************************************************
+	마이페이지 - 메인
+************************************************/
+/* 상단 블랙 바 */
+.private-bar {
+	display: flex;
+	align-items: center;
+	gap: 0 30px;
+	min-width: var(--page-min-width);
+	padding: 0 30px;
+	color: #fff;
+	line-height: 44px;
+	background-color: #333;
+}
+.private-bar div {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 0 10px;
+}
+.private-bar .name {
+	margin-right: 30px;
+	font-size: 15px;
+	font-weight: 700;
+}
+.private-bar .address {
+	font-size: var(--base-font-size);
+	font-weight: 700;
+}
+
+/* 대시보드 영역 */
+.mypage-wrap {
+	padding: 35px 0;
+}
+.mypage-wrap:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.mypage-wrap .mypage-box {
+	float: left;
+	width: calc(50% - 15px);
+}
+.mypage-wrap .mypage-box:last-child {
+	float: right;
+}
+.mypage-wrap .btn-sub-line {
+	height: 30px;
+	font-size: 12px;
+}
+.mypage-wrap .section-header .title-wrap .title {
+	line-height: 30px;
+}
+.mypage-wrap .section-body + .section-header,
+.mypage-wrap .row + .section-header {
+	margin-top: 30px;
+}
+/* 급식아동 현황 + 모니터링 센터 */
+.mypage-wrap .meal-status {
+	padding: 5px;
+	text-align: right;
+}
+.mypage-wrap .meal-status .info-area {
+	position: relative;
+	height: 80px;
+	box-sizing: content-box;
+}
+.mypage-wrap .meal-status .info-area::before {
+	content: '';
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 80px;
+	height: 80px;
+	background: #D5E6FF;
+	border-radius: 15px;
+}
+.mypage-wrap .meal-status .info-area.meal::before {
+	background: #D5E6FF url('../img/mypage/bg_people.png') no-repeat center center;
+}
+.mypage-wrap .meal-status .info-area.supply::before {
+	background: #D6F8FF url('../img/mypage/bg_man.png') no-repeat center center;
+}
+.mypage-wrap .meal-status .info-area.nutriment::before {
+	background: #FFEED4 url('../img/mypage/bg_drug.png') no-repeat center center;
+}
+.mypage-wrap .meal-status .info-area.sign::before {
+	background: #F7385926 url('../img/mypage/bg_sick.png') no-repeat center center;
+}
+.mypage-wrap .meal-status .info-area + .info-area {
+	padding-top: 25px;
+	margin-top: 25px;
+	border-top: 1px solid #ddd;
+}
+.mypage-wrap .meal-status .title {
+	margin-bottom: 27px;
+	color: var(--base-text-color);
+	font-size: 14px;
+	font-weight: 700;
+}
+.mypage-wrap .meal-status .count {
+	display: flex;
+	align-items: baseline;
+	justify-content: flex-end;
+	gap: 0 5px;
+}
+.mypage-wrap .meal-status .number {
+	color: var(--primary);
+	font-size: 30px;
+	font-weight: 500;
+}
+.mypage-wrap .meal-status .unit {
+	color: var(--base-text-color);
+	font-size: 16px;
+	font-weight: 700;
+}
+
+/* 예산 현황 */
+.mypage-wrap .budget-status {
+	display: flex;
+	justify-content: space-between;
+	margin: -5px -15px;
+}
+.mypage-wrap .budget-status li {
+	width: 25%;
+	text-align: center;
+}
+.mypage-wrap .budget-status li + li {
+	border-left: 1px solid #ddd;
+}
+.mypage-wrap .budget-status li .title {
+	color: #000;
+	font-size: 13px;
+	font-weight: 700;
+}
+.mypage-wrap .budget-status li .number {
+	margin-top: 21px;
+	color: var(--primary);
+	font-size: 14px;
+	font-weight: 700;
+}
+
+/* 나의 즐겨찾기 */
+.mypage-wrap .favorite-list {
+	display: flex;
+	gap: 0 25px;
+	height: 278px;
+	overflow: auto;
+}
+.mypage-wrap .favorite-list .list li {
+	display: inline-flex;
+	align-items: center;
+	gap: 0 5px;
+	min-width: 160px;
+	font-size: 13px;
+	line-height: 32px;
+	cursor: pointer;
+}
+.mypage-wrap .favorite-list .list li + li {
+	margin-top: 5px;
+}
+.mypage-wrap .favorite-list .list li .icon-star {
+	font-size: 16px;
+}
+
+/* 게시판 */
+.mypage-wrap .board-wrap {
+	display: flex;
+	gap: 0 20px;
+}
+.mypage-wrap .board-wrap .col-6 {
+	width: calc(50% - 20px);
+}
+.mypage-wrap .board-wrap hr {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	border-left: 1px solid #ddd;
+}
+.mypage-wrap .board-title {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 15px;
+}
+.mypage-wrap .board-title span {
+	color: #000;
+	font-size: 15px;
+	font-weight: 700;
+}
+.mypage-wrap .board-title .btn {
+	height: 30px;
+}
+.mypage-wrap .board-list {
+	height: 115px;
+}
+.mypage-wrap .board-list li {
+	display: flex;
+	justify-content: space-between;
+	gap: 0 10px;
+	font-size: var(--base-font-size);
+	line-height: 15px;
+}
+.mypage-wrap .illegal .board-list li,
+.mypage-wrap .notice .board-list li,
+.mypage-wrap .inquiry .board-list li {
+	cursor: pointer;
+}
+.mypage-wrap .illegal .board-list li:hover .subject,
+.mypage-wrap .notice .board-list li:hover .subject,
+.mypage-wrap .inquiry .board-list li:hover .subject {
+	color: var(--primary);
+}
+.mypage-wrap .board-list li + li {
+	margin-top: 10px;
+}
+.mypage-wrap .board-list li .subject {
+	color: var(--base-text-color);
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.mypage-wrap .board-list li .date {
+	color: #999;
+}
+
+
+/************************************************
+	마이페이지 - 내 정보 조회
+************************************************/
+/* 비밀번호 변경 */
+.new-password {
+	display: flex;
+	flex-direction: column;
+	gap: 5px 0;
+}
+.new-password .form-container {
+	justify-content: flex-start;
+}
+.new-password .form-label {
+	width: 100px;
+	font-size: 12px;
+	font-weight: 500;
+}
+.new-password .input-wrap {
+	max-width: 210px !important;
+}
+.new-password .btn span {
+	min-width: auto;
+}
+
+/* 메일인증, 번호인증 팝업 */
+.form-area {
+	display: flex;
+	flex-direction: column;
+	gap: 10px 0;
+}
+.form-area .input-wrap {
+	max-width: 210px;
+}

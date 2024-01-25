@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+<title>지원구분별 금액</title>
+
+<!--v Packages -->
+<script src="../../assets/js/jquery.min.js"></script>
+
+<link href="../../assets/css/jquery-ui.min.css" rel="stylesheet" />
+<script src="../../assets/js/jquery-ui.min.js"></script>
+
+<link href="../../assets/css/select2.min.css" rel="stylesheet" />
+<script src="../../assets/js/select2.min.js"></script>
+<!--^ Packages -->
+
+<link href="../../assets/css/all.css" rel="stylesheet" />
+<script src="../../assets/js/util.js"></script>
+</head>
+
+<body class="sub-page">
+	<header>
+		<div class="inner">
+			<h1 class="logo">
+				<a href="#">
+					<img src="../../assets/img/logo.svg" />
+				</a>
+			</h1>
+			<div id="gnb">
+				<ul class="gnb-list">
+					<li>
+						<a href="#">회원/카드관리</a>
+					</li>
+					<li>
+						<a href="#">거래관리</a>
+					</li>
+					<li>
+						<a href="#">정산현황</a>
+					</li>
+					<li>
+						<a href="#">통계/분석</a>
+					</li>
+					<li>
+						<a href="#">지원정책</a>
+					</li>
+					<li>
+						<a href="#">환경설정</a>
+					</li>
+					<li>
+						<button type="button" class="btn">
+							<span>전체보기</span>
+							<i class="icon-menu"></i>
+						</button>
+					</li>
+				</ul>
+			</div>
+			<div class="my-menu">
+				<div class="info">
+					<div class="photo">
+						<i class="icon-smile"></i><!-- 혹시 나중에 img태그가 들어간다면 해당 i태그 삭제 -->
+					</div>
+					<div class="name">관리자</div>
+				</div>
+				<div class="log">
+					<span>최종 로그인</span>
+					<span class="time">2022.08.29 14:14</span>
+				</div>
+				<div class="button-wrap">
+					<button type="button" class="btn">
+						<i class="icon-setting"></i>
+					</button>
+					<button type="button" class="btn">
+						<i class="icon-logout"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="container">
+		<div id="lnb">
+			<div class="group-title">
+				<span>통계/분석</span>
+			</div>
+			<button type="button" class="btn btn-primary btn_lnb_control">
+				<i class="icon-arrow-prev"></i>
+			</button>
+			<ul class="menu-list">
+				<li>
+					<a href="#">
+						<span>모니터링</span>
+						<i class="icon-circle-plus"></i>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>영양관리 모니터링</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>이상징후 모니터링</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="on">
+					<a href="#">
+						<span>통계현황</span>
+						<i class="icon-circle-plus"></i>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>조중석통계</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>지원내용별 현황</span>
+							</a>
+						</li>
+						<li class="on">
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>지원구분별 금액</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>월별통계현황</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>지자체별 정산 통계</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>지자체별 대상자 통계</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>대상자 주문 통계</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>배달업체별 상품 통계</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>배달업체별 주문 통계</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!-- #lnb -->
+		<div class="content-wrap">
+			<div class="content-header">
+				<div class="title-wrap">
+					<div class="title">지원구분별 금액</div>
+					<div class="location">
+						<i class="icon-home"></i>
+						<span>홈</span>
+						<span>통계/분석</span>
+						<span>통계현황</span>
+						<span>지원구분별 금액</span>
+					</div>
+				</div>
+			</div>
+			<div class="content-body">
+				<div class="page-memo">
+					<ul class="list">
+						<li>붉은색의 <span class="text-warning">*</span>표시는 필수선택 사항입니다.</li>
+					</ul>
+				</div>
+				
+				<div class="search-form-wrap">
+					<form>
+						<div class="search-form-inner">
+							<div class="search-form">
+
+								<div class="row">
+									<div class="col-12">
+										<label class="form-label required" for="지자체"><span>지자체</span></label>
+										<div class="form-container">
+											<select class="form-select select2" id="지자체" name="시/도" data-placeholder="시/도 선택" disabled>
+												<option value=""></option>
+												<option value="경기도" selected>경기도</option>
+											</select>
+											<select class="form-select select2" id="시/군" name="시/군" data-placeholder="시/군 선택">
+												<option value=""></option>
+												<option value="옵션1">옵션1</option>
+												<option value="옵션2">옵션2</option>
+												<option value="옵션3">옵션3</option>
+											</select>
+											<select class="form-select select2" id="구" name="구" data-placeholder="구 선택">
+												<option value=""></option>
+												<option value="옵션1">옵션1</option>
+												<option value="옵션2">옵션2</option>
+												<option value="옵션3">옵션3</option>
+											</select>
+											<select class="form-select select2" id="읍/면/동" name="읍/면/동" data-placeholder="읍/면/동 선택">
+												<option value=""></option>
+												<option value="옵션1">옵션1</option>
+												<option value="옵션2">옵션2</option>
+												<option value="옵션3">옵션3</option>
+											</select>
+										</div>
+									</div><!-- .col -->
+								</div><!-- .row -->
+								
+								<div class="row">
+									<div class="col-6">
+										<label class="form-label" for="조회연도"><span>조회년월</span></label>
+										<div class="form-container">
+											<select class="form-select select2" id="조회연도" name="조회연도" data-placeholder="조회연도 선택">
+												<option value=""></option>
+												<option value="옵션1">2022</option>
+												<option value="옵션2">2021</option>
+												<option value="옵션3">2020</option>
+											</select>
+											<div class="unit">년</div>
+											<select class="form-select select2" id="조회월" name="조회월" data-placeholder="조회월 선택">
+												<option value=""></option>
+												<option value="옵션1">2022</option>
+												<option value="옵션2">2021</option>
+												<option value="옵션3">2020</option>
+											</select>
+											<div class="unit">월</div>
+										</div><!-- .form-container -->
+									</div><!-- .col -->
+								</div><!-- .row -->
+
+								<div class="row">
+									<div class="col-12">
+										<label class="form-label" for="신청구분(평일)"><span>신청구분(평일)</span></label>
+										<div class="form-container">
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" id="체크박스1" name="체크박스1" value="체크박스1" checked="" />
+												<label class="form-check-label" for="체크박스1">월요일</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" id="체크박스2" name="체크박스2" value="체크박스2" />
+												<label class="form-check-label" for="체크박스2">화요일</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" id="체크박스3" name="체크박스3" value="체크박스3" />
+												<label class="form-check-label" for="체크박스3">수요일</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" id="체크박스4" name="체크박스4" value="체크박스4" />
+												<label class="form-check-label" for="체크박스4">목요일</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" id="체크박스5" name="체크박스5" value="체크박스5" />
+												<label class="form-check-label" for="체크박스5">금요일</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" id="체크박스6" name="체크박스6" value="체크박스6" />
+												<label class="form-check-label" for="체크박스6">토요일</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" id="체크박스7" name="체크박스7" value="체크박스7" />
+												<label class="form-check-label" for="체크박스7">공휴일</label>
+											</div>
+										</div>
+									</div>
+								</div><!-- .row -->
+
+								<div class="row">
+									<div class="col-12">
+										<label class="form-label" for="신청구분(방학)"><span>신청구분(방학)</span></label>
+										<div class="form-container">
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" id="체크박스8" name="체크박스8" value="체크박스8" checked="" />
+												<label class="form-check-label" for="체크박스8">월요일</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" id="체크박스9" name="체크박스9" value="체크박스9" />
+												<label class="form-check-label" for="체크박스9">화요일</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" id="체크박스10" name="체크박스10" value="체크박스10" />
+												<label class="form-check-label" for="체크박스10">수요일</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" id="체크박스11" name="체크박스11" value="체크박스11" />
+												<label class="form-check-label" for="체크박스11">목요일</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" id="체크박스12" name="체크박스12" value="체크박스12" />
+												<label class="form-check-label" for="체크박스12">금요일</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" id="체크박스13" name="체크박스13" value="체크박스13" />
+												<label class="form-check-label" for="체크박스13">토요일</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" id="체크박스14" name="체크박스14" value="체크박스14" />
+												<label class="form-check-label" for="체크박스14">공휴일</label>
+											</div>
+										</div>
+									</div>
+								</div><!-- .row -->
+
+							</div><!-- .search-form -->
+
+							<div class="button-wrap">
+								<button type="button" class="btn btn-primary">
+									<i class="icon-search"></i>
+									<span>검색</span>
+								</button>
+							</div>
+						</div><!-- .search-form-inner -->
+					</form>
+				</div><!-- .search_form_wrap -->
+
+				<div class="section-header">
+					<div class="title-wrap">
+						<div class="title">검색결과<span class="small text-primary">(99건)</span></div>
+					</div>
+					<div class="button-wrap">
+						<button type="button" class="btn btn-line">
+							<i class="icon-print"></i>
+							<span>인쇄</span>
+						</button>
+						<button type="button" class="btn btn-line">
+							<i class="icon-filedown"></i>
+							<span>엑셀다운</span>
+						</button>
+					</div>
+				</div><!-- .section-header -->
+
+				<div class="section-body">
+					<div class="grid-area">
+						<div style="padding: 100px 0; text-align: center; font-size: 20px;">IBSheet영역</div><!-- 이 줄을 삭제 후 그리드를 삽입하세요. -->
+					</div>
+				</div><!-- .section-body -->
+			</div>
+		</div><!-- .content-wrap -->
+	</div><!-- .container -->
+</body>
+</html>

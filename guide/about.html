@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
+<title>UI/UX Style Guide</title>
+
+<link href="../assets/css/all.css" rel="stylesheet" />
+<script src="../assets/js/jquery.min.js"></script>
+
+<!-- GUIDE관련 소스 -->
+<link href="assets/css/only_for_guide.css" rel="stylesheet" />
+<link href="assets/css/treeview_custom.css" rel="stylesheet" />
+<script src="assets/js/only_for_guide.js"></script>
+</head>
+
+<body class="guide_page">
+	<header>
+		<div class="inner">
+			<div class="logo">UI/UX GUIDE</div>
+			<ul class="gnb">
+				<li><a href="index.html">페이지</a></li>
+				<li><a href="style.html">스타일</a></li>
+				<li><a href="components.html">컴포넌트</a></li>
+				<li><a href="layouts.html">레이아웃</a></li>
+				<li class="active"><a href="about.html">About</a></li>
+			</ul>
+		</div>
+	</header>
+
+	<div class="guide guide_about">
+		<section>
+			<div class="container">
+				<h2 class="page-title">About</h2>
+
+				<div class="page-note">
+					<div>프로젝트 소개, 사용된 패키지에 대해 정리합니다.</div>
+					<div>본 가이드는 jQuery를 기반으로 구성되었습니다.</div>
+				</div>
+
+				<article class="guide">
+					<h3 class="guide-title">프로젝트 / Project /</h3>
+
+					<div class="contents">
+						<ul class="info">
+							<li>프로젝트명 : 2022년도 아동급식지원 플랫폼 구축</li>
+							<li>프로젝트 기간 : 2022.10 ~ 2022.02</li>
+						</ul>
+					</div>
+				</article>
+
+				<article class="guide">
+					<h3 class="guide-title">Dependencies <span class="ms-auto">(package.json에 등록된)</span></h3>
+
+					<ul class="info">
+						<li>본 가이드에서 사용된 UI용 package들은 아래와 같습니다.</li>
+						<li>package들은 오픈소스(MIT Licence)입니다.</li>
+						<li>각 package의 버전은 2022년 10월 05일 기준 입니다.</li>
+					</ul>
+
+					<div class="contents">
+						<ul class="dependencies">
+							<li>
+								<div class="li_title">jQuery 3.6</div>
+								<div class="li_data">"jquery": "^3.6.0"</div>
+								<div class="li_memo">- License: MIT</div>
+								<div class="li_site">
+									<a class="guide btn-link" href="https://jquery.com/" target="_blank">https://jquery.com/</a>
+								</div>
+							</li>
+							<li>
+								<div class="li_title">jQuery UI 1.13.1</div>
+								<div class="li_data">"jquery-ui-dist": "^1.13.1"</div>
+								<div class="li_memo">- License: MIT</div>
+								<div class="li_site">
+									<a class="guide btn-link" href="https://jqueryui.com/" target="_blank">https://jqueryui.com/</a>
+								</div>
+							</li>
+							<li>
+								<div class="li_title">select2 4.1.0-rc.0</div>
+								<div class="li_data">"select2": "^4.1.0-rc.0"</div>
+								<div class="li_memo">- License: MIT<br />- The jQuery replacement for select boxes</div>
+								<div class="li_site">
+									<a class="guide btn-link" href="https://select2.org/" target="_blank">https://select2.org/</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</article>
+
+				<article class="guide">
+					<h3 class="guide-title">디렉토리 구조</h3>
+
+					<ul class="info">
+						<li style="color: red">아래 디렉토리 중 [가이드용] 디렉토리는 웹서비스로 옮길 필요가 없습니다.</li>
+					</ul>
+
+					<div class="contents">
+						<ul id="guideDirectory" class="filetree treeview">
+							<li class="root">
+								<div class="folder"><span class="name">pub</span></div>
+								<ul>
+									<li>
+										<div class="folder"><span class="name">assets</span></div>
+										<ul>
+											<li>
+												<div class="folder"><span class="name">css</span></div>
+											</li>
+											<li>
+												<div class="folder"><span class="name">fonts</span></div>
+												<ul>
+													<li>
+														<div class="folder"><span class="name">icomoon</span> <span class="memo">* 아이콘셋</span></div>
+													</li>
+													<li>
+														<div class="folder"><span class="name">InfinitySans</span> <span class="memo">* InfinitySans 폰트</span></div>
+													</li>
+													<li>
+														<div class="folder"><span class="name">NanumSquareNeo</span> <span class="memo">* NanumSquareNeo 폰트</span></div>
+													</li>
+												</ul>
+											</li>
+											<li>
+												<div class="folder"><span class="name">js</span></div>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<div class="folder"><span class="name">guide</span> <span class="memo">* [가이드용] css, js, image, html</span></div>
+										<ul>
+											<li>
+												<div class="folder"><span class="name">assets</span></div>
+												<ul>
+													<li>
+														<div class="folder"><span class="name">css</span></div>
+													</li>
+													<li>
+														<div class="folder"><span class="name">img</span></div>
+													</li>
+													<li>
+														<div class="folder"><span class="name">js</span></div>
+													</li>
+												</ul>
+											</li>
+											<li>
+												<div class="folder"><span class="name">components</span> <span class="memo">* component 가이드 파일들</span></div>
+											</li>
+											<li>
+												<div class="folder"><span class="name">layouts</span> <span class="memo">* layout 가이드 파일들</span></div>
+											</li>
+										</ul>
+									</li>
+
+									<li>
+										<div class="folder"><span class="name">pages</span> <span class="memo">* 퍼블리싱 파일들</span></div>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</article>
+			</div><!-- .container -->
+		</section>
+	</div><!-- .guide -->
+
+	<footer>
+		<div class="inner">
+			<div class="copy">Copyright &copy; GRIDA 2022</div>
+			<div class="f-logo"><img src="assets/img/ci_grida.svg" /></div>
+		</div>
+	</footer>
+</body>
+</html>

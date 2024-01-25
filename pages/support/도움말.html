@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+<title>도움말(잔액이월)</title>
+
+<!--v Packages -->
+<script src="../../assets/js/jquery.min.js"></script>
+
+<link href="../../assets/css/jquery-ui.min.css" rel="stylesheet" />
+<script src="../../assets/js/jquery-ui.min.js"></script>
+
+<link href="../../assets/css/select2.min.css" rel="stylesheet" />
+<script src="../../assets/js/select2.min.js"></script>
+<!--^ Packages -->
+
+<link href="../../assets/css/all.css" rel="stylesheet" />
+<script src="../../assets/js/util.js"></script>
+</head>
+
+<body class="sub-page">
+	<header>
+		<div class="inner">
+			<h1 class="logo">
+				<a href="#">
+					<img src="../../assets/img/logo.svg" />
+				</a>
+			</h1>
+			<div id="gnb">
+				<ul class="gnb-list">
+					<li>
+						<a href="#">회원/카드관리</a>
+					</li>
+					<li>
+						<a href="#">거래관리</a>
+					</li>
+					<li>
+						<a href="#">정산현황</a>
+					</li>
+					<li>
+						<a href="#">통계/분석</a>
+					</li>
+					<li>
+						<a href="#">지원정책</a>
+					</li>
+					<li>
+						<a href="#">환경설정</a>
+					</li>
+					<li>
+						<button type="button" class="btn">
+							<span>전체보기</span>
+							<i class="icon-menu"></i>
+						</button>
+					</li>
+				</ul>
+			</div>
+			<div class="my-menu">
+				<div class="info">
+					<div class="photo">
+						<i class="icon-smile"></i><!-- 혹시 나중에 img태그가 들어간다면 해당 i태그 삭제 -->
+					</div>
+					<div class="name">관리자</div>
+				</div>
+				<div class="log">
+					<span>최종 로그인</span>
+					<span class="time">2022.08.29 14:14</span>
+				</div>
+				<div class="button-wrap">
+					<button type="button" class="btn">
+						<i class="icon-setting"></i>
+					</button>
+					<button type="button" class="btn">
+						<i class="icon-logout"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="container">
+		<div id="lnb">
+			<div class="group-title">
+				<span>지원정책</span>
+			</div>
+			<button type="button" class="btn btn-primary btn_lnb_control">
+				<i class="icon-arrow-prev"></i>
+			</button>
+			<ul class="menu-list">
+				<li>
+					<a href="#">
+						<span>참여마당</span>
+						<i class="icon-circle-plus"></i>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>공지관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>자주하는 질문 관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>1:1문의관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>바우처시스템 개선 요청</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">
+						<span>부정수급</span>
+						<i class="icon-circle-plus"></i>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>부정수급사례 조회</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>부정수급 신고내역 조회</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="on">
+					<a href="#">
+						<span>지원정책</span>
+						<i class="icon-circle-plus"></i>
+					</a>
+					<ul class="sub-menu">
+						<li class="on">
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>바우처정책</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>학교관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>지자체관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>급식 템플릿 관리</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!-- #lnb -->
+		<div class="content-wrap">
+		</div><!-- .content-wrap -->
+	</div><!-- .container -->
+
+	<!-- 팝업 위치는 항상 여기에 넣어주세요. -->
+	<div id="layerPopup" class="layerPopup" style="display: block;"><!-- 실제 작업하실 때는 style 선언은 지워주세요. 팝업 활성화 방법은 components/modal.html 파일을 참고해주세요. -->
+		<div class="layer-wrap" style="width: 760px;">
+			<div class="layer-header">
+				<h4 class="layer-title">도움말</h4>
+				<div class="button-wrap">
+					<button type="button" class="btn btn_close" title="창닫기">
+						<i class="icon-close"></i>
+					</button>
+				</div>
+			</div><!-- .layer-header -->
+	
+			<div class="layer-body">
+
+				<div class="section-header">
+					<div class="title-wrap">
+						<div class="title">소멸 - 이월 가이드</div>
+					</div>
+				</div><!-- .section-header -->
+
+				<div class="section-body">
+					<div class="table-wrap">
+						<table class="tbl-form all-center">
+							<colgroup>
+								<col style="width: 100px;">
+								<col style="width: 95%;">
+							</colgroup>
+							<thead>
+							<tr>
+								<th>소멸 - 이월 방식</th>
+								<th>설명</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>소멸</td>
+								<td>월 충전 시 모든 잔액이 소멸됩니다.</td>
+							</tr>
+							<tr>
+								<td>전액이월</td>
+								<td>월 충전 시 모든 잔액이 이월됩니다.</td>
+							</tr>
+							<tr>
+								<td>정액이월</td>
+								<td>월 충전 시 선택된 단위 미만의 잔액만 이월합니다.</td>
+							</tr>
+							<tr>
+								<td>정률이월</td>
+								<td>월 충전 시 지정한 비율 만큼의 잔액을 이월합니다.</td>
+							</tr>
+							</tbody>
+						</table>
+					</div>
+				</div><!-- .section-body -->
+
+				<div class="section-header">
+					<div class="title-wrap">
+						<div class="title">소멸 - 이월 테스트</div>
+					</div>
+
+					<div class="button-wrap">
+						<button type="button" class="btn btn-primary">
+							<span>소멸테스트</span>
+						</button>
+					</div>
+				</div><!-- .section-header -->
+
+				<div class="section-body">
+					<div class="table-wrap">
+						<table class="tbl-form all-center">
+							<colgroup>
+								<col style="width: 100px;">
+								<col style="width: 45%;">
+								<col style="width: 100px;">
+								<col style="width: 45%;">
+							</colgroup>
+							<tbody>
+							<tr>
+								<th>
+									<label class="form-label" for="이월방식"><span>이월방식</span></label>
+								</th>
+								<td>
+									<div class="form-container">
+										<select class="form-select select2" id="이월방식" name="이월방식" data-placeholder="이월방식">
+											<option value=""></option>
+											<option value="소멸" selected>소멸</option>
+											<option value="옵션2">옵션2</option>
+											<option value="옵션3">옵션3</option>
+										</select>
+									</div>
+								</td>
+								<th>
+									<label class="form-label" for="잔액"><span>잔액</span></label>
+								</th>
+								<td>
+									<div class="form-container">
+										<div class="input-wrap">
+											<input class="number" type="text" id="잔액" name="잔액" step="1" value="" placeholder="" oninput="numberLocaleString(this);" />
+										</div><!-- .input-wrap -->
+										<div class="unit">원</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>
+									<label class="form-label" for="이월단위"><span>이월단위(정액이월)</span></label>
+								</th>
+								<td>
+									<div class="form-container">
+										<select class="form-select select2" id="이월단위" name="이월단위" data-placeholder="이월단위">
+											<option value=""></option>
+											<option value="1,000단위" selected>1,000단위</option>
+											<option value="옵션2">옵션2</option>
+											<option value="옵션3">옵션3</option>
+										</select>
+									</div>
+								</td>
+								<th>
+									<label class="form-label" for="이월비율"><span>이월비율(정률이월)</span></label>
+								</th>
+								<td>
+									<div class="form-container">
+										<div class="input-wrap">
+											<input class="number" type="number" id="이월비율" name="이월비율" value="" placeholder="" pattern="[0-9.,]+" step="1" min="" max="" onfocusout="numberLocaleString(this, 2);">
+										</div><!-- .input-wrap -->
+										<div class="unit">%</div>
+									</div>
+								</td>
+							</tr>
+							</tbody>
+						</table>
+					</div>
+				</div><!-- .section-body -->
+
+
+				<div class="section-header">
+					<div class="title-wrap">
+						<div class="title">테스트결과</div>
+					</div>
+				</div><!-- .section-header -->
+
+				<div class="section-body">
+					<div class="table-wrap">
+						<table class="tbl-form all-center">
+							<thead>
+							<tr>
+								<th>소멸 - 이월 방식</th>
+								<th>잔액</th>
+								<th>소멸금 계산식</th>
+								<th>소멸금액</th>
+								<th>이월금액</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>소멸</td>
+								<td>11,500</td>
+								<td>11,500</td>
+								<td>11,500</td>
+								<td>0</td>
+							</tr>
+							<tr>
+								<td>전액이월</td>
+								<td>11,500</td>
+								<td>0</td>
+								<td>0</td>
+								<td>11,500</td>
+							</tr>
+							<tr>
+								<td>정액이월</td>
+								<td>11,500</td>
+								<td>11500 – (11500 mod 1000)</td>
+								<td>11,000</td>
+								<td>500</td>
+							</tr>
+							<tr>
+								<td>정률이월</td>
+								<td>11,500</td>
+								<td>11500 – (11500 *10/ 100)</td>
+								<td>10,350</td>
+								<td>1,150</td>
+							</tr>
+							</tbody>
+						</table>
+					</div>
+					
+					<!-- 그리드로 데이터를 뿌리실 경우 바로 위에있는 .table-wrap 삭제 후 아래 영역의 주석을 풀어서 사용하세요. -->
+					<!-- <div class="grid-area">
+						<div style="padding: 100px 0; text-align: center; font-size: 20px;">IBSheet영역</div>
+					</div> -->
+				</div><!-- .section-body -->
+
+			</div><!-- .layer-body -->
+	
+			<div class="layer-footer">
+				<div class="button-wrap">
+					<button type="button" class="btn btn-line btn_close"><span>닫기</span></button>
+				</div>
+			</div><!-- .layer-footer -->
+		</div><!-- .layer-contents -->
+	</div><!-- #layerPopup.layerPopup -->
+</body>
+</html>

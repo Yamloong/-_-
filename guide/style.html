@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
+<title>UI/UX Style Guide</title>
+
+<link href="../assets/css/all.css" rel="stylesheet" />
+<script src="../assets/js/jquery.min.js"></script>
+
+<!-- GUIDE관련 소스 -->
+<link href="assets/css/only_for_guide.css" rel="stylesheet" />
+<script src="assets/js/only_for_guide.js"></script>
+</head>
+
+<body class="guide_page">
+	<header>
+		<div class="inner">
+			<div class="logo">UI/UX GUIDE</div>
+			<ul class="gnb">
+				<li><a href="index.html">페이지</a></li>
+				<li class="active"><a href="style.html">스타일</a></li>
+				<li><a href="components.html">컴포넌트</a></li>
+				<li><a href="layouts.html">레이아웃</a></li>
+				<li><a href="about.html">About</a></li>
+			</ul>
+		</div>
+	</header>
+
+	<div class="container">
+		<h2 class="page-title">스타일</h2>
+
+		<div class="page-note"><strong>Overview</strong> 사이트의 대표 색상표, 글씨체(폰트), 아이콘에 대해 정리합니다.</div>
+
+		<article class="guide">
+			<h3 class="guide-title">컬러 Color</h3>
+
+			<div class="guide-table-wrap">
+				<table>
+					<thead>
+						<tr>
+							<th>컬러 셋</th>
+							<th>Background</th>
+							<th>Border Line</th>
+							<th>Text Regular</th>
+							<th>Text Strong</th>
+							<th class="text-center">사용</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th>Primary</th>
+							<td class="bg-primary text-white">#4676FB</td>
+							<td><div class="border border-primary text-primary">#4676FB</div></td>
+							<td class="text-primary">#4676FB</td>
+							<td class="text-primary"><strong>#4676FB</strong></td>
+							<td class="text-center">○</td>
+						</tr>
+						<tr>
+							<th>Error</th>
+							<td class="bg-error text-white">#2D3C6B</td>
+							<td><div class="border border-error text-error">#2D3C6B</div></td>
+							<td class="text-error">#2D3C6B</td>
+							<td class="text-error"><strong>#2D3C6B</strong></td>
+							<td class="text-center">○</td>
+						</tr>
+						<tr>
+							<th>Warning</th>
+							<td class="bg-warning text-white">#2D3C6B</td>
+							<td><div class="border border-warning text-warning">#2D3C6B</div></td>
+							<td class="text-warning">#2D3C6B</td>
+							<td class="text-warning"><strong>#2D3C6B</strong></td>
+							<td class="text-center">○</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!--^ .table-responsive -->
+		</article>
+
+		<article class="guide">
+			<h3 class="guide-title">타이포그래피 Typography</h3>
+
+			<div class="contents">
+				<ul class="info">
+					<li>폰트 : NanumSquareNeo, 맑은 고딕, Arial, Tahoma</li>
+				</ul>
+				<div class="guide-sub-title">제목 / Headings /</div>
+				<div class="guide-table-wrap">
+					<table>
+						<colgroup>
+							<col width="100px" />
+							<col />
+							<col width="100px" />
+							<col width="150px" />
+							<col width="100px" />
+							<col />
+						</colgroup>
+						<thead>
+							<tr>
+								<th>Tag</th>
+								<th>예시</th>
+								<th>font-size</th>
+								<th>font-weight</th>
+								<th>line-height</th>
+								<th>용도</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th><h2>h2</h2></th>
+								<td><h2>한글 ENGLISH english</h2></td>
+								<td>22px</td>
+								<td>700 (Bold)</td>
+								<td>32px</td>
+								<td>Content Header 타이틀</td>
+							</tr>
+							<tr>
+								<th><h3>h3</h3></th>
+								<td><h3>한글을 사랑합시다. ENGLISH english</h3></td>
+								<td>16px</td>
+								<td>700 (Bold)</td>
+								<td>35px</td>
+								<td>Section Header 타이틀</td>
+							</tr>
+							<tr>
+								<th><h4>h4</h4></th>
+								<td><h4>한글을 사랑합시다. ENGLISH english</h4></td>
+								<td>16px</td>
+								<td>700 (Bold)</td>
+								<td>18px</td>
+								<td>모달(팝업) 타이틀</td>
+							</tr>
+							<tr>
+								<th><h5>h5</h5></th>
+								<td><h5>한글을 사랑합시다. ENGLISH english</h5></td>
+								<td>16px</td>
+								<td>700 (Bold)</td>
+								<td>35px</td>
+								<td>모달(팝업) 내 블럭 타이틀</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="guide-sub-title">Contents</div>
+				<div class="guide-table-wrap">
+					<table>
+						<colgroup>
+							<col width="150px" />
+							<col />
+							<col width="100px" />
+							<col width="100px" />
+							<col />
+						</colgroup>
+						<thead>
+							<tr>
+								<th>Font Weight</th>
+								<th>예시</th>
+								<th>font-size</th>
+								<th>line-height</th>
+								<th>용도</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th>300 (Light)</th>
+								<td><span style="font-weight: 300">한글을 사랑합시다. ENGLISH english 1234567890</span></td>
+								<td>13px</td>
+								<td>1</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>400 (Regular)</th>
+								<td>한글을 사랑합시다. ENGLISH english 1234567890</td>
+								<td>13px</td>
+								<td>1</td>
+								<td>본문 기본 글씨체</td>
+							</tr>
+							<tr>
+								<th>500 (Medium)</th>
+								<td><span style="font-weight: 500">한글을 사랑합시다. ENGLISH english 1234567890</span></td>
+								<td>13px</td>
+								<td>1</td>
+								<td>테이블 헤더</td>
+							</tr>
+							<tr>
+								<th>600 (Bold)</th>
+								<td><strong style="font-weight: 600">한글을 사랑합시다. ENGLISH english 1234567890</strong></td>
+								<td>13px</td>
+								<td>1</td>
+								<td>본문 강조</td>
+							</tr>
+							<tr>
+								<th>700 (Extra Bold)</th>
+								<td><strong style="font-weight: 700">한글을 사랑합시다. ENGLISH english 1234567890</strong></td>
+								<td>13px</td>
+								<td>1</td>
+								<td>본문 강조</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</article>
+
+		<article class="guide">
+			<h3 class="guide-title">아이콘</h3>
+
+			<div class="contents">
+				<div class="guide-sub-title">사용방법 및 예시(아이콘 사이즈 24px)</div>
+				<ul class="icon_list">
+					<li>
+						<div class="icon_img"><i class="icon-arrow-down"></i></div>
+						<xmp class="icon_tag"><i class="icon-arrow-down"></i></xmp>
+					</li>
+					<li>
+						<div class="icon_img"><i class="icon-arrow-first"></i></div>
+						<xmp class="icon_tag"><i class="icon-arrow-first"></i></xmp>
+					</li>
+					<li>
+						<div class="icon_img"><i class="icon-arrow-last"></i></div>
+						<xmp class="icon_tag"><i class="icon-arrow-last"></i></xmp>
+					</li>
+					<li>
+						<div class="icon_img"><i class="icon-arrow-next"></i></div>
+						<xmp class="icon_tag"><i class="icon-arrow-next"></i></xmp>
+					</li>
+					<li>
+						<div class="icon_img"><i class="icon-arrow-prev"></i></div>
+						<xmp class="icon_tag"><i class="icon-arrow-prev"></i></xmp>
+					</li>
+					<li>
+						<div class="icon_img"><i class="icon-arrow-up"></i></div>
+						<xmp class="icon_tag"><i class="icon-arrow-up"></i></xmp>
+					</li>
+					<li>
+						<div class="icon_img"><i class="icon-bullet-arrow"></i></div>
+						<xmp class="icon_tag"><i class="icon-bullet-arrow"></i></xmp>
+					</li>
+					<li>
+						<div class="icon_img"><i class="icon-calendar"></i></div>
+						<xmp class="icon_tag"><i class="icon-calendar"></i></xmp>
+					</li>
+					<li>
+						<div class="icon_img"><i class="icon-filedown"></i></div>
+						<xmp class="icon_tag"><i class="icon-filedown"></i></xmp>
+					</li>
+					<li>
+						<div class="icon_img"><i class="icon-help"></i></div>
+						<xmp class="icon_tag"><i class="icon-help"></i></xmp>
+					</li>
+					<li>
+						<div class="icon_img"><i class="icon-lock"></i></div>
+						<xmp class="icon_tag"><i class="icon-lock"></i></xmp>
+					</li>
+					<li>
+						<div class="icon_img"><i class="icon-menu"></i></div>
+						<xmp class="icon_tag"><i class="icon-menu"></i></xmp>
+					</li>
+					<li>
+						<div class="icon_img"><i class="icon-reload"></i></div>
+						<xmp class="icon_tag"><i class="icon-reload"></i></xmp>
+					</li>
+				</ul>
+				<!-- .row -->
+
+				<div class="guide-sub-title">크기별 예시</div>
+				<div class="guide-table-wrap">
+					<table>
+						<colgroup>
+							<col width="50px" />
+							<col width="50px" />
+							<col width="50px" />
+							<col width="50px" />
+							<col width="50px" />
+							<col width="50px" />
+							<col width="50px" />
+						</colgroup>
+						<tr>
+							<td><i class="icon-home" style="font-size: 10px"></i></td>
+							<td><i class="icon-home" style="font-size: 12px"></i></td>
+							<td><i class="icon-home" style="font-size: 14px"></i></td>
+							<td><i class="icon-home" style="font-size: 16px"></i></td>
+							<td><i class="icon-home" style="font-size: 18px"></i></td>
+							<td><i class="icon-home" style="font-size: 20px"></i></td>
+							<td><i class="icon-home" style="font-size: 24px"></i></td>
+						</tr>
+						<tr>
+							<td>10px</td>
+							<td>12px</td>
+							<td>14px</td>
+							<td>16px</td>
+							<td>18px</td>
+							<td>20px</td>
+							<td>24px</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</article>
+
+		<article class="guide">
+			<h3 class="guide-title">z-index</h3>
+
+			<div class="contents">
+				<ul class="info">
+					<li>로딩화면 (.preloader_backdrop) : 1000</li>
+					<li>레이어팝업 dim (.layerPopup) : 500</li>
+					<li>레이어팝업 컨텐츠 (.layer-wrap) : 600</li>
+					<li>툴팁 (.tooltip) : 100</li>
+				</ul>
+			</div>
+		</article>
+	</div><!-- .container -->
+
+	<footer>
+		<div class="inner">
+			<div class="copy">Copyright &copy; GRIDA 2022</div>
+			<div class="f-logo"><img src="assets/img/ci_grida.svg" /></div>
+		</div>
+	</footer>
+</body>
+</html>

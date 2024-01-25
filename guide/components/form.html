@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+<title>FORM</title>
+
+<!--v Packages -->
+<script src="../../assets/js/jquery.min.js"></script>
+
+<link href="../../assets/css/jquery-ui.min.css" rel="stylesheet" />
+<script src="../../assets/js/jquery-ui.min.js"></script>
+
+<link href="../../assets/css/select2.min.css" rel="stylesheet" />
+<script src="../../assets/js/select2.min.js"></script>
+<!--^ Packages -->
+
+<!-- GUIDE관련 소스 -->
+<link href="../assets/css/only_for_guide.css" rel="stylesheet" />
+<script src="../assets/js/only_for_guide.js"></script>
+
+<!--v codemirror : 소스보기용 -->
+<link href="../assets/js/codemirror/lib/codemirror.css" rel="stylesheet" />
+<link href="../assets/js/codemirror/theme/rubyblue.css" rel="stylesheet" />
+<script src="../assets/js/codemirror/lib/codemirror.js"></script>
+<script src="../assets/js/codemirror/mode/xml/xml.js"></script>
+<script src="../assets/js/codemirror/mode/javascript/javascript.js"></script>
+<script src="../assets/js/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+<script src="../assets/js/codemirror/addon/selection/active-line.js"></script>
+<!--^ codemirror : 소스보기용 -->
+
+<link href="../../assets/css/all.css" rel="stylesheet" />
+<script src="../../assets/js/util.js"></script>
+</head>
+
+<body class="guide_page">
+
+	<header>
+		<div class="inner">
+			<div class="logo">UI/UX GUIDE</div>
+			<ul class="gnb">
+				<li><a href="../index.html">페이지</a></li>
+				<li><a href="../style.html">스타일</a></li>
+				<li class="active"><a href="../components.html">컴포넌트</a></li>
+				<li><a href="../layouts.html">레이아웃</a></li>
+				<li><a href="../about.html">About</a></li>
+			</ul>
+		</div>
+	</header>
+
+	<div class="guide guide_style">
+		<section>
+			<div class="container">
+				<h2 class="page-title">FORM</h2>
+
+				<div class="page-note">
+					<strong>Overview</strong> 본 프로젝트에서 사용되는 폼의 종류와 형태를 정리합니다.
+				</div>
+
+				<article class="guide">
+					<h3 class="guide-title">입력폼</h3>
+
+					<div class="contents">
+						<div class="guide-sub-title">
+							LAYOUT
+							<div class="right_menu">
+								<button type="button" class="btn btn-primary btn_view_source" data-target="#sourceViewer1">
+									<i class="icon-eyes">👀</i><span>HTML</span>
+								</button>
+							</div>
+						</div>
+
+						<ul class="info">
+							<li>폼 타입 테이블(table.tbl-form)을 사용하여 폼 입력항목을 배치합니다.</li>
+							<li>테이블을 4개의 컬럼(th, td)로 나눠서 첫번째, 세번째 컬럼(th)에는 입력항목의 제목을 두번째, 네번째 컬럼(td)에는 입력창을 배치합니다.</li>
+							<li>table.tbl-form에 설정된 min-width는 1,000px입니다.</li>
+							<li>기본 th width는 200px 입니다.</li>
+							<li>기본 row height : 49px (border-bottom 1px 포함)</li>
+						</ul>
+						<div class="guide-row3">
+							<div class="guide_html">
+
+<div class="content-header">
+	<div class="title-wrap">
+		<div class="title">입력폼 제목</div>
+		<span class="sub-title">(입력폼 소제목 <span class="text-primary">강조컬러</span>)</span>
+	</div>
+</div>
+				
+<form>
+	<div class="table-wrap">
+		<table class="tbl-form">
+			<colgroup>
+				<col style="width: 200px;" />
+				<col style="width: 50%;" />
+				<col style="width: 200px;" />
+				<col style="width: 50%;" />
+			</colgroup>
+			<tbody>
+				<tr>
+					<th><label class="form-label" for="입력항목1">입력항목1</label></th>
+					<td><div class="form_input">div.input-wrap > input</div></td>
+					<th><label class="form-label" for="입력항목1">입력항목2</label></th>
+					<td><div class="form_input">div.input-wrap > input</div></td>
+				</tr>
+				<tr>
+					<th><label class="form-label" for="입력항목3">입력항목3</label></th>
+					<td colspan="3"><div class="form_input">div.input-wrap > input</div></td>
+				</tr>
+				<tr>
+					<th><label class="form-label" for="입력항목4">입력항목4</label></th>
+					<td colspan="3"><div class="form_input">div.input-wrap > input</div></td>
+				</tr>
+			</tbody>
+			<tfoot style="border: 0;">
+				<tr>
+					<td colspan="4" class="form_bottom">
+						<label class="form-label required small">필수입력항목</label>
+					</td>
+				</tr>
+			</tfoot>
+		</table>
+	</div>
+</form>
+
+							</div>
+						</div><!-- .guide-row -->
+
+						<div id="sourceViewer1" class="collapse source_viewer"></div>
+					</div><!-- .contents -->
+
+
+					<div class="contents">
+						<div class="guide-sub-title">
+							예시
+							<div class="right_menu">
+								<button type="button" class="btn btn-primary btn_view_source" data-target="#sourceViewer2">
+									<i class="icon-eyes">👀</i><span>HTML</span>
+								</button>
+							</div>
+						</div>
+
+						<ul class="info">
+							<li>필수입력항목에는 label에 .requried 클래스를, input에 required="required" 속성을 입력합니다.</li>
+							<li>placehoder(select의 경우는 data-placeholder)값은 validation에서 message값으로도 사용됩니다.</li>
+						</ul>
+						<div class="guide-row">
+							<div class="guide_html">
+<div class="content-header">
+	<div class="title-wrap">
+		<div class="title">입력폼 제목</div>
+		<div class="button-wrap">
+			<button type="button" class="btn btn-line"><span>왼쪽버튼</span></button>
+		</div>
+	</div>
+	<div class="button-wrap">
+		<button type="button" class="btn btn-primary"><span>저장</span></button>
+		<button type="button" class="btn btn-line"><span>취소</span></button>
+	</div>
+</div>
+			
+<form>
+	<div class="table-wrap">
+		<table class="tbl-form">
+			<colgroup>
+				<col style="width: 200px;" />
+				<col style="width: 50%;" />
+				<col style="width: 200px;" />
+				<col style="width: 50%;" />
+			</colgroup>
+			<tbody>
+				<tr>
+					<th><label class="form-label" for="텍스트">텍스트</label></th>
+					<td>
+						<div class="input-wrap">
+							<input type="text" id="텍스트" name="텍스트" value="" placeholder="텍스트를 입력하시오." />
+						</div>
+					</td>
+					<th><label class="form-label required" for="필수입력창">필수입력항목</label></th>
+					<td>
+						<div class="input-wrap">
+							<input type="text" id="필수입력창" name="필수입력창" value="" required="required" placeholder="필수입력항목을 입력하시오." />
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th><label class="form-label" for="비밀번호">비밀번호</label></th>
+					<td>
+						<div class="input-wrap">
+							<input type="password" id="비밀번호" name="비밀번호" value="" placeholder="비밀번호를 입력하시오." />
+						</div>
+					</td>
+					<th>체크박스</th>
+					<td>
+						<div class="form-control">
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" id="체크박스" name="체크박스" value="Y" />
+								<label class="form-check-label" for="체크박스">확인</label>
+							</div>
+						</div> <!-- .form-control -->
+					</td>
+				</tr>
+				<tr>
+					<th><label class="form-label" for="SELECT입력">SELECT입력</label></th>
+					<td>
+						<select class="form-select select2" id="SELECT입력" name="SELECT입력" data-placeholder="SELECT를 선택하시오.">
+							<option></option>
+							<option value="옵션1">옵션1</option>
+							<option value="옵션2">옵션2</option>
+							<option value="옵션3">옵션3</option>
+						</select>
+					</td>
+					<th><label class="form-label required" for="SELECT필수">SELECT필수입력</label></th>
+					<td>
+						<select class="form-select select2" id="SELECT필수" name="SELECT필수" data-placeholder="SELECT를 선택하시오." required="required">
+							<option></option>
+							<option value="옵션1">옵션1</option>
+							<option value="옵션2">옵션2</option>
+							<option value="옵션3">옵션3</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th><label class="form-label" for="날짜입력">날짜입력</label></th>
+					<td>
+						<div class="input-wrap input_datepicker_wrap">
+							<input class="datepicker" type="text" id="날짜입력" name="날짜입력" value="" maxlength="10" placeholder="YYYY.MM.DD" oninput="checkInputPattern(this, '0-9\-');" />
+						</div>
+					</td>
+					<th><label class="form-label" for="기간입력">기간입력</label></th>
+					<td>
+						<div class="input_period_wrap">
+							<div class="input-wrap input_datepicker_wrap">
+								<input class="datepicker" type="text" id="기간입력S" name="기간입력S" value="" maxlength="10" placeholder="YYYY.MM.DD" oninput="checkInputPattern(this, '0-9\-');" />
+							</div>
+							<!-- <span class="m-2">~</span> -->
+							<div class="input-wrap input_datepicker_wrap">
+								<input class="datepicker" type="text" id="기간입력E" name="기간입력E" value="" maxlength="10" placeholder="YYYY.MM.DD" oninput="checkInputPattern(this, '0-9\-');" />
+							</div>
+						</div><!-- .input_period_wrap -->
+					</td>
+				</tr>
+				<tr>
+					<th><label class="form-label" for="긴입력창">긴 입력항목</label></th>
+					<td colspan="3">
+						<div class="input-wrap">
+							<input type="text" id="긴입력창" name="긴입력창" value="" placeholder="긴입력항목을 입력하시오." />
+						</div>
+					</td>
+				</tr>
+			</tbody>
+			<tfoot class="border-0">
+				<tr>
+					<td colspan="4" class="form_bottom">
+						<label class="form-label required small">필수입력항목</label>
+					</td>
+				</tr>
+			</tfoot>
+		</table>
+	</div>
+</form>
+							</div><!-- .guide_html -->
+
+						</div><!-- .guide-row -->
+
+						<div id="sourceViewer2" class="collapse source_viewer"></div>
+					</div><!-- .contents -->
+				</article>
+				
+
+				<article class="guide">
+					<h3 class="guide-title">검색폼</h3>
+
+					<div class="contents">
+						<div class="guide-sub-title">
+							LAYOUT
+							<div class="right_menu">
+								<button type="button" class="btn btn-primary btn_view_source" data-target="#sourceViewer3">
+									<i class="icon-eyes">👀</i><span>HTML</span>
+								</button>
+							</div>
+						</div>
+
+						<ul class="info">
+							<li>Bootstrap의 .col-* 칸을 나누는 개념을 사용하여 class를 생성하였습니다. 해당 클래스들을 이용하여 폼 입력항목을 배치합니다.</li>
+							<li>.search_form_wrap의 min-width는 1,000px, .search-form의 min-width는 900px이고, 각 .row의 높이는 45px입니다.</li>
+							<li>.search_form_inner을 좌우로 나눠서, 왼쪽(.search-form)에 검색조건 input들을, 오른쪽에 검색 버튼을 배치합니다.</li>
+							<li><i class="bi bi-exclamation-circle-fill text-danger"></i> .search_form_inner 태그는 .form_wrap 안쪽에 있어야 합니다.</li>
+						</ul>
+						<div class="guide-row3">
+							<div class="guide_html">
+
+<div class="search-form-wrap">
+	<form>
+		<div class="search-form-inner">
+			<div class="search-form">
+				<div class="row">
+					<!-- row 안에 있는 col의 합이 12가 되어야 합니다. -->
+					<div class="col-1">.col-1</div>
+					<div class="col-1">.col-1</div>
+					<div class="col-1">.col-1</div>
+					<div class="col-1">.col-1</div>
+					<div class="col-1">.col-1</div>
+					<div class="col-1">.col-1</div>
+					<div class="col-1">.col-1</div>
+					<div class="col-1">.col-1</div>
+					<div class="col-1">.col-1</div>
+					<div class="col-1">.col-1</div>
+					<div class="col-1">.col-1</div>
+					<div class="col-1">.col-1</div>
+				</div><!-- .row -->
+
+				<div class="row">
+					<div class="col-3">.col-3</div>
+					<div class="col-3">.col-3</div>
+					<div class="col-3">.col-3</div>
+					<div class="col-3">.col-3</div>
+				</div><!-- .row -->
+
+				<div class="row">
+					<div class="col-4">.col-4</div>
+					<div class="col-4">.col-4</div>
+					<div class="col-4">.col-4</div>
+				</div><!-- .row -->
+
+				<div class="row">
+					<div class="col-4">.col-4</div>
+					<div class="col-8">.col-8</div>
+				</div><!-- .row -->
+
+				<div class="row">
+					<div class="col-6">.col-6</div>
+					<div class="col-6">.col-6</div>
+				</div><!-- .row -->
+
+				<div class="row">
+					<div class="col-9">.col-9</div>
+					<div class="col-3">.col-3</div>
+				</div><!-- .row -->
+
+				<div class="row">
+					<div class="col-12">.col-12</div>
+				</div><!-- .row -->
+			</div><!-- .search-form -->
+
+			<div class="button-wrap">
+				<button type="button" class="btn btn-primary">검색</button>
+			</div>
+		</div><!-- .d-flex -->
+	</form>
+</div><!-- .search_form_wrap -->
+
+							</div><!-- .guide_html -->
+						</div><!-- .guide-row -->
+
+						<div id="sourceViewer3" class="collapse source_viewer"></div>
+					</div><!-- .contents -->
+
+
+					<div class="contents">
+						<div class="guide-sub-title">
+							예시
+							<div class="right_menu">
+								<button type="button" class="btn btn-primary btn_view_source" data-target="#sourceViewer4">
+									<i class="icon-eyes">👀</i><span>HTML</span>
+								</button>
+							</div>
+						</div>
+
+						<ul class="info">
+							<li>입력항목의 크기에 따라 .col-*을 사용합니다.  가급적, .col-4 ~ .col-12 사용을 권장합니다.</li>
+							<li>Label의 기본 min-width는 90px입니다. <br>.search-form 에서는 label과 .form-container를 감싸는 .form-control-wrap이 필요하지 않습니다.</li>
+							<li>input, select(select2) 등 입력창은 .col-*에 따라 길이가 변하도록 되어있습니다.</li>
+						</ul>
+						<div class="guide-row3">
+							<div class="guide_html">
+
+<div class="search-form-wrap">
+	<form>
+		<div class="search-form-inner">
+			<div class="search-form">
+				<div class="row">
+					<div class="col-4">
+						<label class="form-label" for="INPUT"><span>INPUT</span></label>
+						<div class="form-container">
+							<div class="input-wrap">
+								<input type="text" id="INPUT" name="INPUT" value="" placeholder="검색어를 입력하시오." />
+							</div><!-- .input-wrap -->
+						</div><!-- .form-container -->
+					</div><!-- .col -->
+					<div class="col-4">
+						<label class="form-label" for="SELECT"><span>SELECT</span></label>
+						<div class="form-container">
+							<div class="form-control">
+								<select class="form-select select2" id="SELECT" name="SELECT" required>
+									<option value="전체">(전체)</option>
+									<option value="옵션1">옵션1</option>
+									<option value="옵션2">옵션2</option>
+									<option value="옵션3">옵션3</option>
+							</select>
+							</div><!-- .form-control -->
+						</div><!-- .form-container -->
+					</div><!-- .col -->
+					<div class="col-4">(.col-4)</div>
+				</div><!-- .row -->
+
+				<div class="row">
+					<div class="col-8">
+						<label class="form-label" for="SELECTS"><span>SELECTS</span></label>
+						<div class="form-container">
+							<select class="form-select select2" id="SELECT1" name="SELECT1" required>
+								<option value="전체">(전체)</option>
+								<option value="옵션1">옵션1</option>
+								<option value="옵션2">옵션2</option>
+								<option value="옵션3">옵션3</option>
+							</select>
+							<select class="form-select select2" id="SELECT2" name="SELECT2" required>
+								<option value="전체">(전체)</option>
+								<option value="옵션1">옵션1</option>
+								<option value="옵션2">옵션2</option>
+								<option value="옵션3">옵션3</option>
+							</select>
+							<select class="form-select select2" id="SELECT3" name="SELECT3" required>
+								<option value="전체">(전체)</option>
+								<option value="옵션1">옵션1</option>
+								<option value="옵션2">옵션2</option>
+								<option value="옵션3">옵션3</option>
+							</select>
+						</div><!-- .row -->
+					</div><!-- .col -->
+					<div class="col-2">
+						<label class="form-label" for="CHECKBOX"><span>CHECKBOX</span></label>
+						<div class="form-container">
+							<div class="form-control">
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" id="CHECKBOX" name="CHECKBOX" value="Y" checked />
+									<label class="form-check-label" for="CHECKBOX"><span>선택</span></label>
+								</div>
+							</div><!-- .form-control -->
+						</div><!-- .form-container -->
+					</div><!-- .col -->
+					<div class="col-2">(.col-2)</div>
+				</div><!-- .row -->
+
+				<div class="row">
+					<div class="col-12">
+						<label class="form-label" for="검색기간"><span>기간</span></label>
+						<div class="form-container">
+							<div class="input_period_wrap">
+								<div class="input-wrap input_datepicker_wrap">
+									<input class="from" type="text" id="기간S" name="기간S" value=""
+										maxlength="10" placeholder="YYYY.MM.DD" oninput="checkInputPattern(this, '0-9\-');" />
+								</div>
+								<!-- <span class="m-2">~</span> -->
+								<div class="input-wrap input_datepicker_wrap">
+									<input class="to" type="text" id="기간E" name="기간E" value=""
+										maxlength="10" placeholder="YYYY.MM.DD" oninput="checkInputPattern(this, '0-9\-');" />
+								</div>
+								<div class="button-wrap"><!-- 기간선택 단축버튼 그룹 -->
+									<button type="button" class="btn btn-dark period" onclick="setInputPeriod(this, 'd0');">
+										<span>금일</span>
+									</button>
+									<button type="button" class="btn btn-dark period" onclick="setInputPeriod(this, 'd-1');">
+										<span>전일</span>
+									</button>
+									<button type="button" class="btn btn-dark period" onclick="setInputPeriod(this, 'd-3');">
+										<span>3일간</span>
+									</button>
+									<button type="button" class="btn btn-dark period" onclick="setInputPeriod(this, 'd-7');">
+										<span>7일간</span>
+									</button>
+									<button type="button" class="btn btn-dark period" onclick="setInputPeriod(this, 'd-15');">
+										<span>15일간</span>
+									</button>
+								</div>
+							</div><!-- .input_period_wrap -->
+						</div><!-- .form-container -->
+					</div><!-- .col -->
+				</div><!-- .row -->
+			</div><!-- .search-form -->
+
+			<div class="button-wrap">
+				<button type="button" class="btn btn-primary">
+					조회</span>
+				</button>
+			</div>
+		</div><!-- .d-flex -->
+	</form>
+</div><!-- .search_form_wrap -->
+
+							</div><!-- .guide_html -->
+						</div><!-- .guide-row -->
+
+						<div id="sourceViewer4" class="collapse source_viewer"></div>
+					</div><!-- .contents -->
+				</article>
+
+			</div><!-- .container -->
+		</section>
+	</div><!-- .guide -->
+
+	<footer>
+		<div class="inner">
+			<div class="copy">Copyright &copy; GRIDA 2022</div>
+			<div class="f-logo"><img src="../assets/img/ci_grida.svg" /></div>
+		</div>
+	</footer>
+
+</body>
+</html>

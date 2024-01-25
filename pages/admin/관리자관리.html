@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+<title>관리자권한관리</title>
+
+<!--v Packages -->
+<script src="../../assets/js/jquery.min.js"></script>
+
+<link href="../../assets/css/jquery-ui.min.css" rel="stylesheet" />
+<script src="../../assets/js/jquery-ui.min.js"></script>
+
+<link href="../../assets/css/select2.min.css" rel="stylesheet" />
+<script src="../../assets/js/select2.min.js"></script>
+<!--^ Packages -->
+
+<link href="../../assets/css/all.css" rel="stylesheet" />
+<script src="../../assets/js/util.js"></script>
+</head>
+
+<body class="sub-page">
+	<header>
+		<div class="inner">
+			<h1 class="logo">
+				<a href="#">
+					<img src="../../assets/img/logo.svg" />
+				</a>
+			</h1>
+			<div id="gnb">
+				<ul class="gnb-list">
+					<li>
+						<a href="#">회원/카드관리</a>
+					</li>
+					<li>
+						<a href="#">거래관리</a>
+					</li>
+					<li>
+						<a href="#">정산현황</a>
+					</li>
+					<li>
+						<a href="#">통계/분석</a>
+					</li>
+					<li>
+						<a href="#">지원정책</a>
+					</li>
+					<li>
+						<a href="#">환경설정</a>
+					</li>
+					<li>
+						<button type="button" class="btn">
+							<span>전체보기</span>
+							<i class="icon-menu"></i>
+						</button>
+					</li>
+				</ul>
+			</div>
+			<div class="my-menu">
+				<div class="info">
+					<div class="photo">
+						<i class="icon-smile"></i><!-- 혹시 나중에 img태그가 들어간다면 해당 i태그 삭제 -->
+					</div>
+					<div class="name">관리자</div>
+				</div>
+				<div class="log">
+					<span>최종 로그인</span>
+					<span class="time">2022.08.29 14:14</span>
+				</div>
+				<div class="button-wrap">
+					<button type="button" class="btn">
+						<i class="icon-setting"></i>
+					</button>
+					<button type="button" class="btn">
+						<i class="icon-logout"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="container">
+		<div id="lnb">
+			<div class="group-title">
+				<span>환경설정</span>
+			</div>
+			<button type="button" class="btn btn-primary btn_lnb_control">
+				<i class="icon-arrow-prev"></i>
+			</button>
+			<ul class="menu-list">
+				<li class="on">
+					<a href="#">
+						<span>관리자 관리</span>
+						<i class="icon-circle-plus"></i>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>관리자승인</span>
+							</a>
+						</li>
+						<li class="on">
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>관리자 관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>관리자권한관리</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">
+						<span>플랫폼 관리</span>
+						<i class="icon-circle-plus"></i>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>메뉴 관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>배너 관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>팝업 관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>공공데이터관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>가맹점분류코드관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>공휴일관리</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">
+						<span>시스템 관리</span>
+						<i class="icon-circle-plus"></i>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>이용자접속현황 관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>변경이력 관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>메타데이터 관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>연계전문 관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>연계데이터 관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>개인정보접근 이력조회</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>개인정보접근 통계</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>알림톡 정보관리</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="icon-menu-depth"></i>
+								<span>알림톡 발송이력</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!-- #lnb -->
+		<div class="content-wrap">
+			<div class="content-header">
+				<div class="title-wrap">
+					<div class="title">사용자관리</div>
+					<div class="location">
+						<i class="icon-home"></i>
+						<span>홈</span>
+						<span>환경설정</span>
+						<span>사용자관리</span>
+						<span>사용자관리</span>
+					</div>
+				</div>
+			</div>
+			<div class="content-body">
+				
+				<div class="search-form-wrap">
+					<form>
+						<div class="search-form-inner">
+							<div class="search-form">
+
+								<div class="row">
+									<div class="col-6">
+										<label class="form-label" for="메뉴권한그룹"><span>메뉴권한그룹</span></label>
+										<div class="form-container">
+											<select class="form-select select2" id="메뉴권한그룹" name="메뉴권한그룹" data-placeholder="메뉴권한그룹 선택">
+												<option value=""></option>
+												<option value="전체그룹" selected>전체그룹</option>
+											</select>
+										</div>
+									</div><!-- .col -->
+									<div class="col-6"></div>
+								</div><!-- .row -->
+
+								<div class="row">
+									<div class="col-6">
+										<label class="form-label" for="아이디"><span>아이디</span></label>
+										<div class="form-container">
+											<div class="input-wrap">
+												<input type="text" id="아이디" name="아이디" value="" placeholder="" />
+											</div><!-- .input-wrap -->
+										</div><!-- .form-container -->
+									</div><!-- .col -->
+									<div class="col-6">
+										<label class="form-label" for="성명"><span>성명</span></label>
+										<div class="form-container">
+											<div class="input-wrap">
+												<input type="text" id="성명" name="성명" value="" placeholder="" />
+											</div><!-- .input-wrap -->
+										</div><!-- .form-container -->
+									</div><!-- .col -->
+								</div><!-- .row -->
+
+							</div><!-- .search-form -->
+
+							<div class="button-wrap">
+								<button type="button" class="btn btn-primary">
+									<i class="icon-search"></i>
+									<span>검색</span>
+								</button>
+							</div>
+						</div><!-- .search-form-inner -->
+					</form>
+				</div><!-- .search_form_wrap -->
+
+				<div class="section-header">
+					<div class="title-wrap">
+						<div class="title">검색결과<span class="small text-primary">(00건)</span></div>
+					</div>
+					<div class="button-wrap">
+						<button type="button" class="btn btn-primary">
+							<span>저장</span>
+						</button>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-4 section-body" style="max-width: 300px;">
+						<div class="grid-area">
+							<!-- 그리드를 넣으시려면 아래의 table-wrap을 지우시고 그리드를 넣어주세요. -->
+							<div class="table-wrap">
+								<table class="tbl-data all-center">
+									<colgroup>
+										<col style="width: 50%;">
+										<col style="width: 50%;">
+									</colgroup>
+									<thead>
+									<tr>
+										<th>아이디</th>
+										<th>성명</th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr>
+										<td>admin1</td>
+										<td>홍길동</td>
+									</tr>
+									<tr>
+										<td>admin1</td>
+										<td>홍길동</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td></td>
+									</tr>
+									</tbody>
+								</table>
+							</div><!-- .table-wrap-->
+						</div>
+					</div>
+					<div class="col-8 section-body" style="flex: 1;">
+						<div class="table-wrap" style="overflow-x: auto;">
+							<table class="tbl-data all-center" style="width: 1400px;">
+								<thead>
+								<tr>
+									<th>권한그룹</th>
+									<th>소속/지자체</th>
+									<th>부서</th>
+									<th>직위</th>
+									<th>전화번호</th>
+									<th>휴대폰</th>
+									<th>이메일</th>
+									<th>등록일</th>
+									<th>최종로그인</th>
+									<th>유효</th>
+									<th>유효기간</th>
+								</tr>
+								</thead>
+								<tbody>
+								<tr>
+									<td>시스템관리자</td>
+									<td>시스템 운영사</td>
+									<td>시스템</td>
+									<td>시스템</td>
+									<td>000-0000-0000</td>
+									<td>010-0000-0000</td>
+									<td>admin@system.com</td>
+									<td>YYYY.MM.DD</td>
+									<td>YYYY.MM.DD</td>
+									<td>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="유효" name="유효" value="유효" checked="" />
+											<label class="form-check-label" for="유효"></label>
+										</div>
+									</td>
+									<td>YYYY.MM.DD</td>
+								</tr>
+								<tr>
+									<td>시스템관리자</td>
+									<td>시스템 운영사</td>
+									<td>시스템</td>
+									<td>시스템</td>
+									<td>000-0000-0000</td>
+									<td>010-0000-0000</td>
+									<td>admin@system.com</td>
+									<td>YYYY.MM.DD</td>
+									<td>YYYY.MM.DD</td>
+									<td>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="유효" name="유효" value="유효" checked="" />
+											<label class="form-check-label" for="유효"></label>
+										</div>
+									</td>
+									<td>YYYY.MM.DD</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- .content-wrap -->
+	</div><!-- .container -->
+</body>
+</html>
